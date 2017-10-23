@@ -31,9 +31,12 @@ var rps = (function() {
             if (result !== 0) {
                 numOfRounds--;
             }
-        } while (numOfRounds > 0 && (playerScore + computerScore < 3));
+            console.log(playerScore, computerScore)
+
+        } while (playerScore + computerScore < 3)
 
 
+        console.log(playerScore, computerScore)
         var winMsg = "The player has " + playerScore + " points compared to the computer's " + computerScore + " points. So the player wins!";
         var loseMsg = "The computer has " + computerScore + " points compared to the player's " + playerScore + " points. So the computer wins!";
         var tieMsg = "It's a tie!";
@@ -91,12 +94,12 @@ var rps = (function() {
           case rules[guess1] == guess2:
             playerScore += points;
             alert(output + "\nPlayer wins the round! \n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
-            // return 1;
+            return 1;
             break;
           case rules[guess2] == guess1:
             computerScore += points;
             alert(output + "\nComputer wins the round! \n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
-            // return 2;
+            return 2;
             break;
         }
 
