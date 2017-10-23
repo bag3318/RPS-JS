@@ -97,8 +97,6 @@ var rps = (function() {
         }
     }
 
-
-
     function compareGuesses(guess1, guess2, points) {
         // Create an alert message detailing the results
         var output = "Player chose: " + guess1.toLowerCase() + " and the computer chose: " + guess2.toLowerCase() + "! \n";
