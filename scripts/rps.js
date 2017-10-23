@@ -41,14 +41,15 @@ var rps = (function() {
         var loseMsg = "The computer has " + computerScore + " points compared to the player's " + playerScore + " points. So the computer wins!";
         var tieMsg = "It's a tie!";
 
-        if (playerScore > computerScore) {
-            alert(winMsg);
-        } else if (playerScore < computerScore) {
-          alert(loseMsg);
-        } else {
-          alert(tieMsg);
+        while (playerScore + computerScore < 3) {
+            if (playerScore > computerScore) {
+                alert(winMsg);
+            } else if (playerScore < computerScore) {
+              alert(loseMsg);
+            } else {
+              alert(tieMsg);
+            }
         }
-
         clearScores();
 
     }
