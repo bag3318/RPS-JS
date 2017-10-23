@@ -1,4 +1,4 @@
-var rps = (function(){
+var rps = (function() {
 
     var playerScore = 0;
 
@@ -36,9 +36,7 @@ var rps = (function(){
 
             playGame(3);
 
-        }
-
-        else {
+        } else {
 
             alert("sorry, maybe next time.");
 
@@ -50,7 +48,7 @@ var rps = (function(){
 
         if (playerScore >= 2) {
 
-           
+
 
             isPlayerWinner = true
 
@@ -58,11 +56,9 @@ var rps = (function(){
 
             alert(winMsg);
 
-        }
+        } else if (computerScore >= 2) {
 
-        else if (computerScore >= 2) {
 
-            
 
             isComputerWinner = true
 
@@ -72,7 +68,7 @@ var rps = (function(){
 
         }
 
-        console.log('d ' + isPlayerWinner + ' ' + isComputerWinner)
+        console.log('d ' + isPlayerWinner, isComputerWinner)
 
     }
 
@@ -80,13 +76,13 @@ var rps = (function(){
 
         do {
 
-            if(isPlayerWinner || isComputerWinner){
+            if (isPlayerWinner || isComputerWinner) {
 
                 return;
 
             }
 
-            console.log('b ' + isPlayerWinner + ' ' + isComputerWinner)
+            console.log('b ' + isPlayerWinner, isComputerWinner)
 
             var player = playerGuess();
 
@@ -114,13 +110,13 @@ var rps = (function(){
 
         if (gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
 
-              return playerChoice;
+            return playerChoice;
 
         } else {
 
-          alert("You typed something else or did not spell your choice correctly please try again!");
+            alert("You typed something else or did not spell your choice correctly please try again!");
 
-          return playerGuess();
+            return playerGuess();
 
         }
 
@@ -144,10 +140,10 @@ var rps = (function(){
             break;
         }
         */
-        
-        var cpuChoice = Math.floor(Math.random()*3);
 
-        switch(cpuChoice) {
+        var cpuChoice = Math.floor(Math.random() * 3);
+
+        switch (cpuChoice) {
             case 0:
                 return gestures[0];
                 break;
@@ -173,41 +169,41 @@ var rps = (function(){
 
         switch (true) {
 
-          case guess1 === guess2:
+            case guess1 === guess2:
 
-            playerScore += 0;
+                playerScore += 0;
 
-            computerScore += 0;
+                computerScore += 0;
 
-            alert(output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore); 
+                alert(output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
 
-            return 0;
+                return 0;
 
-            break;
+                break;
 
-          case rules[guess1] == guess2:
+            case rules[guess1] == guess2:
 
-            playerScore += points;
+                playerScore += points;
 
-            alert(output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+                alert(output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
 
-            determineWinner()
+                determineWinner();
 
-            return 1;
+                return 1;
 
-            break;
+                break;
 
-          case rules[guess2] == guess1:
+            case rules[guess2] == guess1:
 
-            computerScore += points;
+                computerScore += points;
 
-            alert(output + "\nComputer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+                alert(output + "\nComputer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
 
-            determineWinner()
+                determineWinner();
 
-            return 2;
+                return 2;
 
-            break;
+                break;
 
         }
 
