@@ -129,6 +129,7 @@ var rps = (function() {
     function btnClick() {
         startGame(welcomeMsg);
     }
+    
     function setup() {
 
         var textStr = "Play Rock Paper Scissors !";
