@@ -20,7 +20,7 @@ var rps = (function() {
         if (ready == true) {
             playGame(3);
         } else {
-            alert("sorry, maybe next time.");
+            alert("Sorry you don't wanna play, maybe next time! :)");
         }
     }
 
