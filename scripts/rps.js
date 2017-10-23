@@ -144,7 +144,7 @@ var rps = (function() {
         element.addEventListener("load", function() {
             var masterScript = rps();
             masterScript.startMsg(welcomeMsg);
-        });
+        }, false);
     }
 
     return function returnAPI(api) {
