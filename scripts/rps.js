@@ -46,26 +46,18 @@ var rps = (function() {
 
     function determineWinner() {
 
-        if (playerScore >= 2) {
+        switch(true) {
+            case playerScore >= 2:
+                isPlayerWinner = true
+                var winMsg = "The player has " + playerScore + " points compared to the computer's " + computerScore + " points. So the player wins!";
 
-
-
-            isPlayerWinner = true
-
-            var winMsg = "The player has " + playerScore + " points compared to the computer's " + computerScore + " points. So the player wins!";
-
-            alert(winMsg);
-
-        } else if (computerScore >= 2) {
-
-
-
-            isComputerWinner = true
-
-            var loseMsg = "The computer has " + computerScore + " points compared to the player's " + playerScore + " points. So the computer wins!";
-
-            alert(loseMsg)
-
+                alert(winMsg);
+                break;
+            case computerScore >= 2:
+                isComputerWinner = true
+                var loseMsg = "The computer has " + computerScore + " points compared to the player's " + playerScore + " points. So the computer wins!";
+                alert(loseMsg)
+                break;
         }
 
         console.log('d ' + isPlayerWinner, isComputerWinner)
@@ -161,7 +153,7 @@ var rps = (function() {
 
     function compareGuesses(guess1, guess2, points) {
 
-        //Create an alert message detailing the results
+        // Create an alert message detailing the results
 
         var output = "Player chose: " + guess1.toLowerCase() + " and the computer chose: " + guess2.toLowerCase() + "! \n";
 
