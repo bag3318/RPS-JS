@@ -143,6 +143,7 @@ var rps = (function() {
         btn += "</button>";
         BetterInnerHTML(document.querySelector("#btn"), btn, false)
     }
+
     function init() {
         var element = document.querySelector("#btn");
         element.addEventListener("click", function() {
