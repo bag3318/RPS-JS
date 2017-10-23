@@ -100,11 +100,11 @@ var rps = (function() {
     function compareGuesses(guess1, guess2, points) {
         // Create an alert message detailing the results
         var output;
-        output = "Player chose: " + 
-                guess1.toLowerCase() + 
-                " and the computer chose: " + 
-                guess2.toLowerCase() + 
-                "! \n";
+        output = "Player chose: "            + 
+                 guess1.toLowerCase()        + 
+                 " and the computer chose: " + 
+                 guess2.toLowerCase()        + 
+                 "! \n";
 
         var cpuWin = "\nComputer wins the round! \n\n";
         var usrWin = "\nPlayer wins the round! \n\n";
