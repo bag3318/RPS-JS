@@ -13,6 +13,7 @@ var rps = (function() {
 
     var isPlayerWinner = false;
     var isComputerWinner = false;
+    
     var welcomeMsg = "Welcome the good ol' fashion game of Rock, Paper, Scissors! Remember the rules are simple!\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\nClick cancel if you don\'t wanna play.";
 
     function startGame(msg) {
