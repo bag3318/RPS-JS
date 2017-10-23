@@ -127,13 +127,16 @@ var rps = (function() {
     }
 
     function setup() {
+
         var btn = document.querySelector("#btn");
+
         var textStr = "Play Rock Paper Scissors !";
         var textArray = textStr.split(" ");
 
         console.log(textArray);
 
         var btnText = "<span>";
+
         var i;
         for (i = 0; i < textArray.length; i++) {
             if (textArray[i] !== textArray[3] && textArray[i] !== textArray[4]) {
@@ -142,6 +145,7 @@ var rps = (function() {
                 btnText += textArray[i];
             }   
         }
+        
         btnText += "</span>";
         BetterInnerHTML(btn, btnText, true);
     }
