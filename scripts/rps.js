@@ -28,7 +28,7 @@ var rps = (function(){
 
 
 
-    function welcomeMessage(msg) {
+    function startGame(msg) {
 
         var ready = confirm(msg);
 
@@ -130,32 +130,33 @@ var rps = (function(){
 
     function computerGuess() {
 
-
-
+        /*      
         var choice = Math.random();
-
-
-
         switch (true) {
-
           case choice >= 0 && choice <= 0.33:
-
             return gestures[0];
-
             break;
-
           case choice <= 0.66 && choice > 0.33:
-
             return gestures[1];
-
             break;
-
           case choice > 0.66 && choice <= 1:
-
             return gestures[2]
-
             break;
+        }
+        */
+        
+        var cpuChoice = Math.floor(Math.random()*3);
 
+        switch(cpuChoice) {
+            case 0:
+                return gestures[0];
+                break;
+            case 1:
+                return gestures[1];
+                break;
+            case 2:
+                return gestures[2];
+                break;
         }
 
     }
@@ -246,7 +247,7 @@ var rps = (function(){
 
             initiate: init,
 
-            startMsg: welcomeMessage
+            startMsg: startGame
 
             // playRPS: playGame
 
