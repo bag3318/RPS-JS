@@ -131,8 +131,6 @@ var rps = (function() {
     }
 
     function setup() {
-        
-
         var text = ["Play", "Rock", "Paper", "Scissors", "!"];
         btn = "<button>";
         for (i = 0; i < text.length; i++) {
