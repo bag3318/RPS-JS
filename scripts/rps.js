@@ -90,8 +90,6 @@ var rps = (function() {
 
         } while (numOfRounds > 0 && (!isPlayerWinner || !isComputerWinner))
 
-
-
     }
 
 
@@ -161,7 +159,7 @@ var rps = (function() {
 
         switch (true) {
 
-            case guess1 === guess2:
+            case guess1 === guess2: // if tie
 
                 playerScore += 0;
 
@@ -173,7 +171,7 @@ var rps = (function() {
 
                 break;
 
-            case rules[guess1] == guess2:
+            case rules[guess1] == guess2: // if user wins
 
                 playerScore += points;
 
@@ -185,7 +183,7 @@ var rps = (function() {
 
                 break;
 
-            case rules[guess2] == guess1:
+            case rules[guess2] == guess1: // if computer wins
 
                 computerScore += points;
 
@@ -236,8 +234,6 @@ var rps = (function() {
             initiate: init,
 
             startMsg: startGame
-
-            // playRPS: playGame
 
         };
 
