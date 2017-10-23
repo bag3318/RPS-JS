@@ -1,6 +1,5 @@
-
-
 var rps = (function(){
+
     var playerScore = 0;
 
     var computerScore = 0;
@@ -101,7 +100,7 @@ var rps = (function(){
 
             }
 
-        } while ( (!isPlayerWinner || !isComputerWinner))
+        } while (numOfRounds > 0 && (!isPlayerWinner || !isComputerWinner))
 
 
 
