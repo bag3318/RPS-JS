@@ -132,16 +132,16 @@ var rps = (function() {
 
     function setup() {
         var text = ["Play", "Rock", "Paper", "Scissors", "!"];
-        btn = "<button>";
+        btnSpan = "<button>";
         for (i = 0; i < text.length; i++) {
             if (text[i] != text[3]) {
-                btn += text[i] + " ";
+                btnSpan += text[i] + " ";
             } else {
-                btn += text[i]
+                btnSpan += text[i]
             }
         }
-        btn += "</button>";
-        BetterInnerHTML(document.querySelector("#btn"), btn, false)
+        btnSpan += "</button>";
+        BetterInnerHTML(document.querySelector("#btnSpan"), btnSpan, false)
     }
 
     function init() {
@@ -155,7 +155,7 @@ var rps = (function() {
         element.addEventListener("load", function() {
             var masterScript = rps();
             masterScript = setup();
-        });
+        }, false);
     }
 
     return function returnAPI(api) {
