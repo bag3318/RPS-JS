@@ -37,7 +37,7 @@ var rps = (function() {
                 alert(loseMsg)
                 break;
         }
-        console.log('d', isPlayerWinner, isComputerWinner)
+        console.log('d ' + isPlayerWinner, isComputerWinner)
     }
 
     function playGame(numOfRounds) {
@@ -98,36 +98,23 @@ var rps = (function() {
     }
 
     function compareGuesses(guess1, guess2, points) {
-        var output;
-        output = "Player chose: "            + 
-                 guess1.toLowerCase()        + 
-                 " and the computer chose: " + 
-                 guess2.toLowerCase()        + 
-                 "! \n";
-
-        var cpuWin = "\nComputer wins the round! \n\n";
-        var usrWin = "\nPlayer wins the round! \n\n";
-        var tie = "\nIt's a tie! Go again, no score added! \n\n";
-
-        var usrScore = "Player Score: ";
-        var cpuScore = ", Computer Score: ";
-
+        var output = "Player chose: " + guess1.toLowerCase() + " and the computer chose: " + guess2.toLowerCase() + "! \n";
         switch (true) {
             case guess1.toLowerCase() === guess2.toLowerCase(): // if tie
                 playerScore += 0;
                 computerScore += 0;
-                alert(output + tie + usrScore + playerScore + cpuScore + computerScore);
+                alert(output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
                 return 0;
                 break;
             case rules[guess1.toLowerCase()] == guess2.toLowerCase(): // if user wins
                 playerScore += points;
-                alert(output + usrWin + usrScore + playerScore + cpuScore + computerScore);
+                alert(output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
                 determineWinner();
                 return 1;
                 break;
             case rules[guess2.toLowerCase()] == guess1.toLowerCase(): // if computer wins
                 computerScore += points;
-                alert(output + cpuWin + usrScore + playerScore + cpuScore + computerScore);
+                alert(output + "\nComputer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
                 determineWinner();
                 return 2;
                 break;
@@ -153,5 +140,4 @@ var rps = (function() {
             startMsg: startGame
         };
     };
-
 }());
