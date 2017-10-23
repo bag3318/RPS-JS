@@ -127,19 +127,23 @@ var rps = (function() {
     }
 
     function setup() {
-        var btn = "<button>";
-        var text = ["Play", "Rock", "Paper", "Scissors", "!"];
+        var btn = document.querySelector("#btn");
+        var textStr = "Play Rock Paper Scissors !";
+        var textArray = textStr.split(" ");
+
+        console.log(textArray);
+
+        var btnText = "<span>";
         var i;
-        for (i = 0; i < text.length; i++) {
-            if (text[i] !== text[3]) {
-                btn += text[i] + " ";
+        for (i = 0; i < textArray.length; i++) {
+            if (textArray[i] !== textArray[3] && textArray[i] !== textArray[4]) {
+                btnText += textArray[i] + " ";   
             } else {
-                btn += text[i]; 
-            }
-            
+                btnText += textArray[i];
+            }   
         }
-        btn += "</button>"
-        BetterInnerHTML(document.querySelector("#spanBtn"), btn, true);
+        btnText += "</span>";
+        BetterInnerHTML(btn, btnText, true);
     }
 
     function btnClick() {
@@ -149,11 +153,11 @@ var rps = (function() {
     function init() {
         var masterScript = rps();
         var element = window;
-        element.addEventListener("load", function() {
-            masterScript.start();
+        element.addEventListener("load", function(){
+            masterScript.load();
         }, false);
         element = null;
-        var element = document.querySelector("#spanBtn");
+        var element = document.querySelector("#btn");
         element.addEventListener("click", function() {
             masterScript.btnClick();
         }, false);
@@ -163,7 +167,7 @@ var rps = (function() {
     return function returnAPI(api) {
         return {
             initiate: init,
-            start: setup,
+            load: setup,
             btnClick: btnClick
         };
     };
