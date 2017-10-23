@@ -37,7 +37,7 @@ var rps = (function() {
                 alert(loseMsg)
                 break;
         }
-        console.log('d ' + isPlayerWinner, isComputerWinner)
+        console.log('d', isPlayerWinner, isComputerWinner)
     }
 
     function playGame(numOfRounds) {
@@ -45,7 +45,7 @@ var rps = (function() {
             if (isPlayerWinner || isComputerWinner) {
                 return;
             }
-            console.log('b ' + isPlayerWinner, isComputerWinner)
+            console.log('b', isPlayerWinner, isComputerWinner)
             var player = playerGuess();
             var computer = computerGuess();
             var result = compareGuesses(player, computer, 1);
@@ -99,7 +99,19 @@ var rps = (function() {
 
     function compareGuesses(guess1, guess2, points) {
         // Create an alert message detailing the results
-        var output = "Player chose: " + guess1.toLowerCase() + " and the computer chose: " + guess2.toLowerCase() + "! \n";
+        var output;
+        output = "Player chose: " + 
+                guess1.toLowerCase() + 
+                " and the computer chose: " + 
+                guess2.toLowerCase() + 
+                "! \n";
+
+        var cpuWin = "\nComputer wins the round! \n\n";
+        var usrWin = "\nPlayer wins the round! \n\n";
+
+        var usrScore = "Player Score: ";
+        var cpuScore = ", Computer Score: ";
+
         switch (true) {
             case guess1.toLowerCase() === guess2.toLowerCase(): // if tie
                 playerScore += 0;
@@ -109,13 +121,13 @@ var rps = (function() {
                 break;
             case rules[guess1.toLowerCase()] == guess2.toLowerCase(): // if user wins
                 playerScore += points;
-                alert(output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+                alert(output + usrWin + usrScore + playerScore + cpuScore + computerScore);
                 determineWinner();
                 return 1;
                 break;
             case rules[guess2.toLowerCase()] == guess1.toLowerCase(): // if computer wins
                 computerScore += points;
-                alert(output + "\nComputer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+                alert(output + cpuWin + usrScore + playerScore + cpuScore + computerScore);
                 determineWinner();
                 return 2;
                 break;
@@ -141,4 +153,5 @@ var rps = (function() {
             startMsg: startGame
         };
     };
+
 }());
