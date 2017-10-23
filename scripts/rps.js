@@ -32,7 +32,7 @@ var rps = (function() {
                 numOfRounds--;
             }
             console.log(playerScore, computerScore)
-
+            console.log("num of rounds:", numOfRounds)
         } while (numOfRounds > 0)
 
 
@@ -41,7 +41,7 @@ var rps = (function() {
         var loseMsg = "The computer has " + computerScore + " points compared to the player's " + playerScore + " points. So the computer wins!";
         var tieMsg = "It's a tie!";
 
-        while (playerScore + computerScore < 3) {
+        do {
             if (playerScore > computerScore) {
                 alert(winMsg);
             } else if (playerScore < computerScore) {
@@ -49,7 +49,7 @@ var rps = (function() {
             } else {
               alert(tieMsg);
             }
-        }
+        } while (playerScore + computerScore < 3);
         clearScores();
 
     }
