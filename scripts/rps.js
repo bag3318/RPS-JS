@@ -3,7 +3,6 @@ var rps = (function() {
     var playerScore = 0;
     var computerScore = 0;
 
-
     var gestures = ["rock", "paper", "scissors"];
     var rules = {
         "rock": "scissors",
@@ -13,7 +12,7 @@ var rps = (function() {
 
     var isPlayerWinner = false;
     var isComputerWinner = false;
-    
+
     var welcomeMsg = "Welcome the good ol' fashion game of Rock, Paper, Scissors! Remember the rules are simple!\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\nClick cancel if you don\'t wanna play.";
 
     function startGame(msg) {
@@ -56,8 +55,6 @@ var rps = (function() {
         } while (numOfRounds > 0 && (!isPlayerWinner || !isComputerWinner))
     }
 
-
-
     function playerGuess() {
         var playerChoice = prompt("Choose rock, paper, or scissors.");
         if (gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
@@ -98,7 +95,6 @@ var rps = (function() {
                 return gestures[2];
                 break;
         }
-
     }
 
 
