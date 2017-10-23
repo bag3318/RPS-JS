@@ -101,19 +101,19 @@ var rps = (function() {
         // Create an alert message detailing the results
         var output = "Player chose: " + guess1.toLowerCase() + " and the computer chose: " + guess2.toLowerCase() + "! \n";
         switch (true) {
-            case guess1 === guess2: // if tie
+            case guess1.toLowerCase() === guess2.toLowerCase(): // if tie
                 playerScore += 0;
                 computerScore += 0;
                 alert(output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
                 return 0;
                 break;
-            case rules[guess1] == guess2: // if user wins
+            case rules[guess1.toLowerCase()] == guess2.toLowerCase(): // if user wins
                 playerScore += points;
                 alert(output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
                 determineWinner();
                 return 1;
                 break;
-            case rules[guess2] == guess1: // if computer wins
+            case rules[guess2.toLowerCase()] == guess1.toLowerCase(): // if computer wins
                 computerScore += points;
                 alert(output + "\nComputer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
                 determineWinner();
