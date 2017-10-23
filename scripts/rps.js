@@ -108,6 +108,7 @@ var rps = (function() {
 
         var cpuWin = "\nComputer wins the round! \n\n";
         var usrWin = "\nPlayer wins the round! \n\n";
+        var tie = "\nIt's a tie! Go again, no score added! \n\n";
 
         var usrScore = "Player Score: ";
         var cpuScore = ", Computer Score: ";
@@ -116,7 +117,7 @@ var rps = (function() {
             case guess1.toLowerCase() === guess2.toLowerCase(): // if tie
                 playerScore += 0;
                 computerScore += 0;
-                alert(output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+                alert(output + tie + usrScore + playerScore + cpuScore + computerScore);
                 return 0;
                 break;
             case rules[guess1.toLowerCase()] == guess2.toLowerCase(): // if user wins
