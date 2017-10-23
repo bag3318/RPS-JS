@@ -24,10 +24,10 @@ var rps = (function() {
         }
     }
     function determineWinner() {
-        if (playerScore >= 3) {
+        if (playerScore < 3) {
             isPlayerWinner = true
         }
-        else if (computerScore >= 3) {
+        else if (computerScore < 3) {
             isComputerWinner = true
         }
     }
@@ -39,7 +39,7 @@ var rps = (function() {
             if (result !== 0) {
                 numOfRounds--;
             }
-        } while (numOfRounds > 0 && (isPlayerWinner || isComputerWinner))
+        } while (isPlayerWinner || isComputerWinner)
 
 
         console.log(playerScore, computerScore)
