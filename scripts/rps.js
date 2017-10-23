@@ -126,42 +126,44 @@ var rps = (function() {
         computerScore = 0;
     }
 
+    function setup() {
+        var btn = "<button>";
+        var text = ["Play", "Rock", "Paper", "Scissors", "!"];
+        var i;
+        for (i = 0; i < text.length; i++) {
+            if (text[i] !== text[3]) {
+                btn += text[i] + " ";
+            } else {
+                btn += text[i]; 
+            }
+            
+        }
+        btn += "</button>"
+        BetterInnerHTML(document.querySelector("#spanBtn"), btn, true);
+    }
+
     function btnClick() {
         startGame(welcomeMsg);
     }
 
-    function setup() {
-        var text = ["Play", "Rock", "Paper", "Scissors", "!"];
-        btnSpan = "<button>";
-        for (i = 0; i < text.length; i++) {
-            if (text[i] != text[3]) {
-                btnSpan += text[i] + " ";
-            } else {
-                btnSpan += text[i]
-            }
-        }
-        btnSpan += "</button>";
-        BetterInnerHTML(document.querySelector("#btnSpan"), btnSpan, false)
-    }
-
     function init() {
-        var element = document.querySelector("#btn");
-        element.addEventListener("click", function() {
-            var masterScript = rps();
-            masterScript.btnClick();
-        }, false);
-        element = null;
+        var masterScript = rps();
         var element = window;
         element.addEventListener("load", function() {
-            var masterScript = rps();
-            masterScript = setup();
+            masterScript.start();
         }, false);
+        element = null;
+        var element = document.querySelector("#spanBtn");
+        element.addEventListener("click", function() {
+            masterScript.btnClick();
+        }, false);
+
     }
 
     return function returnAPI(api) {
         return {
             initiate: init,
-            setup: setup,
+            start: setup,
             btnClick: btnClick
         };
     };
