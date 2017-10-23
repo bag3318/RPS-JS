@@ -33,7 +33,7 @@ var rps = (function() {
             }
             console.log(playerScore, computerScore)
 
-        } while (playerScore + computerScore < 3)
+        } while (numOfRounds > 0)
 
 
         console.log(playerScore, computerScore)
