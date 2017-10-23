@@ -31,7 +31,8 @@ var rps = (function() {
             if (result !== 0) {
                 numOfRounds--;
             }
-        } while (numOfRounds > 0 && (playerScore < 3 || computerScore < 3));
+        } while (numOfRounds > 0 && (playerScore + computerScore < 3));
+
 
         var winMsg = "The player has " + playerScore + " points compared to the computer's " + computerScore + " points. So the player wins!";
         var loseMsg = "The computer has " + computerScore + " points compared to the player's " + playerScore + " points. So the computer wins!";
@@ -84,18 +85,18 @@ var rps = (function() {
           case guess1 === guess2:
             playerScore += 0;
             computerScore += 0;
-            alert(output + "You and the computer guessed the same thing! Go again, no score added! " + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+            alert(output + "\nYou and the computer guessed the same thing! Go again, no score added! \n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
             return 0;
             break;
           case rules[guess1] == guess2:
             playerScore += points;
-            alert(output + "Player wins the round! " + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
-            return 1;
+            alert(output + "\nPlayer wins the round! \n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+            // return 1;
             break;
           case rules[guess2] == guess1:
             computerScore += points;
-            alert(output + "Computer wins the round! " + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
-            return 2;
+            alert(output + "\nComputer wins the round! \n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+            // return 2;
             break;
         }
 
