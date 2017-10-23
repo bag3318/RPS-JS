@@ -100,13 +100,13 @@ var rps = (function() {
           case rules[guess1] == guess2:
             playerScore += points;
             alert(output + "\nPlayer wins the round! \n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
-            console.log(determineWinner())
+            console.log(isPlayerWinner)
             return 1;
             break;
           case rules[guess2] == guess1:
             computerScore += points;
             alert(output + "\nComputer wins the round! \n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
-            console.log(determineWinner())
+            console.log(isComputerWinner)
             return 2;
             break;
         }
