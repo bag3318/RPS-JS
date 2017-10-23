@@ -130,17 +130,39 @@ var rps = (function() {
         startGame(welcomeMsg);
     }
 
+    function setup() {
+        
+
+        var text = ["Play", "Rock", "Paper", "Scissors", "!"];
+        btn = "<button>";
+        for (i = 0; i < text.length; i++) {
+            if (text[i] != text[3]) {
+                btn += text[i] + " ";
+            } else {
+                btn += text[i]
+            }
+        }
+        btn += "</button>";
+        BetterInnerHTML(document.querySelector("#btn"), btn, false)
+    }
     function init() {
         var element = document.querySelector("#btn");
         element.addEventListener("click", function() {
             var masterScript = rps();
             masterScript.btnClick();
         }, false);
+        element = null;
+        var element = window;
+        element.addEventListener("load", function() {
+            var masterScript = rps();
+            masterScript = setup()
+        });
     }
 
     return function returnAPI(api) {
         return {
             initiate: init,
+            setup: setup,
             btnClick: btnClick
         };
     };
