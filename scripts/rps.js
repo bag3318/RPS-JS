@@ -98,7 +98,6 @@ var rps = (function() {
     }
 
     function compareGuesses(guess1, guess2, points) {
-        // Create an alert message detailing the results
         var output;
         output = "Player chose: "            + 
                  guess1.toLowerCase()        + 
