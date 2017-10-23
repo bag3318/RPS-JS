@@ -126,39 +126,38 @@ var rps = (function() {
         computerScore = 0;
     }
 
-    function setup() {
-
-        var btn = document.querySelector("#btn");
-
-        var textStr = "Play Rock Paper Scissors !";
-        var textArray = textStr.split(" ");
-
-        console.log(textArray);
-
-        var btnText = "<span>";
-
-        var i;
-        for (i = 0; i < textArray.length; i++) {
-            if (textArray[i] !== textArray[3] && textArray[i] !== textArray[4]) {
-                btnText += textArray[i] + " ";   
-            } else {
-                btnText += textArray[i];
-            }   
-        }
-
-        btnText += "</span>";
-        BetterInnerHTML(btn, btnText, true);
-    }
-
     function btnClick() {
         startGame(welcomeMsg);
+    }
+    function setup() {
+
+        var textStr = "Play Rock Paper Scissors !";
+        var arrayText = textStr.split(" ");
+
+        console.log(arrayText);
+
+        var btn = document.querySelector("#btn");
+        var span = "<span>";
+
+        var i;
+        for (i = 0; i < arrayText.length; i++) {
+            if (arrayText[i] !== arrayText[3] && arrayText[i] !== arrayText[4]) {
+                span += arrayText[i] + " ";
+            }
+            else {
+                span += arrayText[i];
+            }
+        }
+
+        span += "</span>";
+        BetterInnerHTML(btn, span, true);
     }
 
     function init() {
         var masterScript = rps();
         var element = window;
-        element.addEventListener("load", function(){
-            masterScript.load();
+        element.addEventListener("load", function() {
+            masterScript.load()
         }, false);
         element = null;
         var element = document.querySelector("#btn");
