@@ -154,7 +154,7 @@ var rps = (function() {
         var element = window;
         element.addEventListener("load", function() {
             var masterScript = rps();
-            masterScript = setup()
+            masterScript = setup();
         });
     }
 
