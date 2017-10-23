@@ -115,7 +115,6 @@ var rps = (function() {
                 alert(output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
                 return 0;
                 break;
-
             case rules[guess1] == guess2: // if user wins
                 playerScore += points;
                 alert(output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
@@ -131,14 +130,10 @@ var rps = (function() {
         }
     }
 
-
-
     function clearScores() {
         playerScore = 0;
         computerScore = 0;
     }
-
-
 
     function init() {
         var element = window;
