@@ -126,18 +126,22 @@ var rps = (function() {
         computerScore = 0;
     }
 
+    function btnClick() {
+        startGame(welcomeMsg);
+    }
+
     function init() {
-        var element = window;
-        element.addEventListener("load", function() {
+        var element = document.querySelector("#btn");
+        element.addEventListener("click", function() {
             var masterScript = rps();
-            masterScript.startMsg(welcomeMsg);
+            masterScript.btnClick();
         }, false);
     }
 
     return function returnAPI(api) {
         return {
             initiate: init,
-            startMsg: startGame
+            btnClick: btnClick
         };
     };
 }());
