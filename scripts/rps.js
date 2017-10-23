@@ -17,7 +17,7 @@ var rps = (function() {
     function welcomeMessage(msg) {
         var ready = confirm(msg);
         if (ready == true) {
-          playGame(3);
+          playGame(2);
         }
         else {
           alert("sorry, maybe next time.");
@@ -39,7 +39,7 @@ var rps = (function() {
             if (result !== 0) {
                 numOfRounds--;
             }
-        } while (isPlayerWinner || isComputerWinner)
+        } while (numOfRounds > 0 && (!isPlayerWinner || !isComputerWinner))
 
 
         console.log(playerScore, computerScore)
