@@ -24,10 +24,10 @@ var rps = (function() {
         }
     }
     function determineWinner() {
-        if (playerScore < 3) {
+        if (playerScore >= 2) {
             isPlayerWinner = true
         }
-        else if (computerScore < 3) {
+        else if (computerScore >= 2) {
             isComputerWinner = true
         }
     }
