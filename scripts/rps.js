@@ -145,7 +145,7 @@ var rps = (function() {
                 btnText += textArray[i];
             }   
         }
-        
+
         btnText += "</span>";
         BetterInnerHTML(btn, btnText, true);
     }
@@ -165,7 +165,6 @@ var rps = (function() {
         element.addEventListener("click", function() {
             masterScript.btnClick();
         }, false);
-
     }
 
     return function returnAPI(api) {
