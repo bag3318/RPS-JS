@@ -4,7 +4,8 @@ var rps = (function() {
     var computerScore = 0;
 
     var gestures = ["rock", "paper", "scissors"];
-
+    var isPlayerWinner = false;
+    var isComputerWinner = false;
     var welcomeMsg = "Welcome the good ol' fashion game of Rock, Paper, Scissors! Remember the rules are simple!\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\nClick cancel if you don\'t wanna play.";
 
     var rules = {
@@ -22,7 +23,14 @@ var rps = (function() {
           alert("sorry, maybe next time.");
         }
     }
-
+    function determineWinner() {
+        if (playerScore >= 3) {
+            isPlayerWinner = true
+        }
+        else if (computerScore >= 3) {
+            isComputerWinner = true
+        }
+    }
     function playGame(numOfRounds) {
         do {
             var player = playerGuess();
@@ -31,9 +39,7 @@ var rps = (function() {
             if (result !== 0) {
                 numOfRounds--;
             }
-            console.log(playerScore, computerScore)
-            console.log("num of rounds:", numOfRounds)
-        } while (numOfRounds > 0)
+        } while (numOfRounds > 0 && (isPlayerWinner || isComputerWinner))
 
 
         console.log(playerScore, computerScore)
@@ -41,15 +47,14 @@ var rps = (function() {
         var loseMsg = "The computer has " + computerScore + " points compared to the player's " + playerScore + " points. So the computer wins!";
         var tieMsg = "It's a tie!";
 
-        do {
-            if (playerScore > computerScore) {
-                alert(winMsg);
-            } else if (playerScore < computerScore) {
-              alert(loseMsg);
-            } else {
-              alert(tieMsg);
-            }
-        } while (playerScore + computerScore < 3);
+        if (playerScore > computerScore) {
+            alert(winMsg);
+        } else if (playerScore < computerScore) {
+          alert(loseMsg);
+        } else {
+          alert(tieMsg);
+        }
+
         clearScores();
 
     }
@@ -89,17 +94,19 @@ var rps = (function() {
           case guess1 === guess2:
             playerScore += 0;
             computerScore += 0;
-            alert(output + "\nYou and the computer guessed the same thing! Go again, no score added! \n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+            alert(output + "\nYou and the computer guessed the same thing! Go again, no score added! \n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore); 
             return 0;
             break;
           case rules[guess1] == guess2:
             playerScore += points;
             alert(output + "\nPlayer wins the round! \n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+            determineWinner()
             return 1;
             break;
           case rules[guess2] == guess1:
             computerScore += points;
             alert(output + "\nComputer wins the round! \n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+            determineWinner()
             return 2;
             break;
         }
