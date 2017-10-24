@@ -27,15 +27,17 @@ var rps = (function() {
     }
 
     function determineWinner() {
+        var winMsg = "The player has " + playerScore + " points compared to the computer's " + computerScore + " points. So the player wins!";
+        var loseMsg = "The computer has " + computerScore + " points compared to the player's " + playerScore + " points. So the computer wins!";
         switch(true) {
             case playerScore >= 2:
                 isPlayerWinner = true;
-                var winMsg = "The player has " + playerScore + " points compared to the computer's " + computerScore + " points. So the player wins!";
+                
                 alert(winMsg);
                 break;
             case computerScore >= 2:
                 isComputerWinner = true;
-                var loseMsg = "The computer has " + computerScore + " points compared to the player's " + playerScore + " points. So the computer wins!";
+                
                 alert(loseMsg);
                 break;
         }
