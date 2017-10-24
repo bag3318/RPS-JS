@@ -83,21 +83,6 @@ var rps = (function() { // define a master function variable named `rps`
     }
 
     function computerGuess() {
-
-       /*      
-        * var choice = Math.random();
-        * switch (true) {
-        * case choice >= 0 && choice <= 0.33:
-        *   return gestures[0];
-        *   break;
-        * case choice <= 0.66 && choice > 0.33:
-        *   return gestures[1];
-        *   break;
-        * case choice > 0.66 && choice <= 1:
-        *   return gestures[2]
-        *   break;
-        * }
-        */
         // make 3 numbers for computer to randomly use (#'s are whole integers: 0, 1, & 2)
         var cpuChoice = Math.floor(Math.random() * 3);
 
@@ -181,13 +166,6 @@ var rps = (function() { // define a master function variable named `rps`
                     btnHTML += rpsArray[i];
                     break; 
             }
-            /*            
-             * if (rpsArray[i] !== rpsArray[3] && rpsArray[i] !== rpsArray[4]) {
-             *   btnHTML += rpsArray[i] + " "; 
-             * } else {
-             *   btnHTML += rpsArray[i];
-             * }
-             */
         }
 
         /*        
