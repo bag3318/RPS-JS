@@ -16,16 +16,21 @@ To Play
 
 --------
 
-##### <sub>1</sub>: How to download repository
+##### 1: How to download repository
 1. Click the `Clone or Download` button
 2. Select the `Download ZIP` button
 3. Save it to wherever you'd like
 
-##### <sub>2</sub>: How to extract the file
+##### 2: How to extract the file
 ###### For Windows
 1. Right click the `RPS-JS.zip` file in the `File Explorer`
 2. Select `Extract All` from the context menu
 3. Check the box and click `Extract`
+
+###### For Mac
+1. Double click the `RPS-JS.zip` file
+
+--------
 
 > __*Enjoy!*__
 
