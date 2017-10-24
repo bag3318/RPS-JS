@@ -135,7 +135,7 @@ var rps = (function() { // define a master function variable named `rps`
         /*
          * In this function we take a string (defined in the `init` function) and make it into an array list.
          * We do this by splitting the string at each space.
-         * Then we push an `!` at the end of the array to avoid using `regex` while splitting
+         * Then we push an `!` at the end of the array to avoid using a regex while splitting
          */
         
         var rpsStr = rpsMsg;
