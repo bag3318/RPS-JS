@@ -155,12 +155,12 @@ var rps = (function() {
                     break; 
             }
             /*            
-            if (rpsArray[i] !== rpsArray[3] && rpsArray[i] !== rpsArray[4]) {
-                btnHTML += rpsArray[i] + " "; 
-            } else {
-                btnHTML += rpsArray[i];
-            }
-            */
+             * if (rpsArray[i] !== rpsArray[3] && rpsArray[i] !== rpsArray[4]) {
+             *   btnHTML += rpsArray[i] + " "; 
+             * } else {
+             *   btnHTML += rpsArray[i];
+             * }
+             */
         }
 
         btnHTML += "</span>";
