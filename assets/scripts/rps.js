@@ -72,7 +72,7 @@ var rps = (function() {
 
     function computerGuess() {
 
-       /*      
+        /*      
         * var choice = Math.random();
         * switch (true) {
         * case choice >= 0 && choice <= 0.33:
