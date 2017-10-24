@@ -136,8 +136,9 @@ var rps = (function() {
 
     function setup() {
 
-        var textStr = "Play Rock Paper Scissors !";
+        var textStr = "Play Rock Paper Scissors";
         var arrayText = textStr.split(" ");
+        arrayText.push("!");
 
         console.log(arrayText);
 
