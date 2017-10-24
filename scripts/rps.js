@@ -40,7 +40,7 @@ var rps = (function() {
                 break;
         }
         console.log('d ' + isPlayerWinner, isComputerWinner);
-    }.
+    }
 
     function playGame(numOfRounds) {
         do {
