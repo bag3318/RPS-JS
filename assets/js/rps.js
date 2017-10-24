@@ -55,6 +55,7 @@ var rps = (function() {
     }
 
     function playGame(numOfRounds) {
+        // create do while loop for game
         do {
             if (isPlayerWinner || isComputerWinner) {
                 return;
