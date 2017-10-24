@@ -54,7 +54,7 @@ var rps = (function() {
             if (result !== 0) {
                 numOfRounds--;
             }
-        } while (numOfRounds > 0 && (!isPlayerWinner || !isComputerWinner))
+        } while (numOfRounds > 0 && (!isPlayerWinner || !isComputerWinner));
     }
 
     function playerGuess() {
@@ -181,5 +181,5 @@ var rps = (function() {
             btnClick: btnClick
         };
     };
-    
+
 }());
