@@ -4,12 +4,15 @@ var rps = (function() {
     var computerScore = 0;
 
     // create new array as object
-    var gestures = new Array("rock", "paper", "scissors");
-    var rules = {
-        "rock": "scissors",
-        "paper": "rock",
-        "scissors": "paper"
-    };
+    var gestures = new Array();
+    gestures[0] = "rock";
+    gestures[1] = "paper";
+    gestures[2] = "scissors";
+    // create new object as object
+    var rules = new Object();
+    rules.rock = gestures[2];
+    rules.paper = gestures[0];
+    rules.scissors = gestures[1];
 
     console.log("gestures:", gestures);
     console.log("rules:", rules);
