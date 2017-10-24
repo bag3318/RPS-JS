@@ -3,7 +3,7 @@
 Rock Paper Scissors
 ===================
 
-This web app is very simple, it is a **rock paper scissors** game programmed in JavaScript.
+This web app is very simple: it is a **rock paper scissors** game programmed in JavaScript.
 
 ## To Play
 
