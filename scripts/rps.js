@@ -12,7 +12,6 @@ var rps = (function() {
 
     console.log(gestures);
 
-
     var isPlayerWinner = false;
     var isComputerWinner = false;
 
