@@ -129,7 +129,7 @@ var rps = (function() {
     }
 
     function setup(rpsMsg) {
-        // 
+        
         var rpsStr = rpsMsg;
         var rpsArray = rpsStr.split(" ");
         rpsArray.push("!");
@@ -141,7 +141,7 @@ var rps = (function() {
         var btnHTML = "<span>";
 
         var i;
-        for (i =0; i < rpsArray.length; i++) {
+        for (i = 0; i < rpsArray.length; i++) {
             if (rpsArray[i] !== rpsArray[3] && rpsArray[i] !== rpsArray[4]) {
                 btnHTML += rpsArray[i] + " ";
             }
@@ -151,7 +151,7 @@ var rps = (function() {
         }
 
         btnHTML += "</span>";
-        
+
         BetterInnerHTML(btn, btnHTML, true);
 
     }
