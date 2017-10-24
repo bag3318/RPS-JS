@@ -38,6 +38,7 @@ var rps = (function() {
                 isComputerWinner = true;
                 alert(loseMsg);
                 break;
+            // there will never be a tie for the final outcome
         }
         console.log('d ' + isPlayerWinner, isComputerWinner);
     }
