@@ -148,7 +148,7 @@ var rps = (function() {
 
         var btn = document.querySelector("#btn");
 
-        var btnHTML = "<span>";
+        var btnHTML = "";
 
         var i;
         for (i = 0; i < rpsArray.length; i++) {
@@ -168,8 +168,6 @@ var rps = (function() {
              * }
              */
         }
-
-        btnHTML += "</span>";
 
         BetterInnerHTML(btn, btnHTML, true);
 
