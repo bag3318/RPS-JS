@@ -3,12 +3,12 @@ var rps = (function() {
     var playerScore = 0;
     var computerScore = 0;
 
-    // create new array as object
+    // create new array (list) as object
     var gestures = new Array();
     gestures[0] = "rock";
     gestures[1] = "paper";
     gestures[2] = "scissors";
-    // define new object as object
+    // define new object (dictionary) as object
     var rules = new Object();
     rules.rock = gestures[2];
     rules.paper = gestures[0];
