@@ -143,12 +143,21 @@ var rps = (function() {
 
         var i;
         for (i = 0; i < rpsArray.length; i++) {
-            if (rpsArray[i] !== rpsArray[3] && rpsArray[i] !== rpsArray[4]) {
-                btnHTML += rpsArray[i] + " ";
+            switch (true) {
+                case rpsArray[i] !== rpsArray[3] && rpsArray[i] !== rpsArray[4]:
+                    btnHTML += rpsArray[i] + " "; 
+                    break;
+                default: 
+                    btnHTML += rpsArray[i];
+                    break; 
             }
-            else {
+            /*            
+            if (rpsArray[i] !== rpsArray[3] && rpsArray[i] !== rpsArray[4]) {
+                btnHTML += rpsArray[i] + " "; 
+            } else {
                 btnHTML += rpsArray[i];
             }
+            */
         }
 
         btnHTML += "</span>";
