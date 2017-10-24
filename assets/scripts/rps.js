@@ -3,6 +3,7 @@ var rps = (function() {
     var playerScore = 0;
     var computerScore = 0;
 
+    // create new array as object
     var gestures = new Array("rock", "paper", "scissors");
     var rules = {
         "rock": "scissors",
