@@ -22,6 +22,7 @@ How To Play
 3. Save it to wherever you'd like
 
 ##### 2: How To Extract The File
+
 ###### For Windows
 1. Right click the `RPS-JS.zip` file in the `File Explorer`
 2. Select `Extract All` from the context menu
