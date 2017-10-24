@@ -32,12 +32,10 @@ var rps = (function() {
         switch(true) {
             case playerScore >= 2:
                 isPlayerWinner = true;
-                
                 alert(winMsg);
                 break;
             case computerScore >= 2:
                 isComputerWinner = true;
-                
                 alert(loseMsg);
                 break;
         }
