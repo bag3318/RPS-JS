@@ -39,15 +39,15 @@ var rps = (function() {
                 alert(loseMsg)
                 break;
         }
-        console.log('d ' + isPlayerWinner, isComputerWinner)
-    }
+        console.log('d ' + isPlayerWinner, isComputerWinner);
+    }.
 
     function playGame(numOfRounds) {
         do {
             if (isPlayerWinner || isComputerWinner) {
                 return;
             }
-            console.log('b', isPlayerWinner, isComputerWinner)
+            console.log('b', isPlayerWinner, isComputerWinner);
             var player = playerGuess();
             var computer = computerGuess();
             var result = compareGuesses(player, computer, 1);
