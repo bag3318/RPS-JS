@@ -124,12 +124,6 @@ var rps = (function() { // define a master function variable named `rps`
         }
     }
 
-    // create functions to clear scores after game is completed
-    function clearScores() {
-        playerScore = 0;
-        computerScore = 0;
-    }
-
     function setup(rpsMsg) {
         
         /*
