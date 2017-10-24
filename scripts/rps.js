@@ -151,6 +151,7 @@ var rps = (function() {
         }
 
         btnHTML += "</span>";
+        
         BetterInnerHTML(btn, btnHTML, true);
 
     }
