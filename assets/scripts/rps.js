@@ -19,11 +19,11 @@ var rps = (function() {
 
     function startGame(msg) {
         var ready = confirm(msg);
-        if (ready == true) {
+        if (ready == true) { // if player chooses "OK"
             playGame(3);
-        } else if (ready == false) {
+        } else if (ready == false) { // else if player chooses "Cancel"
             alert("Sorry you don't wanna play, maybe next time! :)");
-        } else {
+        } else { // else...
             return "error!";
         }
     }
