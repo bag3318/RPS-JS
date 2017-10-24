@@ -14,6 +14,7 @@ var rps = (function() {
     rules.paper = gestures[0];
     rules.scissors = gestures[1];
 
+    console.log(typeof gestures, typeof rules);
     console.log("gestures:", gestures);
     console.log("rules:", rules);
 
@@ -142,6 +143,7 @@ var rps = (function() {
         var rpsArray = rpsStr.split(" ");
         rpsArray.push("!");
 
+        console.log(typeof rpsArray);
         console.log(rpsArray);
 
         var btn = document.querySelector("#btn");
