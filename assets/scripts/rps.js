@@ -21,8 +21,10 @@ var rps = (function() {
         var ready = confirm(msg);
         if (ready == true) {
             playGame(3);
-        } else {
+        } else if (ready == false) {
             alert("Sorry you don't wanna play, maybe next time! :)");
+        } else {
+            return "error!";
         }
     }
 
