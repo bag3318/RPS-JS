@@ -1,7 +1,7 @@
 var rps = (function() {
 
-    var playerScore = Number(0);
-    var computerScore = Number(0);
+    var playerScore = 0;
+    var computerScore = 0;
 
     // create new array (list) as object
     var gestures = new Array();
@@ -18,10 +18,10 @@ var rps = (function() {
     console.log("gestures:", gestures);
     console.log("rules:", rules);
 
-    var isPlayerWinner = Boolean(false);
-    var isComputerWinner = Boolean(false);
+    var isPlayerWinner = false;
+    var isComputerWinner = false;
 
-    var welcomeMsg = String("Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.");
+    var welcomeMsg = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
 
     function startGame(msg) {
         var ready = confirm(msg);
