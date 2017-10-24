@@ -191,7 +191,7 @@ var rps = (function() {
         }, false);
     }
 
-    return function returnAPI(api) {
+    return function API() {
         return {
             initiate: init,
             load: setup,
