@@ -1,5 +1,6 @@
 var rps = (function() {
 
+    // create initial scores for player and computer
     var playerScore = 0;
     var computerScore = 0;
 
@@ -18,12 +19,14 @@ var rps = (function() {
     console.log("gestures:", gestures);
     console.log("rules:", rules);
 
+    // define booleans for winner 
     var isPlayerWinner = false;
     var isComputerWinner = false;
 
     var welcomeMsg = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
 
     function startGame(msg) {
+        // ask the use if they want to play
         var ready = confirm(msg);
         if (ready == true) { // if player chooses "OK"
             playGame(3);
@@ -191,6 +194,7 @@ var rps = (function() {
         }, false);
     }
 
+    // define API for script
     return function API() {
         return {
             initiate: init,
