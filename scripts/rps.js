@@ -70,20 +70,20 @@ var rps = (function() {
 
     function computerGuess() {
 
-        /*      
-         * var choice = Math.random();
-         * switch (true) {
-         * case choice >= 0 && choice <= 0.33:
-         *   return gestures[0];
-         *   break;
-         * case choice <= 0.66 && choice > 0.33:
-         *   return gestures[1];
-         *   break;
-         * case choice > 0.66 && choice <= 1:
-         *   return gestures[2]
-         *   break;
-         * }
-         */
+       /*      
+        * var choice = Math.random();
+        * switch (true) {
+        * case choice >= 0 && choice <= 0.33:
+        *   return gestures[0];
+        *   break;
+        * case choice <= 0.66 && choice > 0.33:
+        *   return gestures[1];
+        *   break;
+        * case choice > 0.66 && choice <= 1:
+        *   return gestures[2]
+        *   break;
+        * }
+        */
 
         var cpuChoice = Math.floor(Math.random() * 3);
 
