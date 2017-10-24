@@ -8,7 +8,7 @@ var rps = (function() {
     gestures[0] = "rock";
     gestures[1] = "paper";
     gestures[2] = "scissors";
-    // create new object as object
+    // define new object as object
     var rules = new Object();
     rules.rock = gestures[2];
     rules.paper = gestures[0];
