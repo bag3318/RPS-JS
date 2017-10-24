@@ -12,6 +12,7 @@ var rps = (function() {
     };
 
     console.log("gestures:", gestures);
+    console.log("rules:", rules);
 
     var isPlayerWinner = false;
     var isComputerWinner = false;
