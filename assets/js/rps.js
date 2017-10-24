@@ -149,6 +149,7 @@ var rps = (function() { // define a master function variable named `rps`
          * Then we need to add them to the `btnHTML` string,
          *  which will then be inserted into the `button` element with the `btn` ID.
          */
+        
         var i;
         for (i = 0; i < rpsArray.length; i++) {
             switch (true) {
