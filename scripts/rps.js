@@ -13,7 +13,7 @@ var rps = (function() {
     var isPlayerWinner = false;
     var isComputerWinner = false;
 
-    var welcomeMsg = "Welcome the good ol' fashion game of Rock, Paper, Scissors! Remember the rules are simple!\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\nClick cancel if you don\'t wanna play.";
+    var welcomeMsg = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
 
     function startGame(msg) {
         var ready = confirm(msg);
@@ -153,7 +153,7 @@ var rps = (function() {
 
         span += "</span>";
         BetterInnerHTML(btn, span, true);
-        
+
     }
 
     function init() {
