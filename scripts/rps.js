@@ -10,7 +10,7 @@ var rps = (function() {
         "scissors": "paper"
     };
 
-    console.log(gestures);
+    console.log("gestures:", gestures);
 
     var isPlayerWinner = false;
     var isComputerWinner = false;
