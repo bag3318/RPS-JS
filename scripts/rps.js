@@ -4,14 +4,14 @@ var rps = (function() {
     var computerScore = 0;
 
     var gestures = new Array("rock", "paper", "scissors");
-
-    console.log(gestures);
-
     var rules = {
         "rock": "scissors",
         "paper": "rock",
         "scissors": "paper"
     };
+
+    console.log(gestures);
+
 
     var isPlayerWinner = false;
     var isComputerWinner = false;
