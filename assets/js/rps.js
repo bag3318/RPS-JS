@@ -174,7 +174,7 @@ var rps = (function() { // define a master function variable named `rps`
          * http://www.optimalworks.net/blog/2007/web-development/javascript/innerhtml-alternative
          * download page:
          * http://www.optimalworks.net/resources/betterinnerhtml/
-        */
+         */
         BetterInnerHTML(btn, btnHTML, true);
 
     }
