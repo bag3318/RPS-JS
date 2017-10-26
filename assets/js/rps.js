@@ -37,7 +37,7 @@ var rps = (function() { // define a master function variable named `rps`
         } else if (ready == false) { // else if player chooses "Cancel"
             alert("Sorry you don't wanna play, maybe next time! :)");
         } else { // else...
-            return "error!";
+            alert("error!");
         }
     }
 
