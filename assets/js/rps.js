@@ -90,15 +90,15 @@ var rps = (function() { // define a master function variable named `rps`
         var cpuChoice = Math.floor((Math.random() * 3) + 1);
 
         switch (cpuChoice) {
-            case 1:
-                return gestures[0];
-                break;
-            case 2:
-                return gestures[1];
-                break;
-            case 3:
-                return gestures[2];
-                break;
+          case 1:
+            return gestures[0]; // rock
+            break;
+          case 2:
+            return gestures[1]; // paper
+            break;
+          case 3:
+            return gestures[2]; // scissors
+            break;
         }
 
     }
