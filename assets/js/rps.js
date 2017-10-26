@@ -31,9 +31,8 @@ var rps = (function() { // define a master function variable named `rps`
      */
 
 
-    console.log(typeof gestures, typeof rules);
-    console.log("gestures:", gestures);
-    console.log("rules:", rules);
+    console.log("gestures:", gestures, typeof gestures);
+    console.log("rules:", rules, typeof rules);
 
     // define booleans for winner
     var isPlayerWinner = false;
@@ -161,8 +160,7 @@ var rps = (function() { // define a master function variable named `rps`
         var rpsArray = rpsStr.split(" ");
         rpsArray.push("!");
 
-        console.log(typeof rpsArray);
-        console.log(rpsArray);
+        console.log(rpsArray, typeof rpsArray);
 
         var btn = document.querySelector("#btn");
 
