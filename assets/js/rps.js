@@ -156,7 +156,7 @@ var rps = (function() { // define a master function variable named `rps`
          *  which will then be inserted into the `button` element with the `btn` ID.
          */
 
-         // loop through the array
+        // loop through the array
         var i;
         for (i = 0; i < rpsArray.length; i++) {
             switch (true) {
