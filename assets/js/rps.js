@@ -85,6 +85,7 @@ var rps = (function() { // define a master function variable named `rps`
     }
 
     function computerGuess() {
+      
         // make 3 numbers for computer to randomly use (#'s are whole integers: 0, 1, & 2)
         var cpuChoice = Math.floor((Math.random() * 3) + 1);
 
@@ -99,6 +100,7 @@ var rps = (function() { // define a master function variable named `rps`
                 return gestures[2];
                 break;
         }
+
     }
 
     function compareGuesses(guess1, guess2, points) {
