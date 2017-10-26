@@ -207,7 +207,7 @@ var rps = (function() { // define a master function variable named `rps`
         // this function will later be executed when the user clicks the rps button
         startGame(welcomeMsg);
         // we need to reload the page in order for the user to play rps again by clicking the button
-        // location.reload();
+        location.reload();
     }
 
     function init() {
