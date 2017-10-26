@@ -4,16 +4,19 @@ var rps = (function() { // define a master function variable named `rps`
     var playerScore = 0;
     var computerScore = 0;
 
-    // create new array (list) as object
-    var gestures = new Array();
-    gestures[0] = "rock";
-    gestures[1] = "paper";
-    gestures[2] = "scissors";
-    // define new object (dictionary) as object
-    var rules = new Object();
-    rules.rock = gestures[2];
-    rules.paper = gestures[0];
-    rules.scissors = gestures[1];
+    // create new array (list)
+    var gestures = [
+      "rock",
+      "paper",
+      "scissors"
+    ];
+
+    // define new object (dictionary)
+    var rules = {
+      "rock": gestures[2],
+      "paper": gestures[1],
+      "scissors": gestures[0]
+    };
 
     console.log(typeof gestures, typeof rules);
     console.log("gestures:", gestures);
@@ -157,7 +160,7 @@ var rps = (function() { // define a master function variable named `rps`
         for (i = 0; i < rpsArray.length; i++) {
             switch (true) {
                  // since we don't want to add a space in between `scissors` and `!`, we do this
-                 // and after `!`, we do this:
+                 // and after `!`, we do this as well:
                 case rpsArray[i] !== rpsArray[3] && rpsArray[i] !== rpsArray[4]:
                     btnHTML += rpsArray[i] + " ";
                     break;
