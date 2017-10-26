@@ -14,7 +14,7 @@ How To Play
 4. Click the `Play Rock Paper Scissors!` button
 5. Enjoy!
 
---------
+________
 
 ##### 1: How To Download Repository
 1. Click the `Clone or Download` button
@@ -31,7 +31,7 @@ How To Play
 ###### For Mac
 1. Double click the `RPS-JS.zip` file
 
---------
+________
 
 > __*Enjoy!*__
 
