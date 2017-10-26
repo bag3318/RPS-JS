@@ -215,7 +215,7 @@ var rps = (function() { // define a master function variable named `rps`
     }
 
     // define API for script
-    // this basically allows us to organize our function in an object and call them in the `init` function
+    // this basically allows us to organize all our functions in an object and call them in the `init` function
     return function API() {
         return {
             initiate: init,
