@@ -10,13 +10,26 @@ var rps = (function() { // define a master function variable named `rps`
       "paper",
       "scissors"
     ];
+    /*
+     * var gestures = new Array();
+     * gestures[0] = "rock";
+     * gestures[1] = "paper";
+     * gestures[2] = "scissors";
+     */
 
     // define new object (dictionary)
     var rules = {
       "rock": gestures[2],
-      "paper": gestures[1],
-      "scissors": gestures[0]
+      "paper": gestures[0],
+      "scissors": gestures[1]
     };
+    /*
+     * var rules = new Object();
+     * rules.rock = gestures[2];
+     * rules.paper = gestures[0];
+     * rules.scissors = gestures[1];
+     */
+
 
     console.log(typeof gestures, typeof rules);
     console.log("gestures:", gestures);
@@ -30,6 +43,7 @@ var rps = (function() { // define a master function variable named `rps`
 
     function startGame(msg) {
         console.log("in startGame");
+        console.log(msg);
         // ask the user if they want to play
         var ready = confirm(msg);
         if (ready == true) { // if player chooses "OK"
