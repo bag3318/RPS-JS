@@ -163,7 +163,8 @@ var rps = (function() { // define a master function variable named `rps`
                 case rpsArray[i] !== rpsArray[3] && rpsArray[i] !== rpsArray[4]:
                     btnHTML += rpsArray[i] + " ";
                     break;
-                default: // otherwise, the default option will not add a space
+                // otherwise, the default option will not add a space
+                default:
                     btnHTML += rpsArray[i];
                     break;
             }
