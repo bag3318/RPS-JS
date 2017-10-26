@@ -104,22 +104,19 @@ var rps = (function() { // define a master function variable named `rps`
     }
 
     function computerGuess() {
-
-        // make 3 numbers for computer to randomly use (#'s are whole integers: 1, 2, & 3)
-        var cpuChoice = Math.floor((Math.random() * 3) + 1);
-
-        switch (cpuChoice) {
-          case 1:
-            return gestures[0]; // rock
-            break;
-          case 2:
-            return gestures[1]; // paper
-            break;
-          case 3:
-            return gestures[2]; // scissors
-            break;
-        }
-
+      // make 3 numbers for computer to randomly use (#'s are whole integers: 1, 2, & 3)
+      var cpuChoice = Math.floor((Math.random() * 3) + 1);
+      switch (cpuChoice) {
+        case 1:
+          return gestures[0]; // rock
+          break;
+        case 2:
+          return gestures[1]; // paper
+          break;
+        case 3:
+          return gestures[2]; // scissors
+          break;
+      }
     }
 
     function compareGuesses(guess1, guess2, points) {
@@ -154,14 +151,13 @@ var rps = (function() { // define a master function variable named `rps`
          * We do this by splitting the string at each space.
          * Then we push an `!` at the end of the array to avoid using a regex while splitting
          */
+        var btn = document.querySelector("#btn");
 
-        var rpsStr = rpsMsg;
-        var rpsArray = rpsStr.split(" ");
+        var btnStr = rpsMsg;
+        var rpsArray = btnStr.split(" ");
         rpsArray.push("!");
 
-        console.log("rpsArray:", rpsArray, typeof rpsArray);
-
-        var btn = document.querySelector("#btn");
+        console.log("rpsArray:", rpsArray, typeof rpsArray, rpsArray.length);
 
         var btnText = "";
 
@@ -175,7 +171,7 @@ var rps = (function() { // define a master function variable named `rps`
         var i;
         for (i = 0; i < rpsArray.length; i++) {
             switch (true) {
-                 // since we don't want to add a space in between `scissors` and `!`, and a space after `!`, we do this:
+                // since we don't want to add a space in between `scissors` and `!`, and a space after `!`, we do this:
                 case rpsArray[i] !== rpsArray[3] && rpsArray[i] !== rpsArray[4]:
                     btnText += rpsArray[i] + " ";
                     break;
