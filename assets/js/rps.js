@@ -189,16 +189,8 @@ var rps = (function() { // define a master function variable named `rps`
             }
         }
 
-        /*
-         * here we use the plugin `BetterInnerHTML` to insert HTML into the button element with the `btn` ID
-         * documentation page:
-         * http://www.optimalworks.net/blog/2007/web-development/javascript/innerhtml-alternative
-         * download page:
-         * http://www.optimalworks.net/resources/betterinnerhtml/
-         */
-
-        BetterInnerHTML(btn, btnHTML, true);
-
+        // append the HTML to the HTML button element with id `btn`
+        btn.appendChild(document.createTextNode(btnHTML));
     }
 
     function btnClick() {
