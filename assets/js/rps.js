@@ -60,7 +60,7 @@ var rps = (function() { // define a master function variable named `rps`
     }
 
     function playGame(numOfRounds) {
-        // create do while loop for game
+        // create do while loop for playing game
         do {
             if (isPlayerWinner || isComputerWinner) {
                 // jump out
