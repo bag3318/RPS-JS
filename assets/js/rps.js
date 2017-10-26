@@ -166,7 +166,7 @@ var rps = (function() { // define a master function variable named `rps`
 
         var btn = document.querySelector("#btn");
 
-        var btnHTML = "";
+        var btnText = "";
 
         /*
          * Next, we need to loop through the `rpsArray` variable for each of the items in that list.
@@ -180,17 +180,17 @@ var rps = (function() { // define a master function variable named `rps`
             switch (true) {
                  // since we don't want to add a space in between `scissors` and `!`, and a space after `!`, we do this:
                 case rpsArray[i] !== rpsArray[3] && rpsArray[i] !== rpsArray[4]:
-                    btnHTML += rpsArray[i] + " ";
+                    btnText += rpsArray[i] + " ";
                     break;
                 // otherwise, the default option will not add a space
                 default:
-                    btnHTML += rpsArray[i];
+                    btnText += rpsArray[i];
                     break;
             }
         }
 
         // append the HTML text to the HTML button element with id of `btn`
-        btn.appendChild(document.createTextNode(btnHTML));
+        btn.appendChild(document.createTextNode(btnText));
     }
 
     function btnClick() {
