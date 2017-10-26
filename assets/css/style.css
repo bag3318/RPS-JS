@@ -10,7 +10,7 @@ body {
 	background: -o-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
 	background: -ms-linear-gradient(top, #44c767 5%, #5cbf2a 100%);
 	background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
-	filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#44c767', endColorstr='#5cbf2a',GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#44c767', endColorstr='#5cbf2a',GradientType=0);
 	background-color: #44c767;
 	-moz-border-radius: 28px;
 	-webkit-border-radius: 28px;
