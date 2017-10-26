@@ -1,5 +1,12 @@
+@font-face {
+	font-family: Verdana;
+	src: url(../fonts/Verdana.woff);
+}
+
 body {
 	margin: 1%;
+	background-color: rgb(238, 238, 238);
+	/*background-color: rgba(#ebebeb, 0.7);*/
 }
 
 /* button style w/ gradient */
