@@ -27,7 +27,7 @@ var rps = (function() { // define a master function variable named `rps`
 
     function startGame(msg) {
         console.log("in startGame");
-        // ask the use if they want to play
+        // ask the user if they want to play
         var ready = confirm(msg);
         if (ready == true) { // if player chooses "OK"
             playGame(3);
