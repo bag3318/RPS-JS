@@ -159,7 +159,7 @@ var rps = (function() { // define a master function variable named `rps`
         var rpsArray = rpsStr.split(" ");
         rpsArray.push("!");
 
-        console.log(rpsArray, typeof rpsArray);
+        console.log("rpsArray:", rpsArray, typeof rpsArray);
 
         var btn = document.querySelector("#btn");
 
