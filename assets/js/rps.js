@@ -51,7 +51,7 @@ var rps = (function() { // define a master function variable named `rps`
         } else if (ready == false) { // else if player chooses "Cancel"
             alert("Sorry you don't wanna play, maybe next time! :)");
         } else { // else...
-            alert("error!");
+            return alert("error!");
         }
     }
 
@@ -207,7 +207,7 @@ var rps = (function() { // define a master function variable named `rps`
         // this function will later be executed when the user clicks the rps button
         startGame(welcomeMsg);
         // we need to reload the page in order for the user to play rps again by clicking the button
-        location.reload();
+        // location.reload();
     }
 
     function init() {
