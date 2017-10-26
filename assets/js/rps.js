@@ -30,7 +30,6 @@ var rps = (function() { // define a master function variable named `rps`
      * rules.scissors = gestures[1];
      */
 
-
     console.log("gestures:", gestures, typeof gestures);
     console.log("rules:", rules, typeof rules);
 
