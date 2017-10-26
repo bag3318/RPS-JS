@@ -59,6 +59,7 @@ var rps = (function() { // define a master function variable named `rps`
     function determineWinner() {
         var winMsg = "The player has " + playerScore + " points compared to the computer\'s " + computerScore + " points. So the player wins!";
         var loseMsg = "The computer has " + computerScore + " points compared to the player\'s " + playerScore + " points. So the computer wins!";
+        // var tieMsg = "It\'s a tie!";
         switch(true) {
             case playerScore >= 2:
                 isPlayerWinner = true;
@@ -69,6 +70,11 @@ var rps = (function() { // define a master function variable named `rps`
                 alert(loseMsg);
                 break;
             // there will never be a tie for the final outcome
+            /*
+             * case playerScore === computerScore:
+             *  alert(tieMsg);
+             *  break;
+             */
         }
         console.log('d ' + isPlayerWinner, isComputerWinner);
     }
