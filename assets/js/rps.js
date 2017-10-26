@@ -189,7 +189,7 @@ var rps = (function() { // define a master function variable named `rps`
             }
         }
 
-        // append the HTML text to the HTML button element with id of `btn`
+        // append the HTML text to the HTML button element with the id of `btn`
         btn.appendChild(document.createTextNode(btnText));
     }
 
