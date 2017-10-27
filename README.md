@@ -18,7 +18,7 @@ How To Play
 
 ### Playing
 
-1. Open the `index.html` file
+1. Open the `index.html` file with the web browser of your choice
 2. Click the `Play Rock Paper Scissors!` button
 3. Enjoy!
 
