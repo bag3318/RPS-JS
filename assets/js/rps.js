@@ -195,16 +195,16 @@ var rps = (function() { // define a master function variable named `rps`
 
     function init() {
         // this is our init function that will tell the what to do on each action (load and click)
-        var masterScript = rps();
+        var rpsScript = rps();
         var element = window;
         element.addEventListener("load", function() {
-            masterScript.load("Play Rock Paper Scissors");
+            rpsScript.load("Play Rock Paper Scissors");
         }, false);
         // we must set the `element` variable = to null to reuse it again
         element = null;
         var element = document.querySelector("#btn");
         element.addEventListener("click", function() {
-            masterScript.btnClick();
+            rpsScript.btnClick();
         }, false);
     }
 
