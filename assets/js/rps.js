@@ -200,6 +200,7 @@ var rps = (function() { // define a master function variable named `rps`
         element.addEventListener("load", function() {
             masterScript.load("Play Rock Paper Scissors");
         }, false);
+        // we must set the `element` variable = to null to reuse it again
         element = null;
         var element = document.querySelector("#btn");
         element.addEventListener("click", function() {
