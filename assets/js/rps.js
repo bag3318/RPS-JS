@@ -172,7 +172,7 @@ var rps = (function() { // define a master function variable named `rps`
         for (i = 0; i < rpsArray.length; i++) {
             switch (true) {
                 // since we don't want to add a space in between `scissors` and `!`, and a space after `!`, we do this:
-                case rpsArray[i] !== rpsArray[3] && rpsArray[i] !== rpsArray[4]:
+                case rpsArray[i] != rpsArray[3] && rpsArray[i] != rpsArray[4]:
                     btnText += rpsArray[i] + " ";
                     break;
                 // otherwise, the default option will not add a space
