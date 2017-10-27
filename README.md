@@ -41,6 +41,6 @@ ________
 
 ________
 
-> __*Enjoy!*__
+> **_Enjoy!_**
 
 [//]: # "End README.md file"
