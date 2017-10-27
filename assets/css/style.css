@@ -6,7 +6,12 @@
 body {
 	margin: 1%;
 	background-color: rgb(238, 238, 238);
+	font-family: Verdana;
 	/*background-color: rgba(#ebebeb, 0.7);*/
+}
+
+.center {
+	text-align: center;
 }
 
 /* button style w/ gradient */
