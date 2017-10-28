@@ -5,30 +5,18 @@ var rps = (function() { // define a master function variable named `rps`
     var computerScore = 0;
 
     // create new array (list)
-    var gestures = [
-      "rock",
-      "paper",
-      "scissors"
-    ];
-    /*
-     * var gestures = new Array();
-     * gestures[0] = "rock";
-     * gestures[1] = "paper";
-     * gestures[2] = "scissors";
-     */
+    var gestures = new Array();
+    gestures[0] = "rock";
+    gestures[1] = "paper";
+    gestures[2] = "scissors";
+
 
     // define new object (dictionary)
-    var rules = {
-      "rock": gestures[2],
-      "paper": gestures[0],
-      "scissors": gestures[1]
-    };
-    /*
-     * var rules = new Object();
-     * rules.rock = gestures[2];
-     * rules.paper = gestures[0];
-     * rules.scissors = gestures[1];
-     */
+     var rules = new Object();
+     rules.rock = gestures[2];
+     rules.paper = gestures[0];
+     rules.scissors = gestures[1];
+
 
     console.log("gestures:", gestures, typeof gestures, gestures.length);
     console.log("rules:", rules, typeof rules);
