@@ -30,8 +30,8 @@ var rps = (function() { // define a master function variable named `rps`
      * rules.scissors = gestures[1];
      */
 
-    console.log("gestures:", gestures, typeof gestures, gestures.length);
-    console.log("rules:", rules, typeof rules);
+    // console.log("gestures:", gestures, typeof gestures, gestures.length);
+    // console.log("rules:", rules, typeof rules);
 
     // define booleans for winner
     var isPlayerWinner = false;
