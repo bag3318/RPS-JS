@@ -104,7 +104,7 @@ var rps = (function() { // define a master function variable named `rps`
             }
           }
           return false;
-        }
+        };
 
         // if player's choice is equal to anything in the gestures array
         if (gestures.inArray(playerChoice.toLowerCase()) || gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
