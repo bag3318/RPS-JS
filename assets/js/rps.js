@@ -141,7 +141,6 @@ var rps = (function() { // define a master function variable named `rps`
     }
 
     function setup(rpsMsg, h5Msg) {
-
         /*
          * In this function we take a string (defined in the `init` function) and make it into an array list.
          * We do this by splitting the string at each space.
