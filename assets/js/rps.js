@@ -94,7 +94,7 @@ var rps = (function() { // define a master function variable named `rps`
 
     function playerGuess() {
         var playerChoice = prompt("Choose rock, paper, or scissors.");
-        // if player's choice is in the gestures array
+        // if player's choice is equal to anything in the gestures array
         if (gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
             return playerChoice;
         } else {
@@ -104,18 +104,14 @@ var rps = (function() { // define a master function variable named `rps`
     }
 
     function computerGuess() {
-      // make 3 numbers for computer to randomly use (#'s are going to be integers: 1, 2, & 3)
       var cpuChoice = Math.floor((Math.random() * 3) + 1);
       switch (cpuChoice) {
         case 1:
           return gestures[0]; // rock
-          break;
         case 2:
           return gestures[1]; // paper
-          break;
         case 3:
           return gestures[2]; // scissors
-          break;
       }
     }
 
