@@ -146,7 +146,7 @@ var rps = (function() { // define a master function variable named `rps`
          * Then we push an `!` at the end of the array to avoid using a regex while splitting
          */
         var btn = document.querySelector("#btn");
-        var btnArray = btnMsg.split(" ");
+        var btnArray = btnMsg.split(/\s/);
         btnArray.push("!");
         console.log("btnArray:", btnArray, typeof btnArray, btnArray.length);
         var btnText = "";
@@ -174,7 +174,7 @@ var rps = (function() { // define a master function variable named `rps`
 
         // now we do the same thing for the h5Array
         var h5 = document.querySelector("h5");
-        var h5Array = h5Msg.split(" ");
+        var h5Array = h5Msg.split(/\s/);
         h5Array.push("!");
         var h5Text = "";
         console.log("h5Array:", h5Array, typeof h5Array, h5Array.length);
