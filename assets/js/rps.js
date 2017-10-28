@@ -144,34 +144,33 @@ var rps = (function() { // define a master function variable named `rps`
         }
     }
 
-    function setup(rpsMsg, h5Msg) {
+    function setup(h5Msg, btnMsg) {
         /*
          * In this function we take a string (defined in the `init` function) and make it into an array list.
          * We do this by splitting the string at each space.
          * Then we push an `!` at the end of the array to avoid using a regex while splitting
          */
         var btn = document.querySelector("#btn");
-        var btnStr = rpsMsg;
-        var rpsArray = btnStr.split(" ");
-        rpsArray.push("!");
-        console.log("rpsArray:", rpsArray, typeof rpsArray, rpsArray.length);
+        var btnArray = btnMsg.split(" ");
+        btnArray.push("!");
+        console.log("btnArray:", btnArray, typeof btnArray, btnArray.length);
         var btnText = "";
         /*
-         * Next, we need to loop through the `rpsArray` variable for each of the items in that list.
-         * Then we need to add them to the `btnHTML` string,
+         * Next, we need to loop through the `btnArray` variable for each of the items in that list.
+         * Then we need to add them to the `btnText` string,
          *  which will then be inserted into the `button` element with the `btn` ID.
          */
         // loop through the array
         var i;
-        for (i = 0; i < rpsArray.length; i++) {
+        for (i = 0; i < btnArray.length; i++) {
             switch (true) {
                 // since we don't want to add a space in between `scissors` and `!`, and a space after `!`, we do this:
-                case rpsArray[i] != rpsArray[3] && rpsArray[i] != rpsArray[4]:
-                    btnText += rpsArray[i] + " ";
+                case btnArray[i] != btnArray[3] && btnArray[i] != btnArray[4]:
+                    btnText += btnArray[i] + " ";
                     break;
                 // otherwise, the default option will not add a space
                 default:
-                    btnText += rpsArray[i];
+                    btnText += btnArray[i];
                     break;
             }
         }
@@ -180,8 +179,7 @@ var rps = (function() { // define a master function variable named `rps`
 
         // now we do the same thing for the h5Array
         var h5 = document.querySelector("h5");
-        var h5Str = h5Msg;
-        var h5Array = h5Str.split(" ");
+        var h5Array = h5Msg.split(" ");
         h5Array.push("!");
         var h5Text = "";
         console.log("h5Array:", h5Array, typeof h5Array, h5Array.length);
@@ -208,13 +206,13 @@ var rps = (function() { // define a master function variable named `rps`
 
     function init() {
         // this is our init function that will tell the what to do on each action (load and click)
-       var rpsScript = rps();
-       var element = window;
-       element.addEventListener("load", function() {
-           rpsScript.load("Play Rock Paper Scissors", "Click the button below to play");
-       }, false);
-       // we must set the `element` variable = to null to reuse it again
-       element = null;
+        var rpsScript = rps();
+        var element = window;
+        element.addEventListener("load", function() {
+          rpsScript.load("Click the button below to play", "Play Rock Paper Scissors");
+        }, false);
+        // we must set the `element` variable = to `null` in order to use it again
+        element = null;
         var element = document.querySelector("#btn");
         element.addEventListener("click", function() {
             rpsScript.btnClick();
