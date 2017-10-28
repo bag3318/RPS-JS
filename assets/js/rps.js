@@ -95,8 +95,19 @@ var rps = (function() { // define a master function variable named `rps`
 
     function playerGuess() {
         var playerChoice = prompt("Choose rock, paper, or scissors.");
+
+        Array.prototype.inArray = function inArray(value) {
+          var i;
+          for (i = 0; i < this.length; i++) {
+            if (this[i] === value) {
+              return true;
+            }
+          }
+          return false;
+        }
+
         // if player's choice is equal to anything in the gestures array
-        if (gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
+        if (gestures.inArray(playerChoice)) { // gestures.indexOf(playerChoice.toLowerCase()) >= 0
             return playerChoice;
         } else {
             alert("You typed something else or did not spell your choice correctly please try again!");
