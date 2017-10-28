@@ -42,12 +42,13 @@ var rps = (function() { // define a master function variable named `rps`
     function startGame(msg) {
         // ask the user if they want to play
         var ready = confirm(msg);
-        if (ready == true) { // if player chooses "OK"
+        switch(ready) {
+          case true:
             playGame(3);
-        } else if (ready == false) { // else if player chooses "Cancel"
+            break;
+          case false:
             alert("Sorry you don't wanna play, maybe next time! :)");
-        } else { // else...
-            return alert("error!");
+            break;
         }
     }
 
@@ -121,26 +122,21 @@ var rps = (function() { // define a master function variable named `rps`
 
     function compareGuesses(guess1, guess2, points) {
         var output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "! \n";
-        switch (true) {
-            case guess1.toLowerCase() === guess2.toLowerCase(): // if tie
-                // don't do anything with player & computer scores
-                playerScore += 0;
-                computerScore += 0;
-                alert(output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
-                return 0;
-                break;
-            case rules[guess1.toLowerCase()] == guess2.toLowerCase(): // if user wins
-                playerScore += points; // add 1 point to the player (specified in the `playGames` function)
-                alert(output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
-                determineWinner(); // call `determineWinner` function
-                return 1;
-                break;
-            case rules[guess2.toLowerCase()] == guess1.toLowerCase(): // if computer wins
-                computerScore += points; // add 1 point to the cpu (specified in the `playGames` function)
-                alert(output + "\nComputer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
-                determineWinner(); // call `determineWinner` function
-                return 2;
-                break;
+        if (rules[guess1.toLowerCase()] == guess2.toLowerCase()) { // if user wins
+          playerScore += points; // add 1 point to the player (specified in the `playGames` function)
+          alert(output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+          determineWinner(); // call `determineWinner` function
+          return 1;
+        } else if (rules[guess2.toLowerCase()] == guess1.toLowerCase()) { // if computer wins
+          computerScore += points; // add 1 point to the cpu (specified in the `playGames` function)
+          alert(output + "\nComputer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+          determineWinner(); // call `determineWinner` function
+          return 2;
+        } else { // guess1.toLowerCase() === guess2.toLowerCase() // if tie...
+          playerScore += 0;
+          computerScore += 0;
+          alert(output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+          return 0;
         }
     }
 
