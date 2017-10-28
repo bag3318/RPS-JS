@@ -144,7 +144,7 @@ var rps = (function() { // define a master function variable named `rps`
         }
     }
 
-    function setup(h5Msg, btnMsg) {
+    function setup(btnMsg, h5Msg) {
         /*
          * In this function we take a string (defined in the `init` function) and make it into an array list.
          * We do this by splitting the string at each space.
@@ -209,7 +209,7 @@ var rps = (function() { // define a master function variable named `rps`
         var rpsScript = rps();
         var element = window;
         element.addEventListener("load", function() {
-          rpsScript.load("Click the button below to play", "Play Rock Paper Scissors");
+          rpsScript.load("Play Rock Paper Scissors", "Click the button below to play");
         }, false);
         // we must set the `element` variable = to `null` in order to use it again
         element = null;
