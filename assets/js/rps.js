@@ -138,59 +138,6 @@ var rps = (function() { // define a master function variable named `rps`
         }
     }
 
-    function setup(btnMsg, h5Msg) {
-        /*
-         * In this function we take a string (defined in the `init` function) and make it into an array list.
-         * We do this by splitting the string at each space.
-         * Then we push an `!` at the end of the array to avoid using a regex while splitting
-         */
-        var btn = document.querySelector("#btn");
-        var btnArray = btnMsg.split(/\s/);
-        btnArray.push("!");
-        console.log("btnArray:", btnArray, typeof btnArray, btnArray.length);
-        var btnText = "";
-        /*
-         * Next, we need to loop through the `btnArray` variable for each of the items in that list.
-         * Then we need to add them to the `btnText` string,
-         *  which will then be inserted into the `button` element with the `btn` ID.
-         */
-        // loop through the array
-        var i;
-        for (i = 0; i < btnArray.length; i++) {
-            switch (true) {
-                // since we don't want to add a space in between `scissors` and `!`, and a space after `!`, we do this:
-                case btnArray[i] != btnArray[3] && btnArray[i] != btnArray[4]:
-                    btnText += btnArray[i] + " ";
-                    break;
-                // otherwise, the default option will not add a space
-                default:
-                    btnText += btnArray[i];
-                    break;
-            }
-        }
-        // append the HTML text to the HTML button element with the id of `btn`
-        btn.appendChild(document.createTextNode(btnText));
-
-        // now we do the same thing for the h5Array
-        var h5 = document.querySelector("h5");
-        var h5Array = h5Msg.split(/\s/);
-        h5Array.push("!");
-        var h5Text = "";
-        console.log("h5Array:", h5Array, typeof h5Array, h5Array.length);
-        // set i = to null so we can use it again in the following for loop
-        i = null;
-        var i;
-        for (i = 0; i < h5Array.length; i++) {
-          if (h5Array[i] != h5Array[5] && h5Array[i] != h5Array[6]) {
-            h5Text += h5Array[i] + " ";
-          } else {
-            h5Text += h5Array[i];
-          }
-        }
-        h5TextNode = document.createTextNode(h5Text);
-        h5.appendChild(h5TextNode);
-    }
-
     function btnClick() {
         // this function will later be executed when the user clicks the rps button
         startGame(welcomeMsg);
@@ -201,12 +148,6 @@ var rps = (function() { // define a master function variable named `rps`
     function init() {
         // this is our init function that will tell the what to do on each action (load and click)
         var rpsScript = rps();
-        var element = window;
-        element.addEventListener("load", function() {
-          rpsScript.load("Play Rock Paper Scissors", "Click the button below to play");
-        }, false);
-        // we must set the `element` variable = to `null` in order to use it again
-        element = null;
         var element = document.querySelector("#btn");
         element.addEventListener("click", function() {
             rpsScript.btnClick();
@@ -218,7 +159,6 @@ var rps = (function() { // define a master function variable named `rps`
     return function API() {
         return {
             initiate: init,
-            load: setup,
             btnClick: btnClick
         };
     };
