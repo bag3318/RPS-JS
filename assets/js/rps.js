@@ -81,7 +81,7 @@ var rps = (function() { // define a master function variable named `rps`
     }
 
     function playerGuess() {
-        var playerChoice = prompt("Choose rock, paper, or scissors.");
+        var playerChoice = prompt("Choose rock, paper, or scissors:");
 
         Array.prototype.inArray = function inArray(value) {
           var i;
