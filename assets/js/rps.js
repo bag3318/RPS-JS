@@ -4,6 +4,7 @@ var rps = (function() { // define a master function variable named `rps`
     // create initial scores for player and computer
     var playerScore = 0;
     var computerScore = 0;
+    var ties = 0;
 
     // create new array (list)
     var gestures = new Array();
@@ -42,8 +43,8 @@ var rps = (function() { // define a master function variable named `rps`
 
     // define a function to determine the grand winner of the rps game
     function determineWinner() {
-        var winMsg = "The player has " + playerScore + " points compared to the computer\'s " + computerScore + " points. So the player wins!";
-        var loseMsg = "The computer has " + computerScore + " points compared to the player\'s " + playerScore + " points. So the computer wins!";
+        var winMsg = "The player has " + playerScore + " points compared to the computer\'s " + computerScore + " points (there were " + ties + " ties). So the player wins! ";
+        var loseMsg = "The computer has " + computerScore + " points compared to the player\'s " + playerScore + " points (there were " + ties + " ties). So the computer wins!";
         // var tieMsg = "It\'s a tie!";
         switch(true) {
             case playerScore >= 2:
@@ -134,6 +135,7 @@ var rps = (function() { // define a master function variable named `rps`
         } else { // guess1.toLowerCase() === guess2.toLowerCase() // if tie...
           playerScore += 0;
           computerScore += 0;
+          ties += 1;
           alert(output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
           return 0;
         }
