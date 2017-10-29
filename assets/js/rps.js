@@ -138,6 +138,25 @@ var rps = (function() { // define a master function variable named `rps`
         }
     }
 
+    function setup(h5Msg) {
+      var h5 = document.querySelector(".h5");
+      var h5Array = h5Msg.split(/\s/);
+      h5Array.push("!");
+      var h5Txt = "";
+      var i;
+      for (i = 0; i < h5Array.length; i++) {
+        switch(true) {
+          case h5Array[i] != h5Array[5] && h5Array[i] != h5Array[6]:
+            h5Txt += h5Array[i] + " ";
+            break;
+          default:
+            h5Txt += h5Array[i];
+            break;
+         }
+      }
+      h5.appendChild(document.createTextNode(h5Txt));
+    }
+
     function btnClick() {
         // this function will later be executed when the user clicks the rps button
         startGame(welcomeMsg);
@@ -148,6 +167,9 @@ var rps = (function() { // define a master function variable named `rps`
     function init() {
         // this is our init function that will tell the what to do on each action (load and click)
         var rpsScript = rps();
+        window.addEventListener("load", function() {
+          rpsScript.load("Click the button below to play");
+        }, false);
         var element = document.querySelector("#btn");
         element.addEventListener("click", function() {
             rpsScript.btnClick();
@@ -159,6 +181,7 @@ var rps = (function() { // define a master function variable named `rps`
     return function API() {
         return {
             initiate: init,
+            load: setup,
             btnClick: btnClick
         };
     };
