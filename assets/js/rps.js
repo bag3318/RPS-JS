@@ -142,9 +142,9 @@ var rps = (function() { // define a master function variable named `rps`
     function setup(h5Msg) {
       var h5 = document.querySelector(".h5");
       var span = document.querySelector("#header5Contents");
-      var h5Array = h5Msg.split(/\-|\+|\=|\_|\s/g);
+      var regex = new RegExp(/\-|\+|\=|\_|\s/g, "i");
+      var h5Array = h5Msg.split(regex);
       h5Array.push("!");
-      console.log(h5Array);
       var h5Txt = "";
       var i;
       for (i = 0; i < h5Array.length; i++) {
