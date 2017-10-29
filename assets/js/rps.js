@@ -141,27 +141,6 @@ var rps = (function() { // define a master function variable named `rps`
         }
     }
 
-    function setup(h5Msg) {
-      var h5 = document.querySelector(".h5");
-      var span = document.querySelector("#header5Contents");
-      var regex = new RegExp(/(?:\-\/){1}|(?:\+\*){1}|(?:\=\!){1}|(?:\_\^){1}|[(?:\d){1}]/g, "i");
-      var h5Array = h5Msg.split(regex);
-      h5Array.push("!");
-      var h5Txt = "";
-      var i;
-      for (i = 0; i < h5Array.length; i++) {
-        switch(true) {
-          case h5Array[i] != h5Array[5] && h5Array[i] != h5Array[6]:
-            h5Txt += h5Array[i] + " ";
-            break;
-          default:
-            h5Txt += h5Array[i];
-            break;
-         }
-      }
-      span.parentNode.replaceChild(document.createTextNode(h5Txt), span);
-    }
-
     function btnClick() {
         // this function will later be executed when the user clicks the rps button
         startGame(welcomeMsg);
@@ -169,12 +148,38 @@ var rps = (function() { // define a master function variable named `rps`
         location.reload();
     }
 
+    function setup(h5Msg) {
+      var h5 = document.querySelector(".h5");
+      var span = document.querySelector("#header5Contents");
+      var regex = new RegExp(/(?:\-\/){1}|(?:\+\*){1}|(?:\=\!){1}|(?:\_\^){1}|[(?:\d)]{1}/g, "i");
+      h5Array = h5Msg.split(regex);
+      h5Array.push("!");
+      console.log(h5Array);
+      console.log(h5Array.indexOf("play"), h5Array.indexOf("!"));
+      h5Txt = "";
+      var i;
+      for (i = 0; i < h5Array.length; i++) {
+        switch (true) {
+          case h5Array[i] !== h5Array[5] && h5Array[i] !== h5Array[6]:
+            h5Txt += h5Array[i] + " ";
+            break;
+          default:
+            h5Txt += h5Array[i];
+            break;
+        }
+      }
+      console.log(h5Txt);
+      span.parentNode.replaceChild(document.createTextNode(h5Txt), span);
+    }
+
     function init() {
         // this is our init function that will tell the what to do on each action (load and click)
         var rpsScript = rps();
+        var element = document.querySelector("body");
         window.addEventListener("load", function() {
           rpsScript.load("Click-/the+*button=!below_^to8play");
         }, true);
+        element = null;
         var element = document.querySelector("#btn");
         element.addEventListener("click", function() {
             rpsScript.btnClick();
@@ -186,8 +191,8 @@ var rps = (function() { // define a master function variable named `rps`
     return function API() {
         return {
             initiate: init,
-            load: setup,
-            btnClick: btnClick
+            btnClick: btnClick,
+            load: setup
         };
     };
 
