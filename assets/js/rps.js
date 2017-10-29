@@ -151,7 +151,7 @@ var rps = (function() { // define a master function variable named `rps`
     function setup(h5Msg) {
       var h5 = document.querySelector(".h5");
       var span = document.querySelector("#header5Contents");
-      var regex = new RegExp(/(?:\-\/){1}|(?:\+\*){1}|(?:\=\!){1}|(?:\_\^){1}|[(?:\d)]{1}/g, "i");
+      var regex = new RegExp(/(?:\-\/){1}|(?:\+\*){1}|(?:\=\!\?){1}|(?:\_\^){1}|[(?:\d)]{1}/, "g");
       h5Array = h5Msg.split(regex);
       h5Array.push("!");
       console.log(h5Array);
@@ -177,7 +177,7 @@ var rps = (function() { // define a master function variable named `rps`
         var rpsScript = rps();
         var element = document.querySelector("body");
         window.addEventListener("load", function() {
-          rpsScript.load("Click-/the+*button=!below_^to8play");
+          rpsScript.load("Click-/the+*button=!?below_^to8play");
         }, true);
         element = null;
         var element = document.querySelector("#btn");
