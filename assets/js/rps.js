@@ -1,3 +1,4 @@
+<!--
 var rps = (function() { // define a master function variable named `rps`
 
     // create initial scores for player and computer
@@ -189,3 +190,4 @@ var rps = (function() { // define a master function variable named `rps`
     };
 
 }());
+//-->
