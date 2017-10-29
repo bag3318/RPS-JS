@@ -95,7 +95,7 @@ var rps = (function() { // define a master function variable named `rps`
 
         // if player's choice is equal to anything in the gestures array
         if (gestures.inArray(playerChoice.toLowerCase()) || gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
-            return playerChoice;
+          return playerChoice;
         } else {
             alert("You typed something else or did not spell your choice correctly please try again!");
             return playerGuess(); // return playerGuess function to run the prompt again
@@ -141,8 +141,9 @@ var rps = (function() { // define a master function variable named `rps`
     function setup(h5Msg) {
       var h5 = document.querySelector(".h5");
       var span = document.querySelector("#headerContents");
-      var h5Array = h5Msg.split(/\s/);
+      var h5Array = h5Msg.split(/\-|\+|\=|\_|\s/);
       h5Array.push("!");
+      console.log(h5Array);
       var h5Txt = "";
       var i;
       for (i = 0; i < h5Array.length; i++) {
@@ -169,7 +170,7 @@ var rps = (function() { // define a master function variable named `rps`
         // this is our init function that will tell the what to do on each action (load and click)
         var rpsScript = rps();
         window.addEventListener("load", function() {
-          rpsScript.load("Click the button below to play");
+          rpsScript.load("Click-the+button=below_to play");
         }, false);
         var element = document.querySelector("#btn");
         element.addEventListener("click", function() {
