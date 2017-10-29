@@ -151,7 +151,7 @@ var rps = (function() { // define a master function variable named `rps`
     function setup(h5Msg) {
       var h5 = document.querySelector(".h5");
       var span = document.querySelector("#header5Contents");
-      var regex = new RegExp(/(?:(?:[\-+\/]){2}|(?:[\++\*]{2})|(?:[\=+\!+\?]{3})|(?:[\_+\^]{2})|(?:[\s+\d+\s]){3})/, "g");
+      var regex = new RegExp(/(?:(?:[\-+\/]{2})|(?:[\++\*]{2})|(?:[\=+\!+\?]{3})|(?:[\_+\^]{2})|(?:[\s+\d+\s]{3}))/, "g");
       h5Array = h5Msg.split(regex);
       h5Array.push("!");
       console.log(h5Array);
