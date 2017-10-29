@@ -174,7 +174,7 @@ var rps = (function() { // define a master function variable named `rps`
         var rpsScript = rps();
         window.addEventListener("load", function() {
           rpsScript.load("Click-/the+*button=!below_^to 8 play");
-        }, false);
+        }, true);
         var element = document.querySelector("#btn");
         element.addEventListener("click", function() {
             rpsScript.btnClick();
