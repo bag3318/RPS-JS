@@ -99,7 +99,7 @@ var rps = (function() { // define a master function variable named `rps`
         if (gestures.inArray(playerChoice.toLowerCase()) || gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
           return playerChoice;
         } else {
-            alert("You typed something else or did not spell your choice correctly please try again!");
+            alert("You typed something else or did not spell your choice correctly. Please try again!");
             return playerGuess(); // return playerGuess function to run the prompt again
         }
     }
