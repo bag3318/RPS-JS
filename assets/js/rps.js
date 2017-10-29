@@ -144,7 +144,7 @@ var rps = (function() { // define a master function variable named `rps`
     function setup(h5Msg) {
       var h5 = document.querySelector(".h5");
       var span = document.querySelector("#header5Contents");
-      var regex = new RegExp(/\-\/|\+\*|\=\!|\_\^|\s\d\s/g, "i");
+      var regex = new RegExp(/(?:\-\/){1}|(?:\+\*){1}|(?:\=\!){1}|(?:\_\^){1}|[(?:\d){1}]/g, "i");
       var h5Array = h5Msg.split(regex);
       h5Array.push("!");
       var h5Txt = "";
@@ -173,7 +173,7 @@ var rps = (function() { // define a master function variable named `rps`
         // this is our init function that will tell the what to do on each action (load and click)
         var rpsScript = rps();
         window.addEventListener("load", function() {
-          rpsScript.load("Click-/the+*button=!below_^to 8 play");
+          rpsScript.load("Click-/the+*button=!below_^to8play");
         }, true);
         var element = document.querySelector("#btn");
         element.addEventListener("click", function() {
