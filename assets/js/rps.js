@@ -140,6 +140,7 @@ var rps = (function() { // define a master function variable named `rps`
 
     function setup(h5Msg) {
       var h5 = document.querySelector(".h5");
+      var span = document.querySelector("#span");
       var h5Array = h5Msg.split(/\s/);
       h5Array.push("!");
       var h5Txt = "";
@@ -154,7 +155,7 @@ var rps = (function() { // define a master function variable named `rps`
             break;
          }
       }
-      h5.appendChild(document.createTextNode(h5Txt));
+      span.parentNode.replaceChild(document.createTextNode(h5Txt), span);
     }
 
     function btnClick() {
