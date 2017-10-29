@@ -140,7 +140,7 @@ var rps = (function() { // define a master function variable named `rps`
 
     function setup(h5Msg) {
       var h5 = document.querySelector(".h5");
-      var span = document.querySelector("#span");
+      var span = document.querySelector("#headerContents");
       var h5Array = h5Msg.split(/\s/);
       h5Array.push("!");
       var h5Txt = "";
