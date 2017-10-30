@@ -128,7 +128,7 @@ var rps = (function() { // define a master function variable named `rps`
 
    function CompareGuesses(guess1, guess2, points) {
       this.output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "! \n";
-      this.compare = function Compare() {
+      this.compare = function compare() {
          if (rules[guess1.toLowerCase()] == guess2.toLowerCase()) { // if user wins
             playerScore += points; // add 1 point to the player (specified in the `PlayGames` function)
             alert(this.output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
