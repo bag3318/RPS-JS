@@ -30,7 +30,7 @@ var rps = (function() {
      set Confirm(Confirm) { this._ready = Confirm; },
      get Confirm() { return this._ready; }
    };
-   Object.prototype.confirm = function confirm() {
+   Object.prototype.Confirmation = function Confirmation() {
       switch (this._ready) {
          case true:
             var playG = new PlayGame(3);
@@ -165,7 +165,7 @@ var rps = (function() {
 
    function BTNClick() {
       var start = new StartGame(confirm(welcomeMsg));
-      start.confirm();
+      start.Confirmation();
       location.reload();
    }
 
