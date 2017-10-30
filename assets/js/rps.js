@@ -1,6 +1,6 @@
 <!--
 var rps = (function() {
-  "use moz"
+   "use moz"
    var playerScore = 0;
    var computerScore = 0;
    var ties = 0;
@@ -27,16 +27,20 @@ var rps = (function() {
 
 
    var StartGame = class StartGame {
-     Start(Confirm) {
-     // we use the `_` to prevent recursion
-      this._ready = Confirm;
-    }
+      Start(Confirm) {
+         // we use the `_` to prevent recursion
+         this._ready = Confirm;
+      }
    }
 
    StartGame.prototype = {
-     // here we define our getters and setters for the `StartGame` function
-     set Confirm(Confirm) { this._ready = Confirm; },
-     get Confirm() { return this._ready; }
+      // here we define our getters and setters for the `StartGame` function
+      set Confirm(Confirm) {
+         this._ready = Confirm;
+      },
+      get Confirm() {
+         return this._ready;
+      }
    };
 
    // create new prototype of type object and make it a function named `Confirmation`
@@ -53,7 +57,8 @@ var rps = (function() {
             break;
       }
    };
-  function DetermineWinner(pl, co, ti, msgW, msgL) {
+
+   function DetermineWinner(pl, co, ti, msgW, msgL) {
       msgW = "The player has " + pl + " points compared to the computer\'s " + co + " points (ties: " + ti + "). So the player wins!";
       msgL = "The computer has " + co + " points compared to the player\'s " + pl + " points (ties: " + ti + "). So the computer wins!";
       this._winMsg = msgW;
@@ -61,10 +66,18 @@ var rps = (function() {
       console.log('d ' + isPlayerWinner, isComputerWinner);
    }
    DetermineWinner.prototype = {
-     set winMsg(msgW) { this._winMsg = msgW; },
-     get winMsg() { return this._winMsg; },
-     set loseMsg(msgL) { this._loseMsg = msgL; },
-     get loseMsg() {return this._loseMsg; }
+      set winMsg(msgW) {
+         this._winMsg = msgW;
+      },
+      get winMsg() {
+         return this._winMsg;
+      },
+      set loseMsg(msgL) {
+         this._loseMsg = msgL;
+      },
+      get loseMsg() {
+         return this._loseMsg;
+      }
    };
    Object.prototype.determineW = function determineW() {
       switch (true) {
@@ -99,12 +112,12 @@ var rps = (function() {
    // -------
 
    function PlayerGuess(pChoice) {
-     this._playerChoice = pChoice;
-     /*
-      * create `inArray` prototype of type `Array` = to function
-      * this will check if a value in in the specified array (in this case: gestures)
-      */
-     Array.prototype.inArray = function inArray(value) {
+      this._playerChoice = pChoice;
+      /*
+       * create `inArray` prototype of type `Array` = to function
+       * this will check if a value in in the specified array (in this case: gestures)
+       */
+      Array.prototype.inArray = function inArray(value) {
          var i;
          for (i = 0; i < this.length; i++) {
             if (this[i] === value) {
@@ -117,8 +130,12 @@ var rps = (function() {
    }
 
    PlayerGuess.prototype = {
-     set playerChoice(pChoice) { this._playerChoice = pChoice; },
-     get playerChoice() { return this._playerChoice; }
+      set playerChoice(pChoice) {
+         this._playerChoice = pChoice;
+      },
+      get playerChoice() {
+         return this._playerChoice;
+      }
    };
 
    Object.prototype.PGuess = function PGuess() {
@@ -149,8 +166,12 @@ var rps = (function() {
    }
 
    ComputerGuess.prototype = {
-     set cpuChoice(formula) { this._cpuChoice = formula; },
-     get cpuChoice() { return this._cpuChoice; }
+      set cpuChoice(formula) {
+         this._cpuChoice = formula;
+      },
+      get cpuChoice() {
+         return this._cpuChoice;
+      }
    };
 
    function CompareGuesses(guess1, guess2, points) {
