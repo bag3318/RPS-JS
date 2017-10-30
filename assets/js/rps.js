@@ -61,8 +61,8 @@ var rps = (function() { // define a master function variable named `rps`
      set loseMsg(msgL) { this.__loseMsg = msgL; },
      get loseMsg() {return this.__loseMsg; }
    };
-   DetermineWinner.prototype.determineW = function determineW(expression) {
-      switch (expression) {
+   DetermineWinner.prototype.determineW = function determineW() {
+      switch (true) {
          case playerScore >= 2:
             isPlayerWinner = true;
             alert(this.winMsg);
@@ -156,13 +156,13 @@ var rps = (function() { // define a master function variable named `rps`
             playerScore += points; // add 1 point to the player (specified in the `PlayGames` function)
             alert(this.output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
             var w = new DetermineWinner(playerScore, computerScore, ties); // call `DetermineWinner` function
-            w.determineW(true);
+            w.determineW();
             return 1;
          } else if (rules[guess2.toLowerCase()] == guess1.toLowerCase()) { // if computer wins
             computerScore += points; // add 1 point to the cpu (specified in the `PlayGames` function)
             alert(this.output + "\nComputer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
             var l = new DetermineWinner(playerScore, computerScore, ties); // call `DetermineWinner` function
-            l.determineW(true);
+            l.determineW();
             return 2;
          } else { // guess1.toLowerCase() === guess2.toLowerCase() // if tie...
             playerScore += 0;
@@ -170,7 +170,7 @@ var rps = (function() { // define a master function variable named `rps`
             ties += 1;
             alert(this.output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
             var t = new DetermineWinner(playerScore, computerScore, ties);
-            t.determineW(true);
+            t.determineW();
             return 0;
          }
       };
