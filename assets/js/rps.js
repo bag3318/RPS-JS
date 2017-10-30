@@ -26,16 +26,22 @@ var rps = (function() {
    var welcomeMsg = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
 
    function StartGame(Confirm) {
+     // we use the `_` to prevent recursion
       this._ready = Confirm;
    }
    StartGame.prototype = {
+     // here we define our getters and setters for the `StartGame` function
      set Confirm(Confirm) { this._ready = Confirm; },
      get Confirm() { return this._ready; }
    };
+
+   // create new prototype of type object and make it a function named `Confirmation`
    Object.prototype.Confirmation = function Confirmation() {
-      switch (this._ready) {
+      switch (this._ready) { // call the ready instance variable
          case true:
+            // create `playG` variable of type PlayGame (instantiate it as well)
             var playG = new PlayGame(3);
+            // call the play function of the `PlayGame` function
             playG.play();
             break;
          case false:
@@ -70,6 +76,7 @@ var rps = (function() {
       }
    };
 
+   // -------
    function PlayGame(numOfRounds) {
       this.play = function play() {
          do {
@@ -86,9 +93,12 @@ var rps = (function() {
          } while (numOfRounds > 0 && (!isPlayerWinner || !isComputerWinner));
       };
    }
+   // -------
 
    function PlayerGuess(pChoice) {
      this._playerChoice = pChoice;
+     // create `inArray` prototype of type `Array` = to function
+     // this will check if a value in in the specified array (in this case: gestures)
      Array.prototype.inArray = function inArray(value) {
          var i;
          for (i = 0; i < this.length; i++) {
@@ -140,20 +150,21 @@ var rps = (function() {
 
    function CompareGuesses(guess1, guess2, points) {
       this.output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "! \n";
+      // create compare function
       this.compare = function compare() {
-         if (rules[guess1.toLowerCase()] == guess2.toLowerCase()) {
+         if (rules[guess1.toLowerCase()] == guess2.toLowerCase()) { // if player wins
             playerScore += points;
             alert(this.output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
             var w = new DetermineWinner(playerScore, computerScore, ties);
             w.determineW();
             return 1;
-         } else if (rules[guess2.toLowerCase()] == guess1.toLowerCase()) {
+         } else if (rules[guess2.toLowerCase()] == guess1.toLowerCase()) { // if computer wins
             computerScore += points;
             alert(this.output + "\nComputer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
             var l = new DetermineWinner(playerScore, computerScore, ties);
             l.determineW();
             return 2;
-         } else {
+         } else { // if tie
             playerScore += 0;
             computerScore += 0;
             ties += 1;
