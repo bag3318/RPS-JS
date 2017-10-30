@@ -30,18 +30,18 @@ var rps = (function() { // define a master function variable named `rps`
    function StartGame(msg) {
       // ask the user if they want to play
       this.ready = confirm(msg); // confirm(welcomeMsg)
-      this.confirm = function() {
-         switch (this.ready) {
-            case true:
-               var playG = new PlayGame(3);
-               playG.play();
-               break;
-            case false:
-               alert("Sorry you don't wanna play, maybe next time! :)");
-               break;
-         }
-      }
    }
+   StartGame.prototype.confirm = function() {
+      switch (this.ready) {
+         case true:
+            var playG = new PlayGame(3);
+            playG.play();
+            break;
+         case false:
+            alert("Sorry you don't wanna play, maybe next time! :)");
+            break;
+      }
+   };
 
    // define a function to determine the grand winner of the rps game
    function determineWinner() {
@@ -81,8 +81,8 @@ var rps = (function() { // define a master function variable named `rps`
       };
    }
 
-   function PlayerGuess(prompt1) {
-     this.playerChoice = prompt(prompt1);
+   function PlayerGuess(pPrompt) {
+     this.playerChoice = prompt(pPrompt);
       Array.prototype.inArray = function inArray(value) {
          var i;
          for (i = 0; i < this.length; i++) {
@@ -92,19 +92,19 @@ var rps = (function() { // define a master function variable named `rps`
          }
          return false;
       };
-      this.PGuess = function() {
-         // if player's choice is equal to anything in the gestures array
-         if (gestures.inArray(this.playerChoice.toLowerCase()) || gestures.indexOf(this.playerChoice.toLowerCase()) >= 0) {
-            return this.playerChoice;
-         } else {
-            alert("You typed something else or did not spell your choice correctly. Please try again!");
-            var pG = new PlayerGuess("Choose rock, paper, or scissors:")
-            return pG.PGuess(); // return PlayerGuess function to run the prompt again
-         }
-      };
+
    }
 
-
+   PlayerGuess.prototype.PGuess = function() {
+      // if player's choice is equal to anything in the gestures array
+      if (gestures.inArray(this.playerChoice.toLowerCase()) || gestures.indexOf(this.playerChoice.toLowerCase()) >= 0) {
+         return this.playerChoice;
+      } else {
+         alert("You typed something else or did not spell your choice correctly. Please try again!");
+         var pG = new PlayerGuess("Choose rock, paper, or scissors:");
+         return pG.PGuess(); // return PlayerGuess function to run the prompt again
+      }
+   };
 
    function ComputerGuess(formula) {
       // make 3 numbers for computer to randomly use (#'s are going to be integers: 1, 2, & 3)
