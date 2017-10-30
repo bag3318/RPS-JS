@@ -180,7 +180,7 @@ var rps = (function() {
       var start = new StartGame(confirm(welcomeMsg));
       start.Confirmation();
       // refresh page to play again
-      location.reload();
+      location.reload(true); // true = reload page from server
    }
 
    function Setup(h5Msg) {
