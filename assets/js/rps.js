@@ -141,7 +141,7 @@ var rps = (function() { // define a master function variable named `rps`
       };
    }
 
-   
+
    ComputerGuess.prototype = {
      set cpuChoice(formula) { this.__cpuChoice = formula; },
      get cpuChoice() { return this.__cpuChoice; }
@@ -173,7 +173,7 @@ var rps = (function() { // define a master function variable named `rps`
             t.determineW(true);
             return 0;
          }
-      }
+      };
    }
 
    function BTNClick() {
