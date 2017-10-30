@@ -31,7 +31,7 @@ var rps = (function() { // define a master function variable named `rps`
       // ask the user if they want to play
       this.ready = confirm(msg); // confirm(welcomeMsg)
    }
-   StartGame.prototype.confirm = function() {
+   StartGame.prototype.confirm = function confirm() {
       switch (this.ready) {
          case true:
             var playG = new PlayGame(3);
@@ -49,7 +49,7 @@ var rps = (function() { // define a master function variable named `rps`
       this.loseMsg = "The computer has " + co + " points compared to the player\'s " + pl + " points (ties: " + ties + "). So the computer wins!";
       console.log('d ' + isPlayerWinner, isComputerWinner);
    }
-   determineWinner.prototype.determineW = function(expression) {
+   determineWinner.prototype.determineW = function determineW(expression) {
       switch (expression) {
          case playerScore >= 2:
             isPlayerWinner = true;
@@ -64,7 +64,7 @@ var rps = (function() { // define a master function variable named `rps`
 
    function PlayGame(numOfRounds) {
       // create do while loop for playing game
-      this.play = function() {
+      this.play = function play() {
          do {
             if (isPlayerWinner || isComputerWinner) {
                // jump out
@@ -95,7 +95,7 @@ var rps = (function() { // define a master function variable named `rps`
 
    }
 
-   PlayerGuess.prototype.PGuess = function() {
+   PlayerGuess.prototype.PGuess = function PGuess() {
       // if player's choice is equal to anything in the gestures array
       if (gestures.inArray(this.playerChoice.toLowerCase()) || gestures.indexOf(this.playerChoice.toLowerCase()) >= 0) {
          return this.playerChoice;
@@ -109,7 +109,7 @@ var rps = (function() { // define a master function variable named `rps`
    function ComputerGuess(formula) {
       // make 3 numbers for computer to randomly use (#'s are going to be integers: 1, 2, & 3)
       this.cpuChoice = formula;
-      this.CGuess = function() {
+      this.CGuess = function CGuess() {
          switch (this.cpuChoice) {
             case 1:
                return gestures[0]; // rock
@@ -128,7 +128,7 @@ var rps = (function() { // define a master function variable named `rps`
 
    function CompareGuesses(guess1, guess2, points) {
       this.output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "! \n";
-      this.compare = function() {
+      this.compare = function Compare() {
          if (rules[guess1.toLowerCase()] == guess2.toLowerCase()) { // if user wins
             playerScore += points; // add 1 point to the player (specified in the `PlayGames` function)
             alert(this.output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
