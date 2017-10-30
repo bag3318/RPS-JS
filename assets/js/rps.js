@@ -44,18 +44,18 @@ var rps = (function() { // define a master function variable named `rps`
    };
 
    // define a function to determine the grand winner of the rps game
-   function determineWinner(pl, co, msgW, msgL) {
+   function DetermineWinner(pl, co, msgW, msgL) {
       msgW = "The player has " + pl + " points compared to the computer\'s " + co + " points (ties: " + ties + "). So the player wins!";
       msgL = "The computer has " + co + " points compared to the player\'s " + pl + " points (ties: " + ties + "). So the computer wins!";
       this.__winMsg = msgW;
       this.__loseMsg = msgL;
       console.log('d ' + isPlayerWinner, isComputerWinner);
    }
-   determineWinner.prototype = {
+   DetermineWinner.prototype = {
      set winMsg(winMsg) { this.__winMsg = winMsg; },
      get winMsg() { return this.__winMsg; }
    };
-   determineWinner.prototype.determineW = function determineW(expression) {
+   DetermineWinner.prototype.determineW = function determineW(expression) {
       switch (expression) {
          case playerScore >= 2:
             isPlayerWinner = true;
@@ -147,13 +147,13 @@ var rps = (function() { // define a master function variable named `rps`
          if (rules[guess1.toLowerCase()] == guess2.toLowerCase()) { // if user wins
             playerScore += points; // add 1 point to the player (specified in the `PlayGames` function)
             alert(this.output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
-            var w = new determineWinner(playerScore, computerScore); // call `determineWinner` function
+            var w = new DetermineWinner(playerScore, computerScore); // call `DetermineWinner` function
             w.determineW(true);
             return 1;
          } else if (rules[guess2.toLowerCase()] == guess1.toLowerCase()) { // if computer wins
             computerScore += points; // add 1 point to the cpu (specified in the `PlayGames` function)
             alert(this.output + "\nComputer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
-            var l = new determineWinner(playerScore, computerScore); // call `determineWinner` function
+            var l = new DetermineWinner(playerScore, computerScore); // call `DetermineWinner` function
             l.determineW(true);
             return 2;
          } else { // guess1.toLowerCase() === guess2.toLowerCase() // if tie...
@@ -161,7 +161,7 @@ var rps = (function() { // define a master function variable named `rps`
             computerScore += 0;
             ties += 1;
             alert(this.output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
-            var t = new determineWinner(playerScore, computerScore);
+            var t = new DetermineWinner(playerScore, computerScore);
             t.determineW(true);
             return 0;
          }
