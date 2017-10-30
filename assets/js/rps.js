@@ -166,11 +166,11 @@ var rps = (function() { // define a master function variable named `rps`
       var h5 = document.querySelector(".h5");
       var span = document.querySelector("#header5Contents");
       var regex = new RegExp(/(?:(?:[\-+\/]{2})|(?:[\++\*]{2})|(?:[\=+\!+\?]{3})|(?:[\x5F+\x5E]{2})|(?:[\s+\d+\s]{3}))/, "g");
-      h5Array = h5Msg.split(regex);
+      var h5Array = h5Msg.split(regex);
       h5Array.push("!");
       console.log(h5Array);
       console.log(h5Array.indexOf("play"), h5Array.indexOf("!"));
-      h5Txt = "";
+      var h5Txt = "";
       var i;
       for (i = 0; i < h5Array.length; i++) {
          switch (true) {
