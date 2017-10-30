@@ -27,12 +27,16 @@ var rps = (function() { // define a master function variable named `rps`
 
    var welcomeMsg = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
 
-   function StartGame(msg) {
+   function StartGame(Confirm) {
       // ask the user if they want to play
-      this.ready = confirm(msg); // confirm(welcomeMsg)
+      this.__ready = Confirm; // confirm(welcomeMsg)
    }
+   StartGame.prototype = {
+     set Confirm(Confirm) { this.__ready = Confirm; },
+     get Confirm() { return this.__ready; }
+   };
    StartGame.prototype.confirm = function confirm() {
-      switch (this.ready) {
+      switch (this.__ready) {
          case true:
             var playG = new PlayGame(3);
             playG.play();
@@ -143,7 +147,7 @@ var rps = (function() { // define a master function variable named `rps`
 
 
 
-   function CompareGuesses(guess1, guess2, points) {
+   function CompareGuesses(guess1, guess2, points, Output) {
       this.output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "! \n";
       this.compare = function compare() {
          if (rules[guess1.toLowerCase()] == guess2.toLowerCase()) { // if user wins
@@ -172,7 +176,7 @@ var rps = (function() { // define a master function variable named `rps`
 
    function BTNClick() {
       // this function will later be executed when the user clicks the rps button
-      var start = new StartGame(welcomeMsg);
+      var start = new StartGame(confirm(welcomeMsg));
       start.confirm();
       // we need to reload the page in order for the user to play rps again by clicking the button
       location.reload();
