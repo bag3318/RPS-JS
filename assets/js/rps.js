@@ -26,13 +26,13 @@ var rps = (function() {
    var welcomeMsg = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
 
 
-   var StartGame = class StartGame {
+   var StartRPS = class StartGame {
       Start(Confirm) {
          this._ready = Confirm;
       }
    }
 
-   StartGame.prototype = {
+   StartRPS.prototype = {
       set Confirm(Confirm) {
          this._ready = Confirm;
       },
@@ -194,7 +194,7 @@ var rps = (function() {
    }
 
    function BTNClick() {
-      var start = new StartGame();
+      const start = new StartRPS();
       start.Start(confirm(welcomeMsg))
       start.Confirmation();
       // refresh page to play again
