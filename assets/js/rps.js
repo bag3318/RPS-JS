@@ -44,11 +44,17 @@ var rps = (function() { // define a master function variable named `rps`
    };
 
    // define a function to determine the grand winner of the rps game
-   function determineWinner(pl, co) {
-      this.winMsg = "The player has " + pl + " points compared to the computer\'s " + co + " points (ties: " + ties + "). So the player wins!";
-      this.loseMsg = "The computer has " + co + " points compared to the player\'s " + pl + " points (ties: " + ties + "). So the computer wins!";
+   function determineWinner(pl, co, msgW, msgL) {
+      msgW = "The player has " + pl + " points compared to the computer\'s " + co + " points (ties: " + ties + "). So the player wins!";
+      msgL = "The computer has " + co + " points compared to the player\'s " + pl + " points (ties: " + ties + "). So the computer wins!";
+      this.__winMsg = msgW;
+      this.__loseMsg = msgL;
       console.log('d ' + isPlayerWinner, isComputerWinner);
    }
+   determineWinner.prototype = {
+     set winMsg(winMsg) { this.__winMsg = winMsg; },
+     get winMsg() { return this.__winMsg; }
+   };
    determineWinner.prototype.determineW = function determineW(expression) {
       switch (expression) {
          case playerScore >= 2:
@@ -71,7 +77,7 @@ var rps = (function() { // define a master function variable named `rps`
                return;
             }
             console.log('b', isPlayerWinner, isComputerWinner);
-            var player = new PlayerGuess("Choose rock, paper, or scissors:");
+            var player = new PlayerGuess(prompt("Choose rock, paper, or scissors:"));
             var computer = new ComputerGuess(Math.floor((Math.random() * 3) + 1));
             var result = new CompareGuesses(player.PGuess(), computer.CGuess(), 1);
             if (result.compare() !== 0) {
@@ -81,8 +87,8 @@ var rps = (function() { // define a master function variable named `rps`
       };
    }
 
-   function PlayerGuess(Prompt) {
-     this.playerChoice = prompt(Prompt);
+   function PlayerGuess(pChoice) {
+     this.__playerChoice = pChoice;
      Array.prototype.inArray = function inArray(value) {
          var i;
          for (i = 0; i < this.length; i++) {
@@ -95,20 +101,25 @@ var rps = (function() { // define a master function variable named `rps`
 
    }
 
+   PlayerGuess.prototype = {
+     set playerChoice(pChoice) { this.__playerChoice = pChoice; },
+     get playerChoice() { return this.__playerChoice; }
+   };
+
    PlayerGuess.prototype.PGuess = function PGuess() {
       // if player's choice is equal to anything in the gestures array
       if (gestures.inArray(this.playerChoice.toLowerCase()) || gestures.indexOf(this.playerChoice.toLowerCase()) >= 0) {
          return this.playerChoice;
       } else {
          alert("You typed something else or did not spell your choice correctly. Please try again!");
-         var pG = new PlayerGuess("Choose rock, paper, or scissors:");
+         var pG = new PlayerGuess(prompt("Choose rock, paper, or scissors:"));
          return pG.PGuess(); // return PlayerGuess function to run the prompt again
       }
    };
 
    function ComputerGuess(formula) {
       // make 3 numbers for computer to randomly use (#'s are going to be integers: 1, 2, & 3)
-      this.cpuChoice = formula;
+      this.__cpuChoice = formula;
       this.CGuess = function CGuess() {
          switch (this.cpuChoice) {
             case 1:
@@ -123,6 +134,10 @@ var rps = (function() { // define a master function variable named `rps`
          }
       };
    }
+   ComputerGuess.prototype = {
+     set cpuChoice(formula) { this.__cpuChoice = formula; },
+     get cpuChoice() { return this.__cpuChoice; }
+   };
 
 
 
