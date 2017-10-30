@@ -5,11 +5,13 @@ var rps = (function() {
    var computerScore = 0;
    var ties = 0;
 
+   // define gestures array in ojbect format
    var gestures = new Array();
    gestures[0] = "rock";
    gestures[1] = "paper";
    gestures[2] = "scissors";
 
+   // define rules object in object format
    var rules = new Object();
    rules.rock = gestures[2];
    rules.paper = gestures[0];
