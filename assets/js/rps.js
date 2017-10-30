@@ -83,7 +83,7 @@ var rps = (function() { // define a master function variable named `rps`
 
    function PlayerGuess(Prompt) {
      this.playerChoice = prompt(Prompt);
-      Array.prototype.inArray = function inArray(value) {
+     Array.prototype.inArray = function inArray(value) {
          var i;
          for (i = 0; i < this.length; i++) {
             if (this[i] === value) {
