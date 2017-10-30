@@ -31,6 +31,7 @@ var rps = (function() { // define a master function variable named `rps`
       // ask the user if they want to play
       this.__ready = Confirm; // confirm(welcomeMsg)
    }
+   // define `getters` & `setters`
    StartGame.prototype = {
      set Confirm(Confirm) { this.__ready = Confirm; },
      get Confirm() { return this.__ready; }
