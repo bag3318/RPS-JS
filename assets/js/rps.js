@@ -1,6 +1,6 @@
 <!--
 var rps = (function() {
-   "use moz"
+
    var playerScore = 0;
    var computerScore = 0;
    var ties = 0;
@@ -28,13 +28,11 @@ var rps = (function() {
 
    var StartGame = class StartGame {
       Start(Confirm) {
-         // we use the `_` to prevent recursion
          this._ready = Confirm;
       }
    }
 
    StartGame.prototype = {
-      // here we define our getters and setters for the `StartGame` function
       set Confirm(Confirm) {
          this._ready = Confirm;
       },
@@ -43,13 +41,10 @@ var rps = (function() {
       }
    };
 
-   // create new prototype of type object and make it a function named `Confirmation`
    Object.prototype.Confirmation = function Confirmation() {
-      switch (this._ready) { // call the ready instance variable
+      switch (this._ready) {
          case true:
-            // create `playG` variable of type PlayGame (instantiate it as well)
             var playG = new PlayGame(3);
-            // call the play function of the `PlayGame` function
             playG.play();
             break;
          case false:
@@ -113,10 +108,6 @@ var rps = (function() {
 
    function PlayerGuess(pChoice) {
       this._playerChoice = pChoice;
-      /*
-       * create `inArray` prototype of type `Array` = to function
-       * this will check if a value in in the specified array (in this case: gestures)
-       */
       Array.prototype.inArray = function inArray(value) {
          var i;
          for (i = 0; i < this.length; i++) {
