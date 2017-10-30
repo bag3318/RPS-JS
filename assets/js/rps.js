@@ -142,13 +142,10 @@ var rps = (function() { // define a master function variable named `rps`
       };
    }
 
-
    ComputerGuess.prototype = {
      set cpuChoice(formula) { this.__cpuChoice = formula; },
      get cpuChoice() { return this.__cpuChoice; }
    };
-
-
 
    function CompareGuesses(guess1, guess2, points) {
       this.output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "! \n";
