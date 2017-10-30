@@ -45,8 +45,8 @@ var rps = (function() { // define a master function variable named `rps`
 
    // define a function to determine the grand winner of the rps game
    function determineWinner() {
-      this.winMsg = "The player has " + playerScore + " points compared to the computer\'s " + computerScore + " points (there were " + ties + " ties). So the player wins!";
-      this.loseMsg = "The computer has " + computerScore + " points compared to the player\'s " + playerScore + " points (there were " + ties + " ties). So the computer wins!";
+      this.winMsg = "The player has " + playerScore + " points compared to the computer\'s " + computerScore + " points (ties: " + ties + "). So the player wins!";
+      this.loseMsg = "The computer has " + computerScore + " points compared to the player\'s " + playerScore + " points (ties: " + ties + "). So the computer wins!";
       console.log('d ' + isPlayerWinner, isComputerWinner);
    }
    determineWinner.prototype.determineW = function(expression) {
