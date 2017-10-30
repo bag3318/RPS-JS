@@ -153,7 +153,6 @@ var rps = (function() { // define a master function variable named `rps`
       }
    }
 
-
    function BTNClick() {
       // this function will later be executed when the user clicks the rps button
       var start = new StartGame(welcomeMsg);
