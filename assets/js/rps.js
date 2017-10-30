@@ -1,18 +1,15 @@
 <!--
-var rps = (function() { // define a master function variable named `rps`
+var rps = (function() {
 
-   // create Initial scores for player and computer
    var playerScore = 0;
    var computerScore = 0;
    var ties = 0;
 
-   // create new array (list)
    var gestures = new Array();
    gestures[0] = "rock";
    gestures[1] = "paper";
    gestures[2] = "scissors";
 
-   // define new object (dictionary)
    var rules = new Object();
    rules.rock = gestures[2];
    rules.paper = gestures[0];
@@ -21,17 +18,14 @@ var rps = (function() { // define a master function variable named `rps`
    console.log("gestures:", gestures, typeof gestures, gestures.length);
    console.log("rules:", rules, typeof rules);
 
-   // define booleans for winner
    var isPlayerWinner = false;
    var isComputerWinner = false;
 
    var welcomeMsg = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
 
    function StartGame(Confirm) {
-      // ask the user if they want to play
-      this._ready = Confirm; // confirm(welcomeMsg)
+      this._ready = Confirm;
    }
-   // define `getters` & `setters`
    StartGame.prototype = {
      set Confirm(Confirm) { this._ready = Confirm; },
      get Confirm() { return this._ready; }
@@ -48,7 +42,6 @@ var rps = (function() { // define a master function variable named `rps`
       }
    };
 
-   // define a function to determine the grand winner of the rps game
    function DetermineWinner(pl, co, ti, msgW, msgL) {
       msgW = "The player has " + pl + " points compared to the computer\'s " + co + " points (ties: " + ti + "). So the player wins!";
       msgL = "The computer has " + co + " points compared to the player\'s " + pl + " points (ties: " + ti + "). So the computer wins!";
@@ -76,11 +69,9 @@ var rps = (function() { // define a master function variable named `rps`
    };
 
    function PlayGame(numOfRounds) {
-      // create do while loop for playing game
       this.play = function play() {
          do {
             if (isPlayerWinner || isComputerWinner) {
-               // jump out
                return;
             }
             console.log('b', isPlayerWinner, isComputerWinner);
@@ -114,29 +105,27 @@ var rps = (function() { // define a master function variable named `rps`
    };
 
    PlayerGuess.prototype.PGuess = function PGuess() {
-      // if player's choice is equal to anything in the gestures array
       if (gestures.inArray(this.playerChoice.toLowerCase()) || gestures.indexOf(this.playerChoice.toLowerCase()) >= 0) {
          return this.playerChoice;
       } else {
          alert("You typed something else or did not spell your choice correctly. Please try again!");
          var pG = new PlayerGuess(prompt("Choose rock, paper, or scissors:"));
-         return pG.PGuess(); // return PlayerGuess function to run the prompt again
+         return pG.PGuess();
       }
    };
 
    function ComputerGuess(formula) {
-      // make 3 numbers for computer to randomly use (#'s are going to be integers: 1, 2, & 3)
       this._cpuChoice = formula;
       this.CGuess = function CGuess() {
          switch (this.cpuChoice) {
             case 1:
-               return gestures[0]; // rock
+               return gestures[0];
                break;
             case 2:
-               return gestures[1]; // paper
+               return gestures[1];
                break;
             case 3:
-               return gestures[2]; // scissors
+               return gestures[2];
                break;
          }
       };
@@ -150,19 +139,19 @@ var rps = (function() { // define a master function variable named `rps`
    function CompareGuesses(guess1, guess2, points) {
       this.output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "! \n";
       this.compare = function compare() {
-         if (rules[guess1.toLowerCase()] == guess2.toLowerCase()) { // if user wins
-            playerScore += points; // add 1 point to the player (specified in the `PlayGames` function)
+         if (rules[guess1.toLowerCase()] == guess2.toLowerCase()) {
+            playerScore += points;
             alert(this.output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
-            var w = new DetermineWinner(playerScore, computerScore, ties); // call `DetermineWinner` function
+            var w = new DetermineWinner(playerScore, computerScore, ties);
             w.determineW();
             return 1;
-         } else if (rules[guess2.toLowerCase()] == guess1.toLowerCase()) { // if computer wins
-            computerScore += points; // add 1 point to the cpu (specified in the `PlayGames` function)
+         } else if (rules[guess2.toLowerCase()] == guess1.toLowerCase()) {
+            computerScore += points;
             alert(this.output + "\nComputer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
-            var l = new DetermineWinner(playerScore, computerScore, ties); // call `DetermineWinner` function
+            var l = new DetermineWinner(playerScore, computerScore, ties);
             l.determineW();
             return 2;
-         } else { // guess1.toLowerCase() === guess2.toLowerCase() // if tie...
+         } else {
             playerScore += 0;
             computerScore += 0;
             ties += 1;
@@ -175,15 +164,12 @@ var rps = (function() { // define a master function variable named `rps`
    }
 
    function BTNClick() {
-      // this function will later be executed when the user clicks the rps button
       var start = new StartGame(confirm(welcomeMsg));
       start.confirm();
-      // we need to reload the page in order for the user to play rps again by clicking the button
       location.reload();
    }
 
    function Setup(h5Msg) {
-      // **NEED TO OBJECT ORIENT THIS FUNCTION!!**
       var h5 = document.querySelector(".h5");
       var span = document.querySelector("#header5Contents");
       var regex = new RegExp(/(?:(?:[\-+\/]{2})|(?:[\++\*]{2})|(?:[\=+\!+\?]{3})|(?:[\x5F+\x5E]{2})|(?:[\s+\d+\s]{3}))/, "g");
@@ -208,7 +194,6 @@ var rps = (function() { // define a master function variable named `rps`
    }
 
    function Init() {
-      // this is our Init function that will tell the what to do on each action (load and click)
       var rpsScript = rps();
       var element = document.querySelector("body");
       window.addEventListener("load", function() {
@@ -221,8 +206,6 @@ var rps = (function() { // define a master function variable named `rps`
       }, false);
    }
 
-   // define API for script
-   // this basically allows us to organize all our functions in an object and call them in the `Init` function
    return function API() {
       return {
          initiate: Init,
@@ -232,4 +215,3 @@ var rps = (function() { // define a master function variable named `rps`
    };
 
 }());
-//-->
