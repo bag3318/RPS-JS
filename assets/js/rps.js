@@ -49,8 +49,7 @@ var rps = (function() {
             break;
       }
    };
-
-   function DetermineWinner(pl, co, ti, msgW, msgL) {
+  function DetermineWinner(pl, co, ti, msgW, msgL) {
       msgW = "The player has " + pl + " points compared to the computer\'s " + co + " points (ties: " + ti + "). So the player wins!";
       msgL = "The computer has " + co + " points compared to the player\'s " + pl + " points (ties: " + ti + "). So the computer wins!";
       this._winMsg = msgW;
