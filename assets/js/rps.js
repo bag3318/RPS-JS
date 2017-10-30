@@ -179,6 +179,7 @@ var rps = (function() {
    function BTNClick() {
       var start = new StartGame(confirm(welcomeMsg));
       start.Confirmation();
+      // refresh page to play again
       location.reload();
    }
 
