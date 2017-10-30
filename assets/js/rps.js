@@ -1,6 +1,6 @@
 <!--
 var rps = (function() {
-
+  "use moz"
    var playerScore = 0;
    var computerScore = 0;
    var ties = 0;
@@ -25,10 +25,14 @@ var rps = (function() {
 
    var welcomeMsg = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
 
-   function StartGame(Confirm) {
+
+   var StartGame = class StartGame {
+     Start(Confirm) {
      // we use the `_` to prevent recursion
       this._ready = Confirm;
+    }
    }
+
    StartGame.prototype = {
      // here we define our getters and setters for the `StartGame` function
      set Confirm(Confirm) { this._ready = Confirm; },
@@ -178,7 +182,8 @@ var rps = (function() {
    }
 
    function BTNClick() {
-      var start = new StartGame(confirm(welcomeMsg));
+      var start = new StartGame();
+      start.Start(confirm(welcomeMsg))
       start.Confirmation();
       // refresh page to play again
       location.reload(true); // true = reload page from server
