@@ -33,7 +33,7 @@ var rps = (function() { // define a master function variable named `rps`
       this.confirm = function() {
          switch (this.ready) {
             case true:
-               var playG = new playGame(3);
+               var playG = new PlayGame(3);
                playG.play();
                break;
             case false:
@@ -62,7 +62,7 @@ var rps = (function() { // define a master function variable named `rps`
       }
    };
 
-   function playGame(numOfRounds) {
+   function PlayGame(numOfRounds) {
       // create do while loop for playing game
       this.play = function() {
          do {
@@ -130,13 +130,13 @@ var rps = (function() { // define a master function variable named `rps`
       this.output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "! \n";
       this.compare = function() {
          if (rules[guess1.toLowerCase()] == guess2.toLowerCase()) { // if user wins
-            playerScore += points; // add 1 point to the player (specified in the `playGames` function)
+            playerScore += points; // add 1 point to the player (specified in the `PlayGames` function)
             alert(this.output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
             var w = new determineWinner(); // call `determineWinner` function
             w.determineW(true);
             return 1;
          } else if (rules[guess2.toLowerCase()] == guess1.toLowerCase()) { // if computer wins
-            computerScore += points; // add 1 point to the cpu (specified in the `playGames` function)
+            computerScore += points; // add 1 point to the cpu (specified in the `PlayGames` function)
             alert(this.output + "\nComputer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
             var l = new determineWinner(); // call `determineWinner` function
             l.determineW(true);
