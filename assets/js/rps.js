@@ -197,7 +197,7 @@ var rps = (function() {
    function Init() {
       var rpsScript = rps();
       var element = document.querySelector("body");
-      window.addEventListener("load", function() {
+      element.addEventListener("load", function() {
          rpsScript.load("Click-/the+*button=!?below_^to 8 play");
       }, true);
       element = null;
