@@ -52,8 +52,10 @@ var rps = (function() { // define a master function variable named `rps`
       console.log('d ' + isPlayerWinner, isComputerWinner);
    }
    DetermineWinner.prototype = {
-     set winMsg(winMsg) { this.__winMsg = winMsg; },
-     get winMsg() { return this.__winMsg; }
+     set winMsg(msgW) { this.__winMsg = msgW; },
+     get winMsg() { return this.__winMsg; },
+     set loseMsg(msgL) { this.__loseMsg = msgL; },
+     get loseMsg() {return this.__loseMsg; }
    };
    DetermineWinner.prototype.determineW = function determineW(expression) {
       switch (expression) {
