@@ -30,7 +30,7 @@ var rps = (function() {
      set Confirm(Confirm) { this._ready = Confirm; },
      get Confirm() { return this._ready; }
    };
-   StartGame.prototype.confirm = function confirm() {
+   Object.prototype.confirm = function confirm() {
       switch (this._ready) {
          case true:
             var playG = new PlayGame(3);
@@ -55,7 +55,7 @@ var rps = (function() {
      set loseMsg(msgL) { this._loseMsg = msgL; },
      get loseMsg() {return this._loseMsg; }
    };
-   DetermineWinner.prototype.determineW = function determineW() {
+   Object.prototype.determineW = function determineW() {
       switch (true) {
          case playerScore >= 2:
             isPlayerWinner = true;
@@ -104,7 +104,7 @@ var rps = (function() {
      get playerChoice() { return this._playerChoice; }
    };
 
-   PlayerGuess.prototype.PGuess = function PGuess() {
+   Object.prototype.PGuess = function PGuess() {
       if (gestures.inArray(this.playerChoice.toLowerCase()) || gestures.indexOf(this.playerChoice.toLowerCase()) >= 0) {
          return this.playerChoice;
       } else {
