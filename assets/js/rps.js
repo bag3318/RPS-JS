@@ -97,8 +97,10 @@ var rps = (function() {
 
    function PlayerGuess(pChoice) {
      this._playerChoice = pChoice;
-     // create `inArray` prototype of type `Array` = to function
-     // this will check if a value in in the specified array (in this case: gestures)
+     /*
+      * create `inArray` prototype of type `Array` = to function
+      * this will check if a value in in the specified array (in this case: gestures)
+      */
      Array.prototype.inArray = function inArray(value) {
          var i;
          for (i = 0; i < this.length; i++) {
