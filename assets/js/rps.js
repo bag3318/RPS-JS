@@ -1,7 +1,7 @@
 <!--
 var rps = (function() { // define a master function variable named `rps`
 
-   // create initial scores for player and computer
+   // create Initial scores for player and computer
    var playerScore = 0;
    var computerScore = 0;
    var ties = 0;
@@ -27,7 +27,7 @@ var rps = (function() { // define a master function variable named `rps`
 
    var welcomeMsg = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
 
-   function startGame(msg) {
+   function StartGame(msg) {
       // ask the user if they want to play
       this.ready = confirm(msg); // confirm(welcomeMsg)
       this.confirm = function() {
@@ -71,9 +71,9 @@ var rps = (function() { // define a master function variable named `rps`
                return;
             }
             console.log('b', isPlayerWinner, isComputerWinner);
-            var player = new playerGuess("Choose rock, paper, or scissors:");
-            var computer = new computerGuess(Math.floor((Math.random() * 3) + 1));
-            var result = new compareGuesses(player.pGuess(), computer.cGuess(), 1);
+            var player = new PlayerGuess("Choose rock, paper, or scissors:");
+            var computer = new ComputerGuess(Math.floor((Math.random() * 3) + 1));
+            var result = new CompareGuesses(player.PGuess(), computer.CGuess(), 1);
             if (result.compare() !== 0) {
                numOfRounds--;
             }
@@ -81,7 +81,7 @@ var rps = (function() { // define a master function variable named `rps`
       };
    }
 
-   function playerGuess(prompt1) {
+   function PlayerGuess(prompt1) {
      this.playerChoice = prompt(prompt1);
       Array.prototype.inArray = function inArray(value) {
          var i;
@@ -92,24 +92,24 @@ var rps = (function() { // define a master function variable named `rps`
          }
          return false;
       };
-      this.pGuess = function() {
+      this.PGuess = function() {
          // if player's choice is equal to anything in the gestures array
          if (gestures.inArray(this.playerChoice.toLowerCase()) || gestures.indexOf(this.playerChoice.toLowerCase()) >= 0) {
             return this.playerChoice;
          } else {
             alert("You typed something else or did not spell your choice correctly. Please try again!");
-            var pG = new playerGuess()
-            return pG.pGuess(); // return playerGuess function to run the prompt again
+            var pG = new PlayerGuess("Choose rock, paper, or scissors:")
+            return pG.PGuess(); // return PlayerGuess function to run the prompt again
          }
       };
    }
 
 
 
-   function computerGuess(formula) {
+   function ComputerGuess(formula) {
       // make 3 numbers for computer to randomly use (#'s are going to be integers: 1, 2, & 3)
       this.cpuChoice = formula;
-      this.cGuess = function() {
+      this.CGuess = function() {
          switch (this.cpuChoice) {
             case 1:
                return gestures[0]; // rock
@@ -126,7 +126,7 @@ var rps = (function() { // define a master function variable named `rps`
 
 
 
-   function compareGuesses(guess1, guess2, points) {
+   function CompareGuesses(guess1, guess2, points) {
       this.output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "! \n";
       this.compare = function() {
          if (rules[guess1.toLowerCase()] == guess2.toLowerCase()) { // if user wins
@@ -154,15 +154,15 @@ var rps = (function() { // define a master function variable named `rps`
    }
 
 
-   function btnClick() {
+   function BTNClick() {
       // this function will later be executed when the user clicks the rps button
-      var start = new startGame(welcomeMsg);
+      var start = new StartGame(welcomeMsg);
       start.confirm();
       // we need to reload the page in order for the user to play rps again by clicking the button
       location.reload();
    }
 
-   function setup(h5Msg) {
+   function Setup(h5Msg) {
       h5 = document.querySelector(".h5");
       var span = document.querySelector("#header5Contents");
       var regex = new RegExp(/(?:(?:[\-+\/]{2})|(?:[\++\*]{2})|(?:[\=+\!+\?]{3})|(?:[\x5F+\x5E]{2})|(?:[\s+\d+\s]{3}))/, "g");
@@ -186,8 +186,8 @@ var rps = (function() { // define a master function variable named `rps`
       span.parentNode.replaceChild(document.createTextNode(h5Txt), span);
    }
 
-   function init() {
-      // this is our init function that will tell the what to do on each action (load and click)
+   function Init() {
+      // this is our Init function that will tell the what to do on each action (load and click)
       var rpsScript = rps();
       var element = document.querySelector("body");
       window.addEventListener("load", function() {
@@ -196,17 +196,17 @@ var rps = (function() { // define a master function variable named `rps`
       element = null;
       var element = document.querySelector("#btn");
       element.addEventListener("click", function() {
-         rpsScript.btnClick();
+         rpsScript.BTNClick();
       }, false);
    }
 
    // define API for script
-   // this basically allows us to organize all our functions in an object and call them in the `init` function
+   // this basically allows us to organize all our functions in an object and call them in the `Init` function
    return function API() {
       return {
-         initiate: init,
-         btnClick: btnClick,
-         load: setup
+         initiate: Init,
+         BTNClick: BTNClick,
+         load: Setup
       };
    };
 
