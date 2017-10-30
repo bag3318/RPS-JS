@@ -29,7 +29,7 @@ var rps = (function() { // define a master function variable named `rps`
 
    function startGame(msg) {
       // ask the user if they want to play
-      this.ready = msg; // confirm(welcomeMsg)
+      this.ready = confirm(msg); // confirm(welcomeMsg)
       this.confirm = function() {
          switch (this.ready) {
             case true:
@@ -44,11 +44,9 @@ var rps = (function() { // define a master function variable named `rps`
    }
 
    // define a function to determine the grand winner of the rps game
-   function determineWinner(wMsg, lMsg) {
-     var msgW = "The player has " + playerScore + " points compared to the computer\'s " + computerScore + " points (there were " + ties + " ties). So the player wins!";
-     var msgL = "The computer has " + computerScore + " points compared to the player\'s " + playerScore + " points (there were " + ties + " ties). So the computer wins!";
-      this.winMsg = wMsg;
-      this.loseMsg = lMsg;
+   function determineWinner() {
+      this.winMsg = "The player has " + playerScore + " points compared to the computer\'s " + computerScore + " points (there were " + ties + " ties). So the player wins!";
+      this.loseMsg = "The computer has " + computerScore + " points compared to the player\'s " + playerScore + " points (there were " + ties + " ties). So the computer wins!";
       console.log('d ' + isPlayerWinner, isComputerWinner);
    }
    determineWinner.prototype.determineW = function(expression) {
@@ -62,7 +60,7 @@ var rps = (function() { // define a master function variable named `rps`
             alert(this.loseMsg);
             break;
       }
-   }
+   };
 
    function playGame(numOfRounds) {
       // create do while loop for playing game
@@ -158,7 +156,7 @@ var rps = (function() { // define a master function variable named `rps`
 
    function btnClick() {
       // this function will later be executed when the user clicks the rps button
-      var start = new startGame(confirm(welcomeMsg));
+      var start = new startGame(welcomeMsg);
       start.confirm();
       // we need to reload the page in order for the user to play rps again by clicking the button
       location.reload();
