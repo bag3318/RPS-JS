@@ -29,15 +29,15 @@ var rps = (function() { // define a master function variable named `rps`
 
    function StartGame(Confirm) {
       // ask the user if they want to play
-      this.__ready = Confirm; // confirm(welcomeMsg)
+      this._ready = Confirm; // confirm(welcomeMsg)
    }
    // define `getters` & `setters`
    StartGame.prototype = {
-     set Confirm(Confirm) { this.__ready = Confirm; },
-     get Confirm() { return this.__ready; }
+     set Confirm(Confirm) { this._ready = Confirm; },
+     get Confirm() { return this._ready; }
    };
    StartGame.prototype.confirm = function confirm() {
-      switch (this.__ready) {
+      switch (this._ready) {
          case true:
             var playG = new PlayGame(3);
             playG.play();
@@ -52,15 +52,15 @@ var rps = (function() { // define a master function variable named `rps`
    function DetermineWinner(pl, co, ti, msgW, msgL) {
       msgW = "The player has " + pl + " points compared to the computer\'s " + co + " points (ties: " + ti + "). So the player wins!";
       msgL = "The computer has " + co + " points compared to the player\'s " + pl + " points (ties: " + ti + "). So the computer wins!";
-      this.__winMsg = msgW;
-      this.__loseMsg = msgL;
+      this._winMsg = msgW;
+      this._loseMsg = msgL;
       console.log('d ' + isPlayerWinner, isComputerWinner);
    }
    DetermineWinner.prototype = {
-     set winMsg(msgW) { this.__winMsg = msgW; },
-     get winMsg() { return this.__winMsg; },
-     set loseMsg(msgL) { this.__loseMsg = msgL; },
-     get loseMsg() {return this.__loseMsg; }
+     set winMsg(msgW) { this._winMsg = msgW; },
+     get winMsg() { return this._winMsg; },
+     set loseMsg(msgL) { this._loseMsg = msgL; },
+     get loseMsg() {return this._loseMsg; }
    };
    DetermineWinner.prototype.determineW = function determineW() {
       switch (true) {
@@ -95,7 +95,7 @@ var rps = (function() { // define a master function variable named `rps`
    }
 
    function PlayerGuess(pChoice) {
-     this.__playerChoice = pChoice;
+     this._playerChoice = pChoice;
      Array.prototype.inArray = function inArray(value) {
          var i;
          for (i = 0; i < this.length; i++) {
@@ -109,8 +109,8 @@ var rps = (function() { // define a master function variable named `rps`
    }
 
    PlayerGuess.prototype = {
-     set playerChoice(pChoice) { this.__playerChoice = pChoice; },
-     get playerChoice() { return this.__playerChoice; }
+     set playerChoice(pChoice) { this._playerChoice = pChoice; },
+     get playerChoice() { return this._playerChoice; }
    };
 
    PlayerGuess.prototype.PGuess = function PGuess() {
@@ -126,7 +126,7 @@ var rps = (function() { // define a master function variable named `rps`
 
    function ComputerGuess(formula) {
       // make 3 numbers for computer to randomly use (#'s are going to be integers: 1, 2, & 3)
-      this.__cpuChoice = formula;
+      this._cpuChoice = formula;
       this.CGuess = function CGuess() {
          switch (this.cpuChoice) {
             case 1:
@@ -143,8 +143,8 @@ var rps = (function() { // define a master function variable named `rps`
    }
 
    ComputerGuess.prototype = {
-     set cpuChoice(formula) { this.__cpuChoice = formula; },
-     get cpuChoice() { return this.__cpuChoice; }
+     set cpuChoice(formula) { this._cpuChoice = formula; },
+     get cpuChoice() { return this._cpuChoice; }
    };
 
    function CompareGuesses(guess1, guess2, points) {
