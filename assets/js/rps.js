@@ -6,17 +6,13 @@ var rps = (function() {
    var ties = 0;
 
    // define gestures array in ojbect format
-   var gestures = new Array();
-   gestures[0] = "rock";
-   gestures[1] = "paper";
-   gestures[2] = "scissors";
-
+   var gestures = new Array("rock", "paper", "scissors");
    // define rules object in object format
-   var rules = new Object();
-   rules.rock = gestures[2];
-   rules.paper = gestures[0];
-   rules.scissors = gestures[1];
-
+   var rules = new Object({
+    "rock": "scissors",
+    "paper": "rock",
+    "scissors": "paper"
+   });
    console.log("gestures:", gestures, typeof gestures, gestures.length);
    console.log("rules:", rules, typeof rules);
 
@@ -30,7 +26,7 @@ var rps = (function() {
       Start(Confirm) {
          this._ready = Confirm;
       }
-   }
+   };
 
    StartRPS.prototype = {
       set Confirm(Confirm) {
