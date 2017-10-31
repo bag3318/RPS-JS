@@ -7,7 +7,7 @@ var rps = (function() {
 
    // define gestures array in ojbect format
    var gestures = new Array("rock", "paper", "scissors");
-   
+
    // define rules object in object format
    var rules = new Object({
     "rock": "scissors",
