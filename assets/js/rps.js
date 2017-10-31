@@ -13,6 +13,7 @@ var rps = (function() {
     "paper": "rock",
     "scissors": "paper"
    });
+   
    console.log("gestures:", gestures, typeof gestures, gestures.length);
    console.log("rules:", rules, typeof rules);
 
