@@ -115,7 +115,6 @@ var rps = (function() {
          }
          return false;
       };
-
    }
 
    PlayerGuess.prototype = {
