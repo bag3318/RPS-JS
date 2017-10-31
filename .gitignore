@@ -2,8 +2,6 @@
 *.sublime-project
 *.DS_Store
 *.ste
-spare.js
-rps.min.js
 _MACOSX
 
 # If gitignore is not working,

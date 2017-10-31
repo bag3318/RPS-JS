@@ -24,6 +24,7 @@ var rps = (function() {
    var welcomeMsg = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
 
 
+
    var StartRPS = class StartGame {
       Start(Confirm) {
          this._ready = Confirm;
