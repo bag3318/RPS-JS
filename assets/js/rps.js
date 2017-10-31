@@ -18,13 +18,13 @@ var rps = (function() {
    console.log("gestures:", gestures, typeof gestures, gestures.length);
    console.log("rules:", rules, typeof rules);
 
+   // here we define our booleans for the winners (will be used later on)
    var isPlayerWinner = false;
    var isComputerWinner = false;
 
    var welcomeMsg = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
 
-
-
+   // create variable = to class of `StartGame`
    var StartRPS = class StartGame {
       Start(Confirm) {
          this._ready = Confirm;
@@ -40,16 +40,18 @@ var rps = (function() {
       }
    };
 
+   Object.prototype = new StartRPS();
+   Object.prototype.constructor = StartRPS;
    Object.prototype.Confirmation = function Confirmation() {
-      switch (this._ready) {
-         case true:
-            var playG = new PlayGame(3);
-            playG.play();
-            break;
-         case false:
-            alert("Sorry you don't wanna play, maybe next time! :)");
-            break;
-      }
+     switch (this._ready) {
+        case true:
+           var playG = new PlayGame(3);
+           playG.play();
+           break;
+        case false:
+           alert("Sorry you don't wanna play, maybe next time! :)");
+           break;
+     }
    };
 
    function DetermineWinner(pl, co, ti, msgW, msgL) {
@@ -75,7 +77,7 @@ var rps = (function() {
       }
    };
 
-   Object.prototype.determineW = function determineW() {
+   DetermineWinner.prototype.determineW = function determineW() {
       switch (true) {
          case playerScore >= 2:
             isPlayerWinner = true;
@@ -129,7 +131,7 @@ var rps = (function() {
       }
    };
 
-   Object.prototype.PGuess = function PGuess() {
+   PlayerGuess.prototype.PGuess = function PGuess() {
       if (gestures.inArray(this.playerChoice.toLowerCase()) || gestures.indexOf(this.playerChoice.toLowerCase()) >= 0) {
          return this.playerChoice;
       } else {
