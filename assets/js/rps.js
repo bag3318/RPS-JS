@@ -58,6 +58,7 @@ var rps = (function() {
       this._loseMsg = msgL;
       console.log('d ' + isPlayerWinner, isComputerWinner);
    }
+
    DetermineWinner.prototype = {
       set winMsg(msgW) {
          this._winMsg = msgW;
@@ -72,6 +73,7 @@ var rps = (function() {
          return this._loseMsg;
       }
    };
+
    Object.prototype.determineW = function determineW() {
       switch (true) {
          case playerScore >= 2:
@@ -243,6 +245,5 @@ var rps = (function() {
          load: Setup
       };
    };
-
 }());
 //-->
