@@ -55,6 +55,7 @@ var rps = (function() {
      }
    };
 
+   // leave function blank and use prototypes to fill it in
    function DetermineWinner() {}
 
    DetermineWinner.prototype = {
