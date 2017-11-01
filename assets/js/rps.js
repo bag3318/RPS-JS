@@ -236,7 +236,7 @@ var rps = (function() {
       var element = document.querySelector("body");
       element.addEventListener("load", function() {
          rpsScript.Load("Click-/the+*button=!?below_^to 8 play");
-      }, true);
+      }, true); // use `true` to execute in capturing phase
       element = null;
       var element = document.querySelector("#btn");
       element.addEventListener("click", function() {
