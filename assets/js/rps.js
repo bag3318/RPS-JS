@@ -77,6 +77,8 @@ var rps = (function() {
       }
    };
 
+   DetermineWinner.prototype = new DetermineWinner();
+   DetermineWinner.prototype.constructor = DetermineWinner;
    DetermineWinner.prototype.determineW = function determineW() {
       switch (true) {
          case playerScore >= 2:
