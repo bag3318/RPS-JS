@@ -191,7 +191,7 @@ var rps = (function() {
             computerScore += 0;
             ties += 1;
             alert(this.output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
-            var t = new DetermineWinner(s);
+            var t = new DetermineWinner();
             t.determineW(playerScore, computerScore, tie);
             return 0;
          }
