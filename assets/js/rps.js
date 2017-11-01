@@ -31,6 +31,7 @@ var rps = (function() {
       }
    };
 
+   // create prototype of getters and setters for function `StartRPS`
    StartRPS.prototype = {
       set Confirm(Confirm) {
          this._ready = Confirm;
@@ -234,7 +235,7 @@ var rps = (function() {
       var rpsScript = rps();
       var element = document.querySelector("body");
       element.addEventListener("load", function() {
-         rpsScript.load("Click-/the+*button=!?below_^to 8 play");
+         rpsScript.Load("Click-/the+*button=!?below_^to 8 play");
       }, true);
       element = null;
       var element = document.querySelector("#btn");
@@ -247,7 +248,7 @@ var rps = (function() {
       return {
          initiate: Init,
          BTNClick: BTNClick,
-         load: Setup
+         Load: Setup
       };
    };
 }());
