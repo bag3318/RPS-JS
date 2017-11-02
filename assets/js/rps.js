@@ -34,7 +34,7 @@ var rps = (function() {
    // create prototype of getters and setters for function `StartRPS`
    StartRPS.prototype = {
       set Confirm(Confirm) {
-         this._ready = Confirm;
+         this._ready = Boolean(Confirm);
       },
       get Confirm() {
          return this._ready;
