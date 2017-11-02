@@ -180,13 +180,13 @@ var rps = (function() {
       this.compare = function compare() {
          if (rules[guess1.toLowerCase()] == guess2.toLowerCase()) { // if player wins
             playerScore += points;
-            alert(this.output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+            alert(this.output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore + ".");
             var w = new DetermineWinner();
             w.determineW(playerScore, computerScore, ties);
             return 1;
          } else if (rules[guess2.toLowerCase()] == guess1.toLowerCase()) { // if computer wins
             computerScore += points;
-            alert(this.output + "\nComputer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+            alert(this.output + "\nComputer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore + ".");
             var l = new DetermineWinner();
             l.determineW(playerScore, computerScore, ties);
             return 2;
@@ -194,7 +194,7 @@ var rps = (function() {
             playerScore += 0;
             computerScore += 0;
             ties += 1;
-            alert(this.output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
+            alert(this.output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore + ".");
             var t = new DetermineWinner();
             t.determineW(playerScore, computerScore, ties);
             return 0;
