@@ -163,7 +163,7 @@ var rps = (function() {
 
    ComputerGuess.prototype = {
       set cpuChoice(formula) {
-         this._cpuChoice = formula;
+         this._cpuChoice = Number(formula);
       },
       get cpuChoice() {
          return this._cpuChoice;
@@ -192,7 +192,7 @@ var rps = (function() {
             ties += 1;
             alert(this.output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore);
             var t = new DetermineWinner();
-            t.determineW(playerScore, computerScore, tie);
+            t.determineW(playerScore, computerScore, ties);
             return 0;
          }
       };
