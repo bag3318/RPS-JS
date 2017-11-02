@@ -60,13 +60,13 @@ var rps = (function() {
 
    DetermineWinner.prototype = {
       set winMsg(msgW) {
-         this._winMsg = msgW;
+         this._winMsg = String(msgW);
       },
       get winMsg() {
          return this._winMsg;
       },
       set loseMsg(msgL) {
-         this._loseMsg = msgL;
+         this._loseMsg = String(msgL);
       },
       get loseMsg() {
          return this._loseMsg;
@@ -127,7 +127,7 @@ var rps = (function() {
 
    PlayerGuess.prototype = {
       set playerChoice(pChoice) {
-         this._playerChoice = pChoice;
+         this._playerChoice = String(pChoice);
       },
       get playerChoice() {
          return this._playerChoice;
