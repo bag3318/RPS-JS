@@ -33,11 +33,11 @@ var rps = (function() {
 
    // create prototype of getters and setters for function `StartRPS`
    StartRPS.prototype = {
+      get Confirm() {
+        return this._ready;
+      },
       set Confirm(Confirm) {
          this._ready = Boolean(Confirm);
-      },
-      get Confirm() {
-         return this._ready;
       }
    };
 
@@ -59,17 +59,17 @@ var rps = (function() {
    function DetermineWinner() {}
 
    DetermineWinner.prototype = {
+      get winMsg() {
+        return this._winMsg;
+      },
       set winMsg(msgW) {
          this._winMsg = String(msgW);
       },
-      get winMsg() {
-         return this._winMsg;
+      get loseMsg() {
+         return this._loseMsg;
       },
       set loseMsg(msgL) {
          this._loseMsg = String(msgL);
-      },
-      get loseMsg() {
-         return this._loseMsg;
       }
    };
 
@@ -126,11 +126,11 @@ var rps = (function() {
    }
 
    PlayerGuess.prototype = {
-      set playerChoice(pChoice) {
-         this._playerChoice = String(pChoice);
-      },
       get playerChoice() {
          return this._playerChoice;
+      },
+      set playerChoice(pChoice) {
+         this._playerChoice = String(pChoice);
       }
    };
 
@@ -162,12 +162,13 @@ var rps = (function() {
    }
 
    ComputerGuess.prototype = {
-      set cpuChoice(formula) {
-         this._cpuChoice = Number(formula);
-      },
       get cpuChoice() {
          return this._cpuChoice;
+      },
+      set cpuChoice(formula) {
+         this._cpuChoice = Number(formula);
       }
+
    };
 
    function CompareGuesses(guess1, guess2, points) {
@@ -202,23 +203,23 @@ var rps = (function() {
    }
 
     CompareGuesses.prototype = {
-       set points(points) {
-          this._points = Number(points);
-       },
        get points() {
           return this._points;
        },
-       set guess1(guess1) {
-          this._guess1 = String(guess1);
+       set points(points) {
+          this._points = Number(points);
        },
        get guess1() {
           return this._guess1;
        },
-       set guess2(guess2) {
-          this._guess2 = String(guess2);
+       set guess1(guess1) {
+          this._guess1 = String(guess1);
        },
        get guess2() {
           return this._guess2;
+       },
+       set guess2(guess2) {
+          this._guess2 = String(guess2);
        }
     };
 
