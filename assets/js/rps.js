@@ -135,7 +135,7 @@ var rps = (function() {
    };
 
    PlayerGuess.prototype.PGuess = function PGuess() {
-      if (gestures.inArray(this.playerChoice.toLowerCase()) || gestures.indexOf(this.playerChoice.toLowerCase()) >= 0) {
+      if (gestures.inArray(this.playerChoice.toLowerCase())) { // gestures.indexOf(this.playerChoice.toLowerCase()) >= 0
          return this.playerChoice;
       } else {
          alert("You typed something else or did not spell your choice correctly. Please try again!");
