@@ -171,6 +171,9 @@ var rps = (function() {
    };
 
    function CompareGuesses(guess1, guess2, points) {
+      this._points = points;
+      this._guess1 = guess1;
+      this._guess2 = guess2;
       this.output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "! \n";
       // create compare function
       this.compare = function compare() {
@@ -197,6 +200,27 @@ var rps = (function() {
          }
       };
    }
+
+    CompareGuesses.prototype = {
+       set points(points) {
+          this._points = Number(points);
+       },
+       get points() {
+          return this._points;
+       },
+       set guess1(guess1) {
+          this._guess1 = String(guess1);
+       },
+       get guess1() {
+          return this._guess1;
+       },
+       set guess2(guess2) {
+          this._guess2 = String(guess2);
+       },
+       get guess2() {
+          return this._guess2;
+       }
+    };
 
    function BTNClick() {
       const start = new StartRPS();
