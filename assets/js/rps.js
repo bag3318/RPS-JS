@@ -200,7 +200,7 @@ var rps = (function() {
 
    function BTNClick() {
       const start = new StartRPS();
-      start.Start(confirm(welcomeMsg))
+      start.Start(confirm(welcomeMsg));
       start.Confirmation();
       // refresh page to play again
       location.reload(true); // true = reload page from server
