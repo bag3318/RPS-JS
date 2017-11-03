@@ -123,5 +123,6 @@ class rps {
        }, false);
   }
 }
+
 let script: rps = new rps();
 script.Init();
