@@ -69,7 +69,7 @@ class rps {
 
    PlayerGuess() {
      var playerChoice: string = prompt("Choose rock, paper, or scissors:");
-     if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) { //
+     if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
         return playerChoice;
      } else {
         alert("You typed something else or did not spell your choice correctly. Please try again!");
