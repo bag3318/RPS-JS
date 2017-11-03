@@ -134,13 +134,15 @@ class rps {
     }
 
     BTNClick() {
-        this.Game();
         this.Start();
         location.reload(true);
     }
 
     Init() {
         var rpsScript: rps = new rps("Rock Paper Scissors");
+        window.addEventListener("load", () => {
+          rpsScript.Game();
+        }, true);
         var element: HTMLElement = document.querySelector("button");
         element.addEventListener("click", () => {
             rpsScript.BTNClick();

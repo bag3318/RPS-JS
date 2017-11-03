@@ -124,12 +124,14 @@ var rps = /** @class */ (function () {
         }
     };
     rps.prototype.BTNClick = function () {
-        this.Game();
         this.Start();
         location.reload(true);
     };
     rps.prototype.Init = function () {
         var rpsScript = new rps("Rock Paper Scissors");
+        window.addEventListener("load", function () {
+            rpsScript.Game();
+        }, true);
         var element = document.querySelector("button");
         element.addEventListener("click", function () {
             rpsScript.BTNClick();
