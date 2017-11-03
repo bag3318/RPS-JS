@@ -202,26 +202,26 @@ var rps = (function() {
       };
    }
 
-    CompareGuesses.prototype = {
-       get points() {
-          return this._points;
-       },
-       set points(points) {
-          this._points = Number(points);
-       },
-       get guess1() {
-          return this._guess1;
-       },
-       set guess1(guess1) {
-          this._guess1 = String(guess1);
-       },
-       get guess2() {
-          return this._guess2;
-       },
-       set guess2(guess2) {
-          this._guess2 = String(guess2);
-       }
-    };
+  CompareGuesses.prototype = {
+     get points() {
+        return this._points;
+     },
+     set points(points) {
+        this._points = Number(points);
+     },
+     get guess1() {
+        return this._guess1;
+     },
+     set guess1(guess1) {
+        this._guess1 = String(guess1);
+     },
+     get guess2() {
+        return this._guess2;
+     },
+     set guess2(guess2) {
+        this._guess2 = String(guess2);
+     }
+  };
 
    function BTNClick() {
       const start = new StartRPS();

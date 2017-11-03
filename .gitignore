@@ -3,7 +3,7 @@
 *.DS_Store
 *.ste
 _MACOSX
-rps.ts
+
 
 # If gitignore is not working,
 # try this:
