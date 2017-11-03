@@ -4,9 +4,9 @@ class rps {
     computerScore: number = 0;
     ties: number = 0;
 
-    gestures = new Array("rock", "paper", "scissors");
+    gestures:string[] = new Array("rock", "paper", "scissors");
 
-    rules = new Object({
+    rules:object = new Object({
         "rock": "scissors",
         "paper": "rock",
         "scissors": "paper"
