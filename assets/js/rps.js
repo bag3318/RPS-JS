@@ -1,5 +1,5 @@
 var rps = /** @class */ (function () {
-    function rps() {
+    function rps(game) {
         this.playerScore = 0;
         this.computerScore = 0;
         this.ties = 0;
@@ -12,7 +12,21 @@ var rps = /** @class */ (function () {
         this.isPlayerWinner = false;
         this.isComputerWinner = false;
         this.welcomeMsg = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
+        this._gameName = game;
     }
+    rps.prototype.Game = function () {
+        console.log(this._gameName);
+    };
+    Object.defineProperty(rps.prototype, "gameName", {
+        get: function () {
+            return this._gameName;
+        },
+        set: function (gameName) {
+            this._gameName = gameName;
+        },
+        enumerable: true,
+        configurable: true
+    });
     rps.prototype.Start = function () {
         var ready = confirm(this.welcomeMsg);
         if (ready) {
@@ -99,13 +113,14 @@ var rps = /** @class */ (function () {
         location.reload(true); // true = reload page from server
     };
     rps.prototype.Init = function () {
-        var rpsScript = new rps();
+        var rpsScript = new rps("Rock Paper Scissors");
         var element = document.querySelector("button");
         element.addEventListener("click", function () {
+            rpsScript.Game();
             rpsScript.BTNClick();
         }, false);
     };
     return rps;
 }());
-var script = new rps();
+var script = new rps("Rock Paper Scissors");
 script.Init();

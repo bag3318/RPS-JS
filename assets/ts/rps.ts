@@ -1,5 +1,6 @@
 class rps {
 
+
   playerScore: number = 0;
   computerScore: number = 0;
   ties: number = 0;
@@ -17,7 +18,21 @@ class rps {
 
   welcomeMsg: string = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
 
-  constructor() {}
+  private _gameName: string;
+
+  constructor(game: string) {
+    this._gameName = game;
+  }
+
+  Game() {
+    console.log(this._gameName);
+  }
+  get gameName(): string {
+    return this._gameName;
+  }
+  set gameName(gameName: string) {
+    this._gameName = gameName
+  }
 
   Start() {
     var ready: boolean = confirm(this.welcomeMsg);
@@ -113,13 +128,14 @@ class rps {
    }
 
     Init() {
-      let rpsScript: rps = new rps();
+      let rpsScript: rps = new rps("Rock Paper Scissors");
       var element: HTMLElement = document.querySelector("button");
        element.addEventListener("click", () => {
+         rpsScript.Game();
          rpsScript.BTNClick()
        }, false);
   }
 }
 
-let script: rps = new rps();
+let script: rps = new rps("Rock Paper Scissors");
 script.Init();
