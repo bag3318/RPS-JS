@@ -47,9 +47,9 @@ ________
 <!--
 # Command Line
 
-1. `tsc -w`
-2. `sass --watch assets/scss:assets/css`
-3. `tsfmt -r`
+1. `tsc -w` = watch typescript
+2. `sass --watch assets/scss:assets/css` = watch sass
+3. `tsfmt -r` = format typescript replace/reformat
 ________
 -->
 
