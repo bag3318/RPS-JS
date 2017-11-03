@@ -12,7 +12,6 @@ class rps {
     "scissors": "paper"
   });
 
-
   isPlayerWinner: boolean = false;
   isComputerWinner: boolean = false;
 
