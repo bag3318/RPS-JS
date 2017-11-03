@@ -48,12 +48,12 @@ class rps {
         var msgW: string;
         var msgL: string;
         switch(true) {
-          case this.playerScore == 2 && this.computerScore == 1 || this.playerScore == 1 && this.computerScore == 2: {
+          case (this.playerScore == 2 && this.computerScore == 1) || (this.playerScore == 1 && this.computerScore == 2): {
             msgW = `The player has ${this.playerScore} points compared to the computer\'s ${this.computerScore} point (ties: ${this.ties}). So the player wins!`;
             msgL = `The computer has ${this.computerScore} points compared to the player\'s ${this.playerScore} point (ties: ${this.ties}). So the computer wins!`;
             break;
           }
-          case this.playerScore == 2 && this.computerScore == 0 || this.playerScore == 0 && this.computerScore == 2: {
+          case (this.playerScore == 2 && this.computerScore == 0) || (this.playerScore == 0 && this.computerScore == 2): {
             msgW = `The player has ${this.playerScore} points compared to the computer\'s ${this.computerScore} points (ties: ${this.ties}). So the player wins!`;
             msgL = `The computer has ${this.computerScore} points compared to the player\'s ${this.playerScore} points (ties: ${this.ties}). So the computer wins!`;
             break;
