@@ -12,7 +12,7 @@ var rps = /** @class */ (function () {
         this.isPlayerWinner = false;
         this.isComputerWinner = false;
         this.welcomeMsg = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
-        this._gameName = game.toString();
+        this._gameName = game;
     }
     rps.prototype.Game = function () {
         console.log(this._gameName);
