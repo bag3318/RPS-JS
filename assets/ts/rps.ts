@@ -45,8 +45,6 @@ class rps {
     }
   }
 
-
-   // -------
   PlayGame(numOfRounds) {
    do {
       if (this.isPlayerWinner || this.isComputerWinner) {
@@ -60,7 +58,7 @@ class rps {
       }
    } while (numOfRounds > 0 && (!this.isPlayerWinner || !this.isComputerWinner));
   }
-   // -------
+
    PlayerGuess() {
      var playerChoice: string = prompt("Choose rock, paper, or scissors:");
      if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) {

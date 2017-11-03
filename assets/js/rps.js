@@ -36,7 +36,6 @@ var rps = /** @class */ (function () {
                 break;
         }
     };
-    // -------
     rps.prototype.PlayGame = function (numOfRounds) {
         do {
             if (this.isPlayerWinner || this.isComputerWinner) {
@@ -50,7 +49,6 @@ var rps = /** @class */ (function () {
             }
         } while (numOfRounds > 0 && (!this.isPlayerWinner || !this.isComputerWinner));
     };
-    // -------
     rps.prototype.PlayerGuess = function () {
         var playerChoice = prompt("Choose rock, paper, or scissors:");
         if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
