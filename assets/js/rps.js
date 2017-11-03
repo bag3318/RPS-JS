@@ -122,5 +122,8 @@ var rps = /** @class */ (function () {
     };
     return rps;
 }());
-var script = new rps("Rock Paper Scissors");
-script.Init();
+function loadScripts(RPS) {
+    var script = new rps(RPS);
+    script.Init();
+}
+loadScripts("Rock Paper Scissors");
