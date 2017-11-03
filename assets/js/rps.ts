@@ -119,10 +119,10 @@ class rps {
 
     Init() {
       let rpsScript: rps = new rps();
-
-       document.querySelector("#btn").addEventListener("click", () => {
+      var element: HTMLElement = document.querySelector("button");
+       element.addEventListener("click", () => {
          rpsScript.BTNClick()
-       });
+       }, false);
   }
 }
 
