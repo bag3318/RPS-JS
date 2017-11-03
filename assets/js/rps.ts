@@ -1,83 +1,80 @@
 class rps {
 
 
-   constructor() {};
+  constructor() {}
 
-      playerScore: number = 0;
-      computerScore: number = 0;
-      ties: number = 0;
+  playerScore: number = 0;
+  computerScore: number = 0;
+  ties: number = 0;
 
-   // define gestures array in ojbect format
-     gestures = new Array("rock", "paper", "scissors");
+  gestures = new Array("rock", "paper", "scissors");
 
-   // define rules object in object format
-     rules = new Object({
+  rules = new Object({
     "rock": "scissors",
     "paper": "rock",
     "scissors": "paper"
-   });
+  });
 
 
-   // here we define our booleans for the winners (will be used later on)
-     isPlayerWinner: boolean = false;
-     isComputerWinner: boolean = false;
+  isPlayerWinner: boolean = false;
+  isComputerWinner: boolean = false;
 
-     welcomeMsg: string = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
+  welcomeMsg: string = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
 
 
    // create iable = to class of `StartGame`
   Start() {
-        var ready: boolean = confirm(this.welcomeMsg);
-       if (ready) {
-         this.PlayGame(3);
-       }
-       else {
-         alert("Sorry you don't wanna play, maybe next time! :)");
-       }
-    }
+    var ready: boolean = confirm(this.welcomeMsg);
+     if (ready) {
+       this.PlayGame(3);
+     }
+     else {
+       alert("Sorry you don't wanna play, maybe next time! :)");
+     }
+  }
 
 
    // leave function blank and use prototypes to fill it in
   DetermineWinner() {
-       var msgW: string = "The player has " + this.playerScore + " points compared to the computer\'s " + this.computerScore + " points (ties: " + this.ties + "). So the player wins!";
-       var msgL: string = "The computer has " + this.computerScore + " points compared to the player\'s " + this.playerScore + " points (ties: " + this.ties + "). So the computer wins!";
-      switch (true) {
-         case this.playerScore >= 2:
-            this.isPlayerWinner = true;
-            alert(msgW);
-            break;
-         case this.computerScore >= 2:
-            this.isComputerWinner = true;
-            alert(msgL);
-            break;
-      }
+    var msgW: string = "The player has " + this.playerScore + " points compared to the computer\'s " + this.computerScore + " points (ties: " + this.ties + "). So the player wins!";
+    var msgL: string = "The computer has " + this.computerScore + " points compared to the player\'s " + this.playerScore + " points (ties: " + this.ties + "). So the computer wins!";
+    switch (true) {
+       case this.playerScore >= 2:
+          this.isPlayerWinner = true;
+          alert(msgW);
+          break;
+       case this.computerScore >= 2:
+          this.isComputerWinner = true;
+          alert(msgL);
+          break;
     }
+  }
 
 
    // -------
   PlayGame(numOfRounds) {
-       do {
-          if (this.isPlayerWinner || this.isComputerWinner) {
-             return;
-          }
-           var player = this.PlayerGuess();
-           var computer = this.ComputerGuess();
-           var result = this.CompareGuesses(player, computer, 1);
-          if (result !== 0) {
-             numOfRounds--;
-          }
-       } while (numOfRounds > 0 && (!this.isPlayerWinner || !this.isComputerWinner));
-   }
+   do {
+      if (this.isPlayerWinner || this.isComputerWinner) {
+         return;
+      }
+       var player = this.PlayerGuess();
+       var computer = this.ComputerGuess();
+       var result = this.CompareGuesses(player, computer, 1);
+      if (result !== 0) {
+         numOfRounds--;
+      }
+   } while (numOfRounds > 0 && (!this.isPlayerWinner || !this.isComputerWinner));
+  }
    // -------
 
    PlayerGuess() {
-      var playerChoice: string = prompt("Choose rock, paper, or scissors:");
-         if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) { //
-            return playerChoice;
-         } else {
-            alert("You typed something else or did not spell your choice correctly. Please try again!");
-            return this.PlayerGuess();
-         }
+     var playerChoice: string = prompt("Choose rock, paper, or scissors:");
+     if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) { //
+        return playerChoice;
+     } else {
+        alert("You typed something else or did not spell your choice correctly. Please try again!");
+        return this.PlayerGuess();
+     }
    }
 
 
@@ -94,13 +91,6 @@ class rps {
        }
    }
 
-   /*
-    rules = new Object({
-    "rock": "scissors",
-    "paper": "rock",
-    "scissors": "paper"
-   });
-   */
 
   CompareGuesses(guess1, guess2, points) {
        var output: string = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "! \n";
@@ -133,14 +123,11 @@ class rps {
 
     Init() {
       let rpsScript: rps = new rps();
+
        document.querySelector("#btn").addEventListener("click", () => {
          rpsScript.BTNClick()
        });
-
   }
-
-
-
 }
 
 let script: rps = new rps();

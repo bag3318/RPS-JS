@@ -1,280 +1,124 @@
-<!--
-var rps = (function() {
-
-   var playerScore = 0;
-   var computerScore = 0;
-   var ties = 0;
-
-   // define gestures array in ojbect format
-   var gestures = new Array("rock", "paper", "scissors");
-
-   // define rules object in object format
-   var rules = new Object({
-    "rock": "scissors",
-    "paper": "rock",
-    "scissors": "paper"
-   });
-
-   console.log("gestures:", gestures, typeof gestures, gestures.length);
-   console.log("rules:", rules, typeof rules);
-
-   // here we define our booleans for the winners (will be used later on)
-   var isPlayerWinner = false;
-   var isComputerWinner = false;
-
-   var welcomeMsg = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
-
-   // create variable = to class of `StartGame`
-   var StartRPS = class StartGame {
-      Start(Confirm) {
-         this._ready = Confirm;
-      }
-   };
-
-   // create prototype of getters and setters for function `StartRPS`
-   StartRPS.prototype = {
-      get Confirm() {
-        return this._ready;
-      },
-      set Confirm(Confirm) {
-         this._ready = Boolean(Confirm);
-      }
-   };
-
-   Object.prototype = new StartRPS();
-   Object.prototype.constructor = StartRPS;
-   Object.prototype.Confirmation = function Confirmation() {
-     switch (this._ready) {
-        case true:
-           var playG = new PlayGame(3);
-           playG.play();
-           break;
-        case false:
-           alert("Sorry you don't wanna play, maybe next time! :)");
-           break;
-     }
-   };
-
-   // leave function blank and use prototypes to fill it in
-   function DetermineWinner() {}
-
-   DetermineWinner.prototype = {
-      get winMsg() {
-        return this._winMsg;
-      },
-      set winMsg(msgW) {
-         this._winMsg = String(msgW);
-      },
-      get loseMsg() {
-         return this._loseMsg;
-      },
-      set loseMsg(msgL) {
-         this._loseMsg = String(msgL);
-      }
-   };
-
-   DetermineWinner.prototype = new DetermineWinner();
-   DetermineWinner.prototype.constructor = DetermineWinner;
-   DetermineWinner.prototype.determineW = function determineW(pl, co, ti, msgW, msgL) {
-     msgW = "The player has " + pl + " points compared to the computer\'s " + co + " points (ties: " + ti + "). So the player wins!";
-     msgL = "The computer has " + co + " points compared to the player\'s " + pl + " points (ties: " + ti + "). So the computer wins!";
-     this._winMsg = msgW;
-     this._loseMsg = msgL;
-     console.log('d ' + isPlayerWinner, isComputerWinner);
-      switch (true) {
-         case playerScore >= 2:
-            isPlayerWinner = true;
-            alert(this.winMsg);
-            break;
-         case computerScore >= 2:
-            isComputerWinner = true;
-            alert(this.loseMsg);
-            break;
-      }
-   };
-
-   // -------
-   function PlayGame(numOfRounds) {
-      this.play = function play() {
-         do {
-            if (isPlayerWinner || isComputerWinner) {
-               return;
+var rps = /** @class */ (function () {
+    function rps() {
+        this.playerScore = 0;
+        this.computerScore = 0;
+        this.ties = 0;
+        // define gestures array in ojbect format
+        this.gestures = new Array("rock", "paper", "scissors");
+        // define rules object in object format
+        this.rules = new Object({
+            "rock": "scissors",
+            "paper": "rock",
+            "scissors": "paper"
+        });
+        this.isPlayerWinner = false;
+        this.isComputerWinner = false;
+        this.welcomeMsg = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
+    }
+    // create iable = to class of `StartGame`
+    rps.prototype.Start = function () {
+        var ready = confirm(this.welcomeMsg);
+        if (ready) {
+            this.PlayGame(3);
+        }
+        else {
+            alert("Sorry you don't wanna play, maybe next time! :)");
+        }
+    };
+    // leave function blank and use prototypes to fill it in
+    rps.prototype.DetermineWinner = function () {
+        var msgW = "The player has " + this.playerScore + " points compared to the computer\'s " + this.computerScore + " points (ties: " + this.ties + "). So the player wins!";
+        var msgL = "The computer has " + this.computerScore + " points compared to the player\'s " + this.playerScore + " points (ties: " + this.ties + "). So the computer wins!";
+        switch (true) {
+            case this.playerScore >= 2:
+                this.isPlayerWinner = true;
+                alert(msgW);
+                break;
+            case this.computerScore >= 2:
+                this.isComputerWinner = true;
+                alert(msgL);
+                break;
+        }
+    };
+    // -------
+    rps.prototype.PlayGame = function (numOfRounds) {
+        do {
+            if (this.isPlayerWinner || this.isComputerWinner) {
+                return;
             }
-            console.log('b', isPlayerWinner, isComputerWinner);
-            var player = new PlayerGuess(prompt("Choose rock, paper, or scissors:"));
-            var computer = new ComputerGuess(Math.floor((Math.random() * 3) + 1));
-            var result = new CompareGuesses(player.PGuess(), computer.CGuess(), 1);
-            if (result.compare() !== 0) {
-               numOfRounds--;
+            var player = this.PlayerGuess();
+            var computer = this.ComputerGuess();
+            var result = this.CompareGuesses(player, computer, 1);
+            if (result !== 0) {
+                numOfRounds--;
             }
-         } while (numOfRounds > 0 && (!isPlayerWinner || !isComputerWinner));
-      };
-   }
-   // -------
-
-   function PlayerGuess(pChoice) {
-      this._playerChoice = pChoice;
-      Array.prototype.inArray = function inArray(value) {
-         var i;
-         for (i = 0; i < this.length; i++) {
-            if (this[i] === value) {
-               return true;
-            }
-         }
-         return false;
-      };
-   }
-
-   PlayerGuess.prototype = {
-      get playerChoice() {
-         return this._playerChoice;
-      },
-      set playerChoice(pChoice) {
-         this._playerChoice = String(pChoice);
-      }
-   };
-
-   PlayerGuess.prototype.PGuess = function PGuess() {
-      if (gestures.inArray(this.playerChoice.toLowerCase())) { // gestures.indexOf(this.playerChoice.toLowerCase()) >= 0
-         return this.playerChoice;
-      } else {
-         alert("You typed something else or did not spell your choice correctly. Please try again!");
-         var pG = new PlayerGuess(prompt("Choose rock, paper, or scissors:"));
-         return pG.PGuess();
-      }
-   };
-
-   function ComputerGuess(formula) {
-      this._cpuChoice = formula;
-      this.CGuess = function CGuess() {
-         switch (this.cpuChoice) {
+        } while (numOfRounds > 0 && (!this.isPlayerWinner || !this.isComputerWinner));
+    };
+    // -------
+    rps.prototype.PlayerGuess = function () {
+        var playerChoice = prompt("Choose rock, paper, or scissors:");
+        if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
+            return playerChoice;
+        }
+        else {
+            alert("You typed something else or did not spell your choice correctly. Please try again!");
+            return this.PlayerGuess();
+        }
+    };
+    rps.prototype.ComputerGuess = function () {
+        var cpuChoice = Math.floor((Math.random() * 3) + 1);
+        switch (cpuChoice) {
             case 1:
-               return gestures[0];
-               break;
+                return this.gestures[0];
             case 2:
-               return gestures[1];
-               break;
+                return this.gestures[1];
             case 3:
-               return gestures[2];
-               break;
-         }
-      };
-   }
-
-   ComputerGuess.prototype = {
-      get cpuChoice() {
-         return this._cpuChoice;
-      },
-      set cpuChoice(formula) {
-         this._cpuChoice = Number(formula);
-      }
-
-   };
-
-   function CompareGuesses(guess1, guess2, points) {
-      this._points = points;
-      this._guess1 = guess1;
-      this._guess2 = guess2;
-      this.output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "! \n";
-      // create compare function
-      this.compare = function compare() {
-         if (rules[guess1.toLowerCase()] == guess2.toLowerCase()) { // if player wins
-            playerScore += points;
-            alert(this.output + "\nPlayer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore + ".");
-            var w = new DetermineWinner();
-            w.determineW(playerScore, computerScore, ties);
+                return this.gestures[2];
+        }
+    };
+    /*
+     rules = new Object({
+     "rock": "scissors",
+     "paper": "rock",
+     "scissors": "paper"
+    });
+    */
+    rps.prototype.CompareGuesses = function (guess1, guess2, points) {
+        var output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "! \n";
+        // create compare function
+        if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
+            this.playerScore += points;
+            alert(output + "\nPlayer wins the round! \n\n" + "Player Score: " + this.playerScore + ", Computer Score: " + this.computerScore + ".");
+            this.DetermineWinner();
             return 1;
-         } else if (rules[guess2.toLowerCase()] == guess1.toLowerCase()) { // if computer wins
-            computerScore += points;
-            alert(this.output + "\nComputer wins the round! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore + ".");
-            var l = new DetermineWinner();
-            l.determineW(playerScore, computerScore, ties);
+        }
+        else if (this.rules[guess2.toLowerCase()] === guess1.toLowerCase()) {
+            this.computerScore += points;
+            alert(output + "\nComputer wins the round! \n\n" + "Player Score: " + this.playerScore + ", Computer Score: " + this.computerScore + ".");
+            this.DetermineWinner();
             return 2;
-         } else { // if tie
-            playerScore += 0;
-            computerScore += 0;
-            ties += 1;
-            alert(this.output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + playerScore + ", Computer Score: " + computerScore + ".");
-            var t = new DetermineWinner();
-            t.determineW(playerScore, computerScore, ties);
+        }
+        else {
+            this.playerScore += 0;
+            this.computerScore += 0;
+            this.ties += 1;
+            alert(output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + this.playerScore + ", Computer Score: " + this.computerScore + ".");
+            this.DetermineWinner();
             return 0;
-         }
-      };
-   }
-
-  CompareGuesses.prototype = {
-     get points() {
-        return this._points;
-     },
-     set points(points) {
-        this._points = Number(points);
-     },
-     get guess1() {
-        return this._guess1;
-     },
-     set guess1(guess1) {
-        this._guess1 = String(guess1);
-     },
-     get guess2() {
-        return this._guess2;
-     },
-     set guess2(guess2) {
-        this._guess2 = String(guess2);
-     }
-  };
-
-   function BTNClick() {
-      const start = new StartRPS();
-      start.Start(confirm(welcomeMsg));
-      start.Confirmation();
-      // refresh page to play again
-      location.reload(true); // true = reload page from server
-   }
-
-   function Setup(h5Msg) {
-      // NEED TO OBJECT ORIENT THIS FUNCTION!
-      var h5 = document.querySelector(".h5");
-      var span = document.querySelector("#header5Contents");
-      var regex = new RegExp(/(?:(?:[\-+\/]{2})|(?:[\++\*]{2})|(?:[\=+\!+\?]{3})|(?:[\x5F+\x5E]{2})|(?:[\s+\d+\s]{3}))/, "g");
-      var h5Array = h5Msg.split(regex);
-      h5Array.push("!");
-      console.log(h5Array);
-      console.log(h5Array.indexOf("play"), h5Array.indexOf("!"));
-      var h5Txt = "";
-      var i;
-      for (i = 0; i < h5Array.length; i++) {
-         switch (true) {
-            case h5Array[i] !== h5Array[5] && h5Array[i] !== h5Array[6]:
-               h5Txt += h5Array[i] + " ";
-               break;
-            default:
-               h5Txt += h5Array[i];
-               break;
-         }
-      }
-      console.log(h5Txt);
-      span.parentNode.replaceChild(document.createTextNode(h5Txt), span);
-   }
-
-   function Init() {
-      var rpsScript = rps();
-      var element = document.querySelector("body");
-      element.addEventListener("load", function() {
-         rpsScript.Load("Click-/the+*button=!?below_^to 8 play");
-      }, true); // use `true` to execute in capturing phase
-      element = null;
-      var element = document.querySelector("#btn");
-      element.addEventListener("click", function() {
-         rpsScript.BTNClick();
-      }, false);
-   }
-
-   return function API() {
-      return {
-         initiate: Init,
-         BTNClick: BTNClick,
-         Load: Setup
-      };
-   };
+        }
+    };
+    rps.prototype.BTNClick = function () {
+        this.Start();
+        // refresh page to play again
+        location.reload(true); // true = reload page from server
+    };
+    rps.prototype.Init = function () {
+        var rpsScript = new rps();
+        document.querySelector("#btn").addEventListener("click", function () {
+            rpsScript.BTNClick();
+        });
+    };
+    return rps;
 }());
-//-->
+var script = new rps();
+script.Init();
