@@ -103,7 +103,7 @@ var rps = /** @class */ (function () {
     rps.prototype.Init = function () {
         var rpsScript = new rps();
         var element = document.querySelector("button");
-        window.addEventListener("click", function () {
+        element.addEventListener("click", function () {
             rpsScript.BTNClick();
         }, false);
     };

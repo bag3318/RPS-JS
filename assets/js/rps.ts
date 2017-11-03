@@ -118,7 +118,7 @@ class rps {
     Init() {
       let rpsScript: rps = new rps();
       var element: HTMLElement = document.querySelector("button");
-       window.addEventListener("click", () => {
+       element.addEventListener("click", () => {
          rpsScript.BTNClick()
        }, false);
   }
