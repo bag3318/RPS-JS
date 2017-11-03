@@ -36,39 +36,32 @@ var rps = /** @class */ (function () {
             alert("Sorry you don't wanna play, maybe next time! :)");
         }
     };
+    // test tjfdsa;l
     rps.prototype.DetermineWinner = function () {
         var msgW;
         var msgL;
         switch (true) {
-            case this.playerScore == 2 && this.computerScore == 1: {
+            case this.playerScore == 2 && this.computerScore == 1 || this.playerScore == 1 && this.computerScore == 2: {
                 msgW = "The player has " + this.playerScore + " points compared to the computer's " + this.computerScore + " point (ties: " + this.ties + "). So the player wins!";
-                break;
-            }
-            case this.playerScore == 1 && this.computerScore == 2: {
                 msgL = "The computer has " + this.computerScore + " points compared to the player's " + this.playerScore + " point (ties: " + this.ties + "). So the computer wins!";
                 break;
             }
-            case this.playerScore == 2 && this.computerScore == 0: {
+            case this.playerScore == 2 && this.computerScore == 0 || this.playerScore == 0 && this.computerScore == 2: {
                 msgW = "The player has " + this.playerScore + " points compared to the computer's " + this.computerScore + " points (ties: " + this.ties + "). So the player wins!";
+                msgL = "The computer has " + this.computerScore + " points compared to the player's " + this.playerScore + " points (ties: " + this.ties + "). So the computer wins!";
                 break;
             }
-            case this.playerScore == 0 && this.computerScore == 2:
-                {
-                    msgL = "The computer has " + this.computerScore + " points compared to the player's " + this.playerScore + " points (ties: " + this.ties + "). So the computer wins!";
-                }
-                break;
         }
-        switch (true) {
-            case this.playerScore >= 2: {
-                this.isPlayerWinner = true;
-                alert(msgW);
-                break;
-            }
-            case this.computerScore >= 2: {
-                this.isComputerWinner = true;
-                alert(msgL);
-                break;
-            }
+        if (this.playerScore >= 2) {
+            this.isPlayerWinner = true;
+            alert(msgW);
+        }
+        else if (this.computerScore >= 2) {
+            this.isComputerWinner = true;
+            alert(msgL);
+        }
+        else {
+            return;
         }
     };
     rps.prototype.PlayGame = function (numOfRounds) {
