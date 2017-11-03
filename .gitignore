@@ -4,7 +4,7 @@
 *.ste
 _MACOSX
 exec.js
-rps.js
+
 
 
 # If gitignore is not working,

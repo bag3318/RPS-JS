@@ -18,7 +18,6 @@ class rps {
 
   welcomeMsg: string = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
 
-  // blank constructor
   constructor() {}
 
   Start() {

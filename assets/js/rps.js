@@ -1,5 +1,4 @@
 var rps = /** @class */ (function () {
-    // blank constructor
     function rps() {
         this.playerScore = 0;
         this.computerScore = 0;
