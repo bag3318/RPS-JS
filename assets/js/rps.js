@@ -126,8 +126,7 @@ var rps = /** @class */ (function () {
     rps.prototype.BTNClick = function () {
         this.Game();
         this.Start();
-        // refresh page to play again
-        location.reload(true); // true = reload page from server
+        location.reload(true);
     };
     rps.prototype.Init = function () {
         var rpsScript = new rps("Rock Paper Scissors");

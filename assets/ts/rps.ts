@@ -136,8 +136,7 @@ class rps {
     BTNClick() {
         this.Game();
         this.Start();
-        // refresh page to play again
-        location.reload(true); // true = reload page from server
+        location.reload(true);
     }
 
     Init() {
