@@ -36,7 +36,6 @@ var rps = /** @class */ (function () {
             alert("Sorry you don't wanna play, maybe next time! :)");
         }
     };
-    // test tjfdsa;l
     rps.prototype.DetermineWinner = function () {
         var msgW;
         var msgL;

@@ -43,7 +43,6 @@ class rps {
         }
     }
 
-    // test tjfdsa;l
     DetermineWinner() {
         var msgW: string;
         var msgL: string;
