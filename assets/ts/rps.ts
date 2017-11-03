@@ -139,7 +139,7 @@ class rps {
     }
 
     Init() {
-        var rpsScript: rps = new rps("Rock Paper Scissors");
+        let rpsScript: rps = new rps("Rock Paper Scissors");
         window.addEventListener("load", () => {
           rpsScript.Game();
         }, true);
@@ -150,7 +150,7 @@ class rps {
     }
 }
 function loadScript(RPS) {
-  var script: rps = new rps(RPS);
+  let script: rps = new rps(RPS);
   script.Init();
 }
 loadScript("Rock Paper Scissors");
