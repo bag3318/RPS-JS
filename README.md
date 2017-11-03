@@ -49,6 +49,7 @@ ________
 
 1. `tsc -w`
 2. `sass --watch assets/scss:assets/css`
+3. `tsfmt -r`
 ________
 -->
 
