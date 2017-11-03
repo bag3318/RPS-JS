@@ -149,6 +149,7 @@ class rps {
         }, false);
     }
 }
+
 function loadScript(RPS) {
   let script: rps = new rps(RPS);
   script.Init();
