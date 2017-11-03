@@ -30,7 +30,7 @@ class rps {
         return this._gameName;
     }
     set gameName(gameName: string) {
-        this._gameName = gameName
+        this._gameName = gameName;
     }
 
     Start() {
@@ -131,7 +131,7 @@ class rps {
         var element: HTMLElement = document.querySelector("button");
         element.addEventListener("click", () => {
             rpsScript.Game();
-            rpsScript.BTNClick()
+            rpsScript.BTNClick();
         }, false);
     }
 }
