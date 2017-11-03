@@ -20,7 +20,7 @@ class rps {
     private _gameName: string;
 
     constructor(game: string) {
-        this._gameName = game;
+        this._gameName = game.toString();
     }
 
     Game() {
