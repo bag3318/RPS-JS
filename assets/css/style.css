@@ -1,33 +1,6 @@
 @font-face {
   font-family: Verdana;
   src: url(../fonts/Verdana.woff); }
-/* button style w/ gradient */
-/* button style w/o gradient */
-/*
-.btn {
-	background-color: #44c767;
-	-moz-border-radius: 28px;
-	-webkit-border-radius: 28px;
-	border-radius: 28px;
-	border: 1px solid #18ab29;
-	display: inline-block;
-	cursor: pointer;
-	color: #ffffff;
-	font-family: Verdana;
-	font-size: 17px;
-	padding: 16px 31px;
-	text-decoration: none;
-	text-shadow: 0px 1px 0px #2f6627;
-}
-.btn:hover {
-	background-color: #5cbf2a;
-}
-.btn:active {
-	position: relative;
-	top: 1px;
-}
-*/
-/*original font family: Ariel*/
 body {
   margin: 1%;
   background-color: #eeeeee;
@@ -69,5 +42,32 @@ body {
   .btn:active {
     position: relative;
     top: 1px; }
+
+/* button style w/o gradient */
+/*
+.btn {
+	background-color: #44c767;
+	-moz-border-radius: 28px;
+	-webkit-border-radius: 28px;
+	border-radius: 28px;
+	border: 1px solid #18ab29;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Verdana;
+	font-size: 17px;
+	padding: 16px 31px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #2f6627;
+}
+.btn:hover {
+	background-color: #5cbf2a;
+}
+.btn:active {
+	position: relative;
+	top: 1px;
+}
+*/
+/*original font family: Ariel*/
 
 /*# sourceMappingURL=style.css.map */
