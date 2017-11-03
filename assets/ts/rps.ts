@@ -135,6 +135,7 @@ class rps {
     }
 
     BTNClick() {
+        this.Game();
         this.Start();
         // refresh page to play again
         location.reload(true); // true = reload page from server
@@ -144,7 +145,6 @@ class rps {
         let rpsScript: rps = new rps("Rock Paper Scissors");
         var element: HTMLElement = document.querySelector("button");
         element.addEventListener("click", () => {
-            rpsScript.Game();
             rpsScript.BTNClick();
         }, false);
     }

@@ -125,6 +125,7 @@ var rps = /** @class */ (function () {
         }
     };
     rps.prototype.BTNClick = function () {
+        this.Game();
         this.Start();
         // refresh page to play again
         location.reload(true); // true = reload page from server
@@ -133,7 +134,6 @@ var rps = /** @class */ (function () {
         var rpsScript = new rps("Rock Paper Scissors");
         var element = document.querySelector("button");
         element.addEventListener("click", function () {
-            rpsScript.Game();
             rpsScript.BTNClick();
         }, false);
     };
