@@ -45,8 +45,22 @@ class rps {
 
 
     DetermineWinner() {
-        var msgW: string = `The player has ${this.playerScore} points compared to the computer\'s ${this.computerScore} points (ties: ${this.ties}). So the player wins!`;
-        var msgL: string = `The computer has ${this.computerScore} points compared to the player\'s ${this.playerScore} points (ties: ${this.ties}). So the computer wins!`;
+        var msgW: string;
+        var msgL: string;
+        switch(true) {
+          case this.playerScore == 2 && this.computerScore == 1:
+            msgW = `The player has ${this.playerScore} points compared to the computer\'s ${this.computerScore} point (ties: ${this.ties}). So the player wins!`;
+            break;
+          case this.playerScore == 1 && this.computerScore == 2 :
+            msgL = `The computer has ${this.computerScore} points compared to the player\'s ${this.playerScore} point (ties: ${this.ties}). So the computer wins!`;
+            break;
+          case this.playerScore == 2 && this.computerScore == 0:
+            msgW = `The player has ${this.playerScore} points compared to the computer\'s ${this.computerScore} points (ties: ${this.ties}). So the player wins!`;
+            break;
+          case this.playerScore == 0 && this.computerScore == 2:
+            msgL = `The computer has ${this.computerScore} points compared to the player\'s ${this.playerScore} points (ties: ${this.ties}). So the computer wins!`;
+            break;
+        }
         switch (true) {
             case this.playerScore >= 2:
                 this.isPlayerWinner = true;
