@@ -136,8 +136,8 @@ class rps {
     }
 }
 
-function loadScripts(RPS) {
+function loadScript(RPS) {
   let script: rps = new rps(RPS);
   script.Init();
 }
-loadScripts("Rock Paper Scissors");
+loadScript("Rock Paper Scissors");
