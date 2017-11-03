@@ -63,7 +63,6 @@ class rps {
    } while (numOfRounds > 0 && (!this.isPlayerWinner || !this.isComputerWinner));
   }
    // -------
-
    PlayerGuess() {
      var playerChoice: string = prompt("Choose rock, paper, or scissors:");
      if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
@@ -120,11 +119,10 @@ class rps {
     Init() {
       let rpsScript: rps = new rps();
       var element: HTMLElement = document.querySelector("button");
-       element.addEventListener("click", () => {
+       window.addEventListener("click", () => {
          rpsScript.BTNClick()
        }, false);
   }
 }
-
 let script: rps = new rps();
 script.Init();
