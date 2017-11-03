@@ -140,16 +140,15 @@ class rps {
     }
 
     Init() {
-        let rpsScript: rps = new rps("Rock Paper Scissors");
+        var rpsScript: rps = new rps("Rock Paper Scissors");
         var element: HTMLElement = document.querySelector("button");
         element.addEventListener("click", () => {
             rpsScript.BTNClick();
         }, false);
     }
 }
-
 function loadScript(RPS) {
-  let script: rps = new rps(RPS);
+  var script: rps = new rps(RPS);
   script.Init();
 }
 loadScript("Rock Paper Scissors");
