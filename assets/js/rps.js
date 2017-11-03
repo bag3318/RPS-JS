@@ -40,28 +40,35 @@ var rps = /** @class */ (function () {
         var msgW;
         var msgL;
         switch (true) {
-            case this.playerScore == 2 && this.computerScore == 1:
+            case this.playerScore == 2 && this.computerScore == 1: {
                 msgW = "The player has " + this.playerScore + " points compared to the computer's " + this.computerScore + " point (ties: " + this.ties + "). So the player wins!";
                 break;
-            case this.playerScore == 1 && this.computerScore == 2:
+            }
+            case this.playerScore == 1 && this.computerScore == 2: {
                 msgL = "The computer has " + this.computerScore + " points compared to the player's " + this.playerScore + " point (ties: " + this.ties + "). So the computer wins!";
                 break;
-            case this.playerScore == 2 && this.computerScore == 0:
+            }
+            case this.playerScore == 2 && this.computerScore == 0: {
                 msgW = "The player has " + this.playerScore + " points compared to the computer's " + this.computerScore + " points (ties: " + this.ties + "). So the player wins!";
                 break;
+            }
             case this.playerScore == 0 && this.computerScore == 2:
-                msgL = "The computer has " + this.computerScore + " points compared to the player's " + this.playerScore + " points (ties: " + this.ties + "). So the computer wins!";
+                {
+                    msgL = "The computer has " + this.computerScore + " points compared to the player's " + this.playerScore + " points (ties: " + this.ties + "). So the computer wins!";
+                }
                 break;
         }
         switch (true) {
-            case this.playerScore >= 2:
+            case this.playerScore >= 2: {
                 this.isPlayerWinner = true;
                 alert(msgW);
                 break;
-            case this.computerScore >= 2:
+            }
+            case this.computerScore >= 2: {
                 this.isComputerWinner = true;
                 alert(msgL);
                 break;
+            }
         }
     };
     rps.prototype.PlayGame = function (numOfRounds) {
@@ -90,12 +97,15 @@ var rps = /** @class */ (function () {
     rps.prototype.ComputerGuess = function () {
         var cpuChoice = Math.floor((Math.random() * 3) + 1);
         switch (cpuChoice) {
-            case 1:
+            case 1: {
                 return this.gestures[0];
-            case 2:
+            }
+            case 2: {
                 return this.gestures[1];
-            case 3:
+            }
+            case 3: {
                 return this.gestures[2];
+            }
         }
     };
     rps.prototype.CompareGuesses = function (guess1, guess2, points) {
