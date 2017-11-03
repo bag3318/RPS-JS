@@ -45,8 +45,8 @@ class rps {
 
 
     DetermineWinner() {
-        var msgW: string = "The player has " + this.playerScore + " points compared to the computer\'s " + this.computerScore + " points (ties: " + this.ties + "). So the player wins!";
-        var msgL: string = "The computer has " + this.computerScore + " points compared to the player\'s " + this.playerScore + " points (ties: " + this.ties + "). So the computer wins!";
+        var msgW: string = `The player has ${this.playerScore} points compared to the computer\'s ${this.computerScore} points (ties: ${this.ties}). So the player wins!`;
+        var msgL: string = `The computer has ${this.computerScore} points compared to the player\'s ${this.playerScore} points (ties: ${this.ties}). So the computer wins!`;
         switch (true) {
             case this.playerScore >= 2:
                 this.isPlayerWinner = true;
@@ -99,22 +99,22 @@ class rps {
 
 
     CompareGuesses(guess1, guess2, points) {
-        var output: string = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "! \n";
+        var output: string = `Player chose: ${guess1.toLowerCase()}, and the computer chose: ${guess2.toLowerCase()}!\n`;
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
-            alert(output + "\nPlayer wins the round! \n\n" + "Player Score: " + this.playerScore + ", Computer Score: " + this.computerScore + ".");
+            alert(`${output}\nPlayer wins the round! \n\nPlayer Score: ${this.playerScore} Computer Score: ${this.computerScore}.`);
             this.DetermineWinner();
             return 1;
         } else if (this.rules[guess2.toLowerCase()] === guess1.toLowerCase()) {
             this.computerScore += points;
-            alert(output + "\nComputer wins the round! \n\n" + "Player Score: " + this.playerScore + ", Computer Score: " + this.computerScore + ".");
+            alert(`${output}\nComputer wins the round! \n\nPlayer Score: ${this.playerScore}, Computer Score: ${this.computerScore}.`);
             this.DetermineWinner();
             return 2;
         } else {
             this.playerScore += 0;
             this.computerScore += 0;
             this.ties += 1;
-            alert(output + "\nIt's a tie! Go again, no score added! \n\n" + "Player Score: " + this.playerScore + ", Computer Score: " + this.computerScore + ".");
+            alert(`${output}\nIt's a tie! Go again, no score added! \n\nPlayer Score: ${this.playerScore}, Computer Score: ${this.computerScore}`);
             this.DetermineWinner();
             return 0;
         }
