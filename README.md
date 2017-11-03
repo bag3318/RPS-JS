@@ -44,6 +44,14 @@ ________
 
 ________
 
+<!--
+# Command Line
+
+1. `tsc -w`
+2. `sass --watch assets/scss:assets/css`
+________
+-->
+
 > **_Enjoy!_**
 
 [//]: # "End README.md file"
