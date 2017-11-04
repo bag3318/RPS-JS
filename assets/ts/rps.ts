@@ -1,15 +1,5 @@
 class rps {
 
-    private _gameName: string;
-
-    constructor(game: string) {
-        this._gameName = game;
-    }
-
-    Game() {
-        console.log(this._gameName);
-    }
-
     get gameName(): string {
         return this._gameName;
     }
@@ -69,8 +59,9 @@ class rps {
     private isPlayerWinner: boolean = false;
     private isComputerWinner: boolean = false;
 
+    constructor() {}
 
-    Start():void {
+    private Start():void {
         var ready: boolean = confirm(this.welcomeMsg);
         if (ready) {
             this.PlayGame(3);
@@ -80,7 +71,7 @@ class rps {
         }
     }
 
-    DetermineWinner():void {
+    private DetermineWinner():void {
         var msgW: string = `
         The player has ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s) (ties: ${this.ties}).
         So the player wins!
@@ -98,7 +89,7 @@ class rps {
         }
     }
 
-    PlayGame(numOfRounds: number):void {
+    private PlayGame(numOfRounds: number):void {
         do {
             if (this.isPlayerWinner || this.isComputerWinner) {
                 return;
@@ -112,7 +103,7 @@ class rps {
         } while (numOfRounds > 0 && (!this.isPlayerWinner || !this.isComputerWinner));
     }
 
-    PlayerGuess():string {
+    private PlayerGuess():string {
         var playerChoice: string = prompt("Choose rock, paper, or scissors:");
         if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
             return playerChoice;
@@ -124,7 +115,7 @@ class rps {
 
 
 
-    ComputerGuess():string {
+    private ComputerGuess():string {
         var cpuChoice: number = Math.floor((Math.random() * 3) + 1);
         switch (cpuChoice) {
             case 1: {
@@ -140,7 +131,7 @@ class rps {
     }
 
 
-    CompareGuesses(guess1: string, guess2: string, points: number):number {
+    private abstractCompareGuesses(guess1: string, guess2: string, points: number):number {
         var output: string = `Player chose: ${guess1.toLowerCase()}, and the computer chose: ${guess2.toLowerCase()}!\n`;
 
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
@@ -181,16 +172,13 @@ class rps {
         }
     }
 
-    BTNClick():void {
+    private BTNClick():void {
         this.Start();
         location.reload(true);
     }
 
-    Init():void {
-        let rpsScript: rps = new rps("Rock Paper Scissors");
-        window.addEventListener("load", () => {
-          rpsScript.Game();
-        }, true);
+    private Init():void {
+        let rpsScript: rps = new rps();
         var element: Element = document.querySelector("#btn");
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
@@ -199,7 +187,7 @@ class rps {
 }
 
 function loadScript(RPS:string):void {
-  let script: rps = new rps(RPS);
+  let script: rps = new rps();
   script.Init();
 }
-loadScript("Rock Paper Scissors");
+loadScript();

@@ -1,5 +1,5 @@
 var rps = /** @class */ (function () {
-    function rps(game) {
+    function rps() {
         this.playerScore = 0;
         this.computerScore = 0;
         this.ties = 0;
@@ -12,11 +12,7 @@ var rps = /** @class */ (function () {
         });
         this.isPlayerWinner = false;
         this.isComputerWinner = false;
-        this._gameName = game;
     }
-    rps.prototype.Game = function () {
-        console.log(this._gameName);
-    };
     Object.defineProperty(rps.prototype, "gameName", {
         get: function () {
             return this._gameName;
@@ -125,7 +121,7 @@ var rps = /** @class */ (function () {
             }
         }
     };
-    rps.prototype.CompareGuesses = function (guess1, guess2, points) {
+    rps.prototype.abstractCompareGuesses = function (guess1, guess2, points) {
         var output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "!\n";
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
@@ -156,10 +152,7 @@ var rps = /** @class */ (function () {
         location.reload(true);
     };
     rps.prototype.Init = function () {
-        var rpsScript = new rps("Rock Paper Scissors");
-        window.addEventListener("load", function () {
-            rpsScript.Game();
-        }, true);
+        var rpsScript = new rps();
         var element = document.querySelector("#btn");
         element.addEventListener("click", function () {
             rpsScript.BTNClick();
@@ -168,7 +161,7 @@ var rps = /** @class */ (function () {
     return rps;
 }());
 function loadScript(RPS) {
-    var script = new rps(RPS);
+    var script = new rps();
     script.Init();
 }
-loadScript("Rock Paper Scissors");
+loadScript();
