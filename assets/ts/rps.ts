@@ -180,7 +180,7 @@ class rps {
 
     public Init(): void {
         let rpsScript: rps = new rps(info[0], info[1], info[2], info[3]);
-        let element: HTMLButtonElement = document.querySelector("button") as HTMLButtonElement;
+        let element: Element = document.querySelector("#btn") as Element;
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
         }, false);

@@ -146,7 +146,7 @@ var rps = (function () {
     };
     rps.prototype.Init = function () {
         var rpsScript = new rps(info[0], info[1], info[2], info[3]);
-        var element = document.querySelector("button");
+        var element = document.querySelector("#btn");
         element.addEventListener("click", function () {
             rpsScript.BTNClick();
         }, false);
