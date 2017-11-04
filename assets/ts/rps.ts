@@ -1,15 +1,17 @@
-const info: any[] = ["Rock Paper Scissors", "bag3318", 1.0];
+const info: Array<any> = ["RPS", "bag3318", 1.0, true];
 
 class rps {
 
     public gameName: string;
     private author: string;
     public version: number;
-    constructor(GameName: string, Author: string, Version: number) {
+    public status: boolean;
+    constructor(GameName: string, Author: string, Version: number, Status: boolean) {
       this.gameName = GameName;
       this.author = Author;
       this.version = Version;
-      console.log(`Game Name: ${GameName}, Author: ${Author}, Vesion: ${Version}`);
+      this.status = Status;
+      console.log(`Game Name: ${this.gameName}, Author: ${this.author}, Vesion: ${this.version}, Status Working: ${this.status}`);
     }
 
     private playerScore: number = 0;
@@ -175,8 +177,7 @@ class rps {
     }
 
     public Init(): void {
-        let rpsScript: rps = new rps(info[0], info[1], info[2]);
-
+        let rpsScript: rps = new rps(info[0], info[1], info[2], info[3]);
         var element: Element = document.querySelector("#btn");
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
@@ -185,7 +186,7 @@ class rps {
 }
 
 function loadScript(): void {
-  let script: rps = new rps(info[0], info[1], info[2]);
+  let script: rps = new rps(info[0], info[1], info[2], info[3]);
   script.Init();
 }
 loadScript();
