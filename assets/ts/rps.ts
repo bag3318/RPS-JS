@@ -1,9 +1,9 @@
-const rpsStr: any = "Rock Paper Scissors";
+const rpsStr: string = "Rock Paper Scissors";
 
 class rps {
 
-    public log: any;
-    constructor(Log: any) {
+    public log: string;
+    constructor(Log: string) {
       this.log = Log;
       console.log(Log);
     }
@@ -184,7 +184,7 @@ class rps {
     }
 }
 
-function loadScript(RPS: any): void {
+function loadScript(RPS: string): void {
   let script: rps = new rps(RPS);
   script.Init();
 }
