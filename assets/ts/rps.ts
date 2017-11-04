@@ -184,7 +184,7 @@ class rps {
         }, true);
         var element: Element = document.querySelector("#btn");
         element.addEventListener("click", () => {
-            rpsScript.BTNClick();
+          rpsScript.BTNClick();
         }, false);
     }
 }
