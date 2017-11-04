@@ -1,8 +1,8 @@
 class rps {
 
-    public log: string;
-    constructor(Log: string) {
-      this.log = Log;
+    public log: any;
+    constructor(Log: any) {
+      Log = this.log;
       console.log(Log);
     }
 
@@ -187,7 +187,7 @@ class rps {
     }
 }
 
-function loadScript(RPS: string): void {
+function loadScript(RPS: any): void {
   let script: rps = new rps(RPS);
   script.Init();
 }

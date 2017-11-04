@@ -12,7 +12,7 @@ var rps = (function () {
         });
         this.isPlayerWinner = false;
         this.isComputerWinner = false;
-        this.log = Log;
+        Log = this.log;
         console.log(Log);
     }
     Object.defineProperty(rps.prototype, "PlayerScore", {
