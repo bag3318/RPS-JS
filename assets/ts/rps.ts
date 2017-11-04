@@ -4,9 +4,9 @@ class rps {
     public computerScore: number = 0;
     public ties: number = 0;
 
-    gestures: string[] = new Array("rock", "paper", "scissors");
+    public gestures: string[] = new Array("rock", "paper", "scissors");
 
-    rules: object = new Object({
+    public rules: object = new Object({
         "rock": "scissors",
         "paper": "rock",
         "scissors": "paper"
@@ -15,7 +15,7 @@ class rps {
     public isPlayerWinner: boolean = false;
     public isComputerWinner: boolean = false;
 
-    welcomeMsg: string = `
+    private welcomeMsg: string = `
     Welcome to the \"Rock, Paper, Scissors\" game!
 
     Remember, the rules are simple!
