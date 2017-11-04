@@ -1,7 +1,6 @@
 class rps {
 
     public log: string;
-    // create constructor
     constructor(Log: string) {
       this.log = Log;
       console.log(Log);
