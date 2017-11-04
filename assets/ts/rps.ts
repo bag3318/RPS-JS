@@ -6,6 +6,17 @@ class rps {
         this._gameName = game;
     }
 
+    Game() {
+        console.log(this._gameName);
+    }
+
+    get gameName(): string {
+        return this._gameName;
+    }
+    set gameName(gameName: string) {
+        this._gameName = gameName;
+    }
+
     private playerScore: number = 0;
     get PlayerScore(): number {
         return this.playerScore;
@@ -30,19 +41,6 @@ class rps {
         this.ties = tie;
     }
 
-
-    private gestures: string[] = new Array("rock", "paper", "scissors");
-
-    private rules: object = new Object({
-        "rock": "scissors",
-        "paper": "rock",
-        "scissors": "paper"
-    });
-
-    private isPlayerWinner: boolean = false;
-    private isComputerWinner: boolean = false;
-
-    // make getter/setter
     private welcomeMsg: string = `
     Welcome to the \"Rock, Paper, Scissors\" game!
 
@@ -55,17 +53,22 @@ class rps {
     Click cancel if you don\'t wanna play.
     `;
 
-
-    Game() {
-        console.log(this._gameName);
+    get WelcomeMsg(): string {
+        return this.welcomeMsg;
+    }
+    set WelcomeMsg(welcomeMessage: string) {
+        this.welcomeMsg = welcomeMessage;
     }
 
-    get gameName(): string {
-        return this._gameName;
-    }
-    set gameName(gameName: string) {
-        this._gameName = gameName;
-    }
+    private gestures: string[] = new Array("rock", "paper", "scissors");
+    private rules: object = new Object({
+        "rock": "scissors",
+        "paper": "rock",
+        "scissors": "paper"
+    });
+    private isPlayerWinner: boolean = false;
+    private isComputerWinner: boolean = false;
+
 
     Start():void {
         var ready: boolean = confirm(this.welcomeMsg);

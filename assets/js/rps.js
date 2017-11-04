@@ -3,6 +3,7 @@ var rps = /** @class */ (function () {
         this.playerScore = 0;
         this.computerScore = 0;
         this.ties = 0;
+        this.welcomeMsg = "\n    Welcome to the \"Rock, Paper, Scissors\" game!\n\n    Remember, the rules are simple:\n\n    Rock Beats Scissors,\n    Scissors Beats Paper,\n    Paper Beats Rock.\n\n    Click cancel if you don't wanna play.\n    ";
         this.gestures = new Array("rock", "paper", "scissors");
         this.rules = new Object({
             "rock": "scissors",
@@ -11,10 +12,21 @@ var rps = /** @class */ (function () {
         });
         this.isPlayerWinner = false;
         this.isComputerWinner = false;
-        // make getter/setter
-        this.welcomeMsg = "\n    Welcome to the \"Rock, Paper, Scissors\" game!\n\n    Remember, the rules are simple:\n\n    Rock Beats Scissors,\n    Scissors Beats Paper,\n    Paper Beats Rock.\n\n    Click cancel if you don't wanna play.\n    ";
         this._gameName = game;
     }
+    rps.prototype.Game = function () {
+        console.log(this._gameName);
+    };
+    Object.defineProperty(rps.prototype, "gameName", {
+        get: function () {
+            return this._gameName;
+        },
+        set: function (gameName) {
+            this._gameName = gameName;
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(rps.prototype, "PlayerScore", {
         get: function () {
             return this.playerScore;
@@ -45,15 +57,12 @@ var rps = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    rps.prototype.Game = function () {
-        console.log(this._gameName);
-    };
-    Object.defineProperty(rps.prototype, "gameName", {
+    Object.defineProperty(rps.prototype, "WelcomeMsg", {
         get: function () {
-            return this._gameName;
+            return this.welcomeMsg;
         },
-        set: function (gameName) {
-            this._gameName = gameName;
+        set: function (welcomeMessage) {
+            this.welcomeMsg = welcomeMessage;
         },
         enumerable: true,
         configurable: true
