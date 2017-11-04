@@ -1,10 +1,13 @@
 class rps {
 
     public log: string;
+    // create constructor
     constructor(Log: string) {
       this.log = Log;
       console.log(Log);
     }
+
+    // inititalize private score variables (and getters/setters):
 
     private playerScore: number = 0;
     get PlayerScore(): number {
@@ -30,6 +33,7 @@ class rps {
         this.ties = tie;
     }
 
+    // create welcome message of type string
     private welcomeMsg: string = `
     Welcome to the \"Rock, Paper, Scissors\" game!
 
@@ -41,7 +45,6 @@ class rps {
 
     Click cancel if you don\'t wanna play.
     `;
-
     get WelcomeMsg(): string {
         return this.welcomeMsg;
     }
