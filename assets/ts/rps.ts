@@ -1,5 +1,11 @@
 class rps {
 
+    public log: string;
+    constructor(Log: string) {
+      this.log = Log;
+      console.log(Log);
+    }    
+
     private playerScore: number = 0;
     get PlayerScore(): number {
         return this.playerScore;
@@ -52,7 +58,6 @@ class rps {
     private isPlayerWinner: boolean = false;
     private isComputerWinner: boolean = false;
 
-    constructor() {}
 
     private Start():void {
         var ready: boolean = confirm(this.welcomeMsg);
@@ -171,7 +176,7 @@ class rps {
     }
 
     public Init(): void {
-        let rpsScript: rps = new rps();
+        let rpsScript: rps = new rps("Rock Paper Scissors");
         var element: Element = document.querySelector("#btn");
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
@@ -180,7 +185,7 @@ class rps {
 }
 
 function loadScript(RPS): void {
-  let script: rps = new rps();
+  let script: rps = new rps(RPS);
   script.Init();
 }
-loadScript();
+loadScript("Rock Paper Scissors");
