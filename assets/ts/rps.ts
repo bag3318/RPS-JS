@@ -1,19 +1,19 @@
 class rps {
 
-    public playerScore: number = 0;
-    public computerScore: number = 0;
-    public ties: number = 0;
+    private playerScore: number = 0;
+    private computerScore: number = 0;
+    private ties: number = 0;
 
-    public gestures: string[] = new Array("rock", "paper", "scissors");
+    private gestures: string[] = new Array("rock", "paper", "scissors");
 
-    public rules: object = new Object({
+    private rules: object = new Object({
         "rock": "scissors",
         "paper": "rock",
         "scissors": "paper"
     });
 
-    public isPlayerWinner: boolean = false;
-    public isComputerWinner: boolean = false;
+    private isPlayerWinner: boolean = false;
+    private isComputerWinner: boolean = false;
 
     private welcomeMsg: string = `
     Welcome to the \"Rock, Paper, Scissors\" game!
