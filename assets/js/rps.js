@@ -115,14 +115,14 @@ var rps = (function () {
         var output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "!\n";
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
-            var wMsg = "\n            " + output + "\n            Player wins the round!\n\n            Player Score: " + this.playerScore + " Computer Score: " + this.computerScore + ".\n            ";
+            var wMsg = "\n            " + output + "\n            Player wins the round!\n\n            Player Score: " + this.playerScore + "; Computer Score: " + this.computerScore + ".\n            ";
             alert(wMsg);
             this.DetermineWinner();
             return 1;
         }
         else if (this.rules[guess2.toLowerCase()] === guess1.toLowerCase()) {
             this.computerScore += points;
-            var lMsg = "\n            " + output + "\n            Computer wins the round!\n\n            Player Score: " + this.playerScore + ", Computer Score: " + this.computerScore + ".\n            ";
+            var lMsg = "\n            " + output + "\n            Computer wins the round!\n\n            Player Score: " + this.playerScore + "; Computer Score: " + this.computerScore + ".\n            ";
             alert(lMsg);
             this.DetermineWinner();
             return 2;

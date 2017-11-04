@@ -133,7 +133,7 @@ class rps {
             ${output}
             Player wins the round!
 
-            Player Score: ${this.playerScore} Computer Score: ${this.computerScore}.
+            Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
             `;
             alert(wMsg);
             this.DetermineWinner();
@@ -144,7 +144,7 @@ class rps {
             ${output}
             Computer wins the round!
 
-            Player Score: ${this.playerScore}, Computer Score: ${this.computerScore}.
+            Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
             `;
             alert(lMsg);
             this.DetermineWinner();
