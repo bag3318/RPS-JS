@@ -58,13 +58,24 @@ class rps {
         var msgL: string;
         switch(true) {
           case (this.playerScore == 2 && this.computerScore == 1) || (this.playerScore == 1 && this.computerScore == 2): {
-            msgW = `The player has ${this.playerScore} points compared to the computer\'s ${this.computerScore} point (ties: ${this.ties}). So the player wins!`;
-            msgL = `The computer has ${this.computerScore} points compared to the player\'s ${this.playerScore} point (ties: ${this.ties}). So the computer wins!`;
+            msgW = `
+            The player has ${this.playerScore} points compared to the computer\'s ${this.computerScore} point (ties: ${this.ties}).
+            So the player wins!
+            `;
+            msgL = `
+            The computer has ${this.computerScore} points compared to the player\'s ${this.playerScore} point (ties: ${this.ties}). So the computer wins!
+            `;
             break;
           }
           case (this.playerScore == 2 && this.computerScore == 0) || (this.playerScore == 0 && this.computerScore == 2): {
-            msgW = `The player has ${this.playerScore} points compared to the computer\'s ${this.computerScore} points (ties: ${this.ties}). So the player wins!`;
-            msgL = `The computer has ${this.computerScore} points compared to the player\'s ${this.playerScore} points (ties: ${this.ties}). So the computer wins!`;
+            msgW = `
+            The player has ${this.playerScore} points compared to the computer\'s ${this.computerScore} points (ties: ${this.ties}).
+            So the player wins!
+            `;
+            msgL = `
+            The computer has ${this.computerScore} points compared to the player\'s ${this.playerScore} points (ties: ${this.ties}).
+            So the computer wins!
+            `;
             break;
           }
         }
@@ -123,21 +134,43 @@ class rps {
 
     CompareGuesses(guess1, guess2, points) {
         var output: string = `Player chose: ${guess1.toLowerCase()}, and the computer chose: ${guess2.toLowerCase()}!\n`;
+
+        var wMsg: string = `
+        ${output}
+        Player wins the round!
+
+        Player Score: ${this.playerScore} Computer Score: ${this.computerScore}.
+        `;
+
+        var lMsg = `
+        ${output}
+        Computer wins the round!
+
+        Player Score: ${this.playerScore}, Computer Score: ${this.computerScore}.
+        `;
+
+        var tMsg: string = `
+        ${output}
+        It's a tie! Go again, no score added!
+
+        Player Score: ${this.playerScore}, Computer Score: ${this.computerScore}
+        `
+
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
-            alert(`${output}\nPlayer wins the round! \n\nPlayer Score: ${this.playerScore} Computer Score: ${this.computerScore}.`);
+            alert(wMsg);
             this.DetermineWinner();
             return 1;
         } else if (this.rules[guess2.toLowerCase()] === guess1.toLowerCase()) {
             this.computerScore += points;
-            alert(`${output}\nComputer wins the round! \n\nPlayer Score: ${this.playerScore}, Computer Score: ${this.computerScore}.`);
+            alert(lMsg);
             this.DetermineWinner();
             return 2;
         } else {
             this.playerScore += 0;
             this.computerScore += 0;
             this.ties += 1;
-            alert(`${output}\nIt's a tie! Go again, no score added! \n\nPlayer Score: ${this.playerScore}, Computer Score: ${this.computerScore}`);
+            alert(tMsg);
             this.DetermineWinner();
             return 0;
         }
