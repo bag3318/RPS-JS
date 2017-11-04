@@ -67,7 +67,7 @@ class rps {
         this._gameName = gameName;
     }
 
-    Start() {
+    Start():void {
         var ready: boolean = confirm(this.welcomeMsg);
         if (ready) {
             this.PlayGame(3);
@@ -77,7 +77,7 @@ class rps {
         }
     }
 
-    DetermineWinner() {
+    DetermineWinner():void {
         var msgW: string = `
         The player has ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s) (ties: ${this.ties}).
         So the player wins!
@@ -95,7 +95,7 @@ class rps {
         }
     }
 
-    PlayGame(numOfRounds: number) {
+    PlayGame(numOfRounds: number):void {
         do {
             if (this.isPlayerWinner || this.isComputerWinner) {
                 return;
@@ -109,7 +109,7 @@ class rps {
         } while (numOfRounds > 0 && (!this.isPlayerWinner || !this.isComputerWinner));
     }
 
-    PlayerGuess() {
+    PlayerGuess():string {
         var playerChoice: string = prompt("Choose rock, paper, or scissors:");
         if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
             return playerChoice;
@@ -121,7 +121,7 @@ class rps {
 
 
 
-    ComputerGuess() {
+    ComputerGuess():string {
         var cpuChoice: number = Math.floor((Math.random() * 3) + 1);
         switch (cpuChoice) {
             case 1: {
@@ -137,7 +137,7 @@ class rps {
     }
 
 
-    CompareGuesses(guess1: string, guess2: string, points: number) {
+    CompareGuesses(guess1: string, guess2: string, points: number):number {
         var output: string = `Player chose: ${guess1.toLowerCase()}, and the computer chose: ${guess2.toLowerCase()}!\n`;
 
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
@@ -178,12 +178,12 @@ class rps {
         }
     }
 
-    BTNClick() {
+    BTNClick():void {
         this.Start();
         location.reload(true);
     }
 
-    Init() {
+    Init():void {
         let rpsScript: rps = new rps("Rock Paper Scissors");
         window.addEventListener("load", () => {
           rpsScript.Game();
@@ -195,7 +195,7 @@ class rps {
     }
 }
 
-function loadScript(RPS:string) {
+function loadScript(RPS:string):void {
   let script: rps = new rps(RPS);
   script.Init();
 }
