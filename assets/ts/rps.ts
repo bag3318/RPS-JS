@@ -1,12 +1,5 @@
 class rps {
 
-    get gameName(): string {
-        return this._gameName;
-    }
-    set gameName(gameName: string) {
-        this._gameName = gameName;
-    }
-
     private playerScore: number = 0;
     get PlayerScore(): number {
         return this.playerScore;

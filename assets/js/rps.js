@@ -13,16 +13,6 @@ var rps = /** @class */ (function () {
         this.isPlayerWinner = false;
         this.isComputerWinner = false;
     }
-    Object.defineProperty(rps.prototype, "gameName", {
-        get: function () {
-            return this._gameName;
-        },
-        set: function (gameName) {
-            this._gameName = gameName;
-        },
-        enumerable: true,
-        configurable: true
-    });
     Object.defineProperty(rps.prototype, "PlayerScore", {
         get: function () {
             return this.playerScore;
