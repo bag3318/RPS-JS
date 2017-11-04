@@ -11,8 +11,8 @@ class rps {
       this._author = author;
       this._version = version;
       this._status = status;
-      // console.log(`Game Name: ${this._gameName}, Author: ${this._author}, Version: ${this._version}, Status OK: ${this._status}.`); // pass in vars
-      console.log(`Game Name: ${gameName}, Author: ${author}, Version: ${version}, Status OK: ${status}.`); // pass in params
+      // console.log(`Game Name: ${this._gameName}, Author: ${this._author}, Version: ${this._version}, Status OK: ${this._status}.`); // using vars
+      console.log(`Game Name: ${gameName}, Author: ${author}, Version: ${version}, Status OK: ${status}.`); // using params
     }
 
     private playerScore: number = 0;
