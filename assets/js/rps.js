@@ -1,7 +1,6 @@
 var rpsStr = "Rock Paper Scissors";
 var rps = (function () {
-    function rps(Log) {
-        this.Log = Log;
+    function rps(LogRPS) {
         this.playerScore = 0;
         this.computerScore = 0;
         this.ties = 0;
@@ -14,8 +13,8 @@ var rps = (function () {
         });
         this.isPlayerWinner = false;
         this.isComputerWinner = false;
-        this.log = Log;
-        console.log(Log);
+        this.logRPS = LogRPS;
+        console.log(LogRPS);
     }
     Object.defineProperty(rps.prototype, "PlayerScore", {
         get: function () {

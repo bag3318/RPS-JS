@@ -2,10 +2,10 @@ const rpsStr: string = "Rock Paper Scissors";
 
 class rps {
 
-    public log: string;
-    constructor(private Log: string) {
-      this.log = Log;
-      console.log(Log);
+    public logRPS: string;
+    constructor(LogRPS: string) {
+      this.logRPS = LogRPS;
+      console.log(LogRPS);
     }
 
     private playerScore: number = 0;
