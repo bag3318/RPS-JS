@@ -135,7 +135,7 @@ var rps = /** @class */ (function () {
         window.addEventListener("load", function () {
             rpsScript.Game();
         }, true);
-        var element = document.querySelector("button");
+        var element = document.querySelector("#btn");
         element.addEventListener("click", function () {
             rpsScript.BTNClick();
         }, false);

@@ -186,7 +186,7 @@ class rps {
         window.addEventListener("load", () => {
           rpsScript.Game();
         }, true);
-        var element: HTMLElement = document.querySelector("button");
+        var element: Element = document.querySelector("#btn");
         element.addEventListener("click", () => {
             rpsScript.BTNClick();
         }, false);
