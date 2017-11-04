@@ -5,10 +5,34 @@ class rps {
     constructor(game: string) {
         this._gameName = game;
     }
-    
+
+
+
+
     private playerScore: number = 0;
+    get pScore(): number {
+        return this.playerScore;
+    }
+    set pScore(pScore: number) {
+        this.playerScore = pScore;
+    }
+
     private computerScore: number = 0;
+    get cScore(): number {
+        return this.computerScore;
+    }
+    set cScore(cScore: number) {
+        this.computerScore = cScore;
+    }
+
     private ties: number = 0;
+    get tieS(): number {
+        return this.ties;
+    }
+    set tieS(tieS: number) {
+        this.ties = tieS;
+    }
+
 
     private gestures: string[] = new Array("rock", "paper", "scissors");
 

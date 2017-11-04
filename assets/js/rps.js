@@ -14,6 +14,36 @@ var rps = /** @class */ (function () {
         this.welcomeMsg = "\n    Welcome to the \"Rock, Paper, Scissors\" game!\n\n    Remember, the rules are simple:\n\n    Rock Beats Scissors,\n    Scissors Beats Paper,\n    Paper Beats Rock.\n\n    Click cancel if you don't wanna play.\n    ";
         this._gameName = game;
     }
+    Object.defineProperty(rps.prototype, "pScore", {
+        get: function () {
+            return this.playerScore;
+        },
+        set: function (pScore) {
+            this.playerScore = pScore;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(rps.prototype, "cScore", {
+        get: function () {
+            return this.computerScore;
+        },
+        set: function (cScore) {
+            this.computerScore = cScore;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(rps.prototype, "tieS", {
+        get: function () {
+            return this.ties;
+        },
+        set: function (tieS) {
+            this.ties = tieS;
+        },
+        enumerable: true,
+        configurable: true
+    });
     rps.prototype.Game = function () {
         console.log(this._gameName);
     };
