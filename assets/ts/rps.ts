@@ -52,6 +52,7 @@ class rps {
         this.welcomeMsg = welcomeMessage;
     }
 
+    // initialize non-getter/setter vars
     private gestures: string[] = new Array("rock", "paper", "scissors");
     private rules: object = new Object({
         "rock": "scissors",
@@ -61,8 +62,8 @@ class rps {
     private isPlayerWinner: boolean = false;
     private isComputerWinner: boolean = false;
 
-
-    private Start():void {
+    // create private method Start, return nothing (void)
+    private Start(): void {
         var ready: boolean = confirm(this.welcomeMsg);
         if (ready) {
             this.PlayGame(3);
