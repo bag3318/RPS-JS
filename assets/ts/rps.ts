@@ -6,9 +6,6 @@ class rps {
         this._gameName = game;
     }
 
-
-
-
     private playerScore: number = 0;
     get pScore(): number {
         return this.playerScore;
