@@ -2,7 +2,6 @@ const info: Array<any> = ["RPS", "bag3318", 1.0, true];
 
 class rps {
 
-    // log to the console some info about this game
     public gameName: string;
     private author: string;
     public version: number;
