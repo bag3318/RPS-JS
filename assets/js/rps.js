@@ -1,6 +1,6 @@
 var info = ["RPS", "bag3318", 1.0, true];
 var rps = (function () {
-    function rps(GameName, Author, Version, Status) {
+    function rps(gameName, author, version, status) {
         this.playerScore = 0;
         this.computerScore = 0;
         this.ties = 0;
@@ -13,11 +13,11 @@ var rps = (function () {
         });
         this.isPlayerWinner = false;
         this.isComputerWinner = false;
-        this.gameName = GameName;
-        this.author = Author;
-        this.version = Version;
-        this.status = Status;
-        console.log("Game Name: " + GameName + ", Author: " + Author + ", Version: " + this.version + ", Status Working: " + this.status + ".");
+        this._gameName = gameName;
+        this._author = author;
+        this._version = version;
+        this._status = status;
+        console.log("Game Name: " + gameName + ", Author: " + author + ", Version: " + version + ", Status Working: " + status + ".");
     }
     Object.defineProperty(rps.prototype, "PlayerScore", {
         get: function () {

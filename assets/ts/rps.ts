@@ -2,16 +2,17 @@ const info: Array<any> = ["RPS", "bag3318", 1.0, true];
 
 class rps {
 
-    public gameName: string;
-    private author: string;
-    public version: number;
-    public status: boolean;
-    constructor(GameName: string, Author: string, Version: number, Status: boolean) {
-      this.gameName = GameName;
-      this.author = Author;
-      this.version = Version;
-      this.status = Status;
-      console.log(`Game Name: ${GameName}, Author: ${Author}, Version: ${this.version}, Status Working: ${this.status}.`);
+    public _gameName: string;
+    private _author: string;
+    public _version: number;
+    public _status: boolean;
+    constructor(gameName: string, author: string, version: number, status: boolean) {
+      this._gameName = gameName;
+      this._author = author;
+      this._version = version;
+      this._status = status;
+      // console.log(`Game Name: ${this._gameName}, Author: ${this._author}, Version: ${this._version}, Status Working: ${this._status}.`); // pass in vars
+      console.log(`Game Name: ${gameName}, Author: ${author}, Version: ${version}, Status Working: ${status}.`); // pass in params
     }
 
     private playerScore: number = 0;
