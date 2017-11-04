@@ -104,7 +104,7 @@ class rps {
     }
 
     private PlayerGuess(): string {
-        var playerChoice: string = prompt("Choose rock, paper, or scissors:") as string;
+        let playerChoice: string = prompt("Choose rock, paper, or scissors:") as string;
         if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
             return playerChoice;
         } else {
@@ -180,7 +180,7 @@ class rps {
 
     public Init(): void {
         let rpsScript: rps = new rps(info[0], info[1], info[2], info[3]);
-        var element: object = document.querySelector("button");
+        let element: HTMLButtonElement = document.querySelector("button") as HTMLButtonElement;
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
         }, false);
