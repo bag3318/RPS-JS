@@ -1,4 +1,13 @@
+const rpsStr: any = "Rock Paper Scissors";
+
 class rps {
+
+    public log: any;
+    constructor(Log: any) {
+      this.log = Log;
+      console.log(Log);
+    }
+
     // inititalize private score variables (and getters/setters):
 
     private playerScore: number = 0;
@@ -57,12 +66,7 @@ class rps {
     // create private method Start, return nothing (void)
     private Start(): void {
         var ready: boolean = confirm(this.welcomeMsg);
-        if (ready) {
-            this.PlayGame(3);
-        }
-        else {
-            alert("Sorry you don't wanna play, maybe next time! :)");
-        }
+        var Confirm: any = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
     }
 
     private DetermineWinner(): void {
@@ -172,7 +176,7 @@ class rps {
     }
 
     public Init(): void {
-        let rpsScript: rps = new rps();
+        let rpsScript: rps = new rps(rpsStr);
         var element: Element = document.querySelector("#btn");
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
@@ -180,8 +184,8 @@ class rps {
     }
 }
 
-function loadScript(): void {
-  let script: rps = new rps();
+function loadScript(RPS: any): void {
+  let script: rps = new rps(RPS);
   script.Init();
 }
-loadScript();
+loadScript(rpsStr);

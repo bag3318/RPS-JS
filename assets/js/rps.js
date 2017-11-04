@@ -1,5 +1,6 @@
+var rpsStr = "Rock Paper Scissors";
 var rps = (function () {
-    function rps() {
+    function rps(Log) {
         this.playerScore = 0;
         this.computerScore = 0;
         this.ties = 0;
@@ -12,6 +13,8 @@ var rps = (function () {
         });
         this.isPlayerWinner = false;
         this.isComputerWinner = false;
+        this.log = Log;
+        console.log(Log);
     }
     Object.defineProperty(rps.prototype, "PlayerScore", {
         get: function () {
@@ -55,12 +58,7 @@ var rps = (function () {
     });
     rps.prototype.Start = function () {
         var ready = confirm(this.welcomeMsg);
-        if (ready) {
-            this.PlayGame(3);
-        }
-        else {
-            alert("Sorry you don't wanna play, maybe next time! :)");
-        }
+        var Confirm = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
     };
     rps.prototype.DetermineWinner = function () {
         var msgW = "\n        The player has " + this.playerScore + " point(s) compared to the computer's " + this.computerScore + " point(s) (ties: " + this.ties + ").\n        So the player wins!\n        ";
@@ -142,7 +140,7 @@ var rps = (function () {
         location.reload(true);
     };
     rps.prototype.Init = function () {
-        var rpsScript = new rps();
+        var rpsScript = new rps(rpsStr);
         var element = document.querySelector("#btn");
         element.addEventListener("click", function () {
             rpsScript.BTNClick();
@@ -150,8 +148,8 @@ var rps = (function () {
     };
     return rps;
 }());
-function loadScript() {
-    var script = new rps();
+function loadScript(RPS) {
+    var script = new rps(RPS);
     script.Init();
 }
-loadScript();
+loadScript(rpsStr);
