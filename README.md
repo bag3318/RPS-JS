@@ -48,6 +48,7 @@ ________
 # Command Line
 
 1. `tsc -w` = watch typescript, include no comments
+1.1 `tsc -init` = creates config file
 2. `scss --watch assets/scss:assets/css` = watch sass
 3. `tsfmt -r --baseDir assets/ts` = format typescript replace/reformat
 ________
