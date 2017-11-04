@@ -49,7 +49,7 @@ ________
 
 1. `tsc -w` = watch typescript
 2. `scss --watch assets/scss:assets/css` = watch sass
-3. `tsfmt -r` = format typescript replace/reformat
+3. `tsfmt -r --baseDir assets/ts` = format typescript replace/reformat
 ________
 -->
 
