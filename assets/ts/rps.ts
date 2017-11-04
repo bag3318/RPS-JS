@@ -170,7 +170,7 @@ class rps {
         location.reload(true);
     }
 
-    private Init():void {
+    public Init():void {
         let rpsScript: rps = new rps();
         var element: Element = document.querySelector("#btn");
         element.addEventListener("click", () => {
@@ -179,7 +179,7 @@ class rps {
     }
 }
 
-function loadScript(RPS:string):void {
+function loadScript():void {
   let script: rps = new rps();
   script.Init();
 }

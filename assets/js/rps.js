@@ -150,7 +150,7 @@ var rps = /** @class */ (function () {
     };
     return rps;
 }());
-function loadScript(RPS) {
+function loadScript() {
     var script = new rps();
     script.Init();
 }
