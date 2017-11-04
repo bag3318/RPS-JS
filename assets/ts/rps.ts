@@ -7,10 +7,12 @@ class rps {
     }
 
     private playerScore: number = 0;
-    get pScore(): number {
+    // pScore = Player Score
+    get playerScore(): number {
         return this.playerScore;
     }
-    set pScore(pScore: number) {
+
+    set playerScore(pScore: number) {
         this.playerScore = pScore;
     }
 
