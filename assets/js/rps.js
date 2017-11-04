@@ -1,6 +1,7 @@
 var rpsStr = "Rock Paper Scissors";
 var rps = (function () {
     function rps(Log) {
+        this.Log = Log;
         this.playerScore = 0;
         this.computerScore = 0;
         this.ties = 0;

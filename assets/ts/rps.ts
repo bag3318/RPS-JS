@@ -3,7 +3,7 @@ const rpsStr: string = "Rock Paper Scissors";
 class rps {
 
     public log: string;
-    constructor(Log: string) {
+    constructor(private Log: string) {
       this.log = Log;
       console.log(Log);
     }
