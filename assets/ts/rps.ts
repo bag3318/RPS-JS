@@ -95,7 +95,7 @@ class rps {
         }
     }
 
-    PlayGame(numOfRounds) {
+    PlayGame(numOfRounds: number) {
         do {
             if (this.isPlayerWinner || this.isComputerWinner) {
                 return;
@@ -137,7 +137,7 @@ class rps {
     }
 
 
-    CompareGuesses(guess1, guess2, points) {
+    CompareGuesses(guess1: string, guess2: string, points: number) {
         var output: string = `Player chose: ${guess1.toLowerCase()}, and the computer chose: ${guess2.toLowerCase()}!\n`;
 
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
@@ -195,7 +195,7 @@ class rps {
     }
 }
 
-function loadScript(RPS) {
+function loadScript(RPS:string) {
   let script: rps = new rps(RPS);
   script.Init();
 }
