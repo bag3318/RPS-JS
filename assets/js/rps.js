@@ -1,7 +1,11 @@
 "use strict";
-var info = ["RPS", "bag3318", 1.0, true];
+var $info = ["RPS", "bag3318", 1.0, true];
 var rps = (function () {
     function rps(gameName, author, version, status) {
+        this.gameName = gameName;
+        this.author = author;
+        this.version = version;
+        this.status = status;
         this.playerScore = 0;
         this.computerScore = 0;
         this.ties = 0;
@@ -145,7 +149,7 @@ var rps = (function () {
         location.reload(true);
     };
     rps.prototype.Init = function () {
-        var rpsScript = new rps(info[0], info[1], info[2], info[3]);
+        var rpsScript = new rps($info[0], $info[1], $info[2], $info[3]);
         var element = document.querySelector("#btn");
         element.addEventListener("click", function () {
             rpsScript.BTNClick();
@@ -154,7 +158,7 @@ var rps = (function () {
     return rps;
 }());
 function loadScript() {
-    var script = new rps(info[0], info[1], info[2], info[3]);
+    var script = new rps($info[0], $info[1], $info[2], $info[3]);
     script.Init();
 }
 loadScript();

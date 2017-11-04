@@ -1,12 +1,12 @@
-const info: Array<any> = ["RPS", "bag3318", 1.0, true];
+const $info: Array<any> = ["RPS", "bag3318", 1.0, true];
 
 class rps {
 
     public _gameName: string;
     private _author: string;
     public _version: number;
-    public _status: boolean;
-    constructor(gameName: string, author: string, version: number, status: boolean) {
+    private _status: boolean;
+    constructor(public gameName: string, private author: string, public version: number, private status: boolean) {
       this._gameName = gameName;
       this._author = author;
       this._version = version;
@@ -177,7 +177,7 @@ class rps {
     }
 
     public Init(): void {
-        let rpsScript: rps = new rps(info[0], info[1], info[2], info[3]);
+        let rpsScript: rps = new rps($info[0], $info[1], $info[2], $info[3]);
         let element: HTMLElement = document.querySelector("#btn") as HTMLElement;
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
@@ -186,7 +186,7 @@ class rps {
 }
 
 function loadScript(): void {
-  let script: rps = new rps(info[0], info[1], info[2], info[3]);
+  let script: rps = new rps($info[0], $info[1], $info[2], $info[3]);
   script.Init();
 }
 loadScript();
