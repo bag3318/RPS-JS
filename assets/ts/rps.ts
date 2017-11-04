@@ -188,7 +188,7 @@ class rps {
     }
 }
 
-function loadScript(RPS): void {
+function loadScript(RPS: string): void {
   let script: rps = new rps(RPS);
   script.Init();
 }
