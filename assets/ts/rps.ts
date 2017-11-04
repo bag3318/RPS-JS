@@ -15,7 +15,17 @@ class rps {
     public isPlayerWinner: boolean = false;
     public isComputerWinner: boolean = false;
 
-    welcomeMsg: string = "Welcome to the \"Rock, Paper, Scissors\" game!\n\nRemember, the rules are simple!\n\nRock Beats Scissors\nScissors Beats Paper\nPaper Beats Rock\n\nClick cancel if you don\'t wanna play.";
+    welcomeMsg: string = `
+    Welcome to the \"Rock, Paper, Scissors\" game!
+
+    Remember, the rules are simple!
+
+    Rock Beats Scissors
+    Scissors Beats Paper
+    Paper Beats Rock
+
+    Click cancel if you don\'t wanna play.
+    `;
 
     private _gameName: string;
 
