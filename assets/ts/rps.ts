@@ -179,7 +179,7 @@ class rps {
     }
 }
 
-function loadScript(): void {
+function loadScript(RPS): void {
   let script: rps = new rps();
   script.Init();
 }
