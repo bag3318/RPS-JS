@@ -1,5 +1,11 @@
 class rps {
 
+    private _gameName: string;
+
+    constructor(game: string) {
+        this._gameName = game;
+    }
+    
     private playerScore: number = 0;
     private computerScore: number = 0;
     private ties: number = 0;
@@ -27,16 +33,11 @@ class rps {
     Click cancel if you don\'t wanna play.
     `;
 
-    private _gameName: string;
-
-    constructor(game: string) {
-        this._gameName = game;
-    }
 
     Game() {
         console.log(this._gameName);
     }
-    
+
     get gameName(): string {
         return this._gameName;
     }
