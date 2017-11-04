@@ -18,11 +18,11 @@ class rps {
     private welcomeMsg: string = `
     Welcome to the \"Rock, Paper, Scissors\" game!
 
-    Remember, the rules are simple!
+    Remember, the rules are simple:
 
-    Rock Beats Scissors
-    Scissors Beats Paper
-    Paper Beats Rock
+    Rock Beats Scissors,
+    Scissors Beats Paper,
+    Paper Beats Rock.
 
     Click cancel if you don\'t wanna play.
     `;

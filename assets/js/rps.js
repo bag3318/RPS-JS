@@ -11,7 +11,7 @@ var rps = /** @class */ (function () {
         });
         this.isPlayerWinner = false;
         this.isComputerWinner = false;
-        this.welcomeMsg = "\n    Welcome to the \"Rock, Paper, Scissors\" game!\n\n    Remember, the rules are simple!\n\n    Rock Beats Scissors\n    Scissors Beats Paper\n    Paper Beats Rock\n\n    Click cancel if you don't wanna play.\n    ";
+        this.welcomeMsg = "\n    Welcome to the \"Rock, Paper, Scissors\" game!\n\n    Remember, the rules are simple:\n\n    Rock Beats Scissors,\n    Scissors Beats Paper,\n    Paper Beats Rock.\n\n    Click cancel if you don't wanna play.\n    ";
         this._gameName = game;
     }
     rps.prototype.Game = function () {
