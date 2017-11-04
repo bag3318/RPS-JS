@@ -36,6 +36,7 @@ class rps {
     Game() {
         console.log(this._gameName);
     }
+    
     get gameName(): string {
         return this._gameName;
     }
