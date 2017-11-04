@@ -1,3 +1,4 @@
+"use strict";
 var info = ["RPS", "bag3318", 1.0, true];
 var rps = (function () {
     function rps(gameName, author, version, status) {
@@ -111,6 +112,7 @@ var rps = (function () {
                 return this.gestures[2];
             }
         }
+        return "";
     };
     rps.prototype.CompareGuesses = function (guess1, guess2, points) {
         var output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "!\n";
@@ -144,7 +146,7 @@ var rps = (function () {
     };
     rps.prototype.Init = function () {
         var rpsScript = new rps(info[0], info[1], info[2], info[3]);
-        var element = document.querySelector("#btn");
+        var element = document.querySelector("button");
         element.addEventListener("click", function () {
             rpsScript.BTNClick();
         }, false);

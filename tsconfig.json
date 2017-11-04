@@ -7,6 +7,7 @@
         "module": "commonjs",
         "target": "ES5",
         "outDir": "assets/js",
-        "rootDir": "assets/ts"
+        "rootDir": "assets/ts",
+        "strict": true
     }
 }

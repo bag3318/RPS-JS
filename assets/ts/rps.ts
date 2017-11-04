@@ -58,7 +58,7 @@ class rps {
     }
 
     private gestures: string[] = new Array("rock", "paper", "scissors");
-    private rules: object = new Object({
+    private rules: any = new Object({
         "rock": "scissors",
         "paper": "rock",
         "scissors": "paper"
@@ -104,7 +104,7 @@ class rps {
     }
 
     private PlayerGuess(): string {
-        var playerChoice: string = prompt("Choose rock, paper, or scissors:");
+        var playerChoice: string = prompt("Choose rock, paper, or scissors:") as string;
         if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
             return playerChoice;
         } else {
@@ -128,6 +128,7 @@ class rps {
                 return this.gestures[2];
             }
         }
+        return "";
     }
 
 
@@ -179,7 +180,7 @@ class rps {
 
     public Init(): void {
         let rpsScript: rps = new rps(info[0], info[1], info[2], info[3]);
-        var element: Element = document.querySelector("#btn");
+        var element: object = document.querySelector("button");
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
         }, false);
