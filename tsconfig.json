@@ -2,9 +2,11 @@
     "compilerOptions":
     {
         "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
         "module": "commonjs",
         "target": "ES5",
         "outDir": "assets/js",
-        "rootDir": "assets/ts"
+        "rootDir": "assets/ts",
+        "removeComments": true
     }
 }

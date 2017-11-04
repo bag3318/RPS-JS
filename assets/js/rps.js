@@ -1,4 +1,4 @@
-var rps = /** @class */ (function () {
+var rps = (function () {
     function rps() {
         this.playerScore = 0;
         this.computerScore = 0;
