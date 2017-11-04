@@ -1,9 +1,7 @@
-// game info:
 const info: Array<any> = ["RPS", "bag3318", 1.0, true];
 
 class rps {
 
-    // create game info and log to console
     public _gameName: string;
     private _author: string;
     public _version: number;
