@@ -77,7 +77,8 @@ class rps {
         So the player wins!
         `;
         var msgL: string = `
-        The computer has ${this.computerScore} point(s) compared to the player\'s ${this.playerScore} point(s) (ties: ${this.ties}). So the computer wins!
+        The computer has ${this.computerScore} point(s) compared to the player\'s ${this.playerScore} point(s) (ties: ${this.ties}).
+        So the computer wins!
         `;
         if (this.playerScore >= 2) {
           this.isPlayerWinner = true;
