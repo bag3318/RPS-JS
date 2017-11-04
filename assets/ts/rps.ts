@@ -4,7 +4,7 @@ class rps {
     constructor(Log: string) {
       this.log = Log;
       console.log(Log);
-    }    
+    }
 
     private playerScore: number = 0;
     get PlayerScore(): number {
