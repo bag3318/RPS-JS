@@ -34,12 +34,12 @@ var rps = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(rps.prototype, "tieS", {
+    Object.defineProperty(rps.prototype, "Ties", {
         get: function () {
             return this.ties;
         },
-        set: function (tieS) {
-            this.ties = tieS;
+        set: function (tie) {
+            this.ties = tie;
         },
         enumerable: true,
         configurable: true

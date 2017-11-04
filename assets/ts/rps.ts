@@ -23,11 +23,11 @@ class rps {
     }
 
     private ties: number = 0;
-    get tieS(): number {
+    get Ties(): number {
         return this.ties;
     }
-    set tieS(tieS: number) {
-        this.ties = tieS;
+    set Ties(tie: number) {
+        this.ties = tie;
     }
 
 
