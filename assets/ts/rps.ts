@@ -95,9 +95,9 @@ class rps {
             if (this.isPlayerWinner || this.isComputerWinner) {
                 return;
             }
-            var player = this.PlayerGuess();
-            var computer = this.ComputerGuess();
-            var result = this.CompareGuesses(player, computer, 1);
+            var player  = <string>this.PlayerGuess();
+            var computer = <string>this.ComputerGuess();
+            var result = <number>this.CompareGuesses(player, computer, 1);
             if (result !== 0) {
                 numOfRounds--;
             }
