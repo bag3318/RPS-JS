@@ -1,6 +1,6 @@
-var rpsStr = "Rock Paper Scissors";
+var info = ["Rock Paper Scissors", "bag3318", 1.0];
 var rps = (function () {
-    function rps(LogRPS) {
+    function rps(GameName, Author, Version) {
         this.playerScore = 0;
         this.computerScore = 0;
         this.ties = 0;
@@ -13,8 +13,10 @@ var rps = (function () {
         });
         this.isPlayerWinner = false;
         this.isComputerWinner = false;
-        this.logRPS = LogRPS;
-        console.log(LogRPS);
+        this.gameName = GameName;
+        this.author = Author;
+        this.version = Version;
+        console.log("Game Name: " + GameName + ", Author: " + Author + ", Vesion: " + Version);
     }
     Object.defineProperty(rps.prototype, "PlayerScore", {
         get: function () {
@@ -140,7 +142,7 @@ var rps = (function () {
         location.reload(true);
     };
     rps.prototype.Init = function () {
-        var rpsScript = new rps(rpsStr);
+        var rpsScript = new rps(info[0], info[1], info[2]);
         var element = document.querySelector("#btn");
         element.addEventListener("click", function () {
             rpsScript.BTNClick();
@@ -148,8 +150,8 @@ var rps = (function () {
     };
     return rps;
 }());
-function loadScript(RPS) {
-    var script = new rps(RPS);
+function loadScript() {
+    var script = new rps(info[0], info[1], info[2]);
     script.Init();
 }
-loadScript(rpsStr);
+loadScript();

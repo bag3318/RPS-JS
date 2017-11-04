@@ -1,11 +1,15 @@
-const rpsStr: string = "Rock Paper Scissors";
+const info: any[] = ["Rock Paper Scissors", "bag3318", 1.0];
 
 class rps {
 
-    public logRPS: string;
-    constructor(LogRPS: string) {
-      this.logRPS = LogRPS;
-      console.log(LogRPS);
+    public gameName: string;
+    private author: string;
+    public version: number;
+    constructor(GameName: string, Author: string, Version: number) {
+      this.gameName = GameName;
+      this.author = Author;
+      this.version = Version;
+      console.log(`Game Name: ${GameName}, Author: ${Author}, Vesion: ${Version}`);
     }
 
     private playerScore: number = 0;
@@ -171,7 +175,8 @@ class rps {
     }
 
     public Init(): void {
-        let rpsScript: rps = new rps(rpsStr);
+        let rpsScript: rps = new rps(info[0], info[1], info[2]);
+
         var element: Element = document.querySelector("#btn");
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
@@ -179,8 +184,8 @@ class rps {
     }
 }
 
-function loadScript(RPS: string): void {
-  let script: rps = new rps(RPS);
+function loadScript(): void {
+  let script: rps = new rps(info[0], info[1], info[2]);
   script.Init();
 }
-loadScript(rpsStr);
+loadScript();
