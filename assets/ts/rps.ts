@@ -1,8 +1,10 @@
+const rpsStr: string = "Rock Paper Scissors";
+
 class rps {
 
     public log: any;
     constructor(Log: any) {
-      Log = this.log;
+      this.log = Log;
       console.log(Log);
     }
 
@@ -179,7 +181,7 @@ class rps {
     }
 
     public Init(): void {
-        let rpsScript: rps = new rps("Rock Paper Scissors");
+        let rpsScript: rps = new rps(rpsStr);
         var element: Element = document.querySelector("#btn");
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
@@ -191,4 +193,4 @@ function loadScript(RPS: any): void {
   let script: rps = new rps(RPS);
   script.Init();
 }
-loadScript("Rock Paper Scissors");
+loadScript(rpsStr);
