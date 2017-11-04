@@ -42,6 +42,7 @@ class rps {
     private isPlayerWinner: boolean = false;
     private isComputerWinner: boolean = false;
 
+    // make getter/setter
     private welcomeMsg: string = `
     Welcome to the \"Rock, Paper, Scissors\" game!
 
