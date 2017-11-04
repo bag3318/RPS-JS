@@ -2,6 +2,7 @@ const info: Array<any> = ["RPS", "bag3318", 1.0, true];
 
 class rps {
 
+    // log to the console some info about this game
     public gameName: string;
     private author: string;
     public version: number;
@@ -11,7 +12,7 @@ class rps {
       this.author = Author;
       this.version = Version;
       this.status = Status;
-      console.log(`Game Name: ${this.gameName}, Author: ${this.author}, Vesion: ${this.version}, Status Working: ${this.status}.`);
+      console.log(`Game Name: ${GameName}, Author: ${Author}, Version: ${this.version}, Status Working: ${this.status}.`);
     }
 
     private playerScore: number = 0;
