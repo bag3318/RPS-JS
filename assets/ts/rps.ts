@@ -7,20 +7,18 @@ class rps {
     }
 
     private playerScore: number = 0;
-    // pScore = Player Score
-    get playerScore(): number {
+    get PlayerScore(): number {
         return this.playerScore;
     }
-
-    set playerScore(pScore: number) {
+    set PlayerScore(pScore: number) {
         this.playerScore = pScore;
     }
 
     private computerScore: number = 0;
-    get cScore(): number {
+    get ComputerScore(): number {
         return this.computerScore;
     }
-    set cScore(cScore: number) {
+    set ComputerScore(cScore: number) {
         this.computerScore = cScore;
     }
 
