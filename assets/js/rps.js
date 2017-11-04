@@ -121,7 +121,7 @@ var rps = /** @class */ (function () {
             }
         }
     };
-    rps.prototype.abstractCompareGuesses = function (guess1, guess2, points) {
+    rps.prototype.CompareGuesses = function (guess1, guess2, points) {
         var output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "!\n";
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;

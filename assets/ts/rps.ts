@@ -131,7 +131,7 @@ class rps {
     }
 
 
-    private abstractCompareGuesses(guess1: string, guess2: string, points: number):number {
+    private CompareGuesses(guess1: string, guess2: string, points: number):number {
         var output: string = `Player chose: ${guess1.toLowerCase()}, and the computer chose: ${guess2.toLowerCase()}!\n`;
 
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
