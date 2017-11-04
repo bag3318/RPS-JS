@@ -18,7 +18,7 @@ var rps = (function () {
         this._author = author;
         this._version = version;
         this._status = status;
-        console.log("Game Name: " + gameName + ", Author: " + author + ", Version: " + version + ", Status Working: " + status + ".");
+        console.log("Game Name: " + gameName + ", Author: " + author + ", Version: " + version + ", Status OK: " + status + ".");
     }
     Object.defineProperty(rps.prototype, "PlayerScore", {
         get: function () {
