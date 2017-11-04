@@ -184,7 +184,6 @@ class rps {
           rpsScript.BTNClick();
         }, false);
     }
-
 }
 
 function loadScript(): void {
