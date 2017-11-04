@@ -47,7 +47,7 @@ ________
 <!--
 # Command Line
 
-1. `tsc -w` = watch typescript
+1. `tsc -w -c` = watch typescript, include no comments
 2. `scss --watch assets/scss:assets/css` = watch sass
 3. `tsfmt -r --baseDir assets/ts` = format typescript replace/reformat
 ________
