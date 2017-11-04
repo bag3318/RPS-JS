@@ -8,8 +8,6 @@ class rps {
       console.log(Log);
     }
 
-    // inititalize private score variables (and getters/setters):
-
     private playerScore: number = 0;
     get PlayerScore(): number {
         return this.playerScore;
@@ -34,7 +32,6 @@ class rps {
         this.ties = tie;
     }
 
-    // create welcome message of type string
     private welcomeMsg: string = `
     Welcome to the \"Rock, Paper, Scissors\" game!
 
@@ -53,7 +50,6 @@ class rps {
         this.welcomeMsg = welcomeMessage;
     }
 
-    // initialize non-getter/setter vars
     private gestures: string[] = new Array("rock", "paper", "scissors");
     private rules: object = new Object({
         "rock": "scissors",
@@ -63,7 +59,6 @@ class rps {
     private isPlayerWinner: boolean = false;
     private isComputerWinner: boolean = false;
 
-    // create private method Start, return nothing (void)
     private Start(): void {
         var ready: boolean = confirm(this.welcomeMsg);
         var Confirm: any = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");

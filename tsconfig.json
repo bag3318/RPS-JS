@@ -3,10 +3,10 @@
     {
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
+        "removeComments": true,
         "module": "commonjs",
         "target": "ES5",
         "outDir": "assets/js",
-        "rootDir": "assets/ts",
-        "removeComments": true
+        "rootDir": "assets/ts"
     }
 }
