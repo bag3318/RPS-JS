@@ -105,7 +105,7 @@ class rps {
     }
 
     private PlayerGuess(): string {
-        var playerChoice: string = (<string>prompt("Choose rock, paper, or scissors:"));
+        var playerChoice: string = prompt("Choose rock, paper, or scissors:") as string;
         if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
             return playerChoice;
         } else {
