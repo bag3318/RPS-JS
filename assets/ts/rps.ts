@@ -96,7 +96,7 @@ class rps {
                 return;
             }
             var player  = (<string>this.PlayerGuess());
-            var computer =(<string>this.ComputerGuess());
+            var computer = (<string>this.ComputerGuess());
             var result = (<number>this.CompareGuesses(player, computer, 1));
             if (result !== 0) {
                 numOfRounds--;
