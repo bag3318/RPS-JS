@@ -154,6 +154,7 @@ var RPS = (function () {
         element.addEventListener("click", function () {
             rpsScript.BTNClick();
         }, false);
+        var hello = "";
     };
     return RPS;
 }());

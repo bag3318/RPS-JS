@@ -184,6 +184,7 @@ class RPS {
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
         }, false);
+        const hello = "";
     }
 }
 
