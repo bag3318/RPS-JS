@@ -12,5 +12,5 @@ _MACOSX
 # ======================================================
 # git rm -rf --cached .
 # git add .
-# git commit -m "remove cached files, gitignore"
+# git commit -m "remove cached files; fixed gitignore"
 # git push
