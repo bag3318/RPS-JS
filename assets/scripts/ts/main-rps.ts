@@ -67,7 +67,7 @@ class RPS {
 
     private Start(): void {
         var ready: boolean = confirm(this.welcomeMsg);
-        var Confirm: any = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
+        var confirmReady: any = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
     }
 
     private DetermineWinner(): void {
