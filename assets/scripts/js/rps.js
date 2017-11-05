@@ -74,8 +74,8 @@ var RPS = (function () {
         var Confirm = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
     };
     RPS.prototype.DetermineWinner = function () {
-        var msgW = "\n        The player has " + this.playerScore + " point(s) compared to the computer's " + this.computerScore + " point(s) (ties: " + this.ties + ").\n        So the player wins!\n        ";
-        var msgL = "\n        The computer has " + this.computerScore + " point(s) compared to the player's " + this.playerScore + " point(s) (ties: " + this.ties + ").\n        So the computer wins!\n        ";
+        var msgW = "\n        The player has " + this.playerScore + " point(s) compared to the computer's " + this.computerScore + " point(s)\n        (ties: " + this.ties + ").\n\n        The player wins!\n        ";
+        var msgL = "\n        The computer has " + this.computerScore + " point(s) compared to the player's " + this.playerScore + " point(s)\n        (ties: " + this.ties + ").\n\n        The computer wins!\n        ";
         if (this.playerScore >= 2) {
             this.isPlayerWinner = true;
             alert(msgW);

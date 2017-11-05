@@ -79,12 +79,16 @@ class RPS {
 
     private DetermineWinner(): void {
         var msgW: string = `
-        The player has ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s) (ties: ${this.ties}).
-        So the player wins!
+        The player has ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s)
+        (ties: ${this.ties}).
+
+        The player wins!
         `;
         var msgL: string = `
-        The computer has ${this.computerScore} point(s) compared to the player\'s ${this.playerScore} point(s) (ties: ${this.ties}).
-        So the computer wins!
+        The computer has ${this.computerScore} point(s) compared to the player\'s ${this.playerScore} point(s)
+        (ties: ${this.ties}).
+
+        The computer wins!
         `;
         if (this.playerScore >= 2) {
           this.isPlayerWinner = true;
