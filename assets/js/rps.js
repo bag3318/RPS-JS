@@ -1,7 +1,7 @@
 "use strict";
 var $info = ["RPS", "bag3318", 1.0, true];
-var rps = (function () {
-    function rps(gameName, author, version, status) {
+var RPS = (function () {
+    function RPS(gameName, author, version, status) {
         this.gameName = gameName;
         this.author = author;
         this.version = version;
@@ -18,13 +18,13 @@ var rps = (function () {
         });
         this.isPlayerWinner = false;
         this.isComputerWinner = false;
-        rps._gameName = gameName;
-        rps._author = author;
-        rps._version = version;
-        rps._status = status;
+        RPS._gameName = gameName;
+        RPS._author = author;
+        RPS._version = version;
+        RPS._status = status;
         console.log("Game Name: " + gameName + ", Author: " + author + ", Version: " + version + ", Status OK: " + status + ".");
     }
-    Object.defineProperty(rps.prototype, "PlayerScore", {
+    Object.defineProperty(RPS.prototype, "PlayerScore", {
         get: function () {
             return this.playerScore;
         },
@@ -34,7 +34,7 @@ var rps = (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(rps.prototype, "ComputerScore", {
+    Object.defineProperty(RPS.prototype, "ComputerScore", {
         get: function () {
             return this.computerScore;
         },
@@ -44,7 +44,7 @@ var rps = (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(rps.prototype, "Ties", {
+    Object.defineProperty(RPS.prototype, "Ties", {
         get: function () {
             return this.ties;
         },
@@ -54,7 +54,7 @@ var rps = (function () {
         enumerable: true,
         configurable: true
     });
-    Object.defineProperty(rps.prototype, "WelcomeMsg", {
+    Object.defineProperty(RPS.prototype, "WelcomeMsg", {
         get: function () {
             return this.welcomeMsg;
         },
@@ -64,11 +64,11 @@ var rps = (function () {
         enumerable: true,
         configurable: true
     });
-    rps.prototype.Start = function () {
+    RPS.prototype.Start = function () {
         var ready = confirm(this.welcomeMsg);
         var Confirm = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
     };
-    rps.prototype.DetermineWinner = function () {
+    RPS.prototype.DetermineWinner = function () {
         var msgW = "\n        The player has " + this.playerScore + " point(s) compared to the computer's " + this.computerScore + " point(s) (ties: " + this.ties + ").\n        So the player wins!\n        ";
         var msgL = "\n        The computer has " + this.computerScore + " point(s) compared to the player's " + this.playerScore + " point(s) (ties: " + this.ties + ").\n        So the computer wins!\n        ";
         if (this.playerScore >= 2) {
@@ -80,7 +80,7 @@ var rps = (function () {
             alert(msgL);
         }
     };
-    rps.prototype.PlayGame = function (numOfRounds) {
+    RPS.prototype.PlayGame = function (numOfRounds) {
         do {
             if (this.isPlayerWinner || this.isComputerWinner) {
                 return;
@@ -93,7 +93,7 @@ var rps = (function () {
             }
         } while (numOfRounds > 0 && (!this.isPlayerWinner || !this.isComputerWinner));
     };
-    rps.prototype.PlayerGuess = function () {
+    RPS.prototype.PlayerGuess = function () {
         var playerChoice = prompt("Choose rock, paper, or scissors:");
         if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
             return playerChoice;
@@ -103,7 +103,7 @@ var rps = (function () {
             return this.PlayerGuess();
         }
     };
-    rps.prototype.ComputerGuess = function () {
+    RPS.prototype.ComputerGuess = function () {
         var cpuChoice = Math.floor((Math.random() * 3) + 1);
         switch (cpuChoice) {
             case 1: {
@@ -118,7 +118,7 @@ var rps = (function () {
         }
         return "";
     };
-    rps.prototype.CompareGuesses = function (guess1, guess2, points) {
+    RPS.prototype.CompareGuesses = function (guess1, guess2, points) {
         var output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "!\n";
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
@@ -144,21 +144,21 @@ var rps = (function () {
             return 0;
         }
     };
-    rps.prototype.BTNClick = function () {
+    RPS.prototype.BTNClick = function () {
         this.Start();
         location.reload(true);
     };
-    rps.prototype.Init = function () {
-        var rpsScript = new rps($info[0], $info[1], $info[2], $info[3]);
+    RPS.prototype.Init = function () {
+        var rpsScript = new RPS($info[0], $info[1], $info[2], $info[3]);
         var element = document.querySelector("#btn");
         element.addEventListener("click", function () {
             rpsScript.BTNClick();
         }, false);
     };
-    return rps;
+    return RPS;
 }());
 function loadScript() {
-    var script = new rps($info[0], $info[1], $info[2], $info[3]);
+    var script = new RPS($info[0], $info[1], $info[2], $info[3]);
     script.Init();
 }
 loadScript();

@@ -1,17 +1,17 @@
 const $info: Array<any> = ["RPS", "bag3318", 1.0, true];
 
-class rps {
+class RPS {
 
     public static _gameName: string;
     private static _author: string;
     public static _version: number;
     private static _status: boolean;
     constructor(public gameName: string, private author: string, public version: number, private status: boolean) {
-      rps._gameName = gameName;
-      rps._author = author;
-      rps._version = version;
-      rps._status = status;
-      // console.log(`Game Name: ${rps._gameName}, Author: ${rps._author}, Version: ${rps._version}, Status OK: ${rps._status}.`); // using vars
+      RPS._gameName = gameName;
+      RPS._author = author;
+      RPS._version = version;
+      RPS._status = status;
+      // console.log(`Game Name: ${RPS._gameName}, Author: ${RPS._author}, Version: ${RPS._version}, Status OK: ${RPS._status}.`); // using vars
       console.log(`Game Name: ${gameName}, Author: ${author}, Version: ${version}, Status OK: ${status}.`); // using params
     }
 
@@ -178,7 +178,7 @@ class rps {
     }
 
     public Init(): void {
-        let rpsScript: rps = new rps($info[0], $info[1], $info[2], $info[3]);
+        let rpsScript: RPS = new RPS($info[0], $info[1], $info[2], $info[3]);
         let element: HTMLElement = document.querySelector("#btn") as HTMLElement;
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
@@ -187,7 +187,7 @@ class rps {
 }
 
 function loadScript(): void {
-  let script: rps = new rps($info[0], $info[1], $info[2], $info[3]);
+  let script: RPS = new RPS($info[0], $info[1], $info[2], $info[3]);
   script.Init();
 }
 loadScript();
