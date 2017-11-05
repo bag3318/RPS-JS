@@ -18,7 +18,7 @@ class RPS {
       RPS._creator = creator;
       RPS._status = status;
       // console.log(`Game Name: ${RPS._gameName}, Version: ${RPS._version}, Creator: ${RPS._creator}, Status OK: ${RPS._status}.`); // with vars
-      console.log(`Game Name: ${gameName}, Version: ${version}, Creator: ${creator}, Status OK: ${status}`); // with params
+      console.log(`Game Name: ${gameName}, Version: ${version}, Creator: ${creator}, Status OK: ${status}.`); // with params
     }
 
     private playerScore: number = 0;

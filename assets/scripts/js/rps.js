@@ -27,7 +27,7 @@ var RPS = (function () {
         RPS._version = version;
         RPS._creator = creator;
         RPS._status = status;
-        console.log("Game Name: " + gameName + ", Version: " + version + ", Creator: " + creator + ", Status OK: " + status);
+        console.log("Game Name: " + gameName + ", Version: " + version + ", Creator: " + creator + ", Status OK: " + status + ".");
     }
     Object.defineProperty(RPS.prototype, "PlayerScore", {
         get: function () {
