@@ -18,10 +18,10 @@ var rps = (function () {
         });
         this.isPlayerWinner = false;
         this.isComputerWinner = false;
-        this._gameName = gameName;
-        this._author = author;
-        this._version = version;
-        this._status = status;
+        rps._gameName = gameName;
+        rps._author = author;
+        rps._version = version;
+        rps._status = status;
         console.log("Game Name: " + gameName + ", Author: " + author + ", Version: " + version + ", Status OK: " + status + ".");
     }
     Object.defineProperty(rps.prototype, "PlayerScore", {

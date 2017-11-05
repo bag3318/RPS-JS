@@ -2,15 +2,15 @@ const $info: Array<any> = ["RPS", "bag3318", 1.0, true];
 
 class rps {
 
-    public _gameName: string;
-    private _author: string;
-    public _version: number;
-    private _status: boolean;
+    public static _gameName: string;
+    private static _author: string;
+    public static _version: number;
+    private static _status: boolean;
     constructor(public gameName: string, private author: string, public version: number, private status: boolean) {
-      this._gameName = gameName;
-      this._author = author;
-      this._version = version;
-      this._status = status;
+      rps._gameName = gameName;
+      rps._author = author;
+      rps._version = version;
+      rps._status = status;
       // console.log(`Game Name: ${this._gameName}, Author: ${this._author}, Version: ${this._version}, Status OK: ${this._status}.`); // using vars
       console.log(`Game Name: ${gameName}, Author: ${author}, Version: ${version}, Status OK: ${status}.`); // using params
     }
