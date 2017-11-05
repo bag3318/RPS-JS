@@ -13,13 +13,13 @@ How To Play
 1. Download this repository[<sub>1</sub>](#1-how-to-download-repository)
 2. Locate the file you just downloaded (`RPS-JS.zip`) and extract it[<sub>2</sub>](#2-how-to-extract-the-file)
 3. Open the `index.html` file with your web browser of choice
-4. Click the `Play Rock Paper Scissors!` button
+4. Click the `Play!` button
 5. Enjoy!
 
 ### Playing
 
 1. Open the `index.html` file with the web browser of your choice
-2. Click the `Play Rock Paper Scissors!` button
+2. Click the `Play!` button
 3. Enjoy!
 
 ________
