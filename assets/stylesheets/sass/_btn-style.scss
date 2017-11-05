@@ -1,24 +1,3 @@
-$color_1: #FFFFFF;
-$font_family_1: Verdana;
-$background_color_1: rgb(238, 238, 238);
-$background_color_2: #44C767;
-$background_color_3: #5CBF2A;
-
-// original font family: Ariel
-
-@font-face {
-	font-family: Verdana;
-	src: url(../../resources/fonts/Verdana.woff);
-}
-
-body {
-	margin: 1%;
-	background-color: $background_color_1;
-	font-family: $font_family_1;
-}
-#center {
-	text-align: center;
-}
 .btn {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #44C767), color-stop(1, #5CBf2A)); //
 	background: -moz-linear-gradient(top, #44C767 5%, #5CBF2A 100%);
