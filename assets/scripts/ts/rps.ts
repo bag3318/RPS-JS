@@ -3,7 +3,7 @@ const $info: any = {
   version: 1.5,
   creator: "bag3318",
   status_ok: true
-}
+};
 
 class RPS {
 
