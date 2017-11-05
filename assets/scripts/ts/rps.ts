@@ -1,4 +1,9 @@
-const $info: Array<any> = ["RPS", 1.4, "bag3318", true];
+const $info: any = {
+  game_name: "RPS",
+  version: 1.5,
+  creator: "bag3318",
+  status_ok: true
+}
 
 class RPS {
 
@@ -106,7 +111,7 @@ class RPS {
     }
 
     private PlayerGuess(): string {
-        var playerChoice: string = prompt("Choose rock, paper, or scissors:") as string;
+        var playerChoice: string = <string>prompt("Choose rock, paper, or scissors:");
         if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
             return playerChoice;
         } else {
@@ -179,7 +184,7 @@ class RPS {
     }
 
     public Init(): void {
-        let rpsScript: RPS = new RPS($info[0], $info[1], $info[2], $info[3]);
+        let rpsScript: RPS = new RPS($info.game_name, $info.version, $info.creator, $info.status_ok);
         let element: HTMLElement = document.querySelector("#btn") as HTMLElement;
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
@@ -189,7 +194,7 @@ class RPS {
 }
 
 function loadScript(): void {
-  let script: RPS = new RPS($info[0], $info[1], $info[2], $info[3]);
+  let script: RPS = new RPS($info.game_name, $info.version, $info.creator, $info.status_ok);
   script.Init();
 }
 loadScript();

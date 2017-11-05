@@ -1,5 +1,10 @@
 "use strict";
-var $info = ["RPS", 1.4, "bag3318", true];
+var $info = {
+    game_name: "RPS",
+    version: 1.5,
+    creator: "bag3318",
+    status_ok: true
+};
 var RPS = (function () {
     function RPS(gameName, version, creator, status) {
         this.gameName = gameName;
@@ -149,7 +154,7 @@ var RPS = (function () {
         location.reload(true);
     };
     RPS.prototype.Init = function () {
-        var rpsScript = new RPS($info[0], $info[1], $info[2], $info[3]);
+        var rpsScript = new RPS($info.game_name, $info.version, $info.creator, $info.status_ok);
         var element = document.querySelector("#btn");
         element.addEventListener("click", function () {
             rpsScript.BTNClick();
@@ -159,7 +164,7 @@ var RPS = (function () {
     return RPS;
 }());
 function loadScript() {
-    var script = new RPS($info[0], $info[1], $info[2], $info[3]);
+    var script = new RPS($info.game_name, $info.version, $info.creator, $info.status_ok);
     script.Init();
 }
 loadScript();
