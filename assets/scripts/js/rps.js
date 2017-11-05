@@ -1,10 +1,10 @@
 "use strict";
-var $info = ["RPS", "bag3318", 1.2, true];
+var $info = ["RPS", 1.2, "bag3318", true];
 var RPS = (function () {
-    function RPS(gameName, author, version, status) {
+    function RPS(gameName, version, author, status) {
         this.gameName = gameName;
-        this.author = author;
         this.version = version;
+        this.author = author;
         this.status = status;
         this.playerScore = 0;
         this.computerScore = 0;
@@ -19,10 +19,10 @@ var RPS = (function () {
         this.isPlayerWinner = false;
         this.isComputerWinner = false;
         RPS._gameName = gameName;
-        RPS._author = author;
         RPS._version = version;
+        RPS._author = author;
         RPS._status = status;
-        console.log("Game Name: " + gameName + ", Author: " + author + ", Version: " + version + ", Status OK: " + status + ".");
+        console.log("Game Name: " + gameName + ", Version: " + version + ", Author: " + author + ", Status OK: " + status + ".");
     }
     Object.defineProperty(RPS.prototype, "PlayerScore", {
         get: function () {
