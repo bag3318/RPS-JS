@@ -62,7 +62,7 @@ class RPS {
     Paper Beats Rock.
 
     Click cancel if you don\'t wanna play.
-    `;
+    `
     get WelcomeMsg(): string {
         return this.welcomeMsg;
     }
@@ -202,9 +202,3 @@ class RPS {
         }, false);
     }
 }
-
-function loadScript(): void {
-  let script: RPS = new RPS($info.game_name, $info.version, $info.creator, $info.status_ok);
-  script.Init();
-}
-loadScript();
