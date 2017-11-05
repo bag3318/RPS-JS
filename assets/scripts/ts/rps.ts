@@ -2,8 +2,8 @@ const $info: Array<any> = ["RPS", 1.4, "bag3318", true];
 
 class RPS {
 
-    public static _gameName: string;
-    public static _version: number;
+    protected static _gameName: string;
+    protected static _version: number;
     private static _creator: string;
     private static _status: boolean;
 
@@ -40,7 +40,7 @@ class RPS {
         this.ties = tie;
     }
 
-    private welcomeMsg: string = `
+    protected welcomeMsg: string = `
     Welcome to the \"Rock, Paper, Scissors\" game!
 
     Remember, the rules are simple:
