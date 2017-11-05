@@ -1,18 +1,18 @@
-const $info: Array<any> = ["RPS", "bag3318", 1.0, true];
+const $info: Array<any> = ["RPS", "bag3318", 1.2, true];
 
 class RPS {
 
     public static _gameName: string;
-    private static _author: string;
     public static _version: number;
+    private static _author: string;
     private static _status: boolean;
     constructor(public gameName: string, private author: string, public version: number, private status: boolean) {
       RPS._gameName = gameName;
       RPS._author = author;
       RPS._version = version;
       RPS._status = status;
-      // console.log(`Game Name: ${RPS._gameName}, Author: ${RPS._author}, Version: ${RPS._version}, Status OK: ${RPS._status}.`); // using vars
-      console.log(`Game Name: ${gameName}, Author: ${author}, Version: ${version}, Status OK: ${status}.`); // using params
+      // console.log(`Game Name: ${RPS._gameName}, Author: ${RPS._author}, Version: ${RPS._version}, Status OK: ${RPS._status}.`); // with vars
+      console.log(`Game Name: ${gameName}, Author: ${author}, Version: ${version}, Status OK: ${status}.`); // with params
     }
 
     private playerScore: number = 0;

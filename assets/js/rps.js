@@ -1,5 +1,5 @@
 "use strict";
-var $info = ["RPS", "bag3318", 1.0, true];
+var $info = ["RPS", "bag3318", 1.2, true];
 var RPS = (function () {
     function RPS(gameName, author, version, status) {
         this.gameName = gameName;
