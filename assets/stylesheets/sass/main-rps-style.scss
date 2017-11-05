@@ -8,7 +8,7 @@ $background_color_3: #5CBF2A;
 
 @font-face {
 	font-family: Verdana;
-	src: url(../../resources/fonts/Verdana.woff);
+	src: url(../../resources/font/Verdana.woff);
 }
 
 body {
@@ -16,6 +16,7 @@ body {
 	background-color: $background_color_1;
 	font-family: $font_family_1;
 }
+
 #center {
 	text-align: center;
 }
