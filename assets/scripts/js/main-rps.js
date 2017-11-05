@@ -47,8 +47,8 @@ var RPS = (function () {
         get: function () {
             return this.ties;
         },
-        set: function (tie) {
-            this.ties = tie;
+        set: function (draw) {
+            this.ties = draw;
         },
         enumerable: true,
         configurable: true
@@ -57,8 +57,8 @@ var RPS = (function () {
         get: function () {
             return this.welcomeMsg;
         },
-        set: function (welcomeMessage) {
-            this.welcomeMsg = welcomeMessage;
+        set: function (initMsg) {
+            this.welcomeMsg = initMsg;
         },
         enumerable: true,
         configurable: true

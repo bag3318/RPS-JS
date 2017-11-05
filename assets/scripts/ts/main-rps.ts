@@ -34,8 +34,8 @@ class RPS {
     get Ties(): number {
         return this.ties;
     }
-    set Ties(tie: number) {
-        this.ties = tie;
+    set Ties(draw: number) {
+        this.ties = draw;
     }
 
     protected welcomeMsg: string = `
@@ -52,8 +52,8 @@ class RPS {
     get WelcomeMsg(): string {
         return this.welcomeMsg;
     }
-    set WelcomeMsg(welcomeMessage: string) {
-        this.welcomeMsg = welcomeMessage;
+    set WelcomeMsg(initMsg: string) {
+        this.welcomeMsg = initMsg;
     }
 
     private gestures: string[] = new Array("rock", "paper", "scissors");
