@@ -7,7 +7,7 @@ interface GameInfo {
 
 const $info: GameInfo = {
   game_name: "RPS",
-  version: 1.5,
+  version: 1.6,
   creator: "bag3318",
   status_ok: true
 };
