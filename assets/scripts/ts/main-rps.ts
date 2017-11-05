@@ -2,8 +2,8 @@ class RPS {
 
     protected static _gameName: string;
     protected static _version: number;
-    private static _creator: string;
-    private static _status: boolean;
+    protected static _creator: string;
+    protected static _status: boolean;
 
     constructor(protected gameName: string, protected version: number, private creator: string, private status: boolean) {
       RPS._gameName = gameName;
