@@ -19,7 +19,7 @@ class RPS {
     private static _creator: string;
     private static _status: boolean;
 
-    constructor(public gameName: string, public version: number, private creator: string, private status: boolean) {
+    constructor(protected gameName: string, protected version: number, private creator: string, private status: boolean) {
       RPS._gameName = gameName;
       RPS._version = version;
       RPS._creator = creator;
