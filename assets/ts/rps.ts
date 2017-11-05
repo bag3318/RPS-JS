@@ -11,7 +11,7 @@ class rps {
       rps._author = author;
       rps._version = version;
       rps._status = status;
-      // console.log(`Game Name: ${this._gameName}, Author: ${this._author}, Version: ${this._version}, Status OK: ${this._status}.`); // using vars
+      // console.log(`Game Name: ${rps._gameName}, Author: ${rps._author}, Version: ${rps._version}, Status OK: ${rps._status}.`); // using vars
       console.log(`Game Name: ${gameName}, Author: ${author}, Version: ${version}, Status OK: ${status}.`); // using params
     }
 
