@@ -4,8 +4,7 @@
 *.ste
 _MACOSX
 .sass-cache
-js
-css
+
 
 
 # If gitignore is not working,

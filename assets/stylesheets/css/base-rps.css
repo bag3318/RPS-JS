@@ -1,0 +1,36 @@
+/*
+ * original font family: Ariel
+ */
+@font-face {
+  font-family: Verdana;
+  src: url("../../resources/font/Verdana.woff"); }
+body {
+  font-family: Verdana;
+  margin: 1%; }
+
+#center {
+  text-align: center; }
+
+.btn {
+  background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color-emerald-approx', endcolorstr='$color-lima-approx',gradienttype=0);
+  background-color: #44c767;
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  font-family: Verdana;
+  font-size: 17px;
+  padding: 16px 31px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #2f6627; }
+  .btn:hover {
+    background: linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+    filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color-lima-approx', endcolorstr='$color-emerald-approx',gradienttype=0);
+    background-color: #5cbf2a; }
+  .btn:active {
+    position: relative;
+    top: 1px; }
+
+/*# sourceMappingURL=base-rps.css.map */

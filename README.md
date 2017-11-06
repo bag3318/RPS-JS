@@ -4,7 +4,7 @@ Rock Paper Scissors
 ===================
 
 This web app is very simple: it is a **rock paper scissors** game.
-<!--
+
 How To Play
 -----------
 
@@ -43,7 +43,7 @@ ________
 
 1. Double click the `RPS-Web-master.zip` file
 
-________ -->
+________
 
 <!--
 # Command Line
@@ -55,6 +55,6 @@ ________ -->
 ________
 -->
 
-<!-- > **_Enjoy!_** -->
+> **_Enjoy!_**
 
 [//]: # "End README.md file"
