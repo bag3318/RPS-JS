@@ -78,12 +78,12 @@ class RPS {
 
     private DetermineWinner(): void {
         var finalWinMsg: string = trimIndentSpace`
-        The player has ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s) (ties: ${this.ties}).
+        You have ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s) (ties: ${this.ties}).
 
-        The player wins the game!
+        You win the game!
         `;
         var finalLoseMsg: string = trimIndentSpace`
-        The computer has ${this.computerScore} point(s) compared to the player\'s ${this.playerScore} point(s) (ties: ${this.ties}).
+        The computer has ${this.computerScore} point(s) compared to your ${this.playerScore} point(s) (ties: ${this.ties}).
 
         The computer wins the game!
         `;
@@ -151,7 +151,7 @@ class RPS {
             var winRoundMsg: string = trimIndentSpace`
             ${output}
 
-            Player wins the round!
+            You win the round!
 
             Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
             `;
