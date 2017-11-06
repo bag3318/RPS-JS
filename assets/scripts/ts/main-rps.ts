@@ -141,7 +141,7 @@ class RPS {
 
     private CompareGuesses(guess1: string, guess2: string, points: number): number {
         var output: string = trimIndentSpace`
-        Player chose: ${guess1.toLowerCase()}
+        You chose: ${guess1.toLowerCase()}
         Computer chose: ${guess2.toLowerCase()}!
         `;
 
