@@ -1,11 +1,16 @@
 // _btn-style-non-gradient.sass
 
+$px: 28px
+$color1: #18ab29
+$color2: #2f6627
+$color3: #5cbf2A
+
 .btn
   background-color: #44c767
-  -moz-border-radius: 28px
-  -webkit-border-radius: 28px
-  border-radius: 28px
-  border: 1px solid #18ab29
+  -moz-border-radius: $px
+  -webkit-border-radius: $px
+  border-radius: $px
+  border: 1px solid $color1
   display: inline-block
   cursor: pointer
   color: #fff
@@ -13,9 +18,9 @@
   font-size: 17px
   padding: 16px 31px
   text-decoration: none
-  text-shadow: 0px 1px 0px #2f6627
+  text-shadow: 0px 1px 0px $color2
   &:hover
-    background-color: #5cbf2A
+    background-color: $color3
   &:active
     position: relative
     top: 1px
