@@ -9,7 +9,7 @@ Rock Paper Scissors
 1. [NodeJS](https://nodejs.org/en/)
 2. [RubyGems & Ruby](https://www.ruby-lang.org/en/downloads/)
 3. typescript: `npm install -g typescript`
-4. Sass: `gem install sass`
+4. Sass: `gem install sass` (_for Mac, add `sudo` at the beginning of the command_)
 5. typescript-formatter: `npm i typescript-formatter`
 
 ### Useful Commands
