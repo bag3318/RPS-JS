@@ -38,15 +38,15 @@ class RPS {
         this.ties = draw;
     }
 
-    protected welcomeMsg: string = `
+    protected welcomeMsg: string = trimIndentSpace`
     Welcome to the \"Rock, Paper, Scissors\" game!
-
+    \n
     Remember, the rules are simple:
-
+    \n
     Rock Beats Scissors,
     Scissors Beats Paper,
     Paper Beats Rock.
-
+    \n
     Click cancel if you don\'t wanna play.
     `;
     get WelcomeMsg(): string {
@@ -77,16 +77,14 @@ class RPS {
     }
 
     private DetermineWinner(): void {
-        var finalWinMsg: string = `
-        The player has ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s)
-        (ties: ${this.ties}).
-
+        var finalWinMsg: string = trimIndentSpace`
+        The player has ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s) (ties: ${this.ties}).
+        \n
         The player wins the game!
         `;
-        var finalLoseMsg: string = `
-        The computer has ${this.computerScore} point(s) compared to the player\'s ${this.playerScore} point(s)
-        (ties: ${this.ties}).
-
+        var finalLoseMsg: string = trimIndentSpace`
+        The computer has ${this.computerScore} point(s) compared to the player\'s ${this.playerScore} point(s) (ties: ${this.ties}).
+        \n
         The computer wins the game!
         `;
         if (this.playerScore >= 2) {
@@ -147,10 +145,11 @@ class RPS {
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
 
-            var winRoundMsg: string = `
+            var winRoundMsg: string = trimIndentSpace`
             ${output}
+            \n
             Player wins the round!
-
+            \n
             Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
             `;
 
@@ -160,10 +159,11 @@ class RPS {
         } else if (this.rules[guess2.toLowerCase()] === guess1.toLowerCase()) {
             this.computerScore += points;
 
-            var lostRoundMsg: string = `
+            var lostRoundMsg: string = trimIndentSpace`
             ${output}
+            \n
             Computer wins the round!
-
+            \n
             Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
             `;
 
@@ -174,10 +174,11 @@ class RPS {
             this.playerScore += 0;
             this.computerScore += 0;
             this.ties += 1;
-            var tieRoundMsg: string = `
+            var tieRoundMsg: string = trimIndentSpace`
             ${output}
+            \n
             It's a tie! Go again, no score added!
-
+            \n
             Player Score: ${this.playerScore}, Computer Score: ${this.computerScore}
             `;
             alert(tieRoundMsg);
