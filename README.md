@@ -10,7 +10,7 @@ Rock Paper Scissors
 1. `tsc -w` = watch typescript
 2. `tsc -init` = creates typescript config file
 3. `scss --watch assets/stylesheets/sass:assets/stylesheets/css` or `sass --watch assets/stylesheets/sass:assets/stylesheets/css` = watch sass and scss
-4. `tsfmt -r --baseDir assets/scripts/ts` = format typescript replace/reformat
+4. `tsfmt -r --baseDir assets/scripts/ts` = format typescript (replaces & reformats)
 
 ________
 
