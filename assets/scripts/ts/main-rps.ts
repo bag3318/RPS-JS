@@ -67,7 +67,7 @@ class RPS {
 
     private Start(): void {
         /**
-         * confirm is a boolean because it has to return statements:
+         * confirm is a boolean because it has 2 return statements:
          * 1. if you click ok, it returns true
          * 2. if you click cancel, it returns false
          */
