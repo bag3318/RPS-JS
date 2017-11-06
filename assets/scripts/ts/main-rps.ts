@@ -1,5 +1,3 @@
-import {utility} from "./utility";
-
 class RPS {
 
     protected static _gameName: string;

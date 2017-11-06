@@ -3,9 +3,7 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var trim_1 = require("./trim");
-var RPS = /** @class */ (function () {
+var RPS = (function () {
     function RPS(gameName, version, creator, status) {
         this.gameName = gameName;
         this.version = version;
@@ -14,7 +12,7 @@ var RPS = /** @class */ (function () {
         this.playerScore = 0;
         this.computerScore = 0;
         this.ties = 0;
-        this.welcomeMsg = trim_1.trimIndentSpace(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n    Welcome to the \"Rock, Paper, Scissors\" game!\n    \n\n    Remember, the rules are simple:\n    \n\n    Rock Beats Scissors,\n    Scissors Beats Paper,\n    Paper Beats Rock.\n    \n\n    Click cancel if you don't wanna play.\n    "], ["\n    Welcome to the \\\"Rock, Paper, Scissors\\\" game!\n    \\n\n    Remember, the rules are simple:\n    \\n\n    Rock Beats Scissors,\n    Scissors Beats Paper,\n    Paper Beats Rock.\n    \\n\n    Click cancel if you don\\'t wanna play.\n    "])));
+        this.welcomeMsg = trimIndentSpace(__makeTemplateObject(["\n    Welcome to the \"Rock, Paper, Scissors\" game!\n    \n\n    Remember, the rules are simple:\n    \n\n    Rock Beats Scissors,\n    Scissors Beats Paper,\n    Paper Beats Rock.\n    \n\n    Click cancel if you don't wanna play.\n    "], ["\n    Welcome to the \\\"Rock, Paper, Scissors\\\" game!\n    \\n\n    Remember, the rules are simple:\n    \\n\n    Rock Beats Scissors,\n    Scissors Beats Paper,\n    Paper Beats Rock.\n    \\n\n    Click cancel if you don\\'t wanna play.\n    "]));
         this.gestures = new Array("rock", "paper", "scissors");
         this.rules = new Object({
             "rock": "scissors",
@@ -27,8 +25,7 @@ var RPS = /** @class */ (function () {
         RPS._version = version;
         RPS._creator = creator;
         RPS._status = status;
-        console.log("Game Name: " + gameName + ", Version: " + version + ", Creator: " + creator + ", Status OK: " + status + "."); // with params
-        // console.log(`Game Name: ${RPS._gameName}, Version: ${RPS._version}, Creator: ${RPS._creator}, Status OK: ${RPS._status}.`); // with vars
+        console.log("Game Name: " + gameName + ", Version: " + version + ", Creator: " + creator + ", Status OK: " + status + ".");
     }
     Object.defineProperty(RPS.prototype, "PlayerScore", {
         get: function () {
@@ -71,18 +68,12 @@ var RPS = /** @class */ (function () {
         configurable: true
     });
     RPS.prototype.Start = function () {
-        /**
-         * confirm is a boolean because it has 2 return statements:
-         * 1. if you click ok, it returns true
-         * 2. if you click cancel, it returns false
-         */
         var ready = confirm(this.welcomeMsg);
-        // in this case, we use ternary operator to speed things up a bit
         var confirmReady = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
     };
     RPS.prototype.DetermineWinner = function () {
-        var finalWinMsg = trim_1.trimIndentSpace(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n        The player has ", " point(s) compared to the computer's ", " point(s) (ties: ", ").\n        \n\n        The player wins the game!\n        "], ["\n        The player has ", " point(s) compared to the computer\\'s ", " point(s) (ties: ", ").\n        \\n\n        The player wins the game!\n        "])), this.playerScore, this.computerScore, this.ties);
-        var finalLoseMsg = trim_1.trimIndentSpace(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n        The computer has ", " point(s) compared to the player's ", " point(s) (ties: ", ").\n        \n\n        The computer wins the game!\n        "], ["\n        The computer has ", " point(s) compared to the player\\'s ", " point(s) (ties: ", ").\n        \\n\n        The computer wins the game!\n        "])), this.computerScore, this.playerScore, this.ties);
+        var finalWinMsg = trimIndentSpace(__makeTemplateObject(["\n        The player has ", " point(s) compared to the computer's ", " point(s) (ties: ", ").\n        \n\n        The player wins the game!\n        "], ["\n        The player has ", " point(s) compared to the computer\\'s ", " point(s) (ties: ", ").\n        \\n\n        The player wins the game!\n        "]), this.playerScore, this.computerScore, this.ties);
+        var finalLoseMsg = trimIndentSpace(__makeTemplateObject(["\n        The computer has ", " point(s) compared to the player's ", " point(s) (ties: ", ").\n        \n\n        The computer wins the game!\n        "], ["\n        The computer has ", " point(s) compared to the player\\'s ", " point(s) (ties: ", ").\n        \\n\n        The computer wins the game!\n        "]), this.computerScore, this.playerScore, this.ties);
         if (this.playerScore >= 2) {
             this.isPlayerWinner = true;
             alert(finalWinMsg);
@@ -106,7 +97,6 @@ var RPS = /** @class */ (function () {
         } while (numOfRounds > 0 && (!this.isPlayerWinner || !this.isComputerWinner));
     };
     RPS.prototype.PlayerGuess = function () {
-        // since prompt could be of type null (if there is nothing entered), we need to force its type to be string
         var playerChoice = prompt("Choose rock, paper, or scissors:");
         if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
             return playerChoice;
@@ -129,20 +119,20 @@ var RPS = /** @class */ (function () {
                 return this.gestures[2];
             }
         }
-        return ""; // we need to return a blank string for the return type of the function to be string
+        return "";
     };
     RPS.prototype.CompareGuesses = function (guess1, guess2, points) {
         var output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "!\n";
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
-            var winRoundMsg = trim_1.trimIndentSpace(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n            ", "\n            \n\n            Player wins the round!\n            \n\n            Player Score: ", "; Computer Score: ", ".\n            "], ["\n            ", "\n            \\n\n            Player wins the round!\n            \\n\n            Player Score: ", "; Computer Score: ", ".\n            "])), output, this.playerScore, this.computerScore);
+            var winRoundMsg = trimIndentSpace(__makeTemplateObject(["\n            ", "\n            \n\n            Player wins the round!\n            \n\n            Player Score: ", "; Computer Score: ", ".\n            "], ["\n            ", "\n            \\n\n            Player wins the round!\n            \\n\n            Player Score: ", "; Computer Score: ", ".\n            "]), output, this.playerScore, this.computerScore);
             alert(winRoundMsg);
             this.DetermineWinner();
             return 1;
         }
         else if (this.rules[guess2.toLowerCase()] === guess1.toLowerCase()) {
             this.computerScore += points;
-            var lostRoundMsg = trim_1.trimIndentSpace(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n            ", "\n            \n\n            Computer wins the round!\n            \n\n            Player Score: ", "; Computer Score: ", ".\n            "], ["\n            ", "\n            \\n\n            Computer wins the round!\n            \\n\n            Player Score: ", "; Computer Score: ", ".\n            "])), output, this.playerScore, this.computerScore);
+            var lostRoundMsg = trimIndentSpace(__makeTemplateObject(["\n            ", "\n            \n\n            Computer wins the round!\n            \n\n            Player Score: ", "; Computer Score: ", ".\n            "], ["\n            ", "\n            \\n\n            Computer wins the round!\n            \\n\n            Player Score: ", "; Computer Score: ", ".\n            "]), output, this.playerScore, this.computerScore);
             alert(lostRoundMsg);
             this.DetermineWinner();
             return 2;
@@ -151,7 +141,7 @@ var RPS = /** @class */ (function () {
             this.playerScore += 0;
             this.computerScore += 0;
             this.ties += 1;
-            var tieRoundMsg = trim_1.trimIndentSpace(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n            ", "\n            \n\n            It's a tie! Go again, no score added!\n            \n\n            Player Score: ", ", Computer Score: ", "\n            "], ["\n            ", "\n            \\n\n            It's a tie! Go again, no score added!\n            \\n\n            Player Score: ", ", Computer Score: ", "\n            "])), output, this.playerScore, this.computerScore);
+            var tieRoundMsg = trimIndentSpace(__makeTemplateObject(["\n            ", "\n            \n\n            It's a tie! Go again, no score added!\n            \n\n            Player Score: ", ", Computer Score: ", "\n            "], ["\n            ", "\n            \\n\n            It's a tie! Go again, no score added!\n            \\n\n            Player Score: ", ", Computer Score: ", "\n            "]), output, this.playerScore, this.computerScore);
             alert(tieRoundMsg);
             this.DetermineWinner();
             return 0;
@@ -170,4 +160,3 @@ var RPS = /** @class */ (function () {
     };
     return RPS;
 }());
-var templateObject_1, templateObject_2, templateObject_3, templateObject_4, templateObject_5, templateObject_6;
