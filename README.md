@@ -2,7 +2,7 @@
 
 Rock Paper Scissors
 ===================
-
+<!--
 This web app is very simple: it is a **rock paper scissors** game.
 
 How To Play
@@ -43,18 +43,18 @@ ________
 
 1. Double click the `RPS-Web-master.zip` file
 
-________
+________ -->
 
-<!--
+
 # Command Line
 
-1. `tsc -w` = watch typescript, include no comments
+1. `tsc -w` = watch typescript
 2. `tsc -init` = creates config file
 3. `scss --watch assets/stylesheets/sass:assets/stylesheets/css` = watch sass
 4. `tsfmt -r --baseDir assets/scripts/ts` = format typescript replace/reformat
-________
--->
+<!-- ________
 
-> **_Enjoy!_**
+
+> **_Enjoy!_** -->
 
 [//]: # "End README.md file"
