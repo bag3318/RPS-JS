@@ -17,4 +17,5 @@ function trimIndentSpace(strings: any, ...values: any[]): string {
   return lines.map((line) => {
     return line.replace(trimRegEx, '');
   }).join('\n').trim();
+  
 }
