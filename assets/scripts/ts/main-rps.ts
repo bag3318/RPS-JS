@@ -141,8 +141,8 @@ class RPS {
 
     private CompareGuesses(guess1: string, guess2: string, points: number): number {
         var output: string = trimIndentSpace`
-        You chose: ${guess1.toLowerCase()}
-        Computer chose: ${guess2.toLowerCase()}
+        You chose: ${guess1.toLowerCase()}.
+        Computer chose: ${guess2.toLowerCase()}.
         `;
 
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
@@ -182,7 +182,7 @@ class RPS {
 
             It's a tie! Go again, no score added!
 
-            Player Score: ${this.playerScore}, Computer Score: ${this.computerScore}
+            Player Score: ${this.playerScore}, Computer Score: ${this.computerScore}.
             `;
             alert(tieRoundMsg);
             this.DetermineWinner();
