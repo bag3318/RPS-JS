@@ -48,7 +48,7 @@ class RPS {
     Paper Beats Rock.
 
     Click cancel if you don\'t wanna play.
-    `
+    `;
     get WelcomeMsg(): string {
         return this.welcomeMsg;
     }
