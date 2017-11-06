@@ -12,6 +12,6 @@ function trimIndentSpace(strings: any, ...values: Array<any>): string {
 
   // Rip out the leading whitespace.
   return lines.map((line) => {
-    return line.replace(/^\s+|^\t+|^\r+/gm, '\n');
+    return line.replace(/(?:^\s+|^\t+|^\r+)/gm, '\n');
   }).join(' ').trim();
 }
