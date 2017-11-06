@@ -1,4 +1,4 @@
-import {trimIndentSpace} from "./trim";
+import {hello} from "./trim";
 
 class RPS {
 
