@@ -68,15 +68,15 @@ var RPS = (function () {
         var confirmReady = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
     };
     RPS.prototype.DetermineWinner = function () {
-        var msgW = "\n        The player has " + this.playerScore + " point(s) compared to the computer's " + this.computerScore + " point(s)\n        (ties: " + this.ties + ").\n\n        The player wins!\n        ";
-        var msgL = "\n        The computer has " + this.computerScore + " point(s) compared to the player's " + this.playerScore + " point(s)\n        (ties: " + this.ties + ").\n\n        The computer wins!\n        ";
+        var finalWinMsg = "\n        The player has " + this.playerScore + " point(s) compared to the computer's " + this.computerScore + " point(s)\n        (ties: " + this.ties + ").\n\n        The player wins the game!\n        ";
+        var finalLoseMsg = "\n        The computer has " + this.computerScore + " point(s) compared to the player's " + this.playerScore + " point(s)\n        (ties: " + this.ties + ").\n\n        The computer wins the game!\n        ";
         if (this.playerScore >= 2) {
             this.isPlayerWinner = true;
-            alert(msgW);
+            alert(finalWinMsg);
         }
         if (this.computerScore >= 2) {
             this.isComputerWinner = true;
-            alert(msgL);
+            alert(finalLoseMsg);
         }
     };
     RPS.prototype.PlayGame = function (numOfRounds) {
@@ -121,15 +121,15 @@ var RPS = (function () {
         var output = "Player chose: " + guess1.toLowerCase() + ", and the computer chose: " + guess2.toLowerCase() + "!\n";
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
-            var wMsg = "\n            " + output + "\n            Player wins the round!\n\n            Player Score: " + this.playerScore + "; Computer Score: " + this.computerScore + ".\n            ";
-            alert(wMsg);
+            var winRoundMsg = "\n            " + output + "\n            Player wins the round!\n\n            Player Score: " + this.playerScore + "; Computer Score: " + this.computerScore + ".\n            ";
+            alert(winRoundMsg);
             this.DetermineWinner();
             return 1;
         }
         else if (this.rules[guess2.toLowerCase()] === guess1.toLowerCase()) {
             this.computerScore += points;
-            var lMsg = "\n            " + output + "\n            Computer wins the round!\n\n            Player Score: " + this.playerScore + "; Computer Score: " + this.computerScore + ".\n            ";
-            alert(lMsg);
+            var lostRoundMsg = "\n            " + output + "\n            Computer wins the round!\n\n            Player Score: " + this.playerScore + "; Computer Score: " + this.computerScore + ".\n            ";
+            alert(lostRoundMsg);
             this.DetermineWinner();
             return 2;
         }
@@ -137,8 +137,8 @@ var RPS = (function () {
             this.playerScore += 0;
             this.computerScore += 0;
             this.ties += 1;
-            var tMsg = "\n            " + output + "\n            It's a tie! Go again, no score added!\n\n            Player Score: " + this.playerScore + ", Computer Score: " + this.computerScore + "\n            ";
-            alert(tMsg);
+            var tieRoundMsg = "\n            " + output + "\n            It's a tie! Go again, no score added!\n\n            Player Score: " + this.playerScore + ", Computer Score: " + this.computerScore + "\n            ";
+            alert(tieRoundMsg);
             this.DetermineWinner();
             return 0;
         }

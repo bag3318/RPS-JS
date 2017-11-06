@@ -77,25 +77,25 @@ class RPS {
     }
 
     private DetermineWinner(): void {
-        var msgW: string = `
+        var finalWinMsg: string = `
         The player has ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s)
         (ties: ${this.ties}).
 
-        The player wins!
+        The player wins the game!
         `;
-        var msgL: string = `
+        var finalLoseMsg: string = `
         The computer has ${this.computerScore} point(s) compared to the player\'s ${this.playerScore} point(s)
         (ties: ${this.ties}).
 
-        The computer wins!
+        The computer wins the game!
         `;
         if (this.playerScore >= 2) {
           this.isPlayerWinner = true;
-          alert(msgW);
+          alert(finalWinMsg);
         }
         if (this.computerScore >= 2) {
           this.isComputerWinner = true;
-          alert(msgL);
+          alert(finalLoseMsg);
         }
     }
 
@@ -146,37 +146,41 @@ class RPS {
 
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
-            var wMsg: string = `
+
+            var winRoundMsg: string = `
             ${output}
             Player wins the round!
 
             Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
             `;
-            alert(wMsg);
+
+            alert(winRoundMsg);
             this.DetermineWinner();
             return 1;
         } else if (this.rules[guess2.toLowerCase()] === guess1.toLowerCase()) {
             this.computerScore += points;
-            var lMsg: string = `
+
+            var lostRoundMsg: string = `
             ${output}
             Computer wins the round!
 
             Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
             `;
-            alert(lMsg);
+
+            alert(lostRoundMsg);
             this.DetermineWinner();
             return 2;
         } else {
             this.playerScore += 0;
             this.computerScore += 0;
             this.ties += 1;
-            var tMsg: string = `
+            var tieRoundMsg: string = `
             ${output}
             It's a tie! Go again, no score added!
 
             Player Score: ${this.playerScore}, Computer Score: ${this.computerScore}
             `;
-            alert(tMsg);
+            alert(tieRoundMsg);
             this.DetermineWinner();
             return 0;
         }
