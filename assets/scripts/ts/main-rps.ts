@@ -66,7 +66,13 @@ class RPS {
     private isComputerWinner: boolean = false;
 
     private Start(): void {
+        /**
+         * confirm is a boolean because it has to return statements:
+         * 1. if you click ok, it returns true
+         * 2. if you click cancel, it returns false
+         */
         var ready: boolean = confirm(this.welcomeMsg);
+        // in this case, we use ternary operator to speed things up a bit
         var confirmReady: any = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
     }
 
@@ -108,6 +114,7 @@ class RPS {
     }
 
     private PlayerGuess(): string {
+        // since prompt could be of type null (if there is nothing entered), we need to force its type to be string
         var playerChoice: string = <string>prompt("Choose rock, paper, or scissors:");
         if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
             return playerChoice;
@@ -130,7 +137,7 @@ class RPS {
                 return this.gestures[2];
             }
         }
-        return "";
+        return ""; // we need to return a blank string for the return type of the function to be string
     }
 
 
