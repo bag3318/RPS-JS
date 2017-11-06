@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 function trimIndentSpace(strings) {
     var values = [];
     for (var _i = 1; _i < arguments.length; _i++) {

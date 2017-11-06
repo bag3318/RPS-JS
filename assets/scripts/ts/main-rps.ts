@@ -1,3 +1,5 @@
+import {trimIndentSpace} from "./trim";
+
 class RPS {
 
     protected static _gameName: string;

@@ -1,4 +1,4 @@
-function trimIndentSpace(strings: any, ...values: Array<any>): string {
+export function trimIndentSpace(strings: any, ...values: Array<any>): string {
   // Interweave the strings with the
   // substitution vars first.
   let output: string = '';
