@@ -1,4 +1,4 @@
-import {hello} from "./trim";
+import {utility} from "./utility";
 
 class RPS {
 
