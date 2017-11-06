@@ -1,33 +1,23 @@
 .btn {
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #44C767), color-stop(1, #5CBf2A)); //
-	background: -moz-linear-gradient(top, #44C767 5%, #5CBF2A 100%);
-	background: -webkit-linear-gradient(top, #44C767 5%, #5CBF2A 100%);
-	background: -o-linear-gradient(top, #44C767 5%, #5CBF2A 100%);
-	background: -ms-linear-gradient(top, #44C767 5%, #5CBF2A 100%);
-	background: linear-gradient(to bottom, #44C767 5%, #5CBF2A 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#44C767', endColorstr='#5CBF2A',GradientType=0);
-	background-color: $background_color_2;
-	-moz-border-radius: 28px;
-	-webkit-border-radius: 28px;
+	background: linear-gradient(to bottom, $color-emerald-approx 5%, $color-lima-approx 100%);
+	filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color-emerald-approx', endcolorstr='$color-lima-approx',gradienttype=0);
+	background-color: $color-emerald-approx;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 	border-radius: 28px;
-	border: 1px solid #18AB29;
+	border: 1px solid $color-forest-green-approx;
 	display: inline-block;
 	cursor: pointer;
-	color: $color_1;
-	font-family: $font_family_1;
+	color: $white;
+	font-family: $font-0;
 	font-size: 17px;
 	padding: 16px 31px;
 	text-decoration: none;
-	text-shadow: 0px 1px 0px #2F6627;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 1px 0 $color-dell-approx;
 	&:hover {
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5CBF2A), color-stop(1, #44C767));
-		background: -moz-linear-gradient(top, #5CBF2A 5%, #44C767 100%);
-		background: -webkit-linear-gradient(top, #5CBF2A 5%, #44C767 100%);
-		background: -o-linear-gradient(top, #5CBF2A 5%, #44C767 100%);
-		background: -ms-linear-gradient(top, #5CBF2A 5%, #44C767 100%);
-		background: linear-gradient(to bottom, #5CBF2A 5%, #44C767 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5CBF2A', endColorstr='#44C767',GradientType=0);
-		background-color: $background_color_3;
+		background: linear-gradient(to bottom, $color-lima-approx 5%, $color-emerald-approx 100%);
+		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color-lima-approx', endcolorstr='$color-emerald-approx',gradienttype=0);
+		background-color: $color-lima-approx;
 	}
 	&:active {
 		position: relative;

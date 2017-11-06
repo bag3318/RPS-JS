@@ -1,44 +1,34 @@
+/*
+ * original font family: Ariel
+ */
 @font-face {
   font-family: Verdana;
-  src: url(../../resources/font/Verdana.woff); }
+  src: url("../../resources/font/Verdana.woff"); }
 body {
-  margin: 1%;
-  background-color: #eeeeee;
-  font-family: Verdana; }
+  font-family: Verdana;
+  margin: 1%; }
 
 #center {
   text-align: center; }
 
 .btn {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #44C767), color-stop(1, #5CBf2A));
-  background: -moz-linear-gradient(top, #44C767 5%, #5CBF2A 100%);
-  background: -webkit-linear-gradient(top, #44C767 5%, #5CBF2A 100%);
-  background: -o-linear-gradient(top, #44C767 5%, #5CBF2A 100%);
-  background: -ms-linear-gradient(top, #44C767 5%, #5CBF2A 100%);
-  background: linear-gradient(to bottom, #44C767 5%, #5CBF2A 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#44C767', endColorstr='#5CBF2A',GradientType=0);
-  background-color: #44C767;
-  -moz-border-radius: 28px;
-  -webkit-border-radius: 28px;
+  background: linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color-emerald-approx', endcolorstr='$color-lima-approx',gradienttype=0);
+  background-color: #44c767;
   border-radius: 28px;
-  border: 1px solid #18AB29;
+  border: 1px solid #18ab29;
   display: inline-block;
   cursor: pointer;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: Verdana;
   font-size: 17px;
   padding: 16px 31px;
   text-decoration: none;
-  text-shadow: 0px 1px 0px #2F6627; }
+  text-shadow: 0 1px 0 #2f6627; }
   .btn:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #5CBF2A), color-stop(1, #44C767));
-    background: -moz-linear-gradient(top, #5CBF2A 5%, #44C767 100%);
-    background: -webkit-linear-gradient(top, #5CBF2A 5%, #44C767 100%);
-    background: -o-linear-gradient(top, #5CBF2A 5%, #44C767 100%);
-    background: -ms-linear-gradient(top, #5CBF2A 5%, #44C767 100%);
-    background: linear-gradient(to bottom, #5CBF2A 5%, #44C767 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5CBF2A', endColorstr='#44C767',GradientType=0);
-    background-color: #5CBF2A; }
+    background: linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+    filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color-lima-approx', endcolorstr='$color-emerald-approx',gradienttype=0);
+    background-color: #5cbf2a; }
   .btn:active {
     position: relative;
     top: 1px; }
