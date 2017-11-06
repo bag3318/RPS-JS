@@ -18,7 +18,7 @@ class RPS {
     get PlayerScore(): number {
         return this.playerScore;
     }
-    set PlayerScore(pScore: number) {
+    set PlayerScore(pScore: number) { // pScore = player's score
         this.playerScore = pScore;
     }
 
@@ -26,7 +26,7 @@ class RPS {
     get ComputerScore(): number {
         return this.computerScore;
     }
-    set ComputerScore(cScore: number) {
+    set ComputerScore(cScore: number) { // cScore = computer's score
         this.computerScore = cScore;
     }
 

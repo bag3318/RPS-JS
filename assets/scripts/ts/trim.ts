@@ -1,5 +1,6 @@
+// this function will strip all indentation space on multiline strings
 function trimIndentSpace(strings: any, ...values: Array<any>): string {
-  
+
   // Interweave the strings with the substitution vars first.
   let output: string = '';
   for (let i: number = 0; i < values.length; i++) {
@@ -9,8 +10,10 @@ function trimIndentSpace(strings: any, ...values: Array<any>): string {
 
   // Split on newlines.
   let lines: string[] = output.split(/(?:\r\n|\n|\r)/);
+
   // Rip out the leading whitespace.
   return lines.map((line) => {
     return line.replace(/(?:^\s+|^\t+|^\r+|^\n+)/gm, '');
   }).join('\n').trim();
+
 }
