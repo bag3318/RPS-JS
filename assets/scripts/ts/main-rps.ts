@@ -140,7 +140,10 @@ class RPS {
 
 
     private CompareGuesses(guess1: string, guess2: string, points: number): number {
-        var output: string = `Player chose: ${guess1.toLowerCase()}, and the computer chose: ${guess2.toLowerCase()}!`;
+        var output: string = trimIndentSpace`
+        Player chose: ${guess1.toLowerCase()}
+        Computer chose: ${guess2.toLowerCase()}!
+        `;
 
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
