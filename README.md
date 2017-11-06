@@ -12,7 +12,7 @@ How To Play
 
 1. Download this repository **[<sub>1</sub>](#1-how-to-download-repository)**
 2. Locate the file you just downloaded (`RPS-Web-master.zip`) and extract it **[<sub>2</sub>](#2-how-to-extract-the-file)**
-  * This step may not be necessary on some Macs, since they might extract it for you and open up the extracted folder
+    * This step may not be necessary on some Macs, since they might extract it for you and open up the extracted folder
 3. Open the `index.html` file with your web browser of choice
 4. Click the `Play!` button
 5. Enjoy!
