@@ -46,7 +46,7 @@ ________
 ________ -->
 
 
-# Command Line
+## Command Line
 
 1. `tsc -w` = watch typescript
 2. `tsc -init` = creates config file
