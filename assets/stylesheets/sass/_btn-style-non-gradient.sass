@@ -4,9 +4,10 @@
 $px: 28px
 
 //colors
-$color-1: #18ab29
-$color-2: #2f6627
-$color-3: #5cbf2A
+$color-1: #44c767
+$color-2: #18ab29
+$color-3: #2f6627
+$color-4: #5cbf2A
 
 //fonts
 $font-0: Verdana
@@ -21,11 +22,11 @@ $url-0: url('../../resources/font/Verdana.woff')
 
 
 .btn
-  background-color: #44c767
+  background-color: $color-1
   -moz-border-radius: $px
   -webkit-border-radius: $px
   border-radius: $px
-  border: 1px solid $color-1
+  border: 1px solid $color-2
   display: inline-block
   cursor: pointer
   color: #fff
@@ -33,9 +34,9 @@ $url-0: url('../../resources/font/Verdana.woff')
   font-size: 17px
   padding: 16px 31px
   text-decoration: none
-  text-shadow: 0px 1px 0px $color-2
+  text-shadow: 0px 1px 0px $color-3
   &:hover
-    background-color: $color-3
+    background-color: $color-4
   &:active
     position: relative
     top: 1px
