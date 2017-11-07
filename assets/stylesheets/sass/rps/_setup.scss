@@ -1,0 +1,19 @@
+//fonts
+$font-0: Verdana;
+
+//urls
+$url-0: url('../../resources/font/Verdana.woff');
+
+/*
+ * original font family: Ariel
+ */
+
+@font-face {
+  font-family: $font-0;
+  src: $url-0;
+}
+
+body {
+  font-family: $font-0;
+  margin: auto;
+}
