@@ -21,7 +21,7 @@ Rock Paper Scissors
 3. `scss --watch assets/stylesheets/sass:assets/stylesheets/css` or `sass --watch assets/stylesheets/sass:assets/stylesheets/css` = compile and watch sass and scss
 4. `tsfmt -r --baseDir assets/scripts/ts` = format typescript (replaces & reformats)
 
-________
+--------
 
 > **_Enjoy!_**
 
