@@ -23,6 +23,6 @@ Rock Paper Scissors
 
 ________
 
-> __*Enjoy!*__
+> **_Enjoy!_**
 
 [//]: # "End README.md file"
