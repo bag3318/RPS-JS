@@ -7,11 +7,13 @@ Rock Paper Scissors
 
 ### The following packages are needed:
 
-1. [NodeJS](https://nodejs.org/en/)
-2. [RubyGems & Ruby](https://www.ruby-lang.org/en/downloads/)
-3. typescript: `npm install -g typescript` (_for Mac, add `sudo` at the beginning of the command_)
-4. Sass: `gem install sass` (_for Mac, add `sudo` at the beginning of the command_)
-5. typescript-formatter: `npm i typescript-formatter` (_for Mac, add `sudo` at the beginning of the command_)
+1. (*for Mac only*) Xcode command line tools: `xcode-select --install`
+2. [NodeJS](https://nodejs.org/en/)
+3. [RubyGems & Ruby](https://www.ruby-lang.org/en/downloads/)
+4. typescript: `npm install -g typescript` (_for Mac, add `sudo` at the beginning of the command_)
+5. Sass: `gem install sass` (_for Mac, add `sudo` at the beginning of the command_)
+6. typescript-formatter: `npm i typescript-formatter` (_for Mac, add `sudo` at the beginning of the command_)
+7. __Optional__: [git command line tools](https://git-scm.com/downloads/)
 
 ### Useful Commands
 
