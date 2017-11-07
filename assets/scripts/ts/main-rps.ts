@@ -38,7 +38,7 @@ class RPS {
         this.ties = draw;
     }
 
-    protected welcomeMsg: string = trimIndentSpace`
+    protected welcomeMsg: string = trimIndentSpaces`
     Welcome to the \"Rock, Paper, Scissors\" game!
 
     Remember, the rules are simple:
@@ -77,12 +77,12 @@ class RPS {
     }
 
     private DetermineWinner(): void {
-        var finalWinMsg: string = trimIndentSpace`
+        var finalWinMsg: string = trimIndentSpaces`
         You have ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s) (ties: ${this.ties}).
 
         You win the game!
         `;
-        var finalLoseMsg: string = trimIndentSpace`
+        var finalLoseMsg: string = trimIndentSpaces`
         The computer has ${this.computerScore} point(s) compared to your ${this.playerScore} point(s) (ties: ${this.ties}).
 
         The computer wins the game!
@@ -140,7 +140,7 @@ class RPS {
 
 
     private CompareGuesses(guess1: string, guess2: string, points: number): number {
-        var output: string = trimIndentSpace`
+        var output: string = trimIndentSpaces`
         You chose: ${guess1.toLowerCase()}.
         Computer chose: ${guess2.toLowerCase()}.
         `;
@@ -148,7 +148,7 @@ class RPS {
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
 
-            var winRoundMsg: string = trimIndentSpace`
+            var winRoundMsg: string = trimIndentSpaces`
             ${output}
 
             You win the round!
@@ -162,7 +162,7 @@ class RPS {
         } else if (this.rules[guess2.toLowerCase()] === guess1.toLowerCase()) {
             this.computerScore += points;
 
-            var lostRoundMsg: string = trimIndentSpace`
+            var lostRoundMsg: string = trimIndentSpaces`
             ${output}
 
             Computer wins the round!
@@ -177,7 +177,7 @@ class RPS {
             this.playerScore += 0;
             this.computerScore += 0;
             this.ties += 1;
-            var tieRoundMsg: string = trimIndentSpace`
+            var tieRoundMsg: string = trimIndentSpaces`
             ${output}
 
             It's a tie! Go again, no score added!

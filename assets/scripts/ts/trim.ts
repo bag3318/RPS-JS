@@ -1,5 +1,5 @@
 // this function will strip all indentation space on multiline strings
-function trimIndentSpace(strings: any, ...values: any[]): string {
+function trimIndentSpaces(strings: any, ...values: any[]): string {
 
   // Interweave the strings with the substitution vars first.
   let output: string = '';
