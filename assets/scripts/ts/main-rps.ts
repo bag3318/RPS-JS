@@ -73,7 +73,7 @@ class RPS {
          */
         var ready: boolean = confirm(this.welcomeMsg);
         // in this case, we use ternary operator to speed things up a bit
-        var confirmReady: any = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
+        var confirmReady: void = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
     }
 
     private DetermineWinner(): void {
