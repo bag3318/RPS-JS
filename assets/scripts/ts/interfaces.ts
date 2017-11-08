@@ -1,5 +1,5 @@
 interface Rules {
-  [index: string]: string
+  [index: string]: string;
 }
 interface GameInfo {
   game_name: string;

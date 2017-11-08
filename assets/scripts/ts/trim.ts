@@ -11,7 +11,7 @@ function trimIndentSpaces(strings: TemplateStringsArray, ...values: Array<number
   // Split on newlines.
   var splitRegEx: RegExp = RegExp(/(?:\n\r|\n|\r)/gm);
   let lines: string[] = output.split(splitRegEx);
-  
+
   // Rip out the leading whitespace.
   var trimRegEx: RegExp = RegExp(/(?:^\s+)/gm);
   return lines.map((line) => {
