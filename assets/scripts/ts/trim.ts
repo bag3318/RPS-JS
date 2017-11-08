@@ -9,11 +9,11 @@ function trimIndentSpaces(strings: any, ...values: any[]): string {
   output += strings[values.length];
 
   // Split on newlines.
-  var splitRegEx: any = new RegExp(/(?:(?:\n\r)|(?:\n)|(?:\r))/);
+  var splitRegEx: any = new RegExp(/(?:\n\r|\n|\r)/g);
   let lines: string[] = output.split(splitRegEx);
 
   // Rip out the leading whitespace.
-  var trimRegEx: any = new RegExp(/(?:(?:^\s+)|(?:^\n+)|(?:^\t+)|(?:^\r+))/gm);
+  var trimRegEx: any = new RegExp(/(?:^\s+)/g);
   return lines.map((line) => {
     return line.replace(trimRegEx, '');
   }).join('\n').trim();
