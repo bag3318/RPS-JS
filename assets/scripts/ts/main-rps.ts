@@ -57,21 +57,26 @@ class RPS {
     }
 
     private gestures: Array<string> = Array("rock", "paper", "scissors");
-    // private gestures: string[] = [
-    //   "rock",
-    //   "paper",
-    //   "scissors"
-    // ];
+    /**
+     * private gestures: string[] = [
+     *   "rock",
+     *   "paper",
+     *   "scissors"
+     * ];
+     */
     private rules: Rules = Object({
         "rock": "scissors",
         "paper": "rock",
         "scissors": "paper"
     });
-    // private rules: { [index: string]: string } = {
-    //     "rock": "scissors",
-    //     "paper": "rock",
-    //     "scissors": "paper"
-    // };
+    /**
+     * private rules: { [index: string]: string } = {
+     *     "rock": "scissors",
+     *     "paper": "rock",
+     *     "scissors": "paper"
+     * };
+     */
+
     private isPlayerWinner: boolean = false;
     private isComputerWinner: boolean = false;
 
