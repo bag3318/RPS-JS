@@ -174,6 +174,7 @@ class RPS {
             alert(winRoundMsg);
             this.DetermineWinner();
             return 1;
+
         } else if (this.rules[guess2.toLowerCase()] === guess1.toLowerCase()) {
             this.computerScore += points;
 
@@ -188,6 +189,7 @@ class RPS {
             alert(lostRoundMsg);
             this.DetermineWinner();
             return 2;
+
         } else {
             this.playerScore += 0;
             this.computerScore += 0;
@@ -202,6 +204,7 @@ class RPS {
             alert(tieRoundMsg);
             this.DetermineWinner();
             return 0;
+
         }
     }
 
