@@ -23,3 +23,14 @@ function trimIndentSpaces(strings: TemplateStringsArray, ...values: Array<number
   }).join('\n').trim();
 
 }
+
+/**
+ * How to use:
+ * ===============
+ * before a the ` in the multiline string,
+ * put this: (trimIndentSpaces)
+ * Ex:
+ * var str: string = (trimIndentSpaces)`
+ * hello world
+ * `;
+ */
