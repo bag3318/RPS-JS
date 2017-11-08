@@ -1,8 +1,8 @@
 // this function will strip all indentation space on multiline strings
 function trimIndentSpaces(strings: TemplateStringsArray, ...values: Array<number|string>): string {
   // create regex constants (vars)
-  const $newLines: RegExp = /(?:\n\r|\n|\r)/gm;
-  const $whiteSpace: RegExp = /(?:^\s+)/gm;
+  const $NEWLINES: RegExp = /(?:\n\r|\n|\r)/gm;
+  const $WHITESPACE: RegExp = /(?:^\s+)/gm;
 
   // Interweave the strings with the substitution vars first.
   let output: string = '';
@@ -12,11 +12,11 @@ function trimIndentSpaces(strings: TemplateStringsArray, ...values: Array<number
   output += strings[values.length];
 
   // Split on newlines.
-  var splitRegEx: RegExp = RegExp($newLines);
+  var splitRegEx: RegExp = RegExp($NEWLINES);
   let lines: string[] = output.split(splitRegEx);
 
   // Rip out the leading whitespace.
-  var trimRegEx: RegExp = RegExp($whiteSpace);
+  var trimRegEx: RegExp = RegExp($WHITESPACE);
   return lines.map((line) => {
     return line.replace(trimRegEx, '');
   }).join('\n').trim();

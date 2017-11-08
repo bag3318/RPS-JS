@@ -201,7 +201,7 @@ class RPS {
     }
 
     public Init(): void {
-        let rpsScript: RPS = new RPS($info.game_name, $info.version, $info.creator, $info.status_ok);
+        let rpsScript: RPS = new RPS($INFO.game_name, $INFO.version, $INFO.creator, $INFO.status_ok);
         let element: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
