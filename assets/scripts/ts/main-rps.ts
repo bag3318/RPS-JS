@@ -62,6 +62,11 @@ class RPS {
         "paper": "rock",
         "scissors": "paper"
     });
+    // private rules: { [index: string]: string } = Object({
+    //     "rock": "scissors",
+    //     "paper": "rock",
+    //     "scissors": "paper"
+    // });
     private isPlayerWinner: boolean = false;
     private isComputerWinner: boolean = false;
 
