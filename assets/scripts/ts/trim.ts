@@ -1,5 +1,5 @@
 // this function will strip all indentation space on multiline strings
-function trimIndentSpaces(strings: TemplateStringsArray, ...values: Array<number|string>): string {
+function trimIndentSpaces(strings: TemplateStringsArray, ...values: Array<number|string>): string { // feel free to change the array data type(s)
 
   // create regex constants (vars)
   const $NEWLINES: RegExp = /(?:\n\r|\n|\r)/gm;
