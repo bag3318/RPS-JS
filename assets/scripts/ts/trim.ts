@@ -31,6 +31,6 @@ function trimIndentSpaces(strings: TemplateStringsArray, ...values: Array<number
  * put this: (trimIndentSpaces)
  * Ex:
  * var str: string = (trimIndentSpaces)`
- * hello world
+ *    hello world
  * `;
  */
