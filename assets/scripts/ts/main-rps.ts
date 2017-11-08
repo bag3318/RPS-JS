@@ -57,7 +57,7 @@ class RPS {
     }
 
     private gestures: Array<string> = Array("rock", "paper", "scissors");
-    private rules: { [index: string]: string } = Object({
+    private rules: Rules = Object({
         "rock": "scissors",
         "paper": "rock",
         "scissors": "paper"
