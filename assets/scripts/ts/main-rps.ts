@@ -38,7 +38,7 @@ class RPS {
         this.ties = draw;
     }
 
-    protected welcomeMsg: string = (trimIndentSpaces)`
+    protected welcomeMsg: string = trimIndentSpaces`
     Welcome to the \"Rock, Paper, Scissors\" game!
 
     Remember, the rules are simple:
