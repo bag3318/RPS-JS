@@ -9,25 +9,27 @@ $color-dell-approx: #2f6627;
 
 .btn {
   background: linear-gradient(to bottom, $color-emerald-approx 5%, $color-lima-approx 100%);
-  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color-emerald-approx', endcolorstr='$color-lima-approx',gradienttype=0);
   background-color: $color-emerald-approx;
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-  border-radius: 28px;
   border: 1px solid $color-forest-green-approx;
-  display: inline-block;
-  cursor: pointer;
+  border-radius: 28px;
   color: $white;
+  cursor: pointer;
+  display: inline-block;
+  filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color-emerald-approx', endcolorstr='$color-lima-approx',gradienttype=0);
   font-family: $font-0;
   font-size: 17px;
-  padding: 16px 25px; /* original: 16px 31px */
+  padding: 16px 25px;
   text-decoration: none;
   //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
   text-shadow: 0 1px 0 $color-dell-approx;
+
   &:hover {
     background: linear-gradient(to bottom, $color-lima-approx 5%, $color-emerald-approx 100%);
-    filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color-lima-approx', endcolorstr='$color-emerald-approx',gradienttype=0);
     background-color: $color-lima-approx;
+    filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$color-lima-approx', endcolorstr='$color-emerald-approx',gradienttype=0);
   }
+
   &:active {
     position: relative;
     top: 1px;
