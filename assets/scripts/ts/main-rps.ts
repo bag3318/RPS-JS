@@ -56,8 +56,8 @@ class RPS {
         this.welcomeMsg = initMsg;
     }
 
-    private gestures: Array<string> = new Array("rock", "paper", "scissors");
-    private rules: any = new Object({
+    private gestures: Array<string> = Array("rock", "paper", "scissors");
+    private rules: { [index: string]: string } = Object({
         "rock": "scissors",
         "paper": "rock",
         "scissors": "paper"
