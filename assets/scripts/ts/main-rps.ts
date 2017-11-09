@@ -58,6 +58,7 @@ class RPS {
 
     private gestures: Array<string> = Array("rock", "paper", "scissors");
     /**
+     * // alternivite to the variable `gestures` above:
      * private gestures: string[] = [
      *   "rock",
      *   "paper",
@@ -70,6 +71,7 @@ class RPS {
         "scissors": "paper"
     });
     /**
+     * // alternivite to the variable `rules` above:
      * private rules: { [index: string]: string } = {
      *     "rock": "scissors",
      *     "paper": "rock",
