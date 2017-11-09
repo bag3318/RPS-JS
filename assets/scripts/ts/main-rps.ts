@@ -213,5 +213,6 @@ class RPS {
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
         }, false);
+        return console.log("Script fully loaded!");
     }
 }
