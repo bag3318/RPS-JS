@@ -97,7 +97,7 @@ class RPS {
 
         You win the game!
         `;
-        alert(trimIndentSpaces<string|number>(finalWinMsg));
+        alert(trimIndentSpaces<string|number>(<string>finalWinMsg));
         var finalLoseMsg: string = `
         The computer has ${this.computerScore} point(s) compared to your ${this.playerScore} point(s) (ties: ${this.ties}).
 
