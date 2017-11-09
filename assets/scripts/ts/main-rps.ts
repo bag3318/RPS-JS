@@ -162,7 +162,6 @@ class RPS {
         `;
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
-
             var winRoundMsg: string  = `
             ${outputScore}
             You win the round!
@@ -174,18 +173,15 @@ class RPS {
             return 1;
         } else if (this.rules[guess2.toLowerCase()] === guess1.toLowerCase()) {
             this.computerScore += points;
-
             var lostRoundMsg: string = `
             ${outputScore}
             Computer wins the round!
 
             Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
             `;
-
             alert(trimIndentSpaces(lostRoundMsg));
             this.DetermineWinner();
             return 2;
-
         } else {
             this.playerScore += 0;
             this.computerScore += 0;
@@ -199,7 +195,6 @@ class RPS {
             alert(trimIndentSpaces(tieRoundMsg));
             this.DetermineWinner();
             return 0;
-
         }
     }
 
