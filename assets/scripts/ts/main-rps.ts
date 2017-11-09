@@ -86,18 +86,17 @@ class RPS {
          * 1. if you click ok, it returns true
          * 2. if you click cancel, it returns false
          */
-        var ready: boolean = confirm(this.welcomeMsg);
+        var ready: boolean = confirm(trimIndentSpaces<string>(this.welcomeMsg));
         // in this case, we use ternary operator to speed things up a bit
         var confirmReady: void|any = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
     }
 
     private DetermineWinner(): void {
-        var finalWinMsg: string = `
+        var finalWinMsg = `
         You have ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s) (ties: ${this.ties}).
 
         You win the game!
         `;
-        alert(trimIndentSpaces<string|number>(<string>finalWinMsg));
         var finalLoseMsg: string = `
         The computer has ${this.computerScore} point(s) compared to your ${this.playerScore} point(s) (ties: ${this.ties}).
 
@@ -105,11 +104,11 @@ class RPS {
         `;
         if (this.playerScore >= 2) {
           this.isPlayerWinner = true;
-          alert(finalWinMsg);
+          alert(trimIndentSpaces<string|number>(finalWinMsg));
         }
         if (this.computerScore >= 2) {
           this.isComputerWinner = true;
-          alert(finalLoseMsg);
+          alert(trimIndentSpaces<string|number>(finalLoseMsg));
         }
     }
 
@@ -156,20 +155,21 @@ class RPS {
 
 
     private CompareGuesses(guess1: string, guess2: string, points: number): number {
-        var output1 = `
+        var output1: string = `
         You chose: ${guess1.toLowerCase()}.
         Computer chose: ${guess2.toLowerCase()}.
         `;
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
 
-            var winRoundMsg  = `
+            var winRoundMsg: string  = `
             ${output1}
 
             You win the round!
 
             Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
             `;
+            alert(trimIndentSpaces<string|number>(winRoundMsg));
             this.DetermineWinner();
             return 1;
 
@@ -184,7 +184,7 @@ class RPS {
             Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
             `;
 
-            alert(lostRoundMsg);
+            alert(trimIndentSpaces<string|number>(lostRoundMsg));
             this.DetermineWinner();
             return 2;
 
@@ -199,7 +199,7 @@ class RPS {
 
             Player Score: ${this.playerScore}, Computer Score: ${this.computerScore}.
             `;
-            alert(tieRoundMsg);
+            alert(trimIndentSpaces<string|number>(tieRoundMsg));
             this.DetermineWinner();
             return 0;
 
