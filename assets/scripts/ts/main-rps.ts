@@ -161,8 +161,10 @@ class RPS {
         `;
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
-
-            var winRoundMsg = trimIndentSpaces<number|string>()`
+            // var x: string = `
+            // ${output1}
+            // `
+            var winRoundMsg: TemplateStringsArray = (trimIndentSpaces<number|string>())`
             ${output1}
 
             You win the round!
