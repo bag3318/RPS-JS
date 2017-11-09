@@ -1,5 +1,5 @@
 // this function will strip all indentation space on multiline strings
-function trimIndentSpaces(stringMsg: string): string {
+function trimIndentSpaces(multiLineStr: string): string {
 
   // create regex constants (vars)
   // this regex identifies the following line breaks: CRLF (Windows/DOS), LR (Linux/Unix), CR (Mac/Unix)
@@ -9,7 +9,7 @@ function trimIndentSpaces(stringMsg: string): string {
 
   var splitRegEx: RegExp = RegExp($NEWLINES);
   // Split on newlines.
-  let lines: string[] = stringMsg.split(splitRegEx);
+  let lines: string[] = multiLineStr.split(splitRegEx);
 
   // Rip out the leading whitespace.
   var trimRegEx: RegExp = RegExp($WHITESPACE);
