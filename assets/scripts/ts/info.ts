@@ -1,4 +1,4 @@
-const $INFO: GameInfo = {
+const INFO: GameInfo = {
   game_name: "RPS",
   version: 1.8,
   creator: "bag3318",

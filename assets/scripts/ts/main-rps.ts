@@ -18,24 +18,24 @@ class RPS {
     get PlayerScore(): number {
         return this.playerScore;
     }
-    set PlayerScore(pScore: number) { // pScore = player's score
-        this.playerScore = pScore;
+    set PlayerScore($playerScore: number) {
+        this.playerScore = $playerScore;
     }
 
     private computerScore: number = 0;
     get ComputerScore(): number {
         return this.computerScore;
     }
-    set ComputerScore(cScore: number) { // cScore = computer's score
-        this.computerScore = cScore;
+    set ComputerScore($computerScore: number) {
+        this.computerScore = $computerScore;
     }
 
     private ties: number = 0;
     get Ties(): number {
         return this.ties;
     }
-    set Ties(draw: number) {
-        this.ties = draw;
+    set Ties($ties: number) {
+        this.ties = $ties;
     }
 
     protected welcomeMsg: string = `
@@ -52,8 +52,8 @@ class RPS {
     get WelcomeMsg(): string {
         return this.welcomeMsg;
     }
-    set WelcomeMsg(initMsg: string) {
-        this.welcomeMsg = initMsg;
+    set WelcomeMsg(welcomeMsg: string) {
+        this.welcomeMsg = welcomeMsg;
     }
 
     private gestures: Array<string> = Array("rock", "paper", "scissors");
@@ -65,7 +65,7 @@ class RPS {
      *   "scissors"
      * ];
      */
-     
+
     private rules: Rules = Object({
         "rock": "scissors",
         "paper": "rock",
@@ -208,7 +208,7 @@ class RPS {
     }
 
     public Init(): void {
-        let rpsScript: RPS = new RPS($INFO.game_name, $INFO.version, $INFO.creator, $INFO.status_ok);
+        let rpsScript: RPS = new RPS(INFO.game_name, INFO.version, INFO.creator, INFO.status_ok);
         let element: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
