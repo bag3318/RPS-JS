@@ -208,10 +208,10 @@ class RPS {
         location.reload(true);
     }
 
-    protected PageStatus(): void {
+    protected PageStatus(): boolean {
       // use ternary operator instead of if/else
-      var loaded: (void|any) = (document.readyState) ? console.log("Page fully loaded!") : console.log("Error: Page has not fully loaded.");
-      return loaded;
+      var isPageLoaded: boolean = (document.readyState) ? true : false;
+      return isPageLoaded;
     }
 
     public Init(): void {
@@ -221,7 +221,7 @@ class RPS {
           rpsScript.BTNClick();
         }, false);
         window.addEventListener("load", function(){
-          rpsScript.PageStatus();
+          console.log("Is page loaded:",rpsScript.PageStatus());
         }, true);
     }
 }
