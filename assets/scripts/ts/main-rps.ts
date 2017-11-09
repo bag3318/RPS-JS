@@ -105,7 +105,7 @@ class RPS {
 
         The computer wins the game!
         `;
-        
+
         if (this.playerScore >= 2) {
           this.isPlayerWinner = true;
           alert(trimIndentSpaces(finalWinMsg));
@@ -206,10 +206,10 @@ class RPS {
         location.reload(true);
     }
 
-    public Init(event: string): void {
+    public Init(): void {
         let rpsScript: RPS = new RPS($INFO.game_name, $INFO.version, $INFO.creator, $INFO.status_ok);
         let element: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
-        element.addEventListener(event, () => {
+        element.addEventListener("click", () => {
           rpsScript.BTNClick();
         }, false);
     }
