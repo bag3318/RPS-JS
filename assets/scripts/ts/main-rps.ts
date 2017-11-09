@@ -65,6 +65,7 @@ class RPS {
      *   "scissors"
      * ];
      */
+     
     private rules: Rules = Object({
         "rock": "scissors",
         "paper": "rock",
