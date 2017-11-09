@@ -90,7 +90,7 @@ class RPS {
          * 2. if you click cancel, it returns false
          */
         var ready: boolean = confirm(trimmedWelcomeMsg);
-        // in this case, we use ternary operator to speed things up a bit
+        // in this case, we use a ternary operator to speed things up a bit
         var confirmReady: void|any = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
     }
 
