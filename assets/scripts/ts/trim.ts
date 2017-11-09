@@ -2,7 +2,9 @@
 function trimIndentSpaces(stringMsg: string): string {
 
   // create regex constants (vars)
+  // this regex identifies the following line breaks: CRLF, LR, CR
   const $NEWLINES: RegExp = /(?:\n\r|\n|\r)/;
+  // this regex identifes whitespace from the beginning of the line and matches 1 or more of the preceding whitepsace
   const $WHITESPACE: RegExp = /(?:^\s+)/g;
 
   // Split on newlines.
