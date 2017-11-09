@@ -86,7 +86,7 @@ class RPS {
          * 1. if you click ok, it returns true
          * 2. if you click cancel, it returns false
          */
-        var ready: boolean = confirm(trimIndentSpaces<string>(this.welcomeMsg));
+        var ready: boolean = confirm(trimIndentSpaces(this.welcomeMsg));
         // in this case, we use ternary operator to speed things up a bit
         var confirmReady: void|any = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
     }
@@ -102,13 +102,14 @@ class RPS {
 
         The computer wins the game!
         `;
+        // var x: number = 3;
         if (this.playerScore >= 2) {
           this.isPlayerWinner = true;
-          alert(trimIndentSpaces<string|number>(finalWinMsg));
+          alert(trimIndentSpaces(finalWinMsg));
         }
         if (this.computerScore >= 2) {
           this.isComputerWinner = true;
-          alert(trimIndentSpaces<string|number>(finalLoseMsg));
+          alert(trimIndentSpaces(finalLoseMsg));
         }
     }
 
@@ -155,7 +156,7 @@ class RPS {
 
 
     private CompareGuesses(guess1: string, guess2: string, points: number): number {
-        var output1: string = `
+        var output: string = `
         You chose: ${guess1.toLowerCase()}.
         Computer chose: ${guess2.toLowerCase()}.
         `;
@@ -163,28 +164,25 @@ class RPS {
             this.playerScore += points;
 
             var winRoundMsg: string  = `
-            ${output1}
-
+            ${output}
             You win the round!
 
             Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
             `;
-            alert(trimIndentSpaces<string|number>(winRoundMsg));
+            alert(trimIndentSpaces(winRoundMsg));
             this.DetermineWinner();
             return 1;
-
         } else if (this.rules[guess2.toLowerCase()] === guess1.toLowerCase()) {
             this.computerScore += points;
 
             var lostRoundMsg: string = `
-            ${output1}
-
+            ${output}
             Computer wins the round!
 
             Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
             `;
 
-            alert(trimIndentSpaces<string|number>(lostRoundMsg));
+            alert(trimIndentSpaces(lostRoundMsg));
             this.DetermineWinner();
             return 2;
 
@@ -193,13 +191,12 @@ class RPS {
             this.computerScore += 0;
             this.ties += 1;
             var tieRoundMsg: string = `
-            ${output1}
-
+            ${output}
             It's a tie! Go again, no score added!
 
             Player Score: ${this.playerScore}, Computer Score: ${this.computerScore}.
             `;
-            alert(trimIndentSpaces<string|number>(tieRoundMsg));
+            alert(trimIndentSpaces(tieRoundMsg));
             this.DetermineWinner();
             return 0;
 
