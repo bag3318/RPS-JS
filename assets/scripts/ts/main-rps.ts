@@ -162,7 +162,7 @@ class RPS {
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
 
-            var winRoundMsg = trimIndentSpaces`
+            var winRoundMsg = trimIndentSpaces<number|string>()`
             ${output1}
 
             You win the round!
