@@ -4,11 +4,11 @@ function trimIndentSpaces(stringMsg: string): string {
   // create regex constants (vars)
   // this regex identifies the following line breaks: CRLF, LR, CR
   const $NEWLINES: RegExp = /(?:\n\r|\n|\r)/;
-  // this regex identifes whitespace from the beginning of the line and matches 1 or more of the preceding whitepsace
-  const $WHITESPACE: RegExp = /(?:^\s+)/g;
+  // this regex identifes whitespace from the beginning of the line and matches 1 or more of the preceding whitepsace token
+  const $WHITESPACE: RegExp = /(?:^\s+)/g; // uses the global flag
 
-  // Split on newlines.
   var splitRegEx: RegExp = RegExp($NEWLINES);
+  // Split on newlines.
   let lines: string[] = stringMsg.split(splitRegEx);
 
   // Rip out the leading whitespace.
