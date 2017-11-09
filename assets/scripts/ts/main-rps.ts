@@ -221,7 +221,7 @@ class RPS {
           rpsScript.BTNClick();
         }, false);
         window.addEventListener("load", () => {
-          console.log("Is page loaded:", rpsScript.PageStatus());
+          console.log("Is page loaded:", rpsScript.PageStatus() + ".");
         }, true);
     }
 }
