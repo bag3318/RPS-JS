@@ -15,3 +15,19 @@ function trimIndentSpaces(stringMsg: string): string {
     return line.replace(trimRegEx, '');
   }).join('\n').trim(); // Join back together with new line.
 }
+
+/**
+ * How to use:
+ * ==============
+ * // step 1: create multiline string
+ * var str: string = `
+ * Hello
+ * World!
+ * `;
+ * // step 2: call the trimIndentSpaces function and pass in that string (you could make it a variable if needed)
+ * var strTrimmed: string = trimIndentSpaces(str);
+ * // step 3: use the trimmed string to your needs
+ * alert(strTrimmed);
+ * // the following also works:
+ * alert(trimIndentSpaces(str));
+ */
