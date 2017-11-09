@@ -105,7 +105,7 @@ class RPS {
 
         The computer wins the game!
         `;
-        // var x: number = 3;
+        
         if (this.playerScore >= 2) {
           this.isPlayerWinner = true;
           alert(trimIndentSpaces(finalWinMsg));
