@@ -1,5 +1,5 @@
 // this function will strip all indentation space on multiline strings
-function trimIndentSpaces<T>(stringer: T): string {
+function trimIndentSpaces<T>(stringMsg: T): string {
 
   // create regex constants (vars)
   const $NEWLINES: RegExp = /(?:\n\r|\n|\r)/gm;
@@ -7,7 +7,7 @@ function trimIndentSpaces<T>(stringer: T): string {
 
   // Split on newlines.
   var splitRegEx: RegExp = RegExp($NEWLINES);
-  let lines: string[] = stringer.split(splitRegEx);
+  let lines: string[] = stringMsg.split(splitRegEx);
 
   // Rip out the leading whitespace.
   var trimRegEx: RegExp = RegExp($WHITESPACE);
