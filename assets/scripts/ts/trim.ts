@@ -1,11 +1,5 @@
-/**
- * To Do List:
- * Convert function into generic function
- * Add more comments
- */
-
 // this function will strip all indentation space on multiline strings
-function trimIndentSpaces(strings: TemplateStringsArray, ...values: Array<number|string>): string { // feel free to change the values array data type(s)
+function trimIndentSpaces<T>(strings: string|TemplateStringsArray, ...values: Array<any>): string {
 
   // create regex constants (vars)
   const $NEWLINES: RegExp = /(?:\n\r|\n|\r)/gm;
@@ -27,16 +21,17 @@ function trimIndentSpaces(strings: TemplateStringsArray, ...values: Array<number
   return lines.map((line) => {
     return line.replace(trimRegEx, '');
   }).join('\n').trim();
-
 }
+
+
 
 /**
  * How to use:
  * ===============
  * before a the ` in the multiline string,
- * put this: (trimIndentSpaces)
+ * put this: trimIndentSpaces
  * Ex:
- * var str: string = (trimIndentSpaces)`
+ * var str: string = trimIndentSpaces`
  *    hello world
  * `;
  */
