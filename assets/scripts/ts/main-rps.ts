@@ -156,7 +156,7 @@ class RPS {
 
 
     private CompareGuesses(guess1: string, guess2: string, points: number): number {
-        var output: string = `
+        var outputScore: string = `
         You chose: ${guess1.toLowerCase()}.
         Computer chose: ${guess2.toLowerCase()}.
         `;
@@ -164,7 +164,7 @@ class RPS {
             this.playerScore += points;
 
             var winRoundMsg: string  = `
-            ${output}
+            ${outputScore}
             You win the round!
 
             Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
@@ -176,7 +176,7 @@ class RPS {
             this.computerScore += points;
 
             var lostRoundMsg: string = `
-            ${output}
+            ${outputScore}
             Computer wins the round!
 
             Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
@@ -191,7 +191,7 @@ class RPS {
             this.computerScore += 0;
             this.ties += 1;
             var tieRoundMsg: string = `
-            ${output}
+            ${outputScore}
             It's a tie! Go again, no score added!
 
             Player Score: ${this.playerScore}, Computer Score: ${this.computerScore}.
