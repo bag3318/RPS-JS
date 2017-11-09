@@ -209,6 +209,7 @@ class RPS {
     }
 
     protected PageStatus(): void {
+      // use ternary operator instead of if/else
       var loaded: (void|any) = (document.readyState) ? console.log("Page fully loaded!") : console.log("Error: Page has not fully loaded.");
       return loaded;
     }
