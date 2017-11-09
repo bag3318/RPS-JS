@@ -203,10 +203,10 @@ class RPS {
         location.reload(true);
     }
 
-    public Init(): void {
+    public Init(event: string): void {
         let rpsScript: RPS = new RPS($INFO.game_name, $INFO.version, $INFO.creator, $INFO.status_ok);
         let element: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
-        element.addEventListener("click", () => {
+        element.addEventListener(event, () => {
           rpsScript.BTNClick();
         }, false);
     }
