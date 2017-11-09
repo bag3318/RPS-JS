@@ -209,7 +209,7 @@ class RPS {
     }
 
     protected PageStatus(): void {
-      var loaded = (document.readyState) ? console.log("Page fully loaded!") : console.log("Error: Page has not fully loaded.");
+      var loaded: void|any = (document.readyState) ? console.log("Page fully loaded!") : console.log("Error: Page has not fully loaded.");
       return loaded;
     }
 
