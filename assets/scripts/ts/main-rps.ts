@@ -81,12 +81,13 @@ class RPS {
     private isComputerWinner: boolean = false;
 
     private Start(): void {
+        var trimmedWelcomeMsg: string = trimIndentSpaces(this.welcomeMsg);
         /**
          * confirm is a boolean because it has 2 return statements:
          * 1. if you click ok, it returns true
          * 2. if you click cancel, it returns false
          */
-        var ready: boolean = confirm(trimIndentSpaces(this.welcomeMsg));
+        var ready: boolean = confirm(trimmedWelcomeMsg);
         // in this case, we use ternary operator to speed things up a bit
         var confirmReady: void|any = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
     }
