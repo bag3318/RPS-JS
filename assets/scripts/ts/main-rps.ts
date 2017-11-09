@@ -93,6 +93,7 @@ class RPS {
         var ready: boolean = confirm(trimmedWelcomeMsg);
         // in this case, we use a ternary operator to speed things up a bit
         var confirmReady: void|any = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
+        return confirmReady;
     }
 
     private DetermineWinner(): void {
@@ -208,11 +209,8 @@ class RPS {
     }
 
     protected PageStatus(): void {
-      if (document.readyState) {
-        return console.log("Page fully loaded!");
-      } else {
-        return console.log("Error: Page has not fully loaded.");
-      }
+      var loaded = (document.readyState) ? console.log("Page fully loaded!") : console.log("Error: Page has not fully loaded.");
+      return loaded;
     }
 
     public Init(): void {
