@@ -16,6 +16,7 @@ function trimIndentSpaces(multiLineStr: string): string {
   return lines.map((line) => {
     return line.replace(trimRegEx, '');
   }).join('\n').trim(); // Join back together with new line.
+  
 }
 
 /**
