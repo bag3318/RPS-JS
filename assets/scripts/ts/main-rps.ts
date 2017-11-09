@@ -92,7 +92,7 @@ class RPS {
     }
 
     private DetermineWinner(): void {
-        var finalWinMsg = `
+        var finalWinMsg: string = `
         You have ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s) (ties: ${this.ties}).
 
         You win the game!
