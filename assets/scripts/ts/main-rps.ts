@@ -207,12 +207,22 @@ class RPS {
         location.reload(true);
     }
 
+    protected PageStatus(): void {
+      if (document.readyState) {
+        return console.log("Page fully loaded!");
+      } else {
+        return console.log("Error: Page has not fully loaded.");
+      }
+    }
+
     public Init(): void {
         let rpsScript: RPS = new RPS(INFO.game_name, INFO.version, INFO.creator, INFO.status_ok);
         let element: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
         }, false);
-        return console.log("Script fully loaded!");
+        window.addEventListener("load", function(){
+          rpsScript.PageStatus();
+        }, true);
     }
 }
