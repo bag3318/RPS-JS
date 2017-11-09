@@ -52,8 +52,8 @@ class RPS {
     get WelcomeMsg(): string {
         return this.welcomeMsg;
     }
-    set WelcomeMsg(welcomeMsg: string) {
-        this.welcomeMsg = welcomeMsg;
+    set WelcomeMsg($welcomeMsg: string) {
+        this.welcomeMsg = $welcomeMsg;
     }
 
     private gestures: Array<string> = Array("rock", "paper", "scissors");
