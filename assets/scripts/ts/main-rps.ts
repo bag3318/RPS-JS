@@ -220,7 +220,7 @@ class RPS {
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
         }, false);
-        window.addEventListener("load", function(){
+        window.addEventListener("load", () => {
           console.log("Is page loaded:",rpsScript.PageStatus());
         }, true);
     }
