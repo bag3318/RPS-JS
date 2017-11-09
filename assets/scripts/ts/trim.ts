@@ -26,7 +26,7 @@ function trimIndentSpaces(stringMsg: string): string {
  * Hello
  * World!
  * `;
- * // step 2: call the trimIndentSpaces function and pass in that string (you could make it a variable if needed)
+ * // step 2: call the trimIndentSpaces function and pass in your multiline string variable
  * var strTrimmed: string = trimIndentSpaces(str);
  * // step 3: use the trimmed string to your needs
  * alert(strTrimmed);
