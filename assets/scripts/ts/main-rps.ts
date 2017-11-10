@@ -222,6 +222,6 @@ class RPS {
         let element1: HTMLBodyElement = document.querySelector("body") as HTMLBodyElement;
         element1.addEventListener("load", (): void => {
           console.log("Is page loaded:", rpsScript.PageStatus());
-        }, true); // here we set it to true so this even can be executed during the capturing phase
+        }, true); // here we set it to true so that this even can be executed during the capturing phase
     }
 }
