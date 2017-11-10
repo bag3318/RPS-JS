@@ -84,6 +84,7 @@ class RPS {
     private isComputerWinner: boolean = false;
 
     private Start(): void {
+        var trimmedWelcomeMsg: string = trimIndentSpaces(this.welcomeMsg);
         /**
          * confirm is a boolean because it has 2 return statements:
          * 1. if you click ok, it returns true
