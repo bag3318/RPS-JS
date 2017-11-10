@@ -219,8 +219,9 @@ class RPS {
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
         }, false);
-        window.addEventListener("load", () => {
+        let element1: HTMLBodyElement = document.querySelector("body") as HTMLBodyElement;
+        element1.addEventListener("load", () => {
           console.log("Is page loaded:", rpsScript.PageStatus());
-        }, true);
+        }, true); // here we set it to true so this even can be executed during the capturing phase
     }
 }
