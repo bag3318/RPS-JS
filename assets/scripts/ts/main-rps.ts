@@ -155,7 +155,7 @@ class RPS {
                 return this.gestures[2];
             }
         }
-        return ""; // we need to return a blank string for the return type of the function to be string
+        return ""; // we need to return a blank string for the return type of the function to be a string
     }
 
 
