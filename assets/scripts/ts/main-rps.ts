@@ -202,12 +202,12 @@ class RPS {
         }
     }
 
-    private BTNClick(): void {
+    private BTNClick = (): void => {
         this.Start();
         location.reload(true); // set true to reload page from server
     }
 
-    protected PageStatus(): boolean {
+    protected PageStatus = (): boolean => {
       // use ternary operator instead of if/else
       var isPageLoaded: boolean = (document.readyState) ? true : false;
       return isPageLoaded;
