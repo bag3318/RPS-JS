@@ -109,11 +109,13 @@ class RPS {
 
         if (this.playerScore >= 2) {
           this.isPlayerWinner = true;
-          alert(trimIndentSpaces(finalWinMsg));
+          var trimmedFinalWinMsg: string = trimIndentSpaces(finalWinMsg);
+          alert(trimmedFinalWinMsg);
         }
         if (this.computerScore >= 2) {
           this.isComputerWinner = true;
-          alert(trimIndentSpaces(finalLoseMsg));
+          var trimmedfinalLoseMsg: string = trimIndentSpaces(finalLoseMsg);
+          alert(trimmedfinalLoseMsg);
         }
     }
 
