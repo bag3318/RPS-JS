@@ -5,7 +5,7 @@ class RPS {
     protected static _creator: string;
     protected static _status: boolean;
 
-    constructor(info:GameInfo) {
+    constructor(protected info:GameInfo) {
       RPS._gameName = info.game_name;
       RPS._version = info.version;
       RPS._creator = info.creator;
