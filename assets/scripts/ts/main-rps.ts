@@ -203,7 +203,7 @@ class RPS {
     }
 
     private BTNClick = (): void => {
-        this.Start();
+        this.Start(); // start the game
         location.reload(true); // set true to reload page from server
     }
 
