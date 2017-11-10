@@ -204,7 +204,7 @@ class RPS {
 
     private BTNClick(): void {
         this.Start();
-        location.reload(true);
+        location.reload(true); // set true to reload page from server
     }
 
     protected PageStatus(): boolean {
