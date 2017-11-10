@@ -216,11 +216,11 @@ class RPS {
     public Init(): void {
         let rpsScript: RPS = new RPS(INFO);
         let element: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
-        element.addEventListener("click", () => {
+        element.addEventListener("click", (): void => {
           rpsScript.BTNClick();
         }, false);
         let element1: HTMLBodyElement = document.querySelector("body") as HTMLBodyElement;
-        element1.addEventListener("load", () => {
+        element1.addEventListener("load", (): void => {
           console.log("Is page loaded:", rpsScript.PageStatus());
         }, true); // here we set it to true so this even can be executed during the capturing phase
     }
