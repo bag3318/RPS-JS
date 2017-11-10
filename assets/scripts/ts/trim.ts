@@ -2,8 +2,8 @@
 function trimIndentSpaces(multiLineStr: string): string {
 
   // create regex constants (vars)
-  // this regex identifies the following line breaks: CRLF (Windows/DOS), LR (Linux/Unix), CR (Mac/Unix)
-  const NEWLINES: RegExp = /(?:\n\r|\n|\r)/;
+  // this regex identifies the following line breaks: CRLF (Windows/DOS), LF (Linux/Unix), CR (Mac/Unix), LFCR (other systems)
+  const NEWLINES: RegExp = /(?:\n\r|\r\n|\n|\r)/;
   // this regex identifes whitespace from the beginning of the line and matches 1 or more of the preceding whitepsace token
   const WHITESPACE: RegExp = /(?:^\s+)/g; // uses the global flag
 
