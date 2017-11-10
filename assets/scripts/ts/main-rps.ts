@@ -79,7 +79,7 @@ class RPS {
      *     "scissors": "paper"
      * };
      */
-
+ 
     private isPlayerWinner: boolean = false;
     private isComputerWinner: boolean = false;
 
