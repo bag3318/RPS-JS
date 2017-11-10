@@ -5,13 +5,12 @@ class RPS {
     protected static _creator: string;
     protected static _status: boolean;
 
-    constructor(protected gameName: string, protected version: number, private creator: string, private status: boolean) {
-      RPS._gameName = gameName;
-      RPS._version = version;
-      RPS._creator = creator;
-      RPS._status = status;
-      console.log(`Game Name: ${gameName}, Version: ${version}, Creator: ${creator}, Status OK: ${status}.`); // with params
-      // console.log(`Game Name: ${RPS._gameName}, Version: ${RPS._version}, Creator: ${RPS._creator}, Status OK: ${RPS._status}.`); // with vars
+    constructor(info:GameInfo) {
+      RPS._gameName = info.game_name;
+      RPS._version = info.version;
+      RPS._creator = info.creator;
+      RPS._status = info.status_ok;
+      console.log(`Game Name: ${RPS._gameName}, Version: ${RPS._version}, Creator: ${RPS._creator}, Status OK: ${RPS._status}.`); // with vars
     }
 
     private playerScore: number = 0;
@@ -215,7 +214,7 @@ class RPS {
     }
 
     public Init(): void {
-        let rpsScript: RPS = new RPS(INFO.game_name, INFO.version, INFO.creator, INFO.status_ok);
+        let rpsScript: RPS = new RPS(INFO);
         let element: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
         element.addEventListener("click", () => {
           rpsScript.BTNClick();
