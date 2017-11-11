@@ -3,8 +3,9 @@
 /// <reference path="ref/interfaces.ts" />
 /// <reference path="ref/variables.ts" />
 
-class RPS {
 
+class RPS {
+    
     protected static _gameName: string;
     protected static _version: number;
     protected static _creator: string;
