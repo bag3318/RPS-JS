@@ -4,3 +4,8 @@ const INFO: GameInfo = {
   creator: "bag3318",
   status_ok: true
 };
+enum Gestures {
+  rock = "rock",
+  paper = "paper",
+  scissors = "scissors"
+}

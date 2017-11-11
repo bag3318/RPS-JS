@@ -54,7 +54,7 @@ class RPS {
         this.welcomeMsg = $welcomeMsg;
     }
 
-    private gestures: Array<string> = Array("rock", "paper", "scissors");
+    private gestures: Array<string> = Array(Gestures.rock, Gestures.paper, Gestures.scissors);
     /**
      * // alternivite to the `gestures` variable above:
      * private gestures: string[] = [
