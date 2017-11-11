@@ -6,6 +6,7 @@ _MACOSX
 .sass-cache
 js
 css
+_btn-style-non-gradient.sass
 
 
 # If gitignore is not working,
