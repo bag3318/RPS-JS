@@ -16,6 +16,7 @@ class RPS {
         RPS._status = info.status_ok;
         console.log(`Game Info:\nGame Name: ${RPS._gameName}, Version: ${RPS._version}, Creator: ${RPS._creator}, Status OK: ${RPS._status}.`);   
     }
+    
     private playerScore: number = 0;
     get PlayerScore(): number {
         return this.playerScore;
