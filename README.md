@@ -21,8 +21,8 @@ Rock Paper Scissors
 
 1. `tsc -w` = compile and watch typescript (settings for directories are in `tsconfig.json`)
 <!-- 2. `tsc -init` = creates typescript config file -->
-2. `sass --watch assets/stylesheets/sass:assets/stylesheets/css` = compile and watch sass and/or scss
-3. `tsfmt -r --baseDir assets/scripts/ts` = format(s) typescript (replaces & reformats)
+2. `tsfmt -r --baseDir assets/scripts/ts` = format(s) typescript (replaces & reformats)
+3. `sass --watch assets/stylesheets/sass:assets/stylesheets/css` = compile and watch sass and/or scss
 <!-- 5. `sass-convert assets/stylesheets/sass/*.sass assets/stylesheets/sass/rps/*.scss` = convert `sass` to `scss`
 6. `sass-convert assets/stylesheets/sass/*.scss assets/stylesheets/sass/rps/*.sass` = convert `scss` to `sass` -->
 
