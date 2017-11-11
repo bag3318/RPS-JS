@@ -70,7 +70,7 @@ class RPS {
     private isPlayerWinner: boolean = false;
     private isComputerWinner: boolean = false;
 
-    private Start(): void {
+    private Start = (): void => {
         /**
          * confirm is a boolean because it has 2 return statements:
          * 1. if you click ok, it returns true
