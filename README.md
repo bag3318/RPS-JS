@@ -24,7 +24,7 @@ Command Line
 2. `tsfmt -r --baseDir assets/scripts/ts` = format(s) typescript (replaces & reformats)
 3. `sass --watch assets/stylesheets/sass:assets/stylesheets/css` = compile and watch sass and/or scss
 
-________
+--------
 
 > **_Enjoy!_**
 
