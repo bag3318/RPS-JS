@@ -1,3 +1,4 @@
+// reference required script
 /// <reference path="../main.ts" />
 
 function loadScript(): void {
