@@ -193,7 +193,7 @@ class RPS {
         location.reload(true); // set true to reload page from server
     }
 
-    protected PageStatus = (): boolean => {
+    protected static PageStatus = (): boolean => {
       // use ternary operator instead of if/else
       var isPageLoaded: boolean = (document.readyState) ? true : false;
       return isPageLoaded;
@@ -207,7 +207,7 @@ class RPS {
         }, false); // execute during bubbling phase
         let element1: HTMLBodyElement = document.querySelector("body") as HTMLBodyElement;
         element1.addEventListener("load", (): void => {
-          console.log("Is page loaded:", rpsScript.PageStatus());
+          console.log("Is page loaded:", RPS.PageStatus());
         }, true); // here we set it to true so that this even can be executed during the capturing phase
     }
 }
