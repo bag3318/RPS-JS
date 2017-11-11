@@ -55,28 +55,12 @@ class RPS {
     }
 
     private gestures: Array<string> = Array(Gestures.rock, Gestures.paper, Gestures.scissors);
-    /**
-     * // alternivite to the `gestures` variable above:
-     * private gestures: string[] = [
-     *   "rock",
-     *   "paper",
-     *   "scissors"
-     * ];
-     */
-
+    
     private rules: Rules = Object({
-        "rock": "scissors",
-        "paper": "rock",
-        "scissors": "paper"
+        "rock": this.gestures[2],
+        "paper": this.gestures[0],
+        "scissors": this.gestures[1]
     });
-    /**
-     * // alternivite to the `rules` variable above:
-     * private rules: { [index: string]: string } = {
-     *     "rock": "scissors",
-     *     "paper": "rock",
-     *     "scissors": "paper"
-     * };
-     */
  
     private isPlayerWinner: boolean = false;
     private isComputerWinner: boolean = false;
