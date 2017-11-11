@@ -1,5 +1,5 @@
 // this function will strip all indentation space on multiline strings
-function trimIndentSpaces(multiLineStr: string) {
+function trimIndentSpaces(multiLineStr: string): string {
 
   // create regex constants (vars)
   // this regex identifies the following line breaks: CRLF (Windows/DOS), LF (Linux/Unix), CR (Mac/Unix), LFCR (other systems)
