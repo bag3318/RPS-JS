@@ -1,5 +1,5 @@
 function loadScript(): void {
-  let script: RPS = new RPS(INFO);
+  let script: RPS = new RPS(GAME_INFO);
   script.Init();
 }
 loadScript();
