@@ -2,6 +2,7 @@
 *.sublime-project
 *.DS_Store
 *.ste
+*.code-workspace
 _MACOSX
 .sass-cache
 js
