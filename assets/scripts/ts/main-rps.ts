@@ -57,9 +57,9 @@ class RPS {
     private gestures: Array<string> = Array(Gestures.rock, Gestures.paper, Gestures.scissors);
     
     private rules: Rules = Object({
-        "rock": this.gestures[2],
-        "paper": this.gestures[0],
-        "scissors": this.gestures[1]
+        rock: this.gestures[2],
+        paper: this.gestures[0],
+        scissors: this.gestures[1]
     });
  
     private isPlayerWinner: boolean = false;
