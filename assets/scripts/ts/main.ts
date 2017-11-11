@@ -1,3 +1,4 @@
+// reference required scripts
 /// <reference path="ref/trim.ts" />
 /// <reference path="ref/interfaces.ts" />
 /// <reference path="ref/variables.ts" />
