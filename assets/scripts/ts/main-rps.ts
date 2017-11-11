@@ -71,9 +71,8 @@ class RPS {
          * 1. if you click ok, it returns true
          * 2. if you click cancel, it returns false
          */
-        var trimmedWelcomeMsg: string = trimIndentSpaces(this.welcomeMsg);        
+        var trimmedWelcomeMsg: string = trimIndentSpaces(this.welcomeMsg);
         var ready: boolean = confirm(trimmedWelcomeMsg);
-        
         // in this case, we use a ternary operator to speed things up a bit
         var confirmReady: (void|any) = (ready) ? this.PlayGame(3) : alert("Sorry you don\'t wanna play, maybe next time! :)");
         return confirmReady;
@@ -93,13 +92,11 @@ class RPS {
 
         if (this.playerScore >= 2) {
           this.isPlayerWinner = true;
-          var trimmedFinalWinMsg: string = trimIndentSpaces(finalWinMsg);
-          alert(trimmedFinalWinMsg);
+          alert(trimIndentSpaces(finalWinMsg));
         }
         if (this.computerScore >= 2) {
           this.isComputerWinner = true;
-          var trimmedfinalLoseMsg: string = trimIndentSpaces(finalLoseMsg);
-          alert(trimmedfinalLoseMsg);
+          alert(trimIndentSpaces(finalWinMsg));
         }
     }
 
