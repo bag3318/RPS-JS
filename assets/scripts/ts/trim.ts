@@ -1,21 +1,25 @@
 // this function will strip all indentation space on multiline strings
-function trimIndentSpaces(multiLineStr: string): string {
+function trimIndentSpaces(multiLineStr: string) {
 
   // create regex constants (vars)
   // this regex identifies the following line breaks: CRLF (Windows/DOS), LF (Linux/Unix), CR (Mac/Unix), LFCR (other systems)
   const NEWLINES: RegExp = /(?:\n\r|\r\n|\n|\r)/;
+  
   // this regex identifes whitespace from the beginning of the line and matches 1 or more of the preceding whitepsace token
   const WHITESPACE: RegExp = /(?:^\s+)/gm; // uses the global flag (which retains the index of the last match) and multiline flag (matches on multiple lines)
 
   var splitRegEx: RegExp = new RegExp(NEWLINES);
+
   // Split on newlines.
   let lines: string[] = multiLineStr.split(splitRegEx);
 
   // Rip out the leading whitespace.
   var trimRegEx: RegExp = new RegExp(WHITESPACE);
+
+  // go through each item in the `lines` array and replace each item's leading whitespace with blank (effectivly deleting the preceding whitespace)
   return lines.map((line) => {
     return line.replace(trimRegEx, '');
-  }).join('\n'); // Join back together with new line.
+  }).join('\n').trim(); // Join back together with new line.
 
 }
 
