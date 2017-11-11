@@ -1,14 +1,6 @@
-enum Gestures {
-    rock = "rock",
-    paper = "paper",
-    scissors = "scissors"
-}
-const GAME_INFO: GameInfo = {
-    game_name: "RPS",
-    version: 1.8,
-    creator: "bag3318",
-    status_ok: true
-};
+/// <reference path="ref/trim.ts" />
+/// <reference path="ref/interfaces.ts" />
+/// <reference path="ref/variables.ts" />
 
 class RPS {
 
@@ -22,7 +14,7 @@ class RPS {
         RPS._version = info.version;
         RPS._creator = info.creator;
         RPS._status = info.status_ok;
-        console.log(`Game Info:\nGame Name: ${RPS._gameName}, Version: ${RPS._version}, Creator: ${RPS._creator}, Status OK: ${RPS._status}.`);
+        console.log(`Game Info:\nGame Name: ${RPS._gameName}, Version: ${RPS._version}, Creator: ${RPS._creator}, Status OK: ${RPS._status}.`);   
     }
     private playerScore: number = 0;
     get PlayerScore(): number {
