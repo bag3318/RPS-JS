@@ -111,9 +111,9 @@ class RPS {
             if (this.isPlayerWinner || this.isComputerWinner) {
                 return;
             }
-            var player: string  = this.PlayerGuess();
-            var computer: string = this.ComputerGuess();
-            var result: number = this.CompareGuesses(player, computer, 1);
+            var player = <string>this.PlayerGuess();
+            var computer = <string>this.ComputerGuess();
+            var result = <number>this.CompareGuesses(player, computer, 1);
             if (result !== 0) {
                 numOfRounds--;
             }
@@ -122,7 +122,7 @@ class RPS {
 
     private PlayerGuess(): string {
         // since prompt could be of type null (if there is nothing entered), we need to force its type to be string
-        var playerChoice: string = <string>prompt("Choose rock, paper, or scissors:");
+        var playerChoice: string = (<string>prompt("Choose rock, paper, or scissors:"));
         if (this.gestures.indexOf(playerChoice.toLowerCase()) >= 0) {
             return playerChoice;
         } else {
