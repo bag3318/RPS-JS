@@ -20,6 +20,7 @@ Command Line
 ### Useful Commands
 
 > Note: **make sure to `cd` to the root of the project directory before running the following commands!**
+> Note: **for compiling sass, `cd` to the `assets/stylesheets` directory**
 
 1. `tsc -w` = compile and watch typescript (settings for directories are in `tsconfig.json`)
 2. `tsfmt -r --baseDir assets/scripts/ts` = format(s) typescript (replaces & reformats)
