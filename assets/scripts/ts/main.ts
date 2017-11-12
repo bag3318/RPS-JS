@@ -72,11 +72,6 @@ class RPS {
     private isComputerWinner: boolean = false;
 
     private Start = (): void => {
-        /**
-         * confirm is a boolean because it has 2 return statements:
-         * 1. if you click ok, it returns true
-         * 2. if you click cancel, it returns false
-         */
         var trimmedWelcomeMsg: string = trimIndentSpaces(this.welcomeMsg);
         var ready: boolean = confirm(trimmedWelcomeMsg);
         // in this case, we use a ternary operator to speed things up a bit
