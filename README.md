@@ -13,6 +13,7 @@ Command Line
 3. [RubyGems & Ruby](https://www.ruby-lang.org/en/downloads/)
 4. typescript: `npm install -g typescript` (_for Mac, add `sudo` at the beginning of the command_)
 5. Sass: `gem install sass` (_for Mac, add `sudo` at the beginning of the command_)
+5. Compass: `gem install compass` (_for Mac, add `sudo` at the beginning of the command_)
 6. typescript-formatter: `npm i typescript-formatter` (_for Mac, add `sudo` at the beginning of the command_)
 7. _Optional_: [git command line tools](https://git-scm.com/downloads/)
 
