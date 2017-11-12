@@ -4,7 +4,7 @@ function trimIndentSpaces(multiLineStr: string): string {
   // create regex constants (vars)
   
   // this regex identifies the following line breaks: CRLF (Windows/DOS), LF (Linux/Unix), CR (Mac/Unix), LFCR (other systems)
-  const NEWLINES: RegExp = /(?:\r\n|\n\r|\n|\r)/g; // g (global flag) retains index of last match
+  const NEWLINES: RegExp = /(?:(?:\r\n)|(?:\n\r)|\r|\n)/g; // g (global flag) retains index of last match
   
   // this regex identifes whitespace from the beginning of the line and matches 1 or more of the preceding whitepsace token
   const WHITESPACE: RegExp = /(?:^\s+)/; 
@@ -19,7 +19,7 @@ function trimIndentSpaces(multiLineStr: string): string {
   // go through each item in the `lines` array and replace each item's leading whitespace with blank (effectivly deleting the preceding whitespace)
   return lines.map((line) => {
     return line.replace(whiteSpaceRegEx, '');
-  }).join('\n').trim(); // Join back together with new line.
+  }).join('\n'); // Join back together with new line.
 
 }
 
