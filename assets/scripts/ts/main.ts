@@ -4,18 +4,18 @@
 /// <reference path="ref/variables.ts" />
 
 class RPS {
-    
+
     protected static _gameName: string;
     protected static _version: number;
     protected static _creator: string;
-    protected static _status: boolean;
-    
+    protected static _statusOK: boolean;
+
     constructor(public info: GameInfo) {
         RPS._gameName = info.game_name;
         RPS._version = info.version;
         RPS._creator = info.creator;
-        RPS._status = info.status_ok;
-        console.log(`Game Information:\nGame Name: ${RPS._gameName}, Version: ${RPS._version}, Creator: ${RPS._creator}, Status OK: ${RPS._status}.`);
+        RPS._statusOK = info.status_ok;
+        console.log(`Game Information:\nGame Name: ${RPS._gameName}, Version: ${RPS._version}, Creator: ${RPS._creator}, Status OK: ${RPS._statusOK}.`);
     }
 
     private playerScore: number = 0;

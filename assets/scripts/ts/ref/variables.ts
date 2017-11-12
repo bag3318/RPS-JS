@@ -8,4 +8,4 @@ const GAME_INFO: GameInfo = {
     version: 1.8,
     creator: "bag3318",
     status_ok: true
-};
+}
