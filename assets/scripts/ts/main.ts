@@ -205,11 +205,11 @@ class RPS {
     public Init(): void {
         let rpsScript: RPS = new RPS(GAME_INFO);
         let rpsClass: any = RPS;
-        let btnElement: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
+        let btnElement: HTMLButtonElement = (document.querySelector("#btn") as HTMLButtonElement);
         btnElement.addEventListener("click", (): void => {
           rpsScript.BTNClick();
         }, false); // execute during bubbling phase
-        let bodyElement: HTMLBodyElement = document.querySelector("body") as HTMLBodyElement;
+        let bodyElement: HTMLBodyElement = (document.querySelector("body") as HTMLBodyElement);
         bodyElement.addEventListener("load", (): void => {
           console.log("Is page loaded:", rpsClass.PageStatus());
         }, true); // here we set it to true so that this even can be executed during the capturing phase
