@@ -7,7 +7,7 @@ _MACOSX
 .sass-cache
 js
 css
-
+rps_complete.rb
 
 # If gitignore is not working,
 # try this:
