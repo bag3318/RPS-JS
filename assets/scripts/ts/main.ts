@@ -9,15 +9,15 @@ class RPS {
     protected static _version: number;
     protected static _creator: string;
     protected static _status: boolean;
-
+    
     constructor(public info: GameInfo) {
         RPS._gameName = info.game_name;
         RPS._version = info.version;
         RPS._creator = info.creator;
         RPS._status = info.status_ok;
-        console.log(`Game Info:\nGame Name: ${RPS._gameName}, Version: ${RPS._version}, Creator: ${RPS._creator}, Status OK: ${RPS._status}.`);   
+        console.log(`Game Information:\nGame Name: ${RPS._gameName}, Version: ${RPS._version}, Creator: ${RPS._creator}, Status OK: ${RPS._status}.`);
     }
-    
+
     private playerScore: number = 0;
     get PlayerScore(): number {
         return this.playerScore;
