@@ -205,7 +205,7 @@ class RPS {
     public Init(): void {
         let rpsScript: RPS = new RPS(GAME_INFO);
         let rpsClass: any = RPS;
-        let btnElement: HTMLButtonElement = (document.querySelector("#btn") as HTMLButtonElement);
+        let btnElement: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
         btnElement.addEventListener("click", (): void => {
           rpsScript.BTNClick();
         }, false); // execute during bubbling phase
