@@ -208,7 +208,7 @@ class RPS {
         let btnElement: HTMLButtonElement = document.querySelector("#btn") as HTMLButtonElement;
         btnElement.addEventListener("click", (): void => {
           rpsScript.BTNClick();
-        }, false); // execute during bubbling phase
+        }, false); // false = execute during bubbling phase
         let bodyElement: HTMLBodyElement = (document.querySelector("body") as HTMLBodyElement);
         bodyElement.addEventListener("load", (): void => {
           console.log("Is page loaded:", rpsClass.PageStatus());
