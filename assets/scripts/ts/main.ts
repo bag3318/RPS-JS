@@ -3,7 +3,6 @@
 /// <reference path="ref/interfaces.ts" />
 /// <reference path="ref/variables.ts" />
 
-
 class RPS {
     
     protected static _gameName: string;
