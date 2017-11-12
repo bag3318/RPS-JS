@@ -67,7 +67,7 @@ class RPS {
         paper: this.gestures[0],
         scissors: this.gestures[1]
     });
- 
+        
     private isPlayerWinner: boolean = false;
     private isComputerWinner: boolean = false;
 
