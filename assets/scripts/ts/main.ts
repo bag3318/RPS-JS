@@ -1,7 +1,9 @@
 // reference required scripts
-/// <reference path="ref/trim.ts" />
+/// <reference path="ref/trim.d.ts" />
 /// <reference path="ref/interfaces.ts" />
 /// <reference path="ref/variables.ts" />
+
+import * as trim from "trim";
 
 class RPS {
 
