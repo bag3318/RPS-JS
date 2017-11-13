@@ -126,7 +126,7 @@ class RPS {
         }
     }
 
-    private ComputerGuess(): string {
+    private ComputerGuess(): (string|void) {
         var cpuChoice: number = Math.floor((Math.random() * 3) + 1);
         switch (cpuChoice) {
             case 1: {
@@ -139,7 +139,6 @@ class RPS {
                 return this.gestures[2];
             }
         }
-        return ""; // we need to return a blank string for the return type of the function to be a string
     }
 
 
