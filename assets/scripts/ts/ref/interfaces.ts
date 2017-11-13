@@ -7,8 +7,3 @@ interface GameInfo {
 interface Rules {
   [index: string]: string;
 }
-/**
- * interface Gestures {
- *  [index: number]: string;
- * }
- */
