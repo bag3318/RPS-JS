@@ -1,3 +1,4 @@
+// intialize jQuery
 $(document).ready(function() {
     var $btn;
     $btn = $("#btn");
