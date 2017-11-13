@@ -30,6 +30,6 @@ Command Line
 
 --------
 
-> **_Enjoy!_**
+> ***Enjoy!***
 
 [//]: # "End README.md file"
