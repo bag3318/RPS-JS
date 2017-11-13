@@ -9,11 +9,11 @@ $(document).ready(function() {
             track: true,
             show: {
                 effect: "slideDown",
-                delay: 100
+                delay: 88
             },
             hide: {
                 effect: "slideUp",
-                delay: 100
+                delay: 88
             },
             // classes: {
             //     "ui-tooltip": "highlight"
