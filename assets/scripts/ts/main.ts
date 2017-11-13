@@ -90,7 +90,6 @@ class RPS {
 
         The computer wins the game!
         `;
-
         if (this.playerScore >= roundPointsCount) {
           this.isPlayerWinner = true;
           alert(trimIndentSpaces(finalWinMsg));
@@ -150,6 +149,7 @@ class RPS {
         `;
         if (this.rules[guess1.toLowerCase()] === guess2.toLowerCase()) {
             this.playerScore += points;
+            this.ties += 0;
             var winRoundMsg: string  = `
             ${outputScore}
             You win the round!
@@ -161,6 +161,7 @@ class RPS {
             return 1;
         } else if (this.rules[guess2.toLowerCase()] === guess1.toLowerCase()) {
             this.computerScore += points;
+            this.ties += 0;
             var lostRoundMsg: string = `
             ${outputScore}
             Computer wins the round!
