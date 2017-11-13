@@ -126,9 +126,7 @@ class RPS {
         }
     }
 
-    private ComputerGuess(): (string|void) {
-        // we use the string OR void return types for the function 
-        // because the final return type is void, but the inline return type is string
+    private ComputerGuess(): string {
         var cpuChoice: number = Math.floor((Math.random() * 3) + 1);
         switch (cpuChoice) {
             case 1: {
@@ -141,6 +139,7 @@ class RPS {
                 return this.gestures[2];
             }
         }
+        return ""; 
     }
 
 
