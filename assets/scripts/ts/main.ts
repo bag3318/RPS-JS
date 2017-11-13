@@ -126,6 +126,7 @@ class RPS {
         }
     }
 
+    // we use the string OR void return types because the final return type is void, but the inline return type is string
     private ComputerGuess(): (string|void) {
         var cpuChoice: number = Math.floor((Math.random() * 3) + 1);
         switch (cpuChoice) {
