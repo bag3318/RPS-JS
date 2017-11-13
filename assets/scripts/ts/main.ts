@@ -139,7 +139,7 @@ class RPS {
                 return this.gestures[2];
             }
         }
-        return ""; 
+        return ""; // we need to return a blank string to fulfill the return type of this method
     }
 
 
