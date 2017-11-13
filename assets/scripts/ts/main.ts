@@ -80,6 +80,8 @@ class RPS {
     }
 
     private DetermineWinner(roundPointsCount: number): void {
+        // `roundPointsCount` is a param in this case because it represents
+        //  the score for either the computer or player can reach at maximum
         var finalWinMsg: string = `
         You have ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s) (ties: ${this.ties}).
 
