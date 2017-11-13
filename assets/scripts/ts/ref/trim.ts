@@ -1,4 +1,4 @@
-// this functiontrimIndentSpaces will strip all indentation space on multiline strings
+// this arrow function, trimIndentSpaces, will strip all indentation space on multiline strings
 var trimIndentSpaces = (multiLineStr: string): string => {
 
   // create regex constants (vars)
