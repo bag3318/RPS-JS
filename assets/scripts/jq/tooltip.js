@@ -10,6 +10,9 @@ $(document).ready(function() {
         hide: {
             effect: "slideUp",
             delay: 100
-        }
+        },
+        // classes: {
+        //     "ui-tooltip": "highlight"
+        // }
     });
 });
