@@ -8,11 +8,11 @@ $(document).ready(function() {
             content: "Click Me!",
             track: true,
             show: {
-                effect: "slideDown",
+                effect: "fadeIn",
                 delay: 88
             },
             hide: {
-                effect: "slideUp",
+                effect: "fadeOut",
                 delay: 88
             },
             // classes: {
