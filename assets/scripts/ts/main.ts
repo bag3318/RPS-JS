@@ -3,7 +3,7 @@
 /// <reference path="ref/interfaces.ts" />
 /// <reference path="ref/variables.ts" />
 
-import * as trim from "trim";
+import * as trimIndentSpaces from "trim";
 
 class RPS {
 
