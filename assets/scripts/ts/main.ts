@@ -174,7 +174,7 @@ class RPS {
         } else {
             this.playerScore += 0;
             this.computerScore += 0;
-            this.ties += points;
+            this.ties += points; // we can use the points parameter here, as it will work as needed
             var tieRoundMsg: string = `
             ${outputScore}
             It's a tie! Go again, no score added!
