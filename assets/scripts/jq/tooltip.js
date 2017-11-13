@@ -1,23 +1,24 @@
 // intialize jQuery
-$(document).ready(function() {
+jQuery(document).ready(function() {
     var $btn;
     $btn = $("#btn");
-    $(function() {
+    function toolTip($delay) {
         $btn.attr("title", "");        
         $btn.tooltip({
             content: "Click Me!",
             track: true,
             show: {
                 effect: "fadeIn",
-                delay: 88
+                delay: $delay
             },
             hide: {
                 effect: "fadeOut",
-                delay: 88
+                delay: $delay
             },
             // classes: {
             //     "ui-tooltip": "highlight"
             // }
         });
-    });
+    }
+    toolTip(88);
 });
