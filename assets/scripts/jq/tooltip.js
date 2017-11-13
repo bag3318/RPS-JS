@@ -1,6 +1,15 @@
 $(document).ready(function() {
     var $btn = $("#btn");
     $btn.tooltip({
-        content: "Click Me!"
+        content: "Click Me!",
+        track: true,
+        show: {
+            effect: "slideDown",
+            delay: 100
+        },
+        hide: {
+            effect: "slideUp",
+            delay: 100
+        }
     });
 });
