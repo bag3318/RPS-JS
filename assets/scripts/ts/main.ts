@@ -79,7 +79,7 @@ class RPS {
         return confirmReady;
     }
 
-    private DetermineWinner(roundCount: number): void {
+    private DetermineWinner(roundPointsCount: number): void {
         var finalWinMsg: string = `
         You have ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s) (ties: ${this.ties}).
 
@@ -91,11 +91,11 @@ class RPS {
         The computer wins the game!
         `;
 
-        if (this.playerScore >= roundCount) {
+        if (this.playerScore >= roundPointsCount) {
           this.isPlayerWinner = true;
           alert(trimIndentSpaces(finalWinMsg));
         }
-        if (this.computerScore >= roundCount) {
+        if (this.computerScore >= roundPointsCount) {
           this.isComputerWinner = true;
           alert(trimIndentSpaces(finalWinMsg));
         }
