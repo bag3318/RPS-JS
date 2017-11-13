@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    var $btn = $("#btn");
+    var $btn;
+    $btn = $("#btn");
     $btn.tooltip({
         content: "Click Me!",
         track: true,
