@@ -2,7 +2,7 @@
 jQuery(document).ready(function() {
     var $btn;
     $btn = $("#btn");
-    function toolTip($delay) {
+    function $toolTip($delay) {
         $btn.attr("title", "");        
         $btn.tooltip({
             content: "Click Me!",
@@ -20,5 +20,5 @@ jQuery(document).ready(function() {
             // }
         });
     }
-    toolTip(88);
+    $toolTip(88);
 });
