@@ -8,7 +8,7 @@ Command Line
 
 ### The following packages are needed:
 
-1. (*for Mac only*) Xcode command line tools: `xcode-select --install`
+1. (_for Mac only_) Xcode command line tools: `xcode-select --install`
 2. [NodeJS](https://nodejs.org/en/)
 3. [RubyGems & Ruby](https://www.ruby-lang.org/en/downloads/)
 4. typescript: `npm install -g typescript` (_for Mac, add `sudo` at the beginning of the command_)
