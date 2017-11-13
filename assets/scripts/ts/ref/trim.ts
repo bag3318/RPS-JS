@@ -13,7 +13,7 @@ function trimIndentSpaces(multiLineStr: string): string {
   var newLinesRegEx: RegExp = new RegExp(NEWLINES);
   var whiteSpaceRegEx: RegExp = new RegExp(WHITESPACE);
 
-  // Split on newlines.
+  // Split on all types newlines.
   let lines: string[] = multiLineStr.split(newLinesRegEx);
 
   // Rip out the leading whitespace.
