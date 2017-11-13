@@ -79,7 +79,7 @@ class RPS {
         return confirmReady;
     }
 
-    private DetermineWinner(): void {
+    private DetermineWinner(roundCount: number): void {
         var finalWinMsg: string = `
         You have ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s) (ties: ${this.ties}).
 
@@ -91,11 +91,11 @@ class RPS {
         The computer wins the game!
         `;
 
-        if (this.playerScore >= 2) {
+        if (this.playerScore >= roundCount) {
           this.isPlayerWinner = true;
           alert(trimIndentSpaces(finalWinMsg));
         }
-        if (this.computerScore >= 2) {
+        if (this.computerScore >= roundCount) {
           this.isComputerWinner = true;
           alert(trimIndentSpaces(finalWinMsg));
         }
@@ -157,7 +157,7 @@ class RPS {
             Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
             `;
             alert(trimIndentSpaces(winRoundMsg));
-            this.DetermineWinner();
+            this.DetermineWinner(2);
             return 1;
         } else if (this.rules[guess2.toLowerCase()] === guess1.toLowerCase()) {
             this.computerScore += points;
@@ -168,7 +168,7 @@ class RPS {
             Player Score: ${this.playerScore}; Computer Score: ${this.computerScore}.
             `;
             alert(trimIndentSpaces(lostRoundMsg));
-            this.DetermineWinner();
+            this.DetermineWinner(2);
             return 2;
         } else {
             this.playerScore += 0;
@@ -181,7 +181,7 @@ class RPS {
             Player Score: ${this.playerScore}, Computer Score: ${this.computerScore}.
             `;
             alert(trimIndentSpaces(tieRoundMsg));
-            this.DetermineWinner();
+            this.DetermineWinner(2);
             return 0;
         }
     }
