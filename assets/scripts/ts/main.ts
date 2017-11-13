@@ -79,7 +79,7 @@ class RPS {
         return confirmReady;
     }
 
-    private DetermineWinner = (roundPointsCount: number): void => {
+    private DetermineWinner(roundPointsCount: number): void {
         var finalWinMsg: string = `
         You have ${this.playerScore} point(s) compared to the computer\'s ${this.computerScore} point(s) (ties: ${this.ties}).
 
