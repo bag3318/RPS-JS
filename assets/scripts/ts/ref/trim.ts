@@ -9,6 +9,7 @@ function trimIndentSpaces(multiLineStr: string): string {
   // this regex identifes whitespace from the beginning of the line and matches 1 or more of the preceding whitepsace token
   const WHITESPACE: RegExp = /(?:^\s+)/; 
 
+  // create regex var statements
   var newLinesRegEx: RegExp = new RegExp(NEWLINES);
   var whiteSpaceRegEx: RegExp = new RegExp(WHITESPACE);
 
