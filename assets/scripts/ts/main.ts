@@ -10,6 +10,32 @@ class RPS {
     protected static _creator: string;
     protected static _statusOK: boolean;
 
+    // create getters and setters global vars above
+    get gameName(): string {
+        return RPS._gameName;
+    }
+    set gameName($gameName: string) {
+        RPS._gameName = $gameName;
+    }
+    get version(): number {
+        return RPS._version;
+    }
+    set version($version: number) {
+        RPS._version = $version;
+    }
+    get creator(): string {
+        return RPS._creator;
+    }
+    set creator($creator: string) {
+        RPS._creator = $string;
+    }
+    get statusOK(): boolean {
+        return RPS._statusOK;
+    }
+    set statusOK($statusOK: boolean) {
+        RPS._statusOK = $statusOK;
+    }
+
     constructor(public info: GameInfo) {
         RPS._gameName = info.game_name;
         RPS._version = info.version;
