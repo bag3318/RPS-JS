@@ -19,9 +19,9 @@ Command Line
 
 ### Useful Commands
 
-> Note 1: **for compiling and/or formatting typescript, `cd` to the `assets/scripts` directory**
+> Note 1: **for compiling and/or formatting typescript, _first_ `cd` to the `assets/scripts` directory**
 
-> Note 2: **for compiling sass, `cd` to the `assets/stylesheets` directory**
+> Note 2: **for compiling sass, _first_ `cd` to the `assets/stylesheets` directory**
 
 1. `tsc -w` = compile and watch typescript (settings for directories are in `tsconfig.json`)
 2. `tsfmt -r` = format(s) typescript (replaces & reformats)
