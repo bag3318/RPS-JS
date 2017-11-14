@@ -10,7 +10,7 @@ Command Line
 
 1. (_for Mac only_) Xcode command line tools: `xcode-select --install`
 2. [NodeJS](https://nodejs.org/en/)
-3. [RubyGems & Ruby](https://www.ruby-lang.org/en/downloads/)
+3. RubyGems & Ruby: [windows](https://rubyinstaller.org/), mac: `\curl -sSL https://get.rvm.io | bash -s stable --ruby`
 4. typescript: `npm install -g typescript` (_for Mac, add `sudo` at the beginning of the command_)
 5. Sass: `gem install sass` (_for Mac, add `sudo` at the beginning of the command_)
 6. Compass: `gem install compass` (_for Mac, add `sudo` at the beginning of the command_)
