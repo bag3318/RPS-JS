@@ -27,7 +27,7 @@ class RPS {
         return RPS._creator;
     }
     set creator($creator: string) {
-        RPS._creator = $string;
+        RPS._creator = $creator;
     }
     get statusOK(): boolean {
         return RPS._statusOK;
