@@ -7,5 +7,5 @@ jQuery("document").ready(function($state){
         var $check;
         $check = ($isReady) ? $consoleLog(Boolean($isReady)) : $consoleLog(Boolean(!$isReady));
     }
-    $checkIfPageLoadedIsComplete($state); // returns boolean
+    $checkIfPageLoadedIsComplete($state);
 }(document.readyState));
