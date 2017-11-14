@@ -1,5 +1,5 @@
 // intialize jQuery
-jQuery("document").ready(function($state){
+jQuery("document").ready(function($docState){
     function $consoleLog($isPageLoaded) {
         return console.log("Is page loaded:", $isPageLoaded);
     }
@@ -7,5 +7,5 @@ jQuery("document").ready(function($state){
         var $check;
         $check = ($isReady) ? $consoleLog(Boolean($isReady)) : $consoleLog(Boolean(!$isReady));
     }
-    $checkIfPageLoadedIsComplete($state);
+    $checkIfPageLoadedIsComplete($docState);
 }(document.readyState));
