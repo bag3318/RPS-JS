@@ -193,7 +193,7 @@ class RPS {
 
     protected BTNClick = (): void => {
         this.Start(); // start the game
-        location.reload(false); // set true to reload page from cache
+        location.reload(false); // set false to reload page from cache
     }
 
     public Init(): void {
