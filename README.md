@@ -24,7 +24,7 @@ Command Line
 > Note 2: **for compiling sass, `cd` to the `assets/stylesheets` directory**
 
 1. `tsc -w` = compile and watch typescript (settings for directories are in `tsconfig.json`)
-2. `tsfmt -r --baseDir ts` = format(s) typescript (replaces & reformats)
+2. `tsfmt -r --baseDir ts` and `tsfmt -r --baseDir ts/ref` = format(s) typescript (replaces & reformats)
 3. `compass watch` = compiles sass/scss
 <!-- 3. `sass --watch assets/stylesheets/sass:assets/stylesheets/css` = compile and watch sass and/or scss -->
 
