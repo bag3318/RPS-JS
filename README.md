@@ -37,6 +37,8 @@ Command Line
 | CSS3                | SASS       | N/A       | Ruby            |
 | JavaScript          | TypeScript | N/A       | JSON            |
 
+--------
+
 > ***Enjoy!***
 
 [//]: # "End README.md file"
