@@ -19,7 +19,7 @@ Command Line
 
 ### Useful Commands
 
-> Note 1: **make sure to `cd` to the `assets/scripts` before compiling typescript and formatting it**
+> Note 1: **for compiling and/or formatting typescript, `cd` to the `assets/scripts` directory**
 
 > Note 2: **for compiling sass, `cd` to the `assets/stylesheets` directory**
 
