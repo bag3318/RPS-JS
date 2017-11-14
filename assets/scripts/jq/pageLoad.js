@@ -3,12 +3,12 @@ jQuery("document").ready(function(){
     function $consoleLog($isPageLoaded) {
         return console.log("Is page loaded:", $isPageLoaded);
     }
-    function $checkIfPageLoadedIsComplete() {
-        if (document.readyState) {
-            $consoleLog(true);
+    function $checkIfPageLoadedIsComplete($isReady) {
+        if ($isReady) {
+            $consoleLog(Boolean($isReady));
         } else {
-            $consoleLog(false);
+            $consoleLog(Boolean(!$isReady));
         }
     }
-    $checkIfPageLoadedIsComplete();
+    $checkIfPageLoadedIsComplete(document.readyState);
 });
