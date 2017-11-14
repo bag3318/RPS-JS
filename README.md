@@ -29,6 +29,14 @@ Command Line
 
 --------
 
+## Programming Languages Used:
+
+| Basic Web Languages | Super Sets | Libraries | Other Languages |
+|---------------------|------------|-----------|-----------------|
+| HTML5               | SCSS       | jQuery    | Markdown        |
+| CSS3                | SASS       | N/A       | Ruby            |
+| JavaScript          | TypeScript | N/A       | JSON            |
+
 > ***Enjoy!***
 
 [//]: # "End README.md file"
