@@ -2,18 +2,18 @@
 jQuery(document).ready(function() {
     var $btn;
     $btn = $("#btn");
-    function $toolTip($delay) {
+    function $toolTip($delayTime) {
         $btn.attr("title", "");        
         $btn.tooltip({
             content: "Click Me!",
             track: true,
             show: {
                 effect: "fadeIn",
-                delay: $delay
+                delay: $delayTime
             },
             hide: {
                 effect: "fadeOut",
-                delay: $delay
+                delay: $delayTime
             },
             // classes: {
             //     "ui-tooltip": "highlight"
