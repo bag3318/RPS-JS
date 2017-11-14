@@ -29,7 +29,7 @@ Command Line
 
 --------
 
-## Programming Languages Used:
+## Programming Languages Used
 
 | Basic Web Languages | Super Sets | Libraries | Other Languages |
 |---------------------|------------|-----------|-----------------|
