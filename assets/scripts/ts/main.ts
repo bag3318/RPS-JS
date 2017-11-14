@@ -3,7 +3,8 @@
 /// <reference path="ref/interfaces.ts" />
 /// <reference path="ref/variables.ts" />
 
-class RPS {
+import {trimIndentSpaces} from "./ref/trim"
+export class RPS {
 
     protected static _gameName: string;
     protected static _version: number;
