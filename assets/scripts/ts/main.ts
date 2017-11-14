@@ -131,13 +131,13 @@ class RPS {
         var cpuChoice: number = Math.floor((Math.random() * 3) + 1);
         switch (cpuChoice) {
             case 1: {
-                return this.gestures[0];
+                return this.gestures[0]; // return rock
             }
             case 2: {
-                return this.gestures[1];
+                return this.gestures[1]; // return paper
             }
             case 3: {
-                return this.gestures[2];
+                return this.gestures[2]; // return scissors
             }
             default: {
                 return ""; // we need to return a blank string to fullfill the return type of this function
