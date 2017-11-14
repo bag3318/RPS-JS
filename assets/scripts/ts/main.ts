@@ -139,8 +139,10 @@ class RPS {
             case 3: {
                 return this.gestures[2];
             }
+            default: {
+                throw new Error("Error, cpu choice not valid.");
+            }
         }
-        return ""; // we need to return a blank string to fulfill the return type of this method
     }
 
 
