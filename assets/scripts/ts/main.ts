@@ -196,7 +196,7 @@ class RPS {
         location.reload(false); // set false to reload page from cache
     }
 
-    public Init(): void {
+    public Init = (): void => {
         let rpsScript: RPS = new RPS(GAME_INFO);
         let btnElement: HTMLButtonElement = (document.querySelector("#btn") as HTMLButtonElement);
         btnElement.addEventListener("click", (): void => {
