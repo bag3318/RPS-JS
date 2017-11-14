@@ -194,22 +194,11 @@ class RPS {
         location.reload(false); // set true to reload page from cache
     }
 
-    protected static PageStatus = (): boolean => {
-      // use ternary operator instead of if/else
-      var isPageLoaded: boolean = (document.readyState) ? true : false;
-      return isPageLoaded;
-    }
-
     public Init(): void {
         let rpsScript: RPS = new RPS(GAME_INFO);
-        let rpsClass: any = RPS;
         let btnElement: HTMLButtonElement = (document.querySelector("#btn") as HTMLButtonElement);
         btnElement.addEventListener("click", (): void => {
           rpsScript.BTNClick();
         }, false); // false = execute during bubbling phase
-        let bodyElement: HTMLBodyElement = (document.querySelector("body") as HTMLBodyElement);
-        bodyElement.addEventListener("load", (): void => {
-          console.log("Is page loaded:", rpsClass.PageStatus());
-        }, true); // here we set it to true so that this even can be executed during the capturing phase
     }
 }
