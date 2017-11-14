@@ -140,7 +140,7 @@ class RPS {
                 return this.gestures[2];
             }
             default: {
-                return ""; // we need to return a blank string to fullfill the the return type of this function
+                return ""; // we need to return a blank string to fullfill the return type of this function
             }
         }
     }
