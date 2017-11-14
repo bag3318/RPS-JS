@@ -2,8 +2,8 @@
 jQuery(document).ready(function() {
     var $btn;
     $btn = $("#btn");
+    $btn.attr("title", "");            
     function $toolTip($delayTime) {
-        $btn.attr("title", "");        
         $btn.tooltip({
             content: "Click Me!",
             track: true,
