@@ -4,7 +4,8 @@ jQuery("document").ready(function(){
         return console.log("Is page loaded:", $isPageLoaded);
     }
     function $checkIfPageLoadedIsComplete($isReady) {
-        var $check = ($isReady) ? $consoleLog(Boolean($isReady)) : $consoleLog(Boolean(!$isReady));
+        var $check;
+        $check = ($isReady) ? $consoleLog(Boolean($isReady)) : $consoleLog(Boolean(!$isReady));
     }
     $checkIfPageLoadedIsComplete(document.readyState);
 });
