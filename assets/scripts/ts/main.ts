@@ -3,13 +3,8 @@
 /// <reference path="ref/interfaces.ts" />
 /// <reference path="ref/variables.ts" />
 
-import {trimIndentSpaces} from "./ref/trim"
-import {GameInfo} from "./ref/interfaces"
-import {GAME_INFO} from "./ref/variables"
-import {Gestures} from "./ref/variables"
-import {Rules} from "./ref/interfaces"
 
-export class RPS {
+class RPS {
 
     protected static _gameName: string;
     protected static _version: number;

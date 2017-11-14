@@ -1,9 +1,9 @@
-export interface GameInfo {
+interface GameInfo {
   game_name: string;
   version: number;
   creator: string;
   status_ok: boolean;
 }
-export interface Rules {
+interface Rules {
   [index: string]: string;
 }
