@@ -21,5 +21,4 @@ jQuery(document).ready(function() {
         });
     }
     $toolTipBtn(88);
-    }
 });
