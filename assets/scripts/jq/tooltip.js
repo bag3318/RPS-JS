@@ -2,8 +2,8 @@
 jQuery(document).ready(function() {
     var $btn;
     $btn = $("#btn");
-    $btn.attr("title", "");            
-    function $toolTip($delayTime) {
+    $btn.attr("title", "");   
+    function $toolTipBtn($delayTime) {
         $btn.tooltip({
             content: "Click Me!",
             track: true,
@@ -20,5 +20,6 @@ jQuery(document).ready(function() {
             // }
         });
     }
-    $toolTip(88);
+    $toolTipBtn(88);
+    }
 });
