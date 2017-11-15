@@ -10,16 +10,16 @@ function trimIndentSpaces(multiLineStr: string): string {
   const WHITESPACE: RegExp = /(?:^\s+)/; 
 
   // create regex var statements
-  var newLinesRegEx: RegExp = new RegExp(NEWLINES);
-  var whiteSpaceRegEx: RegExp = new RegExp(WHITESPACE);
+  var newLines: RegExp = new RegExp(NEWLINES);
+  var whiteSpace: RegExp = new RegExp(WHITESPACE);
 
   // Split on all types newlines.
-  let lines: string[] = multiLineStr.split(newLinesRegEx);
+  let lines: string[] = multiLineStr.split(newLines);
 
   // Rip out the leading whitespace.
   // go through each item in the `lines` array and replace each item's leading whitespace with blank (effectivly deleting the preceding whitespace)
   return lines.map((line) => {
-    return line.replace(whiteSpaceRegEx, '');
+    return line.replace(whiteSpace, '');
   }).join('\n'); // Join back together with new line.
 
 }
