@@ -20,5 +20,5 @@ jQuery(document).ready(function() {
             // }
         });
     }
-    $toolTip(88);    
+    $toolTip(88);
 });
