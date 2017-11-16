@@ -33,7 +33,7 @@ Command Line
 > Note 2: **for compiling sass, _first_ `cd` to the `assets/stylesheets` directory**
 
 1. `tsc -w` = compile and watch typescript (settings for directories are in `tsconfig.json`)
-2. `tsfmt -r` = format(s) typescript (replaces & reformats)
+2. `tsfmt -r` = format(s) typescript (replaces & reformats) (settings for directories are in `tsfmt.json`)
 3. `compass watch` = compiles sass/scss
 
 --------
